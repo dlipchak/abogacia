@@ -1,0 +1,228 @@
+﻿<title class="logo">
+  Calculadora de indemnización por accidentes laborales. 
+  
+  </title>
+
+<section
+  id="page-title"
+  class="calculatorHeader calculatorWorkAccidentHeader min-vh-60 page-title-parallax page-title-dark include-header"
+>
+  <div class="container clearfix">
+    <div>
+      <h3 class="serviceTitle">Accidentes laborales</h3>
+    </div>
+
+    <h1 class="serviceTitle">Calculadora de indemnización</h1>
+  </div>
+</section>
+
+<section id="content" class="calculatorWorkAccident">
+  <div class="content-wrap pt-0">
+    <div class="section mt-0">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-6 bg-light border">
+            <form class="mt-3">
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label for="salary"
+                    ><small>*</small> Ingreso Base Mensual:</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="salary"
+                    name="salary"
+                    placeholder="Por ej: 5000"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label for="saincapacitylary"
+                    ><small>*</small> Porcentaje de incapacidad:</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="incapacity"
+                    name="incapacity"
+                    placeholder="Por ej: 30"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label for="age"><small>*</small> Edad:</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="age"
+                    name="age"
+                    placeholder="Por ej: 25"
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label for="age">Lugar de accidente:</label>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input required valid"
+                      type="radio"
+                      name="accident-place"
+                      id="accident-place-work"
+                      value="work"
+                      checked
+                    />
+                    <label
+                      class="form-check-label nott"
+                      for="accident-place-work"
+                      >En el Trabajo</label
+                    >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input valid"
+                      type="radio"
+                      name="accident-place"
+                      id="accident-place-initinere"
+                      value="initinere"
+                    />
+                    <label
+                      class="form-check-label nott"
+                      for="accident-place-initinere"
+                      >In itinere</label
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <button
+                class="btn btn-success"
+                type="button"
+                id="btnCalculate"
+                disabled
+              >
+                Calcular
+              </button>
+
+              <div>
+                <div class="style-msg successmsg invisible">
+                  <div class="sb-msg">
+                    <span id="result" class="result"></span>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-md-6">
+            <p>
+              <strong class="green">Edad</strong>: refiere a la edad del
+              damnificado
+              <span class="green">
+                a la fecha de la primera manifestación invalidante
+              </span>
+              (es decir, a la fecha del accidente laboral o de la aparición de
+              la enfermedad profesional).
+            </p>
+            <p>
+              <strong class="green">Ingreso base:</strong> para calcular el
+              ingreso base se considerará el
+              <span class="green">promedio mensual de todos los salarios</span>
+              devengados por el trabajador durante el año anterior a la primera
+              manifestación invalidante, o en el tiempo de prestación de
+              servicio si fuera menor. Los salarios mensuales tomados a fin de
+              establecer el promedio se actualizarán mes a mes aplicándose la
+              variación del índice Remuneraciones Imponibles Promedio de los
+              Trabajadores Estables (RIPTE), elaborado y difundido por el
+              MINISTERIO DE SALUD Y DESARROLLO SOCIAL.
+            </p>
+            <p>
+              <strong class="green"
+                >Accidente in itinere (camino al trabajo o de regreso a
+                casa)</strong
+              >: los accidentes in itinere (del latin “itinere”: “en curso”) se
+              encuentran definidos en el artículo sexto de la Ley de Riesgos del
+              Trabajo (Ley 24.557) como: “todo
+              <span class="green">acontecimiento súbito y violento</span>
+              ocurrido por el hecho o en ocasión del trabajo, o en el
+              <span class="green">
+                trayecto entre el domicilio del trabajador y el lugar de trabajo </span
+              >, siempre y cuando el damnificado no hubiere interrumpido o
+              alterado dicho trayecto por causas ajenas al trabajo”.
+            </p>
+            <p>
+              <strong class="green">Porcentaje de incapacidad:</strong> se
+              define de acuerdo a la
+              <span class="green">gravedad de las secuelas</span> producto del
+              accidente o enfermedad laboral. Es fundamental contar con
+              <span class="green">asesoramiento médico y legal</span> a los
+              fines de tener una idea precisa del mismo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <p>
+        Nuestro estudio jurídico conformado por <span class="green">
+          abogados y profesionales médicos
+          de primer nivel
+        </span> se especializa en la gestión de reclamos por accidentes
+        laborales y enfermedades profesionales ante la Superintendencia de
+        Riesgos del Trabajo.
+      </p>
+      <p>
+        Las controversias más comunes que se suscitan hoy día se deben a las
+        <span class="green">indemnizaciónes insignificantes que ofrecen las ART</span> durante el trámite
+        ante la SRT. El objetivo de este procedimiento previo a todo reclamo
+        judicial, es el de cerrar los reclamos por la mínima indemnización
+        posible en perjuicio de los trabajadores. Una clara muestra de ello es
+        que el <span class="green">
+          financiamiento de la Superintendencia proviene de las propias
+          ART.
+        </span> De este modo, la objetividad e independencia de los funcionarios de
+        la Superintendencia se ve severamente comprometida, ya que son las ART
+        las que aportan los fondos para pagar los sueldos de estos funcionarios.
+      </p>
+      <p>
+        Esta actitud sistemática coincide con la <span class="green">pésima atención médica</span> que
+        brindan las ART minimizando en todo tiempo las lesiones padecidas,
+        negándose a cubrir los traslados, con demoras en el pago de salarios y
+        otorgamiento de <span class="green">altas médicas prematuras</span> sin que el trabajador se
+        encuentre verdaderamente rehabilitado para incorporarse de nuevo a su
+        trabajo.
+      </p>
+      <p>
+        Frente a estos abusos constantes, nuestro Estudio integrado por abogados
+        especializados y profesionales médicos de excelencia le brindan la
+        <span class="green">
+          asistencia legal y médica necesaria para que conozca a fondo sus
+          derechos
+        </span> y los haga valer. Nuestro respaldo y asesoramiento
+        personalizado durante todo el trámite de reclamo ante la SRT le darán
+        acceso a la <span class="green">máxima indemnización y a la mejor atención médica.</span>
+        Consultenos sin compromiso <a href="@Url.Action("index", "Contacto")">AQUÍ</a>
+      </p>
+
+      @Html.Partial("WorkAccidentFeatures")
+
+      <div class="divider"></div>
+      <div class="container clearfix mb-5">
+        @Html.Partial("CalculatorsLinks")
+      </div>
+    </div>
+  </div>
+</section>
+
+@section styles{
+<link
+  rel="stylesheet"
+  href="~/css/real-estate/css/font-icons.css"
+  type="text/css"
+/>
+}

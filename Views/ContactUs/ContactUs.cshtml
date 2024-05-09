@@ -1,0 +1,45 @@
+﻿@model ContactModel
+<main id="main">@Html.Partial("ContactUsPartial")</main>
+@section styles {
+    <style type="text/css">
+        small {
+            color: red;
+            font-size: 14pt;
+        }
+    </style>
+}
+
+
+
+@section scripts{
+
+    <script type="text/javascript">
+        $(function () {
+            $(".alert").hide();
+            $("#sendBtn").on("click", (e) => {
+                var form = $("#contactform")[0];
+                var valid = form.checkValidity();
+                if (valid) {
+                    e.preventDefault();
+                    $(".contact-us-spinner").removeClass("invisible");
+                    const contactForm = {
+                        name: $("#name").val(),
+                        email: $("#email").val(),
+                        phone: $("#phone").val(),
+                        subject: $("#subject").val(),
+
+                        message: $("#message").val(),
+                    };
+                    $.post("ContactUs/SendEmail", contactForm, (ret) => {
+                        $(".contact-us-spinner").addClass("invisible");
+                        $(".alert").show();
+                        window.setTimeout(function () {
+                            $(".alert").hide("slow");
+                        }, 5000);
+                    });
+                }
+            });
+        });
+    </script>
+
+}

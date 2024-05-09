@@ -1,0 +1,177 @@
+﻿@model ContactModel
+
+<!-- <section
+  id="slider"
+  class="slider-element slider-parallax page-section min-vh-60 include-header slider-parallax-visible"
+>
+  <div class="slider-inner" style='background:
+  url("/images/contact/contact-us.jpeg") 0% / cover
+  no-repeat !important;' >
+</section> -->
+<!-- Content
+        ============================================= -->
+
+<title class="logo">Contacto</title>
+<section id="content">
+  <div class="content-wrap">
+    <div class="container">
+      <div class="row gutter-40 col-mb-80">
+        <!-- Postcontent
+                                        ============================================= -->
+
+        <div class="postcontent col-lg-9">
+          <div class="row">
+            <div class="ml-3">
+              <h3>Envienos su consulta</h3>
+            </div>
+            <div class="ml-3">
+              <div class="alert alert-success" role="alert">
+                Gracias por su mensaje, pronto le responderemos!
+              </div>
+            </div>
+          </div>
+
+          <form class="mb-0" id="contactform" name="template-contactform">
+            <div class="contact-us-spinner invisible">
+              <div
+                class="spinner-grow text-success"
+                style="width: 3rem; height: 3rem"
+                role="status"
+              >
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4 form-group">
+                <label for="name">Nombre <small>*</small></label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value=""
+                  class="sm-form-control required"
+                  required
+                />
+              </div>
+
+              <div class="col-md-4 form-group">
+                <label for="email">Email <small>*</small></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value=""
+                  class="required email sm-form-control"
+                  required
+                />
+              </div>
+
+              <div class="col-md-4 form-group">
+                <label for="phone">Teléfono</label>
+                <input
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  value=""
+                  type="phone"
+                  class="sm-form-control"
+                />
+              </div>
+
+              <div class="w-100"></div>
+
+              <div class="col-md-8 form-group">
+                <label for="subject">Asunto <small>*</small></label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  value=""
+                  class="required sm-form-control"
+                  required
+                />
+              </div>
+
+              <div class="w-100"></div>
+
+              <div class="col-12 form-group">
+                <label for="message">Mensaje <small>*</small></label>
+                <textarea
+                  class="required sm-form-control"
+                  id="message"
+                  name="message"
+                  rows="6"
+                  cols="30"
+                  required
+                ></textarea>
+              </div>
+
+              <!-- <div class="col-12 form-group d-none">
+                                              <input type="text"
+                                                     id="template-contactform-botcheck"
+                                                     name="template-contactform-botcheck"
+                                                     value=""
+                                                     class="sm-form-control" />
+                                          </div> -->
+
+              <div class="col-12 form-group">
+                <button
+                  class="button button-3d m-0"
+                  type="submit"
+                  id="sendBtn"
+                  name="sendBtn"
+                >
+                  Enviar
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- .postcontent end -->
+        <!-- Sidebar
+                                        ============================================= -->
+        <div class="sidebar col-lg-3">
+          <address>
+            <strong>Oficina:</strong><br />
+            Juana Manso 1113, 7mo piso, Capital Federal, Argentina
+          </address>
+          <div title="Phone Number"><strong>Tel:</strong></div>
+          +54-1161980179<br />
+          <div title="Email"><strong>Email:</strong></div>
+          estudiolopezgiacomelli@gmail.com
+
+          <div class="widget border-0 pt-0">
+            <a
+              href="https://www.facebook.com/Estudio-Jur%C3%ADdico-Lopez-Giacomelli-2000856223478787"
+              target="_blank"
+              class="social-icon si-small si-colored si-facebook"
+            >
+              <i class="icon-facebook"></i>
+              <i class="icon-facebook"></i>
+            </a>
+            <a
+              href="https://twitter.com/__semicolon"
+              target="_blank"
+              class="social-icon si-small si-colored si-twitter"
+            >
+              <i class="icon-twitter"></i>
+              <i class="icon-twitter"></i>
+            </a>
+            <a
+              href="https://instagram.com/semicolonweb"
+              target="_blank"
+              class="social-icon si-small si-colored si-instagram"
+            >
+              <i class="icon-instagram"></i>
+              <i class="icon-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <!-- .sidebar end -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- #content end -->

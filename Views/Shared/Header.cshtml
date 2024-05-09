@@ -1,0 +1,146 @@
+﻿@using AbogaciaCore.Helpers;
+
+<header id="header" class="full-header " data-sticky-class="not-dark">
+    <div id="header-wrap">
+        <div class="container">
+            <div class="slider-social d-block d-sm-none clearfix ">
+                <div class="row justify-content-center border-bottom mb-1" >
+                    <a href="https://www.facebook.com/Estudio-Jur%C3%ADdico-Lopez-Giacomelli-2000856223478787" target="_blank" class="social-icon si-small si-borderless si-facebook si-text-color">
+                        <i class="icon-facebook"></i>
+                        <i class="icon-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com/__semicolon" target="_blank" class="social-icon si-small si-borderless si-twitter si-text-color">
+                        <i class="icon-twitter"></i>
+                        <i class="icon-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com/semicolonweb" target="_blank" class="social-icon si-small si-borderless si-instagram si-text-color">
+                        <i class="icon-instagram"></i>
+                        <i class="icon-instagram"></i>
+                    </a>
+                </div>
+      
+            </div>
+
+            <div class="header-row mb-2">
+                <!-- Logo
+                        ============================================= -->
+                <div id="logo">
+                    <!-- <a href="@Url.Action("Index", "Home")"
+                       class="standard-logo"
+                       data-dark-logo="~/images/logo-dark.png">
+                         Estudio Lopez&nbsp; <div style="color: #1ABC9C;">Giacomelli</div> 
+                    </a>
+                    <a href="@Url.Action("Index", "Home")"
+                       class="retina-logo"
+                       data-dark-logo="~/images/logo-dark@2x.png">
+                       Estudio Lopez&nbsp; <div style="color: #1ABC9C;">Giacomelli</div> 
+                    </a> -->
+                    <a href="@Url.Action("Index", "Home")"
+                    class="standard-logo"><img src="/images/logo.png" alt="Estudio Lopez Giacomelli"></a>
+                    <a href="@Url.Action("Index", "Home")"
+                    class="retina-logo" ><img src="/images/logo.png" alt="Estudio Lopez Giacomelli"></a>
+                </div>
+                <!-- #logo end -->
+
+                <div id="primary-menu-trigger">
+                    <svg class="svg-trigger" viewBox="0 0 100 100">
+                        <path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path>
+                        <path d="m 30,50 h 40"></path>
+                        <path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
+                    </svg>
+                </div>
+
+                <!-- Primary Navigation
+                        ============================================= -->
+                <nav class="primary-menu">
+                    <ul class="menu-container">
+
+                        <li class="menu-item @Html.IsSelected(action:"Index",controller:"Home",cssClass:"current")">
+                            <a class="menu-link" href="@Url.Action("Index", "Home")">Inicio</a>
+                        </li>
+                        <!-- <li class="menu-item @Html.IsSelected(action:"Index",controller:"AboutUs",cssClass:"current")">
+                            <a class="menu-link" href="@Url.Action("Index", "AboutUs")">Nosotros</a>
+                        </li> -->
+                        <li class="menu-item @Html.IsSelected(action:"Index",controller:"Services",cssClass:"current")">
+                            <a class="menu-link" href="#"><div>Accidentes</div></a>
+                            <ul class="sub-menu-container">
+                                <li class="menu-item">
+                                    <a class="menu-link" href="#"><div>De Tránsito</div></a>
+                                    <ul class="sub-menu-container">
+                                        <li class="menu-item"><a class="menu-link" href="@Url.Action("como-actuar-ante-un-accidente-de-tránsito", "Services")">Como actuar ante un accidente de tránsito</a></li>
+                                        <li class="menu-item"><a class="menu-link" href="@Url.Action("accidentes-en-transporte-publico", "Services")">En Transporte publico</a></li>
+                                        <li class="menu-item"><a class="menu-link" href="@Url.Action("accidentes-en-auto", "Services")">En Auto</a></li>
+                                        <li class="menu-item"><a class="menu-link" href="@Url.Action("accidentes-en-moto", "Services")">En Moto</a></li>
+                                        <li class="menu-item"><a class="menu-link" href="@Url.Action("accidentes-en-bicicleta", "Services")">En bicicleta</a></li>
+                                        <li class="menu-item"><a class="menu-link" href="@Url.Action("accidentes-como-acompanantes", "Services")">Como acompañante</a></li>
+                                        <li class="menu-item"><a class="menu-link" href="@Url.Action("accidentes-como-peatón", "Services")">Como peatón</a></li>
+                                        <li class="menu-item"><a class="menu-link" href="@Url.Action("destruccion-total", "Services")">Destruccion total</a></li>
+                                        <li class="menu-item"><a class="menu-link" href="@Url.Action("accidentes-de-tránsito", "Faq")">Preguntas frecuentes</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="#"><div>Laborales</div></a>
+                                    <ul class="sub-menu-container">
+                                        <li class="menu-item"><a class="menu-link" href="@Url.Action("Covid19", "Services")" >Covid-19</a></li>
+                                        <li class="menu-item"><a class="menu-link" href="@Url.Action("accidentes-de-trabajo", "Services")">En ocasión del trabajo</a></li>
+                                        <li class="menu-item"><a class="menu-link" href="@Url.Action("accidentes-in-itinere", "Services")">In itinere</a></li>
+                                        <li class="menu-item"><a class="menu-link" href="@Url.Action("enfermedades-profesionales", "Services")">Enfermedades profesionales</a></li>
+                                        <li class="menu-item"><a class="menu-link" href="@Url.Action("accidentes-laborales", "Faq")">Preguntas frecuentes</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-item @Html.IsSelected(controller:"Dismissals",cssClass:"current") ">
+                            <a href="#" class="menu-link"><div>Despidos</div></a>
+                            <ul class="sub-menu-container">
+                                <li class="menu-item"><a class="menu-link @Html.IsSelected(controller:"Dismissals",cssClass:"current",action:"derechos-del-trabajador")" href="@Url.Action("derechos-del-trabajador", "Dismissals")">Derechos del trabajador</a></li>
+                                <li class="menu-item"><a class="menu-link @Html.IsSelected(controller:"Calculators",cssClass:"current",action:"despidos")" href="@Url.Action("despidos", "Calculators")">Calculadora Despido</a></li>
+                                <li class="menu-item"><a class="menu-link @Html.IsSelected(controller:"FAQ",cssClass:"current",action:"despidos")" href="@Url.Action("despidos", "FAQ")">Preguntas Frecuentes</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item @Html.IsSelected(controller:"Calculators",cssClass:"current") ">
+                            <a href="#" class="menu-link"><div>Calculadoras</div></a>
+                            <ul class="sub-menu-container">
+                                <li class="menu-item"><a class="menu-link @Html.IsSelected(controller:"Calculators",cssClass:"current",action:"accidentes-laborales")" href="@Url.Action("accidentes-laborales", "Calculators")">Calculadora accidente laboral</a></li>
+                                <li class="menu-item"><a class="menu-link @Html.IsSelected(controller:"Calculators",cssClass:"current",action:"accidentes-de-tránsito")" href="@Url.Action("accidentes-de-tránsito", "Calculators")">Calculadora accidente de tránsito</a></li>
+                                <li class="menu-item"><a class="menu-link @Html.IsSelected(controller:"Calculators",cssClass:"current",action:"despidos")" href="@Url.Action("despidos", "Calculators")">Calculadora despido</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item @Html.IsSelected(controller:"FAQ",cssClass:"current") ">
+                            <a href="#" class="menu-link"><div>Preguntas frecuentes</div></a>
+                            <ul class="sub-menu-container">
+                                <li class="menu-item"><a class="menu-link @Html.IsSelected(controller:"FAQ",cssClass:"current",action:"accidentes-laborales")" href="@Url.Action("accidentes-laborales", "FAQ")">Accidentes laborales</a></li>
+                                <li class="menu-item"><a class="menu-link @Html.IsSelected(controller:"FAQ",cssClass:"current",action:"accidentes-de-tránsito")" href="@Url.Action("accidentes-de-tránsito", "FAQ")">Accidentes de tránsito</a></li>
+                                <li class="menu-item"><a class="menu-link @Html.IsSelected(controller:"FAQ",cssClass:"current",action:"despidos")" href="@Url.Action("despidos", "FAQ")">Despidos</a></li>
+                            </ul>
+                        </li>
+
+                    <li class="menu-item @Html.IsSelected(action: "index", controller: "Contacto", cssClass: "current")">
+                        <a class="menu-link" href="@Url.Action("index", "Contacto")">Contáctenos</a>
+                    </li>
+
+                    </ul>
+                </nav>
+                
+                <div class="slider-social  d-lg-block d-none clearfix">
+					<a href="https://www.facebook.com/Estudio-Jur%C3%ADdico-Lopez-Giacomelli-2000856223478787" target="_blank" class="social-icon si-small si-borderless si-facebook si-text-color ">
+						<i class="icon-facebook"></i>
+						<i class="icon-facebook"></i>
+					</a>
+					<a href="https://twitter.com/__semicolon" target="_blank" class="social-icon si-small si-borderless si-twitter si-text-color">
+						<i class="icon-twitter"></i>
+						<i class="icon-twitter"></i>
+					</a>
+					<a href="https://instagram.com/semicolonweb" target="_blank" class="social-icon si-small si-borderless si-instagram si-text-color">
+						<i class="icon-instagram"></i>
+						<i class="icon-instagram"></i>
+					</a>
+                </div>
+          
+                <!-- #primary-menu end -->
+            </div>
+        </div>
+    </div>
+</header>
+<!-- #header end -->

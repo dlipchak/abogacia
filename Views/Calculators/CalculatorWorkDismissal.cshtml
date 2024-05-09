@@ -1,0 +1,286 @@
+﻿<title class="logo">Calculadora de indemnización por despido</title>
+
+<section
+  id="page-title"
+  class="calculatorHeader calculatorDismissalHeader min-vh-60 page-title-parallax page-title-dark include-header"
+>
+  <div class="container clearfix">
+    <div>
+      <h3 class="serviceTitle">Despidos</h3>
+    </div>
+
+    <h1 class="serviceTitle">Calculadora de indemnización</h1>
+  </div>
+</section>
+
+<section id="content" class="calculatorWorkDismissal">
+  <div class="content-wrap pt-0">
+    <div class="section mt-0">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-6 bg-light border">
+            <form class="">
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label for="startDate"
+                    ><small>*</small> Fecha de ingreso:</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="startDate"
+                    name="startDate"
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label for="endDate"
+                    ><small>*</small> Fecha de despido:</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="endDate"
+                    name="endDate"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label for="bestSalary"
+                    ><small>*</small> Mejor sueldo bruto:</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="bestSalary"
+                    name="bestSalary"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label for="notice"><small>*</small> Hubo preaviso:</label>
+                  <select
+                    id="noticeSelect"
+                    class="form-control"
+                    name="preaviso"
+                  >
+                    <option selected id="noNotice">Sin preaviso</option>
+                    <option id="notice">Con preaviso</option>
+                  </select>
+                </div>
+              </div>
+
+              <button
+                class="btn btn-success"
+                type="button"
+                disabled
+                id="btnCalculate"
+              >
+                Calcular
+              </button>
+              <div class="style-msg successmsg invisible">
+                <div class="sb-msg">
+                  <span id="result" class="result"></span>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <p>
+              La indemnización por
+              <span class="green">“despido sin causa”</span> está directamente
+              ligada a su antigüedad y tal como lo contempla el art 245 de la
+              LCT es igual a
+              <span class="green">
+                1 mes de sueldo por cada año de servicio o fracción mayor de
+                TRES (3) meses </span
+              >, tomando como referencia la mejor remuneración mensual, normal y
+              habitual del último año.
+            </p>
+            <p>
+              <b class="green">MEJOR SUELDO BRUTO:</b> mejor remuneración
+              mensual, normal y habitual, es decir, el salario más elevado que
+              usted percibió durante el último año incluyendo horas extras,
+              proporcional de aguinaldo y demás conceptos no remunerativos
+              (bonos, propinas, comisiónes, viáticos etc.) en la medida en que
+              su percepción sea normal y habitual.
+            </p>
+            <p>
+              <b class="green"> PREAVISO:</b> notificación fehaciente efectuada
+              por el empleador respecto de la decisión de concluir con la
+              relación laboral que los une. El empleador debe informar al
+              trabajador por carta documento con una antelación mínima de 15
+              días que varía según la antigüedad del trabajador.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <p>
+        Al producirse la desvinculación de un trabajador debemos
+        <span class="green">
+          examinar si efectivamente se trata de un despido sin causa
+        </span>
+        o si por el contrario el empleador contaba con motivos suficientes para
+        desvincular al trabajador. Las leyes laborales son estrictas en ese
+        sentido a los fines de proteger a los trabajadores. Pese a ello,
+        <span class="green">
+          en muchas oportunidades el empleador invoca causas que no cumplen los
+          estándares mínimos fijados por las leyes laborales </span
+        >. De esa manera
+        <span class="green">
+          presionan al trabajador para que acepte la liquidación final por una
+          suma inferior
+        </span>
+        a la que en verdad le corresponde. Es por ello que
+        <span class="green">
+          antes de firmar cualquier liquidación es importante que consulte a
+          nuestros abogados
+        </span>
+        especializados en derecho laboral para obtener la mejor indemnización.
+      </p>
+      <h4>¿COMO SE CALCULA LA INDEMNIZACIÓN POR DESPIDO SIN CAUSA?</h4>
+      <p>
+        La indemnización por “despido sin causa” está directamente ligada a su
+        antigüedad y tal como lo contempla el art 245 de la LCT es igual a
+        <span class="green">
+          1 mes de sueldo por cada año de servicio o fracción mayor de TRES (3)
+          meses </span
+        >, tomando como referencia la mejor remuneración mensual, normal y
+        habitual del último año.
+      </p>
+      <h4>¿COMO SE CALCULA LA MEJOR REMUNERACIÓN NORMAL Y HABITUAL?</h4>
+      <p>
+        Al hablar de la
+        <span class="green">mejor remuneración mensual, normal y habitual</span>
+        nos referimos al salario más elevado que usted percibió durante el
+        último año incluyendo horas extras, proporcional de aguinaldo y demás
+        conceptos no remunerativos (bonos, propinas, comisiónes, viáticos etc.)
+        en la medida en que su percepción sea normal y habitual.
+      </p>
+      <h4>
+        ¿EXISTEN DIFERENCIAS ENTRE LOS CONCEPTOS DE “LIQUIDACIÓN FINAL” E
+        “INDEMNIZACIÓN POR DESPIDO”?
+      </h4>
+      <p>
+        Un error bastante habitual es confundir ambos conceptos considerando que
+        definen lo mismo. Sin embargo, cuando hablamos de
+        <span class="green">“liquidación final”</span> nos referimos a toda
+        <span class="green">
+          suma que le corresponde al trabajador al producirse la desvinculación
+          independientemente de las causas que la motivaron (despido con o sin
+          causa o renuncia).
+        </span>
+        Esto significa que al trabajador siempre le corresponderá el cobro de
+        las sumas que comprenden el concepto de “liquidación final” (vacaciones
+        proporcionales, SAC proporcional, etc.). Distinto es el caso de la
+        <span class="green"> “indemnización por despido sin causa” </span> que
+        deberá sumarse al importe de la “liquidación final” siempre y cuando el
+        despido se produzca sin una causa justa. Como hemos visto la
+        “indemnización por despido sin causa está vinculada en forma directa a
+        la antigüedad del trabajador siendo equivalente a
+        <span class="green">
+          UN (1) mes de sueldo por cada año de servicio o fracción mayor de TRES
+          (3) meses.
+        </span>
+      </p>
+
+      <p>
+        Es por esa razón que resulta
+        <span class="green">
+          imprescindible consultar con nuestros abogados especializados en
+          derecho del trabajo al momento de recibir la noticia de que hemos sido
+          despedidos
+        </span>
+        para conocer en profundidad los derechos que nos asisten.
+      </p>
+
+      <h4>¿QUÉ ES EL DESPIDO INDIRECTO?</h4>
+      <p>
+        Cuando el empleador incumple con sus obligaciones coloca al trabajador
+        en una situación tal que puede configurar una “injuria”. Es decir que si
+        la falta del empleador es suficientemente grave (ejemplo: falta de pago
+        del salario, trabajador empleado “en negro”, abuso del ius variandi,
+        etc) el
+        <span class="green">
+          trabajador mediante la debida intimación por telegrama a su patron
+          podría considerarse “despedido sin causa”.
+        </span>
+      </p>
+      <p>
+        Como vimos anteriormente, esto es muy importante ya que
+        <span class="green">
+          muchos trabajadores ante la falta de pago de su salario, o conductas
+          abusivas de parte de su patrón presentan la renuncia y con ello
+          resignan la parte más importante de su indemnización
+        </span>
+        que es la “indemnización por antigüedad”. En el caso del despido
+        indirecto, si el trabajador adopta los pasos que corresponden puede
+        considerarse “despedido” sin necesidad de perder el derecho a cobrar la
+        “indemnización por antigüedad”.
+      </p>
+      <h4>¿QUÉ ES UNA INDEMNIZACIÓN AGRAVADA Y EN QUÉ CASOS APLICA?</h4>
+      <p>
+        Cabe destacar asimismo que existe en determinados casos una protección
+        especial para el trabajador. De producirse el despido en las
+        circunstancias que analizaremos a continuación el empleador deberá
+        abonar una indemnización agravada:
+      </p>
+      <ol class="ml-3">
+        <li>
+          <span class="green">
+            Despido de trabajador sin registrar o “en negro” (total o
+            parcialmente):
+          </span>
+          En estos casos son 2 las leyes aplicables: la 24.013 y la 25.323. Si
+          el trabajador intima a su empleador a registrar debidamente la
+          relación previo a ser despedido se aplicarán en forma combinada las
+          indemnizaciónes establecidas en ambas leyes. Si la intimación se
+          produjera luego de despedido aplicarán únicamente las indemnizaciónes
+          que establece la ley 25.323. En conclusión, será siempre conveniente
+          intimar previo a la disolución del vínculo. Recuerde que en caso de
+          estar trabajando en negro las indemnizaciónes de probarse la
+          existencia de esa relación laboral serán mucho más importantes.
+        </li>
+        <li>
+          <span class="green">Protección del Casamiento:</span> también tiene el
+          trabajador/a la obligación de notificar (mediante TCL) que se va a
+          casar junto con la fecha de casamiento. Si el despido se produce
+          dentro de los 3 meses anteriores al casamiento y 6 meses posteriores
+          al mismo operará la misma presunción que en el caso de maternidad y el
+          empleador deberá abonar una multa adicional de 1 año de remuneraciones
+          ( es decir 13 sueldos, al incluir el SAC)
+        </li>
+        <li>
+          <span class="green">Protección de la Maternidad:</span> para gozar de
+          dicha protección la trabajadora deberá en primer lugar notificar al
+          empleador (mediante TCL) su situación de embarazo y la fecha presunta
+          de parto. Si el despido se produce desde 7 meses y medio antes del
+          parto o 7 meses y medio después, se presume que el despido se debe a
+          la notificación enviada y en ese caso el empleador deberá abonar una
+          multa adicional de 1 año de remuneraciones ( es decir 13 sueldos, al
+          incluir el SAC).
+        </li>
+      </ol>
+      <p>
+        Como puede observarse, cuando se produce un despido existe una gran
+        variedad de alternativas que deben considerarse para conocer la
+        indemnización que corresponde al trabajador como consecuencia de dicha
+        disolución.
+      </p>
+      <p>
+        Recuerde siempre que estamos para ayudarlo y su consulta no molesta.
+      </p>
+
+      @Html.Partial("WorkDismissalFeatures")
+    </div>
+    <div class="divider"></div>
+
+    <div class="container clearfix mb-5">@Html.Partial("CalculatorsLinks")</div>
+  </div>
+</section>

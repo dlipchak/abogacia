@@ -1,0 +1,649 @@
+.panel-title a {
+  color: #222;
+}
+
+.panel-title a:hover {
+  color: var(--themecolor);
+}
+
+.panel-default {
+  border-bottom: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.result {
+  font-weight: bold;
+}
+
+a.current {
+  color: var(--themecolor) !important;
+}
+
+#header.full-header #logo {
+  font-size: 27px;
+}
+
+.serviceImage {
+  object-fit: cover;
+  height: 400px;
+}
+
+.heading-block:after {
+  display: inline;
+}
+
+.contact-us-spinner {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: visible;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.AccidentesEnTransportePublico {
+  padding: 250px 0px !important;
+  background-image: url("/images/services/accidente-en-transporte-publico.jpeg");
+  background-size: cover !important;
+  background-position: 0px -469.481px !important;
+}
+
+@media (max-width: 991.98px) {
+  .AccidentesEnTransportePublico {
+    padding: 116px 0px !important;
+    background-position: 0px 0px !important;
+  }
+}
+
+.Covid19 {
+  padding: 250px !important;
+  background-image: url("/images/services/covid19.jpeg") !important;
+  background-size: cover !important;
+  background-position: 64% !important;
+}
+
+@media (max-width: 991.98px) {
+  .Covid19 {
+    padding: 0px !important;
+    background: url("/images/services/enfermedades-profesionales.jpeg") 80% /
+      cover no-repeat !important;
+  }
+}
+
+.HowToActOnTrafficAccident {
+  padding: 250px 0px !important;
+  background-image: url("/images/services/accidentesDeTransito.jpeg") !important;
+  background-size: cover !important;
+  background-position: 0px 59.519px !important;
+}
+
+@media (max-width: 991.98px) {
+  .HowToActOnTrafficAccident {
+    padding: 0px !important;
+    background-position: 0px 0px !important;
+  }
+}
+
+.AccidentesEnAuto {
+  padding: 250px !important;
+  background-image: url("/images/services/accidente-en-automovil.jpg") !important;
+  background-size: cover !important;
+  background-position: 0px 50px !important;
+}
+
+@media (max-width: 991.98px) {
+  .AccidentesEnAuto {
+    padding: 0px !important;
+    background-position: 79% !important;
+  }
+}
+
+.AccidentesEnMoto {
+  padding: 250px !important;
+  background-image: url("/images/services/accidente-en-moto.jpg") !important;
+  background-size: cover !important;
+  background-position: 0px -320.481px !important;
+}
+
+@media (max-width: 991.98px) {
+  .AccidentesEnMoto {
+    padding: 0px !important;
+    background-position: 75% !important;
+  }
+}
+
+.AccidentesEnBicicleta {
+  padding: 250px !important;
+  background-image: url("/images/services/accidente-en-bicicleta.jpg") !important;
+  background-size: cover !important;
+  background-position: 0px -151.481px !important;
+}
+
+@media (max-width: 991.98px) {
+  .AccidentesEnBicicleta {
+    padding: 0px !important;
+    background: url("/images/services/accidente-en-bicicleta.jpg") 15% / cover
+      no-repeat !important;
+  }
+}
+
+.AccidentesComoAcompanantes {
+  padding: 250px !important;
+  background-image: url("/images/services/accidentes-como-acompanantes.jpeg") !important;
+  background-size: cover !important;
+  background-position: 0px -151.481px !important;
+}
+
+@media (max-width: 991.98px) {
+  .AccidentesComoAcompanantes {
+    padding: 0px !important;
+    background: url("/images/services/accidentes-como-acompanantes.jpeg") 17% /
+      cover no-repeat !important;
+  }
+}
+
+.AccidentesComoPeaton {
+  padding: 250px !important;
+  background-image: url("/images/services/peatones.jpeg") !important;
+  background-size: cover !important;
+  background-position: 0px -151.481px !important;
+}
+
+@media (max-width: 991.98px) {
+  .AccidentesComoPeaton {
+    padding: 0px !important;
+    background: url("/images/services/peatones.jpeg") 17% / cover no-repeat !important;
+  }
+}
+
+.DestruccionTotal {
+  padding: 250px !important;
+  background-image: url("/images/services/destruccion-total.jpeg") !important;
+  background-size: cover !important;
+  background-position: 0px -151.481px !important;
+}
+
+@media (max-width: 991.98px) {
+  .DestruccionTotal {
+    padding: 0px !important;
+    background: url("/images/services/destruccion-total.jpeg") 50% / cover
+      no-repeat !important;
+  }
+}
+
+.AccidentesDeTrabajo {
+  padding: 250px !important;
+  background-image: url("/images/services/accidentes-en-ocasion-del-trabajo.jpeg") !important;
+  background-size: cover !important;
+  background-position: 0px -151.481px !important;
+}
+
+@media (max-width: 991.98px) {
+  .AccidentesDeTrabajo {
+    padding: 0px !important;
+    background: url("/images/services/accidentes-en-ocasion-del-trabajo.jpeg")
+      50% / cover no-repeat !important;
+  }
+}
+
+.AccidentesInItinere {
+  padding: 250px !important;
+  background-image: url("/images/services/accidentes-initinere.jpeg") !important;
+  background-size: cover !important;
+  background-position: 0px -151.481px !important;
+}
+
+@media (max-width: 991.98px) {
+  .AccidentesInItinere {
+    padding: 0px !important;
+    background-position: 50% !important;
+  }
+}
+
+/* .choqueSinSeguro {
+  background: url("/images/services/choque-sin-seguro.jpeg") center top / cover
+    no-repeat !important;
+}
+
+
+@media (max-width: 991.98px) {
+  .choqueSinSeguro {
+    padding: 0px !important;
+    background: url(/images/services/choque-sin-seguro.jpeg) 50% / cover
+      no-repeat !important;
+  }
+} */
+
+.EnfermedadesProfesionales {
+  padding: 250px !important;
+  background-image: url("/images/services/enfermedades-profesionales.jpeg") !important;
+  background-size: cover !important;
+  background-position: 98% !important;
+}
+
+@media (max-width: 991.98px) {
+  .EnfermedadesProfesionales {
+    padding: 0px !important;
+    background-position: 90% !important;
+  }
+}
+
+.workerRights {
+  padding: 250px !important;
+  background-image: url("/images/services/WorkerRights.jpeg") !important;
+  background-size: cover !important;
+  background-position: 0px -151.481px !important;
+}
+
+@media (max-width: 991.98px) {
+  .workerRights {
+    /* background: url("/images/services/WorkerRights.jpeg") 20% / cover no-repeat !important; */
+    padding: 0px !important;
+    background-position: 0px 0px !important;
+  }
+}
+
+.galleryImg1 {
+  background-image: url("/images/home/gallery/1.jpeg");
+  background-position: 0% 92%;
+}
+
+@media (max-width: 991.98px) {
+  .galleryImg1 {
+    background-image: url("/images/home/gallery/1.jpeg");
+    background-position: 40% 72%;
+  }
+}
+
+.galleryImg2 {
+  background-image: url("/images/home/gallery/2.jpeg");
+  background-position: 0% 26%;
+}
+
+.galleryImg3 {
+  background-image: url("/images/home/gallery/3.jpeg");
+  background-position: top top;
+}
+
+@media (max-width: 575.98px) {
+  .container,
+  #header.full-header .container,
+  .container-fullwidth {
+    width: 100% !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+.serviceTitle {
+  line-height: 55px !important;
+  display: inline-block !important;
+  background: rgba(26, 188, 156, 0.65) !important;
+  padding: 12px !important;
+  text-align: left !important;
+}
+
+.serviceCategoryTitle {
+  line-height: 55px !important;
+  background: rgba(26, 188, 156, 0.65) !important;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: left !important;
+  margin-bottom: 5px;
+  display: inline-block !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 991.98px) {
+  .serviceCategoryTitle {
+    float: left !important;
+    /* padding-left: 15px;
+    padding-right: 54px; */
+  }
+}
+
+@media (max-width: 991.98px) {
+  .serviceTitle {
+    font-size: 30px !important;
+    line-height: 32px !important;
+    float: left;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #page-title.page-title-dark {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.trafficAccidentFaqHeader {
+  padding: 250px !important;
+  background: url("/images/faq/faq-traffic-accident.jpeg") center center / cover
+    no-repeat;
+}
+
+@media (max-width: 991.98px) {
+  .trafficAccidentFaqHeader {
+    padding: 0px !important;
+    background-position: -385px 0px !important;
+  }
+  /* .dismissalsFaqHeader {
+    padding: 0px !important;
+    background-position: -385px 0px !important;
+  } */
+}
+
+.workAccidentFaqHeader {
+  padding: 250px !important;
+  background: url("/images/faq/faq-work-accident.jpeg") center center / cover
+    no-repeat;
+}
+
+@media (max-width: 991.98px) {
+  .workAccidentFaqHeader {
+    padding: 0px !important;
+  }
+}
+
+.dismissalsFaqHeader {
+  padding: 250px !important;
+  background: url("/images/faq/faq-dismissals-2.jpeg") right center / cover
+    no-repeat;
+}
+
+@media (max-width: 991.98px) {
+  .dismissalsFaqHeader {
+    padding: 0px !important;
+    background-position: 0px 0px !important;
+  }
+}
+
+.calculatorWorkAccidentHeader {
+  padding: 250px !important;
+  background: url("/images/calculators/work-accident-calculator.jpg") center
+    center / cover no-repeat;
+}
+
+.calculatorTrafficAccidentHeader {
+  padding: 250px !important;
+  background: url("/images/calculators/traffic-accident-calculator.jpg") center
+    center / cover no-repeat;
+}
+
+.calculatorDismissalHeader {
+  padding: 250px !important;
+  background: url("/images/calculators/dismissal-calculator.jpg") center center /
+    cover no-repeat;
+}
+
+.stretched #gotoTop {
+  bottom: 100px;
+}
+
+@media (max-width: 991.98px) {
+  .calculatorHeader {
+    padding: 0px !important;
+    background-position: 0px 0px !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .workerRightsIconsFirstCol {
+    padding-bottom: 36px !important;
+  }
+
+  .border-small-device::after {
+    content: "" !important;
+    position: absolute !important;
+    top: calc(64px + 7px) !important;
+    left: 59px !important;
+    width: 2px !important;
+    height: calc(100% - 79px) !important;
+    background-color: #eee !important;
+    z-index: 0 !important;
+  }
+}
+
+.workerRightsIconsSecondCol {
+  margin-bottom: 100px !important;
+}
+
+/* @media (max-width: 991.98px) {
+  .faqHeader {
+    padding: 0px !important;
+    background-position: -400px 0px !important;
+  }
+} */
+
+/* .galleryTitle {
+  line-height: 55px !important;
+  display: inline-block !important;
+  background: rgba(26, 188, 156, 0.65) !important;
+  padding: 12px !important;
+  text-align: left !important;
+} */
+
+@media (max-width: 991.98px) {
+  .galleryTitle {
+    font-size: 30px;
+  }
+}
+
+.galleryTitle {
+  font-size: 40px;
+}
+
+#page-title.page-title-dark h3 {
+  color: rgba(255, 255, 255, 0.9) !important;
+  padding-right: 9px;
+}
+
+#logo a {
+  font-size: 26px !important;
+  font-weight: 500 !important;
+}
+
+.contact-us-whatsapp,
+.contact-us-whatsapp:hover {
+  width: 60px;
+  height: 60px;
+  z-index: 599;
+  position: fixed;
+  line-height: 60px;
+  text-align: center;
+  top: auto;
+  right: auto;
+  left: 19px;
+  bottom: 19px;
+  cursor: pointer;
+  background-color: #25d366;
+  color: #fff;
+  font-size: 36px;
+  border-radius: 50px;
+}
+
+#footer {
+  margin-top: 0px !important;
+}
+
+.feature-box-border .feature-box {
+  position: relative;
+}
+
+.feature-box-border .feature-box:not(.noborder)::after {
+  content: "";
+  position: absolute;
+  top: calc(64px + 7px);
+  left: 59px;
+  width: 2px;
+  height: calc(100% - 79px);
+  background-color: #eee;
+  z-index: 0;
+}
+/* 
+.feature-box-border .fbox-color.feature-box:not(.noborder)::after {
+background-color: #0f6458;
+} */
+
+.feature-box-border .fbox-icon i,
+.feature-box-border .fbox-border.fbox-light .fbox-icon i {
+  line-height: 60px;
+  font-size: 24px;
+  z-index: 1;
+  text-align: center;
+}
+
+.fbox-border.fbox-light .fbox-icon a {
+  background-color: #fff;
+}
+
+.fbox-border.fbox-effect .fbox-icon i::after {
+  background-color: #0f6458;
+}
+
+/* .fbox-content {
+  height: 75px;
+} */
+
+.trafficAccidentSteps .fbox-content {
+  height: auto !important;
+}
+
+@font-face {
+  font-family: "webfont-medical-icons";
+  src: url("/fonts/webfont-medical-icons.eot");
+  src: url("/fonts/webfont-medical-icons.eot?#iefix")
+      format("embedded-opentype"),
+    url("/fonts/webfont-medical-icons.ttf") format("truetype"),
+    url("/fonts/webfont-medical-icons.woff") format("woff"),
+    url("/fonts/webfont-medical-icons.svg#webfont-medical-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-medical-"],
+[class*=" icon-medical-"] {
+  display: inline-block;
+  font-family: "webfont-medical-icons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-medical-ambulance:before {
+  content: "\e66e";
+}
+
+.green {
+  color: #1abc9c !important;
+}
+
+a {
+  font-weight: bolder;
+}
+
+#logo img {
+  height: 65px !important;
+}
+
+@media (min-width: 992px) {
+  .sticky-header-shrink #header-wrap #logo img {
+    height: 45px !important;
+  }
+}
+
+@media (max-width: 414px) {
+  #logo img {
+    height: 40px !important;
+  }
+}
+
+#primary-menu-trigger {
+  width: 36px !important;
+}
+
+@media (max-width: 320px) {
+  #logo img {
+    height: 30px !important;
+  }
+}
+
+@media (max-width: 414px) {
+  #calculatorLinks .button.button-desc {
+    padding: 24px 12px;
+    font-size: 1.02rem;
+  }
+}
+
+small {
+  color: red;
+  font-size: 14pt;
+}
+
+.favicon {
+  color: red;
+}
+/* 
+.section {
+  margin: 0px 0 !important;
+  padding: 15px 0 !important;
+} */
+
+/* .content-wrap {
+  padding: 0 !important;
+} */
+
+#serviceSection {
+  margin: 0px 0 !important;
+  padding: 15px 0 !important;
+}
+
+.promo .icon-check-circle1 {
+  font-size: 34px;
+}
+
+.promo .iconlist > li [class^="icon-"]:first-child,
+.iconlist > li [class*=" icon-"]:first-child {
+  width: 19px;
+  top: 5px;
+}
+
+@media (max-width: 414px) {
+  .promoInmediata {
+    margin-left: 40px;
+  }
+}
+
+.footerLogo {
+  color: #1abc9c;
+}
+
+.work-accident-calculator-button,
+.work-accident-calculator-button:hover {
+  background-color: #249ece !important;
+}
+
+.traffic-accident-calculator-button,
+.traffic-accident-calculator-button:hover {
+  background-color: #002bb3 !important;
+}
+
+.dismissal-calculator-button,
+.dismissal-calculator-button:hover {
+  background-color: #d53d0d !important;
+}
