@@ -209,7 +209,6 @@ a.current {
     no-repeat !important;
 }
 
-
 @media (max-width: 991.98px) {
   .choqueSinSeguro {
     padding: 0px !important;
@@ -462,8 +461,8 @@ a.current {
   line-height: 60px;
   text-align: center;
   top: auto;
-  right: auto;
-  left: 19px;
+  right: 18px;
+  left: auto;
   bottom: 19px;
   cursor: pointer;
   background-color: #25d366;
