@@ -9,11 +9,9 @@
     </style>
 }
 
-
-
 @section scripts{
 
-    <script type="text/javascript">
+    <script type="text/javascript" >
         $(function () {
             $(".alert").hide();
             $("#sendBtn").on("click", (e) => {
@@ -41,5 +39,31 @@
             });
         });
     </script>
-
+    <script type="application/ld+json">
+        {
+          "@@context": "https://schema.org",
+          "@@type": "ContactPage",
+          "name": "Contacto",
+          "description": "Página de contacto del Estudio Jurídico López Giacomelli donde los usuarios pueden enviar consultas.",
+          "url": "https://estudiolopezgiacomelli.com.ar/contacto",
+          "contactPoint": {
+            "@@type": "ContactPoint",
+            "telephone": "+54-1161980179",
+            "contactType": "Customer Support",
+            "areaServed": "AR",
+            "availableLanguage": "Spanish"
+          },
+          "address": {
+            "@@type": "PostalAddress",
+            "streetAddress": "Juana Manso 1113, 7mo piso",
+            "addressLocality": "Capital Federal",
+            "addressCountry": "Argentina"
+          },
+          "sameAs": [
+            "https://www.facebook.com/Estudio-Jurídico-Lopez-Giacomelli-2000856223478787",
+            "https://www.instagram.com/estudiolopezgiacomelli/"
+          ]
+        }
+        </script>
+        
 }

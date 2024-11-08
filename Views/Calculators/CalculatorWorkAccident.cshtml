@@ -9,10 +9,10 @@
 >
   <div class="container clearfix">
     <div>
-      <h3 class="serviceTitle">Accidentes laborales</h3>
+      <h3 class="articleTitle">Accidentes laborales</h3>
     </div>
 
-    <h1 class="serviceTitle">Calculadora de indemnización</h1>
+    <h1 class="articleTitle">Calculadora de indemnización</h1>
   </div>
 </section>
 
@@ -219,10 +219,20 @@
   </div>
 </section>
 
-@section styles{
-<link
-  rel="stylesheet"
-  href="~/css/real-estate/css/font-icons.css"
-  type="text/css"
-/>
-}
+<script type="application/ld+json">
+  {
+    "@@context": "https://schema.org",
+    "@@type": "WebApplication",
+    "name": "Calculadora de Indemnización por Accidentes Laborales",
+    "description": "Herramienta para calcular estimaciones de indemnización por accidentes laborales en Argentina, proporcionada por el Estudio Jurídico López Giacomelli.",
+    "url": "https://estudiolopezgiacomelli.com.ar/calculadoras/accidentes-laborales",
+    "applicationCategory": "LegalCalculator",
+    "operatingSystem": "All",
+    "provider": {
+      "@@type": "Organization",
+      "name": "Estudio Jurídico López Giacomelli",
+      "url": "https://estudiolopezgiacomelli.com.ar"
+    }
+  }
+  </script>
+  

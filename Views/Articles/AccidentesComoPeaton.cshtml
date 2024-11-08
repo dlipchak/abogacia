@@ -1,0 +1,73 @@
+﻿<title class="logo">Accidente como peatón</title>
+<h2>¿Qué derechos tiene un peatón accidentado?</h2>
+
+<p>
+  Innumerables campañas de prevención buscan crear una conciencia más amplia en
+  el peatón respecto de los riesgos del tránsito urbano. Lamentablemente la
+  inobservancia de las normas de tránsito junto con la falta de precaución de
+  algunos peatónes dejan un
+  <span class="green"
+    >saldo diario de 20 fallecimientos por accidentes viales</span
+  >
+  en nuestro país.
+</p>
+
+<p>
+  Los peatónes son los
+  <span class="green">usuarios más vulnerables del sistema de tránsito.</span>
+  Ello es así debido a que su tamaño en relación al de un vehículo dificulta su
+  visualización y a que, a diferencia del conductor, no cuentan con la
+  carrocería del vehículo para protegerse. Por otra parte, el uso de telefonía
+  celular y dispositivos electrónicos como tablets o smartphones, ha
+  incrementando significativamente la cantidad de accidentes por las continuas
+  distracciones que provocan.
+</p>
+
+<p><b>La legislación Argentina establece que:</b></p>
+
+<ul>
+  <li>
+    <span class="green">Todo peatón gozará de prioridad de paso</span>, en la
+    medida en que cruce de forma correcta la calzada por las esquinas o sendas
+    peatónales y con el semáforo a su favor, debiendo el conductor detener la
+    marcha del vehículo en dicha circunstancia.
+  </li>
+  <li>
+    En las vías semaforizadas, aún con luz verde,
+    <span class="green"
+      >todo conductor debe permitir la finalización del cruce iniciado por un
+      peatón.</span
+    >
+  </li>
+  <li>
+    Los conductores al aproximarse a la senda peatónal deberán reducir la
+    velocidad; en las bocacalles sin semáforo y cuando sea necesario, deberán
+    <span class="green"
+      >detener por completo el vehículo cediendo espontáneamente el paso a los
+      peatónes</span
+    >, para que puedan atravesar la calzada siguiendo su marcha normal.
+  </li>
+
+  <li>
+    Al realizar un giro para circular por una calzada transversal a la que
+    transitaba el conductor debe respetar la prioridad de paso de los peatónes
+    que atraviesan dicha vía pública por la senda peatónal, deteniendo el
+    vehículo.
+  </li>
+</ul>
+
+@Html.Partial("TrafficAccidentSteps") @Html.Partial("ComoCobroMiIndemnizacion")
+
+@{
+  var jsonLdModel = new JsonLdModel
+  {
+    Headline = Model.ArticleName, 
+    Description = ViewData["Description"].ToString(),
+    Keywords = ViewData["Keywords"].ToString(),
+    ImageName = Model.ImageName, 
+    Category = Model.ArticleCategory, 
+    ArticleBody = "Este artículo ofrece una guía esencial sobre los derechos y pasos a seguir si ha sufrido un accidente como peatón. Nuestro estudio jurídico, compuesto por abogados y profesionales médicos de primer nivel, se especializa en la gestión de reclamos por accidentes de tránsito, incluyendo aquellos en los que el afectado es peatón. Destacamos la vulnerabilidad de los peatones en el tránsito urbano y la importancia de conocer sus derechos para obtener una indemnización justa. Además, proporcionamos consejos prácticos sobre cómo actuar inmediatamente después del accidente, como anotar los datos del vehículo involucrado, tomar fotografías del lugar y buscar asistencia médica. También ofrecemos herramientas para calcular orientativamente la indemnización correspondiente y estamos disponibles para consultas sin compromiso."
+  };
+}
+
+@Html.Partial("_ArticleJsonLdSchema", jsonLdModel)

@@ -3,15 +3,24 @@
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^6.0.0",
+    "critical": "^7.2.1",
+    "cssnano": "^7.0.6",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-cssmin": "^0.2.0",
+    "gulp-fontmin": "^0.7.4",
     "gulp-gzip": "^1.4.2",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-terser": "^1.4.0",
+    "gulp-postcss": "^10.0.0",
+    "gulp-terser": "^1.4.1",
+    "gulp-ttf2woff2": "^5.0.0",
     "gulp-uglify": "^3.0.2",
-    "merge-stream": "^2.0.0"
+    "merge-stream": "^2.0.0",
+    "terser-webpack-plugin": "^5.3.10",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
     "bootstrap": "^4.4.1"

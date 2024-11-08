@@ -1,289 +1,203 @@
-﻿<!-- Document Wrapper
-============================================= -->
+﻿@{
+  ViewData["Title"] = "Estudio Jurídico López Giacomelli - Abogados Especialistas en Argentina";
+  ViewData["Description"] = "Estudio Jurídico especializado en accidentes de tránsito, laborales y despidos. Contáctenos para recibir asesoría legal en Argentina.";
+  ViewData["Keywords"] = "abogados, accidentes de tránsito, accidentes laborales, despidos, derecho laboral, Argentina";
+  ViewData["Canonical"] = "/";
+}
 
-<!-- 
-<section id="slider" class="slider-element slider-parallax swiper_wrapper vh-75 slider-parallax-visible">
-  <div class="slider-inner" style="transform: translate3d(0px, 0px, 0px); height: 384.75px;">
-
-    <div class="swiper-container swiper-parent swiper-container-initialized swiper-container-horizontal" style="cursor: grab;">
-      <div class="swiper-wrapper" style="transition: all 0ms ease 0s; transform: translate3d(-3806px, 0px, 0px);">
-        <div class="swiper-slide dark" style="width: 1903px;">
-          <div class="container ">
-            <div class="slider-caption">
-              <h2 data-animate="fadeInUp">ESPECIALISTAS EN DERECHO LABORAL</h2>
-            </div>
-          </div>
-          <div class="swiper-slide-bg"   style="background-image: url('images/abogacia/1.jpeg')"></div>
-          
-        </div>
-
-        <div class="swiper-slide swiper-slide-active" style="width: 1903px;">
-          <div class="container ">
-            <div class="slider-caption">
-              <h2 data-animate="fadeInUp">ESPECIALISTAS EN DERECHO LABORAL</h2>
-    
-            </div>
-          </div>
-          <div class="swiper-slide-bg"   style="background-image: url('images/abogacia/2.jpeg')"></div>
-        </div>
-        <div class="swiper-slide swiper-slide-active" style="width: 1903px;">
-          <div class="container ">
-            <div class="slider-caption">
-              <h2 data-animate="fadeInUp">ESPECIALISTAS EN DERECHO LABORAL</h2>
-               </div>
-          <div class="swiper-slide-bg"   style="background-image: url('images/abogacia/3.jpeg')"></div>
-        </div>
-      </div>
-      <div class="swiper-slide swiper-slide-active" style="width: 1903px;">
-        <div class="container ">
-          <div class="slider-caption">
-            <h2 data-animate="fadeInUp">ESPECIALISTAS EN DERECHO LABORAL</h2>
-             </div>
-        <div class="swiper-slide-bg"   style="background-image: url('images/abogacia/4.jpeg')"></div>
-      </div>
-    </div>
-    <div class="swiper-slide swiper-slide-active" style="width: 1903px;">
-      <div class="container ">
-        <div class="slider-caption">
-          <h2 data-animate="fadeInUp">ESPECIALISTAS EN DERECHO LABORAL</h2>
-           </div>
-      <div class="swiper-slide-bg"   style="background-image: url('images/abogacia/5.jpeg')"></div>
-    </div>
-  </div>
-      <div class="slider-arrow-left" style="opacity: 1;" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="false"><i class="icon-angle-left"></i></div>
-      <div class="slider-arrow-right swiper-button-disabled" style="opacity: 1;" tabindex="-1" role="button" aria-label="Next slide" aria-disabled="true"><i class="icon-angle-right"></i></div>
-      <div class="slide-number"><div class="slide-number-current">3</div><span>/</span><div class="slide-number-total">3</div></div>
-    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-
-  </div>
-</section> -->
-
-<title class="logo">
-  Abogados, Accidentes de tránsito, Accidentes laborales, Despidos.
-</title>
-
-@section styles{
+@section styles {
   <style>
-    .swiper-slide-bg:before {
-    content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-image: linear-gradient(to bottom right,#002f4b,grey);
-        opacity: .4; 
-  
-    }
-
+      .swiper-slide-bg:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-image: linear-gradient(to bottom right, #002f4b, grey);
+          opacity: 0.4;
+      }
   </style>
-  }
-  
+}
+
+<!-- Page Title -->
+<title>Abogados Especialistas en Accidentes y Despidos - Estudio Jurídico López Giacomelli</title>
+
 @Html.Partial("GalleryPartial")
-<!-- Content
-============================================= -->
 
+<!-- Content Section -->
 <section id="content">
-   <div class="content-wrap">
-    <div class="container clearfix">
-      <div class="row justify-content-center col-mb-50">
-        <div class="col-sm-6 col-lg-4">
-          <div class="feature-box media-box">
-            <div class="fbox-media">
-              <img
-                data-src="images/home/services/accidentesDeTrabajo.jpeg"
-                alt="Why choose Us?"
-                class="lazy"
-              />
-            </div>
-            <div class="fbox-content px-0 ml-2">
-              <h3>Accidentes de trabajo</h3>
-              <p>
-                <ul class="iconlist iconlist-color mb-0">
-                  <li>
-                    <i class="icon-caret-right"></i>
-                    Determinación de incapacidad
-                  </li>
-                  <li>
-                    <i class="icon-caret-right"></i>
-                    Superintendencia de Riesgos del Trabajo
-                  </li>
-                  <li>
-                    <i class="icon-caret-right"></i>
-                    Comisiónes Médicas
-                  </li>
-                  <li>
-                    <i class="icon-caret-right"></i>
-                    Coberturas especiales por Covid-19
-                  </li>
-
-                </ul>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-lg-4">
-          <div class="feature-box media-box">
-            <div class="fbox-media">
-              <img
-                data-src="images/home/services/accidentesDeTransito.jpeg"
-                alt="Why choose Us?"
-                class="lazy"
-              />
-            </div>
-            <div class="fbox-content px-0 ml-2">
-              <h3>Accidentes de tránsito</h3>
-              <p>
-                <ul class="iconlist iconlist-color mb-0">
-                  <li>   <i class="icon-caret-right"></i> Reclamos a aseguradoras por accidentes de tránsito.</li>
-                  <li>   <i class="icon-caret-right"></i> Lesiones a peatónes, motos y ciclistas. </li>
-                  <li>   <i class="icon-caret-right"></i> Acuerdos express con aseguradoras. Reparación integral. </li>
-                  <li>    <i class="icon-caret-right"></i> Rappi, Glovo,
-                      Pedidos Ya, Uber</li>
-                </ul>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-lg-4">
-          <div class="feature-box media-box">
-            <div class="fbox-media">
-              <img data-src="images/home/services/despidos.jpeg" alt="Why choose Us?" class="lazy" />
-            </div>
-            <div class="fbox-content px-0 ml-2">
-              <h3>Despidos</h3>
-              <p>
-                <ul class="iconlist iconlist-color mb-0">
-                  <li>   <i class="icon-caret-right"></i> Indemnizaciones por despido, trabajo en negro.</li>
-                  <li>    <i class="icon-caret-right"></i> Acuerdos en SECLO. Salarios minimos por sector.</li>
-                  <li>    <i class="icon-caret-right"></i>Acoso laboral. Licencias e indemnizaciónes especiales.</li>
-                  <li>    <i class="icon-caret-right"></i>Doble indemnización y Covid 19.</li>
-                  
-                </ul>
-              
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section"> <div class="container  clearfix">
-      @Html.Partial("CalculatorsLinks")
-    </div></div>
-    <!-- <div class="section parallax m-0 border-top-0 dark skrollable skrollable-between" style="background-image: url(&quot;images/baires.jpeg&quot;); padding: 100px 0px; background-position: 0px 28.0277px;" data-bottom-top="background-position:0px 300px;" data-top-bottom="background-position:0px -300px;">
+  <div class="content-wrap">
       <div class="container clearfix">
-
-        <div class="emphasis-title center">
-          <h2 style="font-size: 52px;">Section with Dark Parallax Background</h2>
-        </div>
-
-
-      </div>
-    </div> -->
-   
-    <div class="container clearfix">
-      <div class="row justify-content-center col-mb-50">
-        <div class="col-sm-6 col-lg-4">
-          <div
-            class="heading-block fancy-title border-bottom-0 title-bottom-border"
-          >
-            <h4>POR QUÉ <span>ELEGIRNOS</span>.</h4>
-          </div>
-
-          <p>
-            Somos un estudio jurídico integrado por un sólido equipo de abogados
-            y profesionales médicos especializados en accidentes de tránsito,
-            accidentes de trabajo y derecho laboral. En la actualidad contamos
-            con más de 25 años de experiencia en el área brindando un servicio
-            rápido y eficiente.
-          </p>
-        </div>
-
-        <div class="col-sm-6 col-lg-4">
-          <div
-            class="heading-block fancy-title border-bottom-0 title-bottom-border"
-          >
-            <h4>Nuestra <span>Misión</span>.</h4>
-          </div>
-
-          <p>
-            Somos conscientes del peso que tiene nuestro trabajo en la vida de
-            cada persona. Nuestros firmes valores basados en la equidad, la
-            justicia y el cumplimiento de las leyes son el pilar de nuestro
-            equipo de trabajo. Nuestro objetivo principal es defender sus
-            derechos brindándole siempre un seguimiento personalizado para su
-            máxima tranquilidad.
-          </p>
-        </div>
-
-        <div class="col-sm-6 col-lg-4">
-          <div
-            class="heading-block fancy-title border-bottom-0 title-bottom-border"
-          >
-            <h4>Nuestro <span> trabajo</span>.</h4>
-          </div>
-
-          <p>
-            Gracias a nuestra amplia trayectoria y nuestros conocimientos
-            jurídicos exigiremos el cumplimiento de todos sus derechos
-            obteniendo así la mayor indemnización. Tenga presente que usted no
-            debe realizar pago alguno para iniciar su reclamo y que cobramos
-            únicamente en caso que su reclamo prospere.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="section parallax dark mb-0 skrollable skrollable-between" style="background-image: url('images/home/whatClientsSay/what-clients-say.jpeg');  " data-bottom-top="background-position:0px 70%;" data-top-bottom="background-position:0px 10%;">
-
-      <div class="heading-block center">
-        <h3>Que dicen NUESTROS CLIENTES</h3>
-      </div>
-
-      <div class="fslider testimonial testimonial-full" data-animation="fade" data-arrows="false">
-        <div class="flexslider" style="height: 218.108px;">
-          <div class="slider-wrap">
-
-            <div class="slide flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;" data-thumb-alt="">
-              <div class="testi-image">
-                <a href="#"><img src="images/testimonials/1.jpg" alt="Customer Testimonails" draggable="false"></a>
-              </div>
-              <div class="testi-content">
-                <p>Fueron para mí una gran solución y por eso los recomiendo. Se comportaron profesionalmente durante todo el proceso, manteniendo comunicación y evacuando todas mis dudas en todo momento, demostraron gran capacidad, seriedad y experiencia en la materia.</p>
-                <div class="testi-meta">
-            David Nizt
-               
+          <div class="row justify-content-center col-mb-50">
+              <!-- Feature Boxes -->
+              <div class="col-sm-6 col-lg-4">
+                <div class="feature-box media-box">
+                    <div class="fbox-media">
+                        <picture>
+                            <source data-srcset="images/home/services/accidentesDeTrabajo.avif" type="image/avif">
+                            <source data-srcset="images/home/services/accidentesDeTrabajo.jpeg" type="image/jpeg">
+                            <img data-src="images/home/services/accidentesDeTrabajo.jpeg" alt="Asesoría en Accidentes de Trabajo" class="lazy" />
+                        </picture>
+                    </div>
+                    <div class="fbox-content px-0 ml-2">
+                        <h3>Accidentes de trabajo</h3>
+                        <ul class="iconlist iconlist-color mb-0">
+                            <li><i class="icon-caret-right"></i> Determinación de incapacidad</li>
+                            <li><i class="icon-caret-right"></i> Superintendencia de Riesgos del Trabajo</li>
+                            <li><i class="icon-caret-right"></i> Comisiónes Médicas</li>
+                            <li><i class="icon-caret-right"></i> Coberturas especiales por Covid-19</li>
+                        </ul>
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="slide flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;" data-thumb-alt="">
-              <div class="testi-image">
-                <a href="#"><img src="images/testimonials/2.jpg" alt="Customer Testimonails" draggable="false"></a>
-              </div>
-              <div class="testi-content">
-                <p>Todo 10 Puntos.
-                  Me solucionaron el problema y siempre evacuaron todas las dudas.
-                  Recomendable.</p>
-                <div class="testi-meta">
-    Fernando Pita
-               
+            
+            <div class="col-sm-6 col-lg-4">
+                <div class="feature-box media-box">
+                    <div class="fbox-media">
+                        <picture>
+                            <source data-srcset="images/home/services/accidentesDeTransito.avif" type="image/avif">
+                            <source data-srcset="images/home/services/accidentesDeTransito.jpeg" type="image/jpeg">
+                            <img data-src="images/home/services/accidentesDeTransito.jpeg" alt="Asesoría en Accidentes de Tránsito" class="lazy" />
+                        </picture>
+                    </div>
+                    <div class="fbox-content px-0 ml-2">
+                        <h3>Accidentes de tránsito</h3>
+                        <ul class="iconlist iconlist-color mb-0">
+                            <li><i class="icon-caret-right"></i> Reclamos a aseguradoras por accidentes de tránsito</li>
+                            <li><i class="icon-caret-right"></i> Lesiones a peatones, motos y ciclistas</li>
+                            <li><i class="icon-caret-right"></i> Acuerdos express con aseguradoras</li>
+                            <li><i class="icon-caret-right"></i> Cobertura para Rappi, Glovo, Pedidos Ya, Uber</li>
+                        </ul>
+                    </div>
                 </div>
-              </div>
             </div>
-
+            
+            <div class="col-sm-6 col-lg-4">
+                <div class="feature-box media-box">
+                    <div class="fbox-media">
+                        <picture>
+                            <source data-srcset="images/home/services/despidos.avif" type="image/avif">
+                            <source data-srcset="images/home/services/despidos.jpeg" type="image/jpeg">
+                            <img data-src="images/home/services/despidos.jpeg" alt="Asesoría en Despidos Laborales" class="lazy" />
+                        </picture>
+                    </div>
+                    <div class="fbox-content px-0 ml-2">
+                        <h3>Despidos</h3>
+                        <ul class="iconlist iconlist-color mb-0">
+                            <li><i class="icon-caret-right"></i> Indemnizaciones por despido y trabajo en negro</li>
+                            <li><i class="icon-caret-right"></i> Acuerdos en SECLO y salarios mínimos por sector</li>
+                            <li><i class="icon-caret-right"></i> Acoso laboral y licencias especiales</li>
+                            <li><i class="icon-caret-right"></i> Doble indemnización por Covid-19</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
           </div>
-        
       </div>
 
-    </div>
+      <!-- Calculators Section -->
+      <div class="section">
+          <div class="container clearfix">
+              @Html.Partial("CalculatorsLinks")
+          </div>
+      </div>
 
-  </div>
+      <!-- Why Choose Us Section -->
+      <div class="container clearfix">
+          <div class="row justify-content-center col-mb-50">
+              <div class="col-sm-6 col-lg-4">
+                  <div class="heading-block fancy-title border-bottom-0 title-bottom-border">
+                      <h4>POR QUÉ <span>ELEGIRNOS</span></h4>
+                  </div>
+                  <p>Somos un equipo jurídico de abogados y profesionales médicos con más de 25 años de experiencia en accidentes de tránsito, laborales y derecho laboral.</p>
+              </div>
 
- 
-  </section>
+              <div class="col-sm-6 col-lg-4">
+                  <div class="heading-block fancy-title border-bottom-0 title-bottom-border">
+                      <h4>Nuestra <span>Misión</span></h4>
+                  </div>
+                  <p>Defendemos sus derechos con un enfoque en equidad, justicia y cumplimiento de las leyes, ofreciendo un seguimiento personalizado.</p>
+              </div>
+
+              <div class="col-sm-6 col-lg-4">
+                  <div class="heading-block fancy-title border-bottom-0 title-bottom-border">
+                      <h4>Nuestro <span>Trabajo</span></h4>
+                  </div>
+                  <p>Garantizamos el cumplimiento de todos sus derechos con el objetivo de obtener la mayor indemnización posible. Sólo cobramos si su reclamo tiene éxito.</p>
+              </div>
+          </div>
+      </div>
+
+      <!-- Testimonials Section -->
+      <div class="section parallax dark mb-0 whatClientsSay" data-bottom-top="background-position:0px 70%;" data-top-bottom="background-position:0px 10%;">
+        <div class="heading-block center">
+            <h3>Qué dicen NUESTROS CLIENTES</h3>
+        </div>
+        <div class="fslider testimonial testimonial-full" data-animation="fade" data-arrows="false">
+            <div class="flexslider">
+                <div class="slider-wrap">
+                    <div class="slide">
+                        <div class="testi-image">
+                            <picture>
+                                <source data-srcset="images/testimonials/1.avif" type="image/avif">
+                                <source data-srcset="images/testimonials/1.jpg" type="image/jpeg">
+                                <img data-src="images/testimonials/1.jpg" alt="Testimonio de David Nizt" class="lazy" draggable="false" />
+                            </picture>
+                        </div>
+                        <div class="testi-content">
+                            <p>Fueron una gran solución, mantuvieron comunicación constante y demostraron profesionalismo y experiencia durante todo el proceso.</p>
+                            <div class="testi-meta">David Nizt</div>
+                        </div>
+                    </div>
     
-<!-- #content end -->
-<!-- #wrapper end -->
-<!-- Go To Top
-============================================= -->
+                    <div class="slide">
+                        <div class="testi-image">
+                            <picture>
+                                <source data-srcset="images/testimonials/2.avif" type="image/avif">
+                                <source data-srcset="images/testimonials/2.jpg" type="image/jpeg">
+                                <img data-src="images/testimonials/2.jpg" alt="Testimonio de Fernando Pita" class="lazy" draggable="false" />
+                            </picture>
+                        </div>
+                        <div class="testi-content">
+                            <p>Todo 10 puntos. Me ayudaron a resolver mi problema y siempre respondieron mis dudas. Recomendable.</p>
+                            <div class="testi-meta">Fernando Pita</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  {
+      "@@context": "https://schema.org",
+      "@@type": "LegalService",
+      "name": "Estudio Jurídico López Giacomelli",
+      "url": "https://estudiolopezgiacomelli.com.ar/",
+      "description": "Estudio Jurídico especializado en accidentes de tránsito, laborales y despidos.",
+      "address": {
+          "@@type": "PostalAddress",
+          "streetAddress": "Juana Manso 1113, 7mo piso",
+          "addressLocality": "Buenos Aires",
+          "addressRegion": "CABA",
+          "postalCode": "1107",
+          "addressCountry": "AR"
+      },
+      "telephone": "+54 11 6198 0179",
+      "areaServed": {
+          "@@type": "Place",
+          "name": "Buenos Aires, Argentina"
+      },
+      "aggregateRating": {
+          "@@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "37"
+      },
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "serviceType": ["Accidentes de Tránsito", "Accidentes Laborales", "Derecho Laboral", "Despidos", "Asesoría en Reclamos de Indemnización"]
+  }
+  </script>
+  

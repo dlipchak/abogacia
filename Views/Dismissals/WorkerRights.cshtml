@@ -1,5 +1,4 @@
 ﻿
-
 <title class="logo">
   Derechos del trabajador
   
@@ -8,7 +7,7 @@
   id="page-title"
   class="workerRights  min-vh-60 page-title-parallax page-title-dark include-header"
 >
-<div class="container clearfix"><h1 class="serviceTitle">derechos del trabajador</h1></div>
+<div class="container clearfix"><h1 class="articleTitle">derechos del trabajador</h1></div>
 
 </div>
 </section>
@@ -142,18 +141,11 @@ Como profesionales somos conscientes de la <span class="green">importancia que t
                   </div>
                 </div>
 
-     
-
-         
-
-
-           
               </div>
             </div>
             <div class="col-md-6 workerRightsIconsSecondCol">
               <div class="row feature-box-border col-mb-30 align-items-center">
                
-
                 <div class="col-md-8 feature-box fbox-color">
                   <div class="fbox-icon">
                     <a><i class="icon-exclamation-sign"></i></a>
@@ -215,5 +207,18 @@ Como profesionales somos conscientes de la <span class="green">importancia que t
     </div>
   </section>
 
-
 </section>
+
+@{
+  var jsonLdModel = new JsonLdModel
+  {
+    Headline = ViewData["Title"].ToString(),
+    Description = ViewData["Description"].ToString(),
+    Keywords = ViewData["Keywords"].ToString(),
+    ImageName = "services/WorkerRights.jpeg", 
+    Category = "Derechos del trabajador",     
+    ArticleBody = "Este artículo ofrece una guía esencial sobre cómo actuar tras sufrir un accidente de tránsito. Nuestro estudio jurídico, compuesto por abogados y profesionales médicos de primer nivel, se especializa en la gestión de reclamos por accidentes de tránsito, incluyendo aquellos en los que el afectado es peatón, conductor o pasajero. Destacamos la importancia de anotar los datos del vehículo involucrado, tomar fotografías del lugar y buscar asistencia médica inmediata, incluso si las lesiones parecen leves. Además, proporcionamos herramientas para calcular orientativamente la indemnización correspondiente y estamos disponibles para consultas sin compromiso."
+  };
+}
+
+@Html.Partial("_ArticleJsonLdSchema", jsonLdModel)

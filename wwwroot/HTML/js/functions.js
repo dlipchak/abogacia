@@ -232,8 +232,8 @@ var SEMICOLON = SEMICOLON || {};
 
 			let bootstrapJs = {
 				default: 'body',
-				file: 'plugins.bootstrap.js',
-				error: 'plugins.bootstrap.js: Plugin could not be loaded',
+				file: 'plugins.bootstrap.min.js',
+				error: 'plugins.bootstrap.min.js: Plugin could not be loaded',
 				pluginfn: 'typeof bootstrap !== "undefined"',
 				trigger: 'pluginBootstrapReady',
 				class: 'has-plugin-bootstrap'
@@ -1076,8 +1076,8 @@ var SEMICOLON = SEMICOLON || {};
 			let settings = {
 				element: element,
 				default: '.swiper_wrapper',
-				file: 'plugins.swiper.js',
-				error: 'plugins.swiper.js: Plugin could not be loaded',
+				file: 'plugins.swiper.min.js',
+				error: 'plugins.swiper.min.js: Plugin could not be loaded',
 				execfn: 'SEMICOLON_swiperInit',
 				pluginfn: 'typeof Swiper !== "undefined"',
 				trigger: 'pluginSwiperReady',

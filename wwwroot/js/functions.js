@@ -325,8 +325,8 @@ var SEMICOLON = SEMICOLON || {};
     defaults: function () {
       let easingJs = {
         default: "body",
-        file: "plugins.easing.js",
-        error: "plugins.easing.js: Plugin could not be loaded",
+        file: "plugins.easing.min.js",
+        error: "plugins.easing.min.js: Plugin could not be loaded",
         pluginfn: 'typeof jQuery.easing["easeOutQuad"] !== "undefined"',
         trigger: "pluginEasingReady",
         class: "has-plugin-easing",
@@ -334,8 +334,8 @@ var SEMICOLON = SEMICOLON || {};
 
       let bootstrapJs = {
         default: "body",
-        file: "plugins.bootstrap.js",
-        error: "plugins.bootstrap.js: Plugin could not be loaded",
+        file: "plugins.bootstrap.min.js",
+        error: "plugins.bootstrap.min.js: Plugin could not be loaded",
         pluginfn: 'typeof bootstrap !== "undefined"',
         trigger: "pluginBootstrapReady",
         class: "has-plugin-bootstrap",
@@ -487,8 +487,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: "[data-lightbox]",
-        file: "plugins.lightbox.js",
-        error: "plugins.lightbox.js: Plugin could not be loaded",
+        file: "plugins.lightbox.min.js",
+        error: "plugins.lightbox.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_lightboxInit",
         pluginfn: "$().magnificPopup",
         trigger: "pluginLightboxReady",
@@ -502,8 +502,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".modal-on-load",
-        file: "plugins.lightbox.js",
-        error: "plugins.lightbox.js: Plugin could not be loaded",
+        file: "plugins.lightbox.min.js",
+        error: "plugins.lightbox.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_modalInit",
         pluginfn: "$().magnificPopup",
         trigger: "pluginLightboxReady",
@@ -517,8 +517,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         default:
           'iframe[src*="youtube"],iframe[src*="vimeo"],iframe[src*="dailymotion"],iframe[src*="maps.google.com"],iframe[src*="google.com/maps"]',
-        file: "plugins.fitvids.js",
-        error: "plugins.fitvids.js: Plugin could not be loaded",
+        file: "plugins.fitvids.min.js",
+        error: "plugins.fitvids.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_resizeVideosInit",
         pluginfn: "$().fitVids",
         trigger: "pluginfitVidsReady",
@@ -531,8 +531,8 @@ var SEMICOLON = SEMICOLON || {};
     pageTransition: function () {
       let settings = {
         default: ".page-transition",
-        file: "plugins.pagetransition.js",
-        error: "plugins.pagetransition.js: Plugin could not be loaded",
+        file: "plugins.pagetransition.min.js",
+        error: "plugins.pagetransition.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_pageTransitionInit",
         pluginfn: "$().animsition",
         trigger: "pluginPageTransitionReady",
@@ -546,8 +546,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".lazy",
-        file: "plugins.lazyload.js",
-        error: "plugins.lazyload.js: Plugin could not be loaded",
+        file: "plugins.lazyload.min.js",
+        error: "plugins.lazyload.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_lazyLoadInit",
         pluginfn: 'typeof LazyLoad !== "undefined"',
         trigger: "pluginlazyLoadReady",
@@ -596,8 +596,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         default:
           "[data-class-xl],[data-class-lg],[data-class-md],[data-class-sm],[data-class-xs]",
-        file: "plugins.dataclasses.js",
-        error: "plugins.dataclasses.js: Plugin could not be loaded",
+        file: "plugins.dataclasses.min.js",
+        error: "plugins.dataclasses.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_dataClassesInit",
         pluginfn: 'typeof scwDataClassesPlugin !== "undefined"',
         trigger: "pluginDataClassesReady",
@@ -611,8 +611,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         default:
           "[data-height-xl],[data-height-lg],[data-height-md],[data-height-sm],[data-height-xs]",
-        file: "plugins.dataheights.js",
-        error: "plugins.dataheights.js: Plugin could not be loaded",
+        file: "plugins.dataheights.min.js",
+        error: "plugins.dataheights.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_dataHeightsInit",
         pluginfn: 'typeof scwDataHeightsPlugin !== "undefined"',
         trigger: "pluginDataHeightsReady",
@@ -1144,8 +1144,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".one-page-menu",
-        file: "plugins.onepage.js",
-        error: "plugins.onepage.js: Plugin could not be loaded",
+        file: "plugins.onepage.min.js",
+        error: "plugins.onepage.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_onePageModule",
         pluginfn: 'typeof scwOnePageModulePlugin !== "undefined"',
         trigger: "pluginOnePageModuleReady",
@@ -1427,8 +1427,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".swiper_wrapper",
-        file: "plugins.swiper.js",
-        error: "plugins.swiper.js: Plugin could not be loaded",
+        file: "plugins.swiper.min.js",
+        error: "plugins.swiper.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_swiperInit",
         pluginfn: 'typeof Swiper !== "undefined"',
         trigger: "pluginSwiperReady",
@@ -1697,8 +1697,8 @@ var SEMICOLON = SEMICOLON || {};
     ajaxload: function () {
       let settings = {
         default: ".portfolio-ajax",
-        file: "plugins.ajaxportfolio.js",
-        error: "plugins.ajaxportfolio.js: Plugin could not be loaded",
+        file: "plugins.ajaxportfolio.min.js",
+        error: "plugins.ajaxportfolio.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_portfolioAjaxloadInit",
         pluginfn: 'typeof scwAjaxPortfolioPlugin !== "undefined"',
         trigger: "pluginAjaxPortfolioReady",
@@ -1746,8 +1746,8 @@ var SEMICOLON = SEMICOLON || {};
         element: element,
         default:
           ".parallax,.page-title-parallax,.portfolio-parallax .portfolio-image",
-        file: "plugins.parallax.js",
-        error: "plugins.parallax.js: Plugin could not be loaded",
+        file: "plugins.parallax.min.js",
+        error: "plugins.parallax.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_parallaxInit",
         pluginfn: 'typeof skrollr !== "undefined"',
         trigger: "pluginParallaxReady",
@@ -1761,8 +1761,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: "[data-animate]",
-        file: "plugins.animations.js",
-        error: "plugins.animations.js: Plugin could not be loaded",
+        file: "plugins.animations.min.js",
+        error: "plugins.animations.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_animationsInit",
         pluginfn: 'typeof scwAnimationsPlugin !== "undefined"',
         trigger: "pluginAnimationsReady",
@@ -1776,8 +1776,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: "[data-hover-animate]",
-        file: "plugins.hoveranimation.js",
-        error: "plugins.hoveranimation.js: Plugin could not be loaded",
+        file: "plugins.hoveranimation.min.js",
+        error: "plugins.hoveranimation.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_hoverAnimationInit",
         pluginfn: 'typeof scwHoverAnimationPlugin !== "undefined"',
         trigger: "pluginHoverAnimationReady",
@@ -1791,8 +1791,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".grid-container",
-        file: "plugins.isotope.js",
-        error: "plugins.isotope.js: Plugin could not be loaded",
+        file: "plugins.isotope.min.js",
+        error: "plugins.isotope.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_gridContainerInit",
         pluginfn: "$().isotope",
         trigger: "pluginIsotopeReady",
@@ -1806,8 +1806,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".grid-filter,.custom-filter",
-        file: "plugins.gridfilter.js",
-        error: "plugins.gridfilter.js: Plugin could not be loaded",
+        file: "plugins.gridfilter.min.js",
+        error: "plugins.gridfilter.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_gridFilterInit",
         pluginfn: '$().isotope && typeof scwGridFilterPlugin !== "undefined"',
         trigger: "pluginGridFilterReady",
@@ -1821,8 +1821,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".fslider",
-        file: "plugins.flexslider.js",
-        error: "plugins.flexslider.js: Plugin could not be loaded",
+        file: "plugins.flexslider.min.js",
+        error: "plugins.flexslider.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_flexSliderInit",
         pluginfn: "$().flexslider",
         trigger: "pluginFlexSliderReady",
@@ -1836,8 +1836,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".video-wrap:has(video)",
-        file: "plugins.html5video.js",
-        error: "plugins.html5video.js: Plugin could not be loaded",
+        file: "plugins.html5video.min.js",
+        error: "plugins.html5video.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_html5VideoInit",
         pluginfn: 'typeof scwHtml5VideoPlugin !== "undefined"',
         trigger: "pluginHtml5VideoReady",
@@ -1851,8 +1851,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".yt-bg-player",
-        file: "plugins.youtube.js",
-        error: "plugins.youtube.js: Plugin could not be loaded",
+        file: "plugins.youtube.min.js",
+        error: "plugins.youtube.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_youtubeBgVideoInit",
         pluginfn: "$().YTPlayer",
         trigger: "pluginYoutubeBgVideoReady",
@@ -1866,8 +1866,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: '.tabs,[data-plugin="tabs"]',
-        file: "plugins.tabs.js",
-        error: "plugins.tabs.js: Plugin could not be loaded",
+        file: "plugins.tabs.min.js",
+        error: "plugins.tabs.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_tabsInit",
         pluginfn: "$().tabs",
         trigger: "pluginTabsReady",
@@ -1881,8 +1881,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".toggle",
-        file: "plugins.toggles.js",
-        error: "plugins.toggles.js: Plugin could not be loaded",
+        file: "plugins.toggles.min.js",
+        error: "plugins.toggles.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_togglesInit",
         pluginfn: 'typeof scwTogglesPlugin !== "undefined"',
         trigger: "pluginTogglesReady",
@@ -1896,8 +1896,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".accordion",
-        file: "plugins.accordions.js",
-        error: "plugins.accordions.js: Plugin could not be loaded",
+        file: "plugins.accordions.min.js",
+        error: "plugins.accordions.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_accordionsInit",
         pluginfn: 'typeof scwAccordionsPlugin !== "undefined"',
         trigger: "pluginAccordionsReady",
@@ -1911,8 +1911,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".counter",
-        file: "plugins.counter.js",
-        error: "plugins.counter.js: Plugin could not be loaded",
+        file: "plugins.counter.min.js",
+        error: "plugins.counter.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_counterInit",
         pluginfn: "$().countTo",
         trigger: "pluginCounterReady",
@@ -1937,8 +1937,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".countdown",
-        file: "plugins.countdown.js",
-        error: "plugins.countdown.js: Plugin could not be loaded",
+        file: "plugins.countdown.min.js",
+        error: "plugins.countdown.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_countdownInit",
         pluginfn: "$().countdown",
         trigger: "pluginCountdownReady",
@@ -1964,8 +1964,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".gmap",
-        file: "plugins.gmap.js",
-        error: "plugins.gmap.js: Plugin could not be loaded",
+        file: "plugins.gmap.min.js",
+        error: "plugins.gmap.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_gmapInit",
         pluginfn: 'typeof google !== "undefined" && $().gMap',
         hiddendisable: true,
@@ -1981,8 +1981,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".rounded-skill",
-        file: "plugins.piechart.js",
-        error: "plugins.piechart.js: Plugin could not be loaded",
+        file: "plugins.piechart.min.js",
+        error: "plugins.piechart.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_roundedSkillInit",
         pluginfn: "$().easyPieChart",
         trigger: "pluginRoundedSkillReady",
@@ -1996,8 +1996,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".progress",
-        file: "plugins.progress.js",
-        error: "plugins.progress.js: Plugin could not be loaded",
+        file: "plugins.progress.min.js",
+        error: "plugins.progress.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_progressInit",
         pluginfn: 'typeof scwProgressPlugin !== "undefined"',
         trigger: "pluginProgressReady",
@@ -2011,8 +2011,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".twitter-feed",
-        file: "plugins.twitter.js",
-        error: "plugins.twitter.js: Plugin could not be loaded",
+        file: "plugins.twitter.min.js",
+        error: "plugins.twitter.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_twitterFeedInit",
         pluginfn:
           'typeof sm_format_twitter !== "undefined" && typeof sm_format_twitter3 !== "undefined"',
@@ -2027,8 +2027,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".flickr-feed",
-        file: "plugins.flickrfeed.js",
-        error: "plugins.flickrfeed.js: Plugin could not be loaded",
+        file: "plugins.flickrfeed.min.js",
+        error: "plugins.flickrfeed.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_flickrFeedInit",
         pluginfn: "$().jflickrfeed",
         trigger: "pluginFlickrFeedReady",
@@ -2042,8 +2042,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".instagram-photos",
-        file: "plugins.instagram.js",
-        error: "plugins.instagram.js: Plugin could not be loaded",
+        file: "plugins.instagram.min.js",
+        error: "plugins.instagram.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_instagramPhotosInit",
         pluginfn: 'typeof scwInstagramPlugin !== "undefined"',
         trigger: "pluginInstagramReady",
@@ -2057,8 +2057,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".dribbble-shots",
-        file: "plugins.dribbble.js",
-        error: "plugins.dribbble.js: Plugin could not be loaded",
+        file: "plugins.dribbble.min.js",
+        error: "plugins.dribbble.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_dribbbleShotsInit",
         pluginfn: "$.jribbble",
         trigger: "pluginDribbbleReady",
@@ -2068,8 +2068,8 @@ var SEMICOLON = SEMICOLON || {};
       let imagesLoadedSettings = {
         element: element,
         default: ".dribbble-shots",
-        file: "plugins.imagesloaded.js",
-        error: "plugins.imagesloaded.js: Plugin could not be loaded",
+        file: "plugins.imagesloaded.min.js",
+        error: "plugins.imagesloaded.min.js: Plugin could not be loaded",
         pluginfn: "$().imagesLoaded",
         trigger: "pluginImagesLoadedReady",
         class: "has-plugin-imagesloaded",
@@ -2083,8 +2083,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".nav-tree",
-        file: "plugins.navtree.js",
-        error: "plugins.navtree.js: Plugin could not be loaded",
+        file: "plugins.navtree.min.js",
+        error: "plugins.navtree.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_navtreeInit",
         pluginfn: 'typeof scwNavTreePlugin !== "undefined"',
         trigger: "pluginNavTreeReady",
@@ -2098,8 +2098,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".carousel-widget",
-        file: "plugins.carousel.js",
-        error: "plugins.carousel.js: Plugin could not be loaded",
+        file: "plugins.carousel.min.js",
+        error: "plugins.carousel.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_carouselInit",
         pluginfn: "$().owlCarousel",
         trigger: "pluginCarouselReady",
@@ -2113,8 +2113,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".masonry-thumbs",
-        file: "plugins.masonrythumbs.js",
-        error: "plugins.masonrythumbs.js: Plugin could not be loaded",
+        file: "plugins.masonrythumbs.min.js",
+        error: "plugins.masonrythumbs.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_masonryThumbsInit",
         pluginfn:
           '$().isotope && typeof scwMasonryThumbsPlugin !== "undefined"',
@@ -2129,8 +2129,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: false,
-        file: "plugins.notify.js",
-        error: "plugins.notify.js: Plugin could not be loaded",
+        file: "plugins.notify.min.js",
+        error: "plugins.notify.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_notificationInit",
         pluginfn: 'typeof toastr !== "undefined"',
         trigger: "pluginNotifyReady",
@@ -2144,8 +2144,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".text-rotater",
-        file: "plugins.textrotator.js",
-        error: "plugins.textrotator.js: Plugin could not be loaded",
+        file: "plugins.textrotator.min.js",
+        error: "plugins.textrotator.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_textRotatorInit",
         pluginfn: "$().Morphext",
         trigger: "pluginTextRotatorReady",
@@ -2159,8 +2159,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: "a[data-scrollto]",
-        file: "plugins.linkscroll.js",
-        error: "plugins.linkscroll.js: Plugin could not be loaded",
+        file: "plugins.linkscroll.min.js",
+        error: "plugins.linkscroll.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_linkScrollInit",
         pluginfn: 'typeof scwLinkScrollPlugin !== "undefined"',
         trigger: "pluginLinkScrollReady",
@@ -2174,8 +2174,8 @@ var SEMICOLON = SEMICOLON || {};
       let formSettings = {
         element: element,
         default: ".form-widget",
-        file: "plugins.form.js",
-        error: "plugins.form.js: Plugin could not be loaded",
+        file: "plugins.form.min.js",
+        error: "plugins.form.min.js: Plugin could not be loaded",
         execfn: false,
         pluginfn: "$().validate && $().ajaxSubmit",
         class: "has-plugin-form",
@@ -2184,8 +2184,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".form-widget",
-        file: "plugins.ajaxform.js",
-        error: "plugins.ajaxform.js: Plugin could not be loaded",
+        file: "plugins.ajaxform.min.js",
+        error: "plugins.ajaxform.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_ajaxFormInit",
         pluginfn: 'typeof scwAjaxFormPlugin !== "undefined"',
         trigger: "pluginAjaxFormReady",
@@ -2200,8 +2200,8 @@ var SEMICOLON = SEMICOLON || {};
       let formSettings = {
         element: element,
         default: ".subscribe-widget",
-        file: "plugins.form.js",
-        error: "plugins.form.js: Plugin could not be loaded",
+        file: "plugins.form.min.js",
+        error: "plugins.form.min.js: Plugin could not be loaded",
         execfn: false,
         pluginfn: "$().validate && $().ajaxSubmit",
         class: "has-plugin-form",
@@ -2210,8 +2210,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".subscribe-widget",
-        file: "plugins.subscribe.js",
-        error: "plugins.subscribe.js: Plugin could not be loaded",
+        file: "plugins.subscribe.min.js",
+        error: "plugins.subscribe.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_subscribeFormInit",
         pluginfn: 'typeof scwSubscribeFormPlugin !== "undefined"',
         trigger: "pluginSubscribeFormReady",
@@ -2226,8 +2226,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".shape-divider",
-        file: "plugins.shapedivider.js",
-        error: "plugins.shapedivider.js: Plugin could not be loaded",
+        file: "plugins.shapedivider.min.js",
+        error: "plugins.shapedivider.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_shapeDividerInit",
         pluginfn: 'typeof scwShapeDividerPlugin !== "undefined"',
         trigger: "pluginShapeDividerReady",
@@ -2241,8 +2241,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".scw-ticker",
-        file: "plugins.ticker.js",
-        error: "plugins.ticker.js: Plugin could not be loaded",
+        file: "plugins.ticker.min.js",
+        error: "plugins.ticker.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_tickerInit",
         pluginfn: 'typeof scwTickerPlugin !== "undefined"',
         trigger: "pluginTickerReady",
@@ -2256,8 +2256,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".sticky-sidebar-wrap",
-        file: "plugins.stickysidebar.js",
-        error: "plugins.stickysidebar.js: Plugin could not be loaded",
+        file: "plugins.stickysidebar.min.js",
+        error: "plugins.stickysidebar.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_stickySidebarInit",
         pluginfn: "$().scwStickySidebar",
         trigger: "pluginStickySidebarReady",
@@ -2271,8 +2271,8 @@ var SEMICOLON = SEMICOLON || {};
       let settings = {
         element: element,
         default: ".gdpr-settings,[data-cookies]",
-        file: "plugins.cookie.js",
-        error: "plugins.cookie.js: Plugin could not be loaded",
+        file: "plugins.cookie.min.js",
+        error: "plugins.cookie.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_cookieInit",
         pluginfn: 'typeof Cookies !== "undefined"',
         trigger: "pluginCookieReady",
@@ -2285,8 +2285,8 @@ var SEMICOLON = SEMICOLON || {};
     cartQuantity: function () {
       let settings = {
         default: ".qty",
-        file: "plugins.quantity.js",
-        error: "plugins.quantity.js: Plugin could not be loaded",
+        file: "plugins.quantity.min.js",
+        error: "plugins.quantity.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_quantityInit",
         pluginfn: 'typeof scwQuantityPlugin !== "undefined"',
         trigger: "pluginQuantityReady",
@@ -2299,8 +2299,8 @@ var SEMICOLON = SEMICOLON || {};
     readmore: function () {
       let settings = {
         default: "[data-readmore]",
-        file: "plugins.readmore.js",
-        error: "plugins.readmore.js: Plugin could not be loaded",
+        file: "plugins.readmore.min.js",
+        error: "plugins.readmore.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_readmoreInit",
         pluginfn: 'typeof scwReadMorePlugin !== "undefined"',
         trigger: "pluginReadMoreReady",
@@ -2313,8 +2313,8 @@ var SEMICOLON = SEMICOLON || {};
     pricingSwitcher: function () {
       let settings = {
         default: ".pts-switcher",
-        file: "plugins.pricingswitcher.js",
-        error: "plugins.pricingswitcher.js: Plugin could not be loaded",
+        file: "plugins.pricingswitcher.min.js",
+        error: "plugins.pricingswitcher.min.js: Plugin could not be loaded",
         execfn: "SEMICOLON_pricingSwitcherInit",
         pluginfn: 'typeof scwPricingSwitcherPlugin !== "undefined"',
         trigger: "pluginPricingSwitcherReady",

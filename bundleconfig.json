@@ -5,11 +5,11 @@
       "wwwroot/css/bootstrap.css",
       "wwwroot/style.css",
       "wwwroot/css/swiper.css",
-      "wwwroot/css/dark-vars.css",
+      "wwwroot/css/dark.css",
       "wwwroot/css/font-icons.css",
+      "wwwroot/css/real-estate/css/font-icons.css",
       "wwwroot/css/animate.css",
       "wwwroot/css/magnific-popup.css",
-      "wwwroot/css/responsive-vars.css",
       "wwwroot/abogacia.css"
     ]
   },
@@ -17,12 +17,6 @@
     "outputFileName": "wwwroot/js/site.min.js",
     "inputFiles": [
       "wwwroot/js/jquery.js",
-      "wwwroot/js/plugins.easing.js",
-      "wwwroot/js/plugins.bootstrap.js",
-      "wwwroot/js/plugins.swiper.js",
-      "wwwroot/js/plugins.animations.js",
-      "wwwroot/js/plugins.parallax.js",
-      "wwwroot/js/plugins.flexslider.js",
       "wwwroot/js/functions.js",
       "wwwroot/js/utils.js",
       "wwwroot/js/components/moment.js",

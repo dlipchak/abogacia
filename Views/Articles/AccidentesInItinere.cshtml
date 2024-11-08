@@ -1,0 +1,74 @@
+﻿<title class="logo">
+  Accidentes in itinere ( Camino al trabajo o de regreso a casa)
+</title>
+<h2>¿QUÉ ES UN ACCIDENTE IN ITINERE?</h2>
+
+<p>
+  Los accidentes in itinere (del latin “itinere”: “en curso”) se encuentran
+  definidos en el artículo sexto de la Ley de Riesgos del Trabajo (Ley 24.557)
+  como: “todo acontecimiento súbito y violento ocurrido por el hecho o en
+  ocasión del trabajo, o en el
+  <span class="green"
+    >trayecto entre el domicilio del trabajador y el lugar de trabajo,</span
+  >
+  siempre y cuando el damnificado no hubiere interrumpido o alterado dicho
+  trayecto por causas ajenas al trabajo”.
+</p>
+<p>
+  <span class="green">Ejemplo 1:</span> El trabajador, luego de salir de su casa
+  y llegando al trabajo, sufre un robo con herida de arma blanca, con cortes en
+  el brazo.
+</p>
+<p>
+  <span class="green">Ejemplo 2:</span> El trabajador, volviendo a su hogar al
+  completar su jornada de trabajo, tropieza en la vereda y cae sufriendo una
+  fractura de rodilla.
+</p>
+<p>
+  Como se puede apreciar, se trata de todo
+  <span class="green"
+    >accidente sufrido por el trabajador en el trayecto entre el hogar y el
+    trabajo, ya sea yendo o volviendo del mismo,</span
+  >
+  siempre y cuando el damnificado no hubiere interrumpido o alterado dicho
+  trayecto por causas ajenas al trabajo.
+</p>
+<p>
+  Al igual que los accidentes ocurridos dentro de las instalaciones del
+  empleador, los accidentes “in itinere” se encuentran amparados por la Ley de
+  Riesgos de Trabajo. Es decir, que su
+  <span class="green"
+    >ART deberá cubrir las prestaciones médicas y salariales</span
+  >
+  hasta el alta definitiva y si quedaran secuelas en su salud deberá ser
+  indemnizado conforme la normativa vigente.
+</p>
+<p>
+  Las controversias más comunes que se suscitan hoy día se deben a las
+  <span class="green">indemnizaciónes insignificantes que ofrecen las ART</span>
+  durante el trámite ante la SRT. El objetivo de este procedimiento previo a
+  todo reclamo judicial es el de cerrar los reclamos por la mínima indemnización
+  posible en perjuicio de los trabajadores. Una clara muestra de ello es que el
+  <span class="green"
+    >financiamiento de la Superintendencia proviene de las propias ART.</span
+  >
+  De este modo, la objetividad e independencia de los funcionarios de la
+  Superintendencia se ve severamente comprometida, ya que son las ART las que
+  aportan los fondos para pagar los sueldos de estos funcionarios.
+</p>
+@Html.Partial("ComoCobroMiIndemnizacionLaboral")
+@Html.Partial("WorkAccidentFeatures") @Html.Partial("WorkAccidentRights")
+
+@{
+  var jsonLdModel = new JsonLdModel
+  {
+    Headline = Model.ArticleName, 
+    Description = ViewData["Description"].ToString(),
+    Keywords = ViewData["Keywords"].ToString(),
+    ImageName = Model.ImageName, 
+    Category = Model.ArticleCategory, 
+    ArticleBody = "Este artículo ofrece una guía esencial sobre los derechos y pasos a seguir si ha sufrido un accidente in itinere, es decir, en el trayecto entre su domicilio y el lugar de trabajo. Nuestro estudio jurídico, compuesto por abogados y profesionales médicos de primer nivel, se especializa en la gestión de reclamos por accidentes laborales y enfermedades profesionales ante la Superintendencia de Riesgos del Trabajo. Destacamos que los accidentes in itinere están amparados por la Ley de Riesgos del Trabajo, lo que implica que su ART debe cubrir las prestaciones médicas y salariales hasta el alta definitiva. Además, proporcionamos consejos prácticos sobre cómo actuar inmediatamente después del accidente, como anotar los datos del vehículo involucrado, tomar fotografías del lugar y buscar asistencia médica. También ofrecemos herramientas para calcular orientativamente la indemnización correspondiente y estamos disponibles para consultas sin compromiso."
+  };
+}
+
+@Html.Partial("_ArticleJsonLdSchema", jsonLdModel)
