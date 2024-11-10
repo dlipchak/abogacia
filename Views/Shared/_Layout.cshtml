@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
 
-    <title>@(ViewData["Title"] ?? "Estudio Jurídico López Giacomelli - Abogados en Argentina")</title>
+    <title>@(ViewData["Title"] ?? "Estudio Jurídico López Giacomelli - Especialistas en accidentes y despidos")</title>
     <meta name="description" content="@(ViewData["Description"] ?? "Abogados especialistas en accidentes y derecho laboral en Argentina.")">
     <meta name="keywords" content="@(ViewData["Keywords"] ?? "abogados, accidentes de tránsito, accidentes laborales, despidos, derecho laboral, indemnización")">
     <link rel="canonical" href="https://estudiolopezgiacomelli.com.ar/@(ViewData["Canonical"] ?? "")" />
@@ -63,7 +63,9 @@
 
     @if (@env.IsDevelopment()) {
       <script src="~/js/jquery.js"></script>
-      <script src="~/js/functions.js"></script>
+      <script src="js/plugins.min.js"></script>
+      <script src="js/functions.bundle.js"></script>
+      <!-- <script src="~/js/functions.js"></script> -->
       <script src="~/js/utils.js"></script>
       <script src="~/js/components/moment.js"></script>
       <script src="~/js/calculators/calculatorWorkDismissal.js"></script>
@@ -74,7 +76,8 @@
           e.preventDefault();
         });
       </script>
-  
+ <script src="~/js/googleReviewsPlugin.js"></script>
+      
       <!-- <script src="~/js/plugins.animations.js"></script>
           <script src="~/js/plugins.bootstrap.js"></script>
           <script src="~/js/plugins.easing.js"></script>

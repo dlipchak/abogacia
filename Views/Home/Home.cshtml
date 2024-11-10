@@ -1,5 +1,5 @@
 ﻿@{
-  ViewData["Title"] = "Estudio Jurídico López Giacomelli - Abogados Especialistas en Argentina";
+  ViewData["Title"] = "Estudio Jurídico López Giacomelli - Especialistas en accidentes y despidos";
   ViewData["Description"] = "Estudio Jurídico especializado en accidentes de tránsito, laborales y despidos. Contáctenos para recibir asesoría legal en Argentina.";
   ViewData["Keywords"] = "abogados, accidentes de tránsito, accidentes laborales, despidos, derecho laboral, Argentina";
   ViewData["Canonical"] = "/";
@@ -130,7 +130,7 @@
       </div>
 
       <!-- Testimonials Section -->
-      <div class="section parallax dark mb-0 whatClientsSay" data-bottom-top="background-position:0px 70%;" data-top-bottom="background-position:0px 10%;">
+      <!-- <div class="section parallax dark mb-0 whatClientsSay" data-bottom-top="background-position:0px 70%;" data-top-bottom="background-position:0px 10%;">
         <div class="heading-block center">
             <h3>Qué dicen NUESTROS CLIENTES</h3>
         </div>
@@ -167,7 +167,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+
+   @Html.Partial("GoogleReviewsPartial");
+    
   </div>
 </section>
 
@@ -193,8 +196,8 @@
       },
       "aggregateRating": {
           "@@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "reviewCount": "37"
+          "ratingValue": "5.0",
+          "reviewCount": "67"
       },
       "openingHours": "Mo-Fr 09:00-18:00",
       "serviceType": ["Accidentes de Tránsito", "Accidentes Laborales", "Derecho Laboral", "Despidos", "Asesoría en Reclamos de Indemnización"]

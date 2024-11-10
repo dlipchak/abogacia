@@ -1,0 +1,32 @@
+@using System.IO
+@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment WebHostEnvironment
+
+@{
+    // Path to the JSON file in the project root
+    var jsonFilePath = System.IO.Path.Combine(WebHostEnvironment.ContentRootPath, "reviews.json");
+
+    // Read the JSON content from the file
+    string reviewsJson = System.IO.File.ReadAllText(jsonFilePath);
+}
+
+<!-- JSON Data Output -->
+<div id="reviews-json" style="display: none;">
+    @Html.Raw(reviewsJson)
+</div>
+
+<!-- Reviews Section -->
+<div class="container clearfix custom-reviews-carousel">
+    <div class="review-header">
+        <!-- <img src="path/to/google-logo.png" alt="Google Logo" class="google-logo">
+        <div class="review-summary">
+            <span class="rating">5.0</span>
+            <span class="stars">★★★★★</span>
+            <span class="reviews-count">(67 opiniones)</span>
+        </div> -->
+    </div>
+    
+    <!-- Reviews Carousel -->
+    <div id="google-reviews" class="owl-carousel posts-carousel carousel-widget" data-pagi="false" data-items-xs="1" data-items-sm="2" data-items-md="3" data-items-lg="4">
+        <!-- The carousel items will be populated by JavaScript using the JSON data -->
+    </div>
+</div>

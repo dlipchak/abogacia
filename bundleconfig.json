@@ -22,7 +22,8 @@
       "wwwroot/js/components/moment.js",
       "wwwroot/js/calculators/calculatorWorkDismissal.js",
       "wwwroot/js/calculators/calculatorWorkAccident.js",
-      "wwwroot/js/calculators/calculatorTrafficAccident.js"
+      "wwwroot/js/calculators/calculatorTrafficAccident.js",
+      "wwwroot/js/googleReviewsPlugin.js"
     ]
   }
 ]
