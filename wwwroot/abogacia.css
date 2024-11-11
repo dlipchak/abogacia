@@ -729,154 +729,186 @@ small {
     background-image: url("/images/home/whatClientsSay/what-clients-say.avif") !important;
   }
 }
-/* Scoped styles for reviews carousel only */
+
+/* Container for the reviews section */
 .custom-reviews-carousel {
   margin: 20px auto;
-  margin-top:120px;
   padding: 0 10px;
 }
 
-.custom-reviews-carousel .review-summary {
-  text-align: center;
-  font-size: 1.5em;
-  margin-bottom: 20px;
-}
-
-.custom-reviews-carousel .oc-item {
-  padding: 10px; /* Reduce padding inside the container */
-  margin: 0 10px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.custom-reviews-carousel .entry-header {
-  display: flex;
-  align-items: center; /* Centers the name vertically with the image */
-  margin-bottom: 10px;
-}
-
-.custom-reviews-carousel .entry-image {
-  margin-right: 8px; /* Reduce spacing between image and name */
-  margin-bottom: 0px !important;
-  width:20% !important;
-}
-
-.custom-reviews-carousel .entry-image img {
-  border-radius: 50%;
-  width: 50px; /* Slightly smaller image */
-  height: 50px;
-  object-fit: cover;
-}
-
-.custom-reviews-carousel .entry-title {
-  font-size: 0.95em; /* Slightly smaller font for name */
-  font-weight: bold;
-  margin: 0;
-}
-
-.custom-reviews-carousel .review-info {
-  display: flex;
-  align-items: center;
-  font-size: 0.85em; /* Smaller font size for rating and date */
-  color: #666;
-  margin-top: 2px; /* Reduce space above stars and date */
-}
-
-.custom-reviews-carousel .review-rating {
-  color: #FFD700;
-  font-size: 2em; /* Reduce font size of stars */
-  margin-right: 10px; /* Reduce space between stars and date */
-}
-
-.custom-reviews-carousel .entry-content {
-  font-size: 0.9em;
-  margin-top: 5px; /* Slightly reduce space above review text */
-}
-
-/* .custom-reviews-carousel .owl-carousel .owl-nav [class*=owl-] {
-left: -50px !important
-} */
-
-.custom-reviews-carousel .owl-carousel .owl-item{
-  margin-bottom: 10px;
-}
-
-.review-header {
+/* Header for the review summary */
+.custom-reviews-carousel .review-header {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.google-logo {
-  width: 80px; /* Adjust size as needed */
+.custom-reviews-carousel .google-logo {
+  width: 80px;
   display: block;
-  margin: 0 auto 10px; /* Center logo and add space below */
+  margin: 0 auto 10px;
 }
 
-.review-summary {
+.custom-reviews-carousel .review-summary {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5em;
-  color: #333; /* Default color for rating and review count */
+  color: #333;
 }
 
-.review-summary .rating {
+.custom-reviews-carousel .review-summary .rating {
   font-weight: bold;
-  margin-right: 5px; /* Space between rating and stars */
+  margin-right: 5px;
 }
 
-.review-summary .stars {
-  color: #FFD700; /* Yellow color for stars */
+.custom-reviews-carousel .review-summary .stars {
+  color: #FFD700;
   font-size: 1.2em;
-  margin-right: 5px; /* Space between stars and review count */
+  margin-right: 5px;
 }
 
-.review-summary .reviews-count {
-  color: #666; /* Adjust color for review count */
+.custom-reviews-carousel .review-summary .reviews-count {
+  color: #666;
   font-size: 0.9em;
 }
 
-/* Target only the reviews carousel */
-.custom-reviews-carousel .owl-item {
-  /* Add any general styles for owl items here if needed */
-}
-
-@media (max-width: 768px) {
-  .custom-reviews-carousel .owl-item {
-      max-width: 300px; /* Set this to the desired width of each item on small screens */
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .custom-reviews-carousel .owl-item {
-      max-width: 400px; /* Set a wider max width for mid-size screens */
-  }
+/* Review card grid layout */
+.custom-reviews-carousel .reviews-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  justify-items: center;
 }
 
 @media (min-width: 1024px) {
-  .custom-reviews-carousel .owl-item {
-      max-width: 474px; /* Set the max width to fit two items side by side on larger screens */
+  .custom-reviews-carousel .reviews-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
   }
 }
 
-/* Style the dots for the reviews carousel */
-.custom-reviews-carousel .owl-dots {
-  text-align: center; /* Center the dots */
-  margin-top: 20px; /* Space between carousel and dots */
+/* Styling for individual review cards */
+.custom-reviews-carousel .review-card {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px 0;
 }
 
-.custom-reviews-carousel .owl-dot {
-  display: inline-block;
-  width: 12px; /* Dot size */
-  height: 12px;
-  margin: 0 5px; /* Spacing between dots */
-  background-color: #ccc; /* Inactive dot color */
+/* Align reviewer's name next to the image */
+.custom-reviews-carousel .entry-header {
+  display: flex;
+  align-items: center;
+}
+
+/* Ensure the image is circular and aligned properly */
+.custom-reviews-carousel .entry-image {
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  cursor: pointer;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-bottom: 0px;
+}
+
+.custom-reviews-carousel .entry-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Reviewer name styling */
+.custom-reviews-carousel .entry-title {
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* Information section within review card */
+.custom-reviews-carousel .review-info {
+  display: flex;
+  align-items: center;
+  font-size: 0.85em;
+  color: #666;
+  margin-top: 8px;
+}
+
+.custom-reviews-carousel .review-rating {
+  color: #FFD700;
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+.custom-reviews-carousel .review-date {
+  font-size: 0.85em;
+  color: #666;
+}
+
+/* Content section within review card */
+.custom-reviews-carousel .entry-content {
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+/* Pagination styling */
+.custom-reviews-carousel .pagination-container {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.custom-reviews-carousel .pagination {
+  display: flex;
+  gap: 5px;
+}
+
+.custom-reviews-carousel .page-item {
+  list-style: none;
+}
+
+/* .custom-reviews-carousel .page-link {
+  padding: 10px 15px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
-.custom-reviews-carousel .owl-dot.active {
-  background-color: #333; /* Active dot color */
+.custom-reviews-carousel .page-link:hover {
+  background-color: #555;
+}
+
+.custom-reviews-carousel .page-item.active .page-link {
+  background-color: #666;
+}
+
+.custom-reviews-carousel .page-item.disabled .page-link {
+  background-color: #ccc;
+  pointer-events: none;
+} */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .custom-reviews-carousel .reviews-container {
+    grid-template-columns: 1fr;
+  }
+
+  .custom-reviews-carousel .pagination-container {
+    justify-content: center;
+  }
+}
+
+/* Disabled button styling */
+.custom-reviews-carousel .pagination .page-item.disabled .page-link {
+  background-color: #ccc; /* Light grey background for disabled state */
+  color: #999; /* Greyed-out text color for disabled state */
+  pointer-events: none; /* Prevents any interaction */
+  opacity: 0.6; /* Slightly transparent to show it's disabled */
+  cursor: not-allowed; /* Shows "not-allowed" cursor on hover */
 }
