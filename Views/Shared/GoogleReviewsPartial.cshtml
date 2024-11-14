@@ -1,27 +1,58 @@
 @using System.IO
+@using System.Linq
+@using System.Text.RegularExpressions
+@using Newtonsoft.Json.Linq
+@using System.Globalization
 @inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment WebHostEnvironment
 
 @{
     // Path to the JSON file in the project root
     var jsonFilePath = System.IO.Path.Combine(WebHostEnvironment.ContentRootPath, "reviews.json");
 
-    // Read the JSON content from the file
+    // Read and parse the JSON file
     string reviewsJson = System.IO.File.ReadAllText(jsonFilePath);
+    var reviews = JArray.Parse(reviewsJson);
+    int reviewCount = reviews.Count;
+
+    // Regular expression to extract numeric portion of the rating as in the JavaScript
+    var ratingRegex = new Regex(@"(\d+(\.\d+)?)");
+
+    // Calculate total rating by parsing ratings as strings and extracting numbers
+    double totalRating = reviews.Sum(review => {
+        var ratingString = review["rating"]?.ToString() ?? "0";
+        var match = ratingRegex.Match(ratingString);
+        return match.Success ? double.Parse(match.Value, CultureInfo.InvariantCulture) : 0;
+    });
+
+    double averageRating = reviewCount > 0 ? totalRating / reviewCount : 0;
 }
 
-<!-- JSON Data Output -->
+<!-- JSON Data Output (Hidden) -->
 <div id="reviews-json" style="display: none;">
     @Html.Raw(reviewsJson)
 </div>
 
 <!-- Reviews Section -->
-<div class="container clearfix custom-reviews-carousel">
-    
+<div class="container clearfix custom-reviews-carousel mt-6">
     <!-- Reviews Container -->
     <div id="google-reviews" class="reviews-container"></div>
     
     <!-- Pagination Container -->
-    <div id="pagination-container" class="pagination-container">
-        <ul class="pagination pagination-rounded pagination-inside-transparent pagination-button"></ul>
+    <div id="pagination-container" class="d-flex justify-content-center mt-4">
+        <!-- Pagination (UL) will be dynamically generated here by JavaScript -->
     </div>
 </div>
+
+<!-- JSON-LD Structured Data for Aggregate Rating -->
+<script type="application/ld+json">
+{
+  "@@context": "https://schema.org",
+  "@@type": "AggregateRating",
+  "itemReviewed": {
+    "@@type": "Organization",
+    "name": "Estudio Jurídico López Giacomelli"
+  },
+  "ratingValue": "@averageRating.ToString("0.0", CultureInfo.InvariantCulture)",
+  "reviewCount": "@reviewCount"
+}
+</script>

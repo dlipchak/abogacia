@@ -52,7 +52,9 @@ a.current {
   background-position: 0px -469.481px !important;
 }
 
-@supports (background-image: url("/images/articles/accidente-en-transporte-publico.avif")) {
+@supports (
+  background-image: url("/images/articles/accidente-en-transporte-publico.avif")
+) {
   .AccidentesEnTransportePublico {
     background-image: url("/images/articles/accidente-en-transporte-publico.avif") !important;
   }
@@ -91,7 +93,9 @@ a.current {
   background-position: 0px 59.519px !important;
 }
 
-@supports (background-image: url("/images/articles/accidentesDeTransito.avif")) {
+@supports (
+  background-image: url("/images/articles/accidentesDeTransito.avif")
+) {
   .HowToActOnTrafficAccident {
     background-image: url("/images/articles/accidentesDeTransito.avif") !important;
   }
@@ -111,7 +115,9 @@ a.current {
   background-position: 0px 50px !important;
 }
 
-@supports (background-image: url("/images/articles/accidente-en-automovil.avif")) {
+@supports (
+  background-image: url("/images/articles/accidente-en-automovil.avif")
+) {
   .AccidentesEnAuto {
     background-image: url("/images/articles/accidente-en-automovil.avif") !important;
   }
@@ -151,7 +157,9 @@ a.current {
   background-position: 0px -151.481px !important;
 }
 
-@supports (background-image: url("/images/articles/accidente-en-bicicleta.avif")) {
+@supports (
+  background-image: url("/images/articles/accidente-en-bicicleta.avif")
+) {
   .AccidentesEnBicicleta {
     background-image: url("/images/articles/accidente-en-bicicleta.avif") !important;
   }
@@ -160,7 +168,8 @@ a.current {
 @media (max-width: 991.98px) {
   .AccidentesEnBicicleta {
     padding: 0px !important;
-    background: url("/images/articles/accidente-en-bicicleta.jpg") 15% / cover no-repeat !important;
+    background: url("/images/articles/accidente-en-bicicleta.jpg") 15% / cover
+      no-repeat !important;
   }
 }
 
@@ -171,7 +180,9 @@ a.current {
   background-position: 0px -151.481px !important;
 }
 
-@supports (background-image: url("/images/articles/accidentes-como-acompanantes.avif")) {
+@supports (
+  background-image: url("/images/articles/accidentes-como-acompanantes.avif")
+) {
   .AccidentesComoAcompanantes {
     background-image: url("/images/articles/accidentes-como-acompanantes.avif") !important;
   }
@@ -180,7 +191,8 @@ a.current {
 @media (max-width: 991.98px) {
   .AccidentesComoAcompanantes {
     padding: 0px !important;
-    background: url("/images/articles/accidentes-como-acompanantes.jpeg") 17% / cover no-repeat !important;
+    background: url("/images/articles/accidentes-como-acompanantes.jpeg") 17% /
+      cover no-repeat !important;
   }
 }
 
@@ -220,18 +232,22 @@ a.current {
 @media (max-width: 991.98px) {
   .DestruccionTotal {
     padding: 0px !important;
-    background: url("/images/articles/destruccion-total.jpeg") 50% / cover no-repeat !important;
+    background: url("/images/articles/destruccion-total.jpeg") 50% / cover
+      no-repeat !important;
   }
 }
 
 .AccidentesDeTrabajo {
   padding: 250px !important;
   background-image: url("/images/articles/accidentes-en-ocasion-del-trabajo.jpeg") !important;
-    background-size: cover !important;
-    background-position: 0px -151.481px !important;
+  background-size: cover !important;
+  background-position: 0px -151.481px !important;
 }
 
-@supports (background-image: url("/images/articles/accidentes-en-ocasion-del-trabajo.avif")) {
+@supports (
+  background-image:
+    url("/images/articles/accidentes-en-ocasion-del-trabajo.avif")
+) {
   .AccidentesDeTrabajo {
     background-image: url("/images/articles/accidentes-en-ocasion-del-trabajo.avif") !important;
   }
@@ -253,7 +269,9 @@ a.current {
   background-position: 0px -151.481px !important;
 }
 
-@supports (background-image: url("/images/articles/accidentes-initinere.avif")) {
+@supports (
+  background-image: url("/images/articles/accidentes-initinere.avif")
+) {
   .AccidentesInItinere {
     background-image: url("/images/articles/accidentes-initinere.avif") !important;
   }
@@ -273,7 +291,9 @@ a.current {
   background-position: 98% !important;
 }
 
-@supports (background-image: url("/images/articles/enfermedades-profesionales.avif")) {
+@supports (
+  background-image: url("/images/articles/enfermedades-profesionales.avif")
+) {
   .EnfermedadesProfesionales {
     background-image: url("/images/articles/enfermedades-profesionales.avif") !important;
   }
@@ -408,7 +428,8 @@ a.current {
 
 @supports (background-image: url("/images/faq/faq-traffic-accident.avif")) {
   .trafficAccidentFaqHeader {
-    background: url("/images/faq/faq-traffic-accident.avif") center center / cover no-repeat;
+    background: url("/images/faq/faq-traffic-accident.avif") center center /
+      cover no-repeat;
   }
 }
 
@@ -427,7 +448,8 @@ a.current {
 
 @supports (background-image: url("/images/faq/faq-work-accident.avif")) {
   .workAccidentFaqHeader {
-    background: url("/images/faq/faq-work-accident.avif") center center / cover no-repeat;
+    background: url("/images/faq/faq-work-accident.avif") center center / cover
+      no-repeat;
   }
 }
 
@@ -445,7 +467,8 @@ a.current {
 
 @supports (background-image: url("/images/faq/faq-dismissals-2.avif")) {
   .dismissalsFaqHeader {
-    background: url("/images/faq/faq-dismissals-2.avif") right center / cover no-repeat;
+    background: url("/images/faq/faq-dismissals-2.avif") right center / cover
+      no-repeat;
   }
 }
 
@@ -458,34 +481,46 @@ a.current {
 
 .calculatorWorkAccidentHeader {
   padding: 250px !important;
-  background: url("/images/calculators/work-accident-calculator.jpg") center center / cover no-repeat;
+  background: url("/images/calculators/work-accident-calculator.jpg") center
+    center / cover no-repeat;
 }
 
-@supports (background-image: url("/images/calculators/work-accident-calculator.avif")) {
+@supports (
+  background-image: url("/images/calculators/work-accident-calculator.avif")
+) {
   .calculatorWorkAccidentHeader {
-    background: url("/images/calculators/work-accident-calculator.avif") center center / cover no-repeat !important;
+    background: url("/images/calculators/work-accident-calculator.avif") center
+      center / cover no-repeat !important;
   }
 }
 
 .calculatorTrafficAccidentHeader {
   padding: 250px !important;
-  background: url("/images/calculators/traffic-accident-calculator.jpg") center center / cover no-repeat;
+  background: url("/images/calculators/traffic-accident-calculator.jpg") center
+    center / cover no-repeat;
 }
 
-@supports (background-image: url("/images/calculators/traffic-accident-calculator.avif")) {
+@supports (
+  background-image: url("/images/calculators/traffic-accident-calculator.avif")
+) {
   .calculatorTrafficAccidentHeader {
-    background: url("/images/calculators/traffic-accident-calculator.avif") center center / cover no-repeat !important;
+    background: url("/images/calculators/traffic-accident-calculator.avif")
+      center center / cover no-repeat !important;
   }
 }
 
 .calculatorDismissalHeader {
   padding: 250px !important;
-  background: url("/images/calculators/dismissal-calculator.jpg") center center / cover no-repeat;
+  background: url("/images/calculators/dismissal-calculator.jpg") center center /
+    cover no-repeat;
 }
 
-@supports (background-image: url("/images/calculators/dismissal-calculator.avif")) {
+@supports (
+  background-image: url("/images/calculators/dismissal-calculator.avif")
+) {
   .calculatorDismissalHeader {
-    background: url("/images/calculators/dismissal-calculator.avif") center center / cover no-repeat !important;
+    background: url("/images/calculators/dismissal-calculator.avif") center
+      center / cover no-repeat !important;
   }
 }
 
@@ -724,7 +759,9 @@ small {
   background-image: url("/images/home/whatClientsSay/what-clients-say.jpeg");
 }
 
-@supports (background-image: url("/images/home/whatClientsSay/what-clients-say.avif")) {
+@supports (
+  background-image: url("/images/home/whatClientsSay/what-clients-say.avif")
+) {
   .whatClientsSay {
     background-image: url("/images/home/whatClientsSay/what-clients-say.avif") !important;
   }
@@ -742,10 +779,16 @@ small {
   margin-bottom: 20px;
 }
 
+/* Container for the reviews section */
 .custom-reviews-carousel .google-logo {
   width: 80px;
-  display: block;
+  height: 40px; /* Adjust height as necessary */
+  background-image: url("../images/google-logo.svg"); /* Use a relative path */
+  background-size: contain; /* Scale image to fit */
+  background-repeat: no-repeat;
+  background-position: center;
   margin: 0 auto 10px;
+  display: block;
 }
 
 .custom-reviews-carousel .review-summary {
@@ -762,7 +805,7 @@ small {
 }
 
 .custom-reviews-carousel .review-summary .stars {
-  color: #FFD700;
+  color: #ffd700;
   font-size: 1.2em;
   margin-right: 5px;
 }
@@ -838,7 +881,7 @@ small {
 }
 
 .custom-reviews-carousel .review-rating {
-  color: #FFD700;
+  color: #ffd700;
   font-size: 1.5em;
   margin-right: 10px;
 }
@@ -911,4 +954,21 @@ small {
   pointer-events: none; /* Prevents any interaction */
   opacity: 0.6; /* Slightly transparent to show it's disabled */
   cursor: not-allowed; /* Shows "not-allowed" cursor on hover */
+}
+
+/* Make pagination responsive and compact */
+.pagination-container {
+  max-width: 100%;
+  overflow-x: auto; /* Enables horizontal scroll if needed */
+  white-space: nowrap; /* Prevents pagination items from wrapping */
+  padding: 0 10px;
+}
+
+.pagination .page-item {
+  margin: 0 3px;
+}
+
+.pagination .page-link {
+  padding: 4px 8px; /* Reduced padding for smaller screens */
+  font-size: 0.9em; /* Reduced font size */
 }
