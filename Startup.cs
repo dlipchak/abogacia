@@ -112,11 +112,48 @@ namespace AbogaciaCore
 
             app.UseStaticFiles(new StaticFileOptions
             {
-                ContentTypeProvider = provider
+                ContentTypeProvider = provider,
+                OnPrepareResponse = ctx =>
+                {
+                    if (!env.IsDevelopment())
+                    {
+                        // Cache versioned files for 1 year
+                        if (ctx.Context.Request.Path.Value.Contains("."))
+                        {
+                            ctx.Context.Response.Headers.Append(
+                                "Cache-Control", "public,max-age=31536000");
+                        }
+                    }
+                    else
+                    {
+                        // Prevent caching in development
+                        ctx.Context.Response.Headers.Append(
+                            "Cache-Control", "no-cache, no-store");
+                        ctx.Context.Response.Headers.Append(
+                            "Pragma", "no-cache");
+                        ctx.Context.Response.Headers.Append(
+                            "Expires", "-1");
+                    }
+                }
             });
 
             // Place ImageFormatMiddleware after UseStaticFiles
             // app.UseMiddleware<ImageFormatMiddleware>();
+
+            app.Use(async (context, next) =>
+            {
+                var requestPath = context.Request.Path.Value?.ToLower();
+                
+                if (requestPath?.StartsWith("/servicios/") == true)
+                {
+                    var newPath = requestPath.Replace("/servicios/", "/guias/");
+                    context.Response.StatusCode = 301;
+                    context.Response.Headers["Location"] = newPath;
+                    return;
+                }
+
+                await next();
+            });
 
             app.UseMvc(routes =>
             {

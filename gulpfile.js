@@ -10,11 +10,19 @@ const gulp = require('gulp'),
     fs = require('fs'),
     postcss = require('gulp-postcss'),
     purgecss = require('@fullhuman/postcss-purgecss'),
-    bundleconfig = require('./bundleconfig.json');
-    const rename = require('gulp-rename');
-    const path = require('path');
-    const glob = require('glob');
-    const merge = require('merge-stream');
+    bundleconfig = require('./bundleconfig.json'),
+    rename = require('gulp-rename'),
+    path = require('path'),
+    glob = require('glob'),
+    merge = require('merge-stream');
+
+// Initialize rev as null, we'll assign it later
+let rev = null;
+
+// Import rev dynamically
+import('gulp-rev').then(module => {
+    rev = module.default;
+});
 
 const regex = {
     css: /\.css$/,
@@ -29,6 +37,7 @@ function fileExists(path) {
 
 // JavaScript minification - single task without merge-stream
 gulp.task('min:js', async function () {
+    const { default: rev } = await import('gulp-rev');
     return merge(getBundles(regex.js).map(bundle => {
         return gulp.src(bundle.inputFiles, { base: '.' })
             .pipe(concat(bundle.outputFileName))
@@ -41,26 +50,32 @@ gulp.task('min:js', async function () {
                     comments: false // Remove comments
                 }
             }))
+            // First create and record the non-gzipped version
+            .pipe(rev())
             .pipe(gulp.dest('.'))
-            .on('end', () => console.log(`Created: ${bundle.outputFileName}`));
+            .pipe(rev.manifest('wwwroot/rev-manifest.json', {
+                merge: true
+            }))
+            .pipe(gulp.dest('.'))
+            // Then create and record the gzipped version
+            .pipe(gzip())
+            .pipe(rev())
+            .pipe(gulp.dest('.'))
+            .pipe(rev.manifest('wwwroot/rev-manifest.json', {
+                merge: true
+            }))
+            .pipe(gulp.dest('.'));
     }));
 });
 // CSS minification with PurgeCSS - single task without merge-stream
-gulp.task('min:css', function () {
+gulp.task('min:css', async function () {
+    const { default: rev } = await import('gulp-rev');
     const cssBundles = getBundles(regex.css);
-    if (cssBundles.length === 0) return Promise.resolve(); // Skip if no CSS bundles
+    if (cssBundles.length === 0) return Promise.resolve();
 
-    // Get the list of .cshtml files in the Views directory
     const cshtmlFiles = glob.sync('./Views/**/*.cshtml');
-
-    // Get the list of .js files in the wwwroot/js directory
-    const jsFiles = glob.sync('./wwwroot/js/**/*.js');;
-
-    // Combine the files for PurgeCSS
-    const contentFiles = [
-        ...cshtmlFiles,
-        ...jsFiles
-    ];
+    const jsFiles = glob.sync('./wwwroot/js/**/*.js');
+    const contentFiles = [...cshtmlFiles, ...jsFiles];
 
     return gulp.src(cssBundles[0].inputFiles, { base: '.' })
         .pipe(concat(cssBundles[0].outputFileName))
@@ -70,11 +85,18 @@ gulp.task('min:css', function () {
                 defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
             })
         ]))
-        .pipe(gulp.src('./wwwroot/abogacia.css')) // Include abogacia.css directly
-        .pipe(concat(cssBundles[0].outputFileName)) // Concatenate abogacia.css with the processed output
-        .pipe(cssmin()) // This will minify everything, including abogacia.css
+        .pipe(gulp.src('./wwwroot/abogacia.css'))
+        .pipe(concat(cssBundles[0].outputFileName))
+        .pipe(cssmin())
+        .pipe(rev())
         .pipe(gulp.dest('.'))
-        .on('end', () => console.log(`Created: ${cssBundles[0].outputFileName}`));
+        .pipe(gzip())
+        .pipe(rev())
+        .pipe(gulp.dest('.'))
+        .pipe(rev.manifest('wwwroot/rev-manifest.json', {
+            merge: true
+        }))
+        .pipe(gulp.dest('.'));
 });
 
 // HTML minification
@@ -90,29 +112,42 @@ gulp.task('min:html', function () {
 });
 
 gulp.task('gzip', function () {
-    const cssPath = 'wwwroot/css/site.min.css';
-    const jsPath = 'wwwroot/js/site.min.js';
-    const fontFiles = 'wwwroot/css/fonts/**/*.{woff,woff2}';
+    // Read the rev-manifest to get the current versioned filenames
+    let manifest = {};
+    try {
+        manifest = JSON.parse(fs.readFileSync('wwwroot/rev-manifest.json', 'utf8'));
+    } catch (err) {
+        console.log('No rev-manifest found');
+    }
 
+    const cssVersionedPath = manifest['wwwroot/css/site.min.css'] 
+        ? `wwwroot/css/${path.basename(manifest['wwwroot/css/site.min.css'])}` 
+        : 'wwwroot/css/site.min.css';
+    
+    const jsVersionedPath = manifest['wwwroot/js/site.min.js']
+        ? `wwwroot/js/${path.basename(manifest['wwwroot/js/site.min.js'])}`
+        : 'wwwroot/js/site.min.js';
+
+    const fontFiles = 'wwwroot/css/fonts/**/*.{woff,woff2}';
     const tasks = [];
 
-    // Check if CSS file exists, then gzip
-    if (fileExists(cssPath)) {
+    // Check if versioned CSS file exists, then gzip
+    if (fileExists(cssVersionedPath)) {
         tasks.push(
-            gulp.src(cssPath)
+            gulp.src(cssVersionedPath)
                 .pipe(gzip({ append: true }))
                 .pipe(gulp.dest('wwwroot/css'))
-                .on('end', () => console.log(`Gzipped: ${cssPath}`))
+                .on('end', () => console.log(`Gzipped: ${cssVersionedPath}`))
         );
     }
 
-    // Check if JS file exists, then gzip
-    if (fileExists(jsPath)) {
+    // Check if versioned JS file exists, then gzip
+    if (fileExists(jsVersionedPath)) {
         tasks.push(
-            gulp.src(jsPath)
+            gulp.src(jsVersionedPath)
                 .pipe(gzip({ append: true }))
                 .pipe(gulp.dest('wwwroot/js'))
-                .on('end', () => console.log(`Gzipped: ${jsPath}`))
+                .on('end', () => console.log(`Gzipped: ${jsVersionedPath}`))
         );
     }
 
@@ -124,7 +159,7 @@ gulp.task('gzip', function () {
             .on('end', () => console.log(`Gzipped font files.`))
     );
 
-    return merge(tasks); // Combine tasks
+    return merge(tasks);
 });
 
 // Clean task to delete existing minified files
@@ -164,3 +199,15 @@ gulp.task('font-optimize', async function () {
 
 // Default task to clean, minify, and gzip files in strict sequence
 gulp.task('default', gulp.series('clean', 'min', 'gzip', 'font-optimize'));
+
+gulp.task('watch', function() {
+    gulp.watch([
+        'wwwroot/css/*.css',          // Only root CSS files
+        'wwwroot/css/imports/*.css',  // CSS in imports folder
+        'wwwroot/js/*.js',           // Only root JS files
+        '!wwwroot/**/*.min.css',     // Exclude all minified CSS
+        '!wwwroot/**/*.min.js',      // Exclude all minified JS
+        '!wwwroot/css/site.css',     // Exclude generated site.css
+        '!wwwroot/js/site.js'        // Exclude generated site.js
+    ], gulp.series('default'));
+});

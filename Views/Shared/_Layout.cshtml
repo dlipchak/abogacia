@@ -38,11 +38,11 @@
       <link rel="stylesheet" href="~/css/magnific-popup.css" type="text/css" />
       
       <link rel="stylesheet" href="~/css/responsive-vars.css" type="text/css" />
-     <link rel="stylesheet" href="~/abogacia.css" type="text/css" /> -->
+     <link rel="stylesheet" href="~/abogacia.css" type="text/css" />  -->
   
-      <link rel="stylesheet" href="~/css/site.min.css" />
+       <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile("/css/site.min.css")" />
       } else {
-      <link rel="stylesheet" href="~/css/site.min.css" />
+      <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile("/css/site.min.css")" />
       }
  
     @RenderSection("Styles", required: false)
@@ -56,14 +56,14 @@
     <div id="wrapper" class="clearfix">
         @Html.Partial("Header")
         @RenderBody()
-        @Html.Partial("GoogleReviewsPartial");
+        @Html.Partial("GoogleReviewsPartial")
         @Html.Partial("Footer")
     </div>
 
     <div id="gotoTop" class="icon-angle-up"></div>
 
     @if (@env.IsDevelopment()) {
-      <script src="~/js/jquery.js"></script>
+@*       <script src="~/js/jquery.js"></script>
       <script src="~/js/functions.js"></script>
       <script src="~/js/utils.js"></script>
       <script src="~/js/components/moment.js"></script>
@@ -75,7 +75,7 @@
           e.preventDefault();
         });
       </script>
- <script src="~/js/googleReviewsPlugin.js"></script>
+ <script src="~/js/googleReviewsPlugin.js"></script> *@
       
       <!-- <script src="~/js/plugins.animations.js"></script>
           <script src="~/js/plugins.bootstrap.js"></script>
@@ -83,8 +83,9 @@
           <script src="~/js/plugins.swiper.js"></script>
           <script src="~/js/plugins.flexslider.js"></script> -->
       <!-- <script src="~/js/googleMaps.js"></script> -->
+        <script src="@VersionedFileHelper.GetVersionedFile("/js/site.min.js")"></script>
       } else {
-      <script src="~/js/site.min.js"></script>
+      <script src="@VersionedFileHelper.GetVersionedFile("/js/site.min.js")"></script>
       } @RenderSection("Scripts", required: false)
 </body>
 </html>
