@@ -1,14 +1,11 @@
 @font-face {
 	font-family: 'realestate-icons';
-	src:  url('icon-files/realestate.eot?ixg742');
-	src:  url('icon-files/realestate.eot?ixg742#iefix') format('embedded-opentype'),
-		url('icon-files/realestate.ttf?ixg742') format('truetype'),
-		url('icon-files/realestate.woff?ixg742') format('woff'),
-		url('icon-files/realestate.svg?ixg742#realestate') format('svg');
+	src: url('fonts/realestate.woff2?ixg742') format('woff2');
 	font-weight: normal;
 	font-style: normal;
-}
-
+	font-display: swap;
+  }
+  
 [class^="icon-realestate-"], [class*=" icon-realestate-"] {
 	/* use !important to prevent issues with browser extensions that change fonts */
 	font-family: 'realestate-icons' !important;

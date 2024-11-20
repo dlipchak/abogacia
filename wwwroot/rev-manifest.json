@@ -1,11 +1,4 @@
 {
-  "wwwroot/css/site-3316d49254.min.css.gz": "wwwroot/css/site-3316d49254-316861f676.min.css.gz",
-  "wwwroot/css/site-827bc0190d.min.css.gz": "wwwroot/css/site-827bc0190d-508a758105.min.css.gz",
-  "wwwroot/css/site-933ddd64d7.min.css.gz": "wwwroot/css/site-933ddd64d7-d1e97b0d80.min.css.gz",
-  "wwwroot/css/site-96761e2574.min.css.gz": "wwwroot/css/site-96761e2574-d942ffa364.min.css.gz",
-  "wwwroot/css/site-9926eccc75.min.css.gz": "wwwroot/css/site-9926eccc75-331bd4a317.min.css.gz",
-  "wwwroot/css/site.min.css": "wwwroot/css/site-827bc0190d.min.css",
-  "wwwroot/js/site-bf986e9465.min.js.gz": "wwwroot/js/site-bf986e9465-0981d4f3cf.min.js.gz",
-  "wwwroot/js/site.min.js": "wwwroot/js/site-79116d99cf.min.js",
-  "wwwroot/rev-manifest.json.gz": "wwwroot/rev-manifest-eab23c0b42.json.gz"
+  "wwwroot/css/site.min.css": "wwwroot/css/site-777be6e539.min.css",
+  "wwwroot/js/site.min.js": "wwwroot/js/site-b76a48a39b.min.js"
 }

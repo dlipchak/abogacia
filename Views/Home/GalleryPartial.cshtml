@@ -1,13 +1,14 @@
 ﻿<section
   id="slider"
   class="slider-element slider-parallax swiper_wrapper min-vh-75 min-vh-md-80"
-  data-loop="true"
+  data-loop="false"
   data-autoplay="5000"
   data-speed="650"
 >
   <div class="slider-inner">
     <div class="swiper-container swiper-parent">
       <div class="swiper-wrapper">
+        <!-- Slide 1 -->
         <div class="swiper-slide dark">
           <div class="container">
             <div class="slider-caption">
@@ -24,9 +25,13 @@
               </p>
             </div>
           </div>
-          <div class="swiper-slide-bg galleryImg1"></div>
+          <div
+            class="swiper-slide-bg galleryImg1"
+            style="background-image: url('/images/home/gallery/1.avif'); background-size: cover; background-position: center;"
+          ></div>
         </div>
 
+        <!-- Slide 2 -->
         <div class="swiper-slide dark">
           <div class="container">
             <div class="slider-caption">
@@ -42,11 +47,15 @@
                   Más info</a
                 >
               </p>
-              <!-- <p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">Especialistas en reclamos por accidentes laborales en la SRT</p> -->
             </div>
           </div>
-          <div class="swiper-slide-bg galleryImg2"></div>
+          <div
+            class="swiper-slide-bg galleryImg2"
+            style="background-image: url('/images/home/gallery/2.avif'); background-size: cover; background-position: center;"
+          ></div>
         </div>
+
+        <!-- Slide 3 -->
         <div class="swiper-slide dark">
           <div class="container">
             <div class="slider-caption slider-caption-left">
@@ -61,26 +70,18 @@
                   >Más info</a
                 >
               </p>
-              <!-- <p
-                class="d-none d-sm-block"
-                data-animate="fadeInUp"
-                data-delay="200"
-              >
-                Create just what you need for your Perfect Website. Choose from
-                a wide range of Elements &amp; simply put them on our Canvas.
-              </p> -->
             </div>
           </div>
-          <div class="swiper-slide-bg galleryImg3"></div>
+          <div
+            class="swiper-slide-bg galleryImg3"
+            style="background-image: url('/images/home/gallery/3.avif'); background-size: cover; background-position: center;"
+          ></div>
         </div>
       </div>
+
+      <!-- Navigation -->
       <div class="slider-arrow-left"><i class="icon-angle-left"></i></div>
       <div class="slider-arrow-right"><i class="icon-angle-right"></i></div>
-      <!-- <div class="slide-number">
-        <div class="slide-number-current"></div>
-        <span>/</span>
-        <div class="slide-number-total"></div>
-      </div> -->
       <div class="swiper-pagination swiper-pagination-bullets"></div>
     </div>
   </div>

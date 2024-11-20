@@ -4,7 +4,6 @@
 	src:url('fonts/font-icons.eot');
 	src:url('fonts/font-icons.eot') format('embedded-opentype'),
 		url('fonts/font-icons.woff2') format('woff2'),
-		url('fonts/font-icons.ttf') format('truetype'),
 		url('fonts/font-icons.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;

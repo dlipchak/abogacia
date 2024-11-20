@@ -6,18 +6,12 @@
 @inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment WebHostEnvironment
 
 @{
-    // Path to the JSON file in the project root
     var jsonFilePath = System.IO.Path.Combine(WebHostEnvironment.ContentRootPath, "reviews.json");
-
-    // Read and parse the JSON file
     string reviewsJson = System.IO.File.ReadAllText(jsonFilePath);
     var reviews = JArray.Parse(reviewsJson);
     int reviewCount = reviews.Count;
 
-    // Regular expression to extract numeric portion of the rating as in the JavaScript
     var ratingRegex = new Regex(@"(\d+(\.\d+)?)");
-
-    // Calculate total rating by parsing ratings as strings and extracting numbers
     double totalRating = reviews.Sum(review => {
         var ratingString = review["rating"]?.ToString() ?? "0";
         var match = ratingRegex.Match(ratingString);
@@ -25,34 +19,75 @@
     });
 
     double averageRating = reviewCount > 0 ? totalRating / reviewCount : 0;
+    int reviewsPerPage = 12;
+    int totalPages = (int)Math.Ceiling((double)reviewCount / reviewsPerPage);
 }
 
-<!-- JSON Data Output (Hidden) -->
-<div id="reviews-json" style="display: none;">
-    @Html.Raw(reviewsJson)
-</div>
 
-<!-- Reviews Section -->
-<div class="container clearfix custom-reviews-carousel mt-6">
-    <!-- Reviews Container -->
-    <div id="google-reviews" class="reviews-container"></div>
-    
-    <!-- Pagination Container -->
-    <div id="pagination-container" class="d-flex justify-content-center mt-4">
-        <!-- Pagination (UL) will be dynamically generated here by JavaScript -->
+    <!-- Hidden element to store total pages -->
+    <span id="total-pages" style="display: none;">@totalPages</span>
+
+    <div class="container clearfix custom-reviews-carousel mt-6">
+        <div class="review-header" id="review-header">
+            <div class="google-logo"></div>
+            <div class="review-summary">
+                <span class="rating">@averageRating.ToString("0.0", CultureInfo.InvariantCulture)</span>
+                <span class="stars">
+                    @(new string('★', (int)Math.Floor(averageRating)))
+                    @(new string('☆', 5 - (int)Math.Floor(averageRating)))
+                </span>
+                <span class="reviews-count">(@reviewCount opiniones)</span>
+            </div>
+        </div>
+
+        <div id="google-reviews" class="reviews-container">
+            @for (int i = 0; i < reviews.Count; i++)
+            {
+                var review = reviews[i];
+                var ratingMatch = ratingRegex.Match(review["rating"]?.ToString() ?? "0");
+                var rating = ratingMatch.Success ? Math.Round(double.Parse(ratingMatch.Value, CultureInfo.InvariantCulture)) : 0;
+                <div class="review-card" data-page="@((i / reviewsPerPage) + 1)" style="display: none;">
+                    <div class="entry">
+                        <div class="entry-header">
+                            <div class="entry-image">
+                                <img src="@review["imageUrl"]" alt="@review["reviewerName"]" class="review-avatar" loading="lazy">
+                            </div>
+                            <div class="entry-title">@review["reviewerName"]</div>
+                        </div>
+                        <div class="review-info">
+                            <div class="review-rating">
+                                @(new string('★', (int)rating))
+                                @(new string('☆', 5 - (int)rating))
+                            </div>
+                            <div class="review-date">@review["reviewTime"]</div>
+                        </div>
+                        <div class="entry-content">
+                            <p>@(review["reviewText"]?.ToString() ?? "")</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        
+        <div id="pagination-container" class="d-flex justify-content-center mt-4">
+            <ul class="pagination pagination-rounded pagination-inside-transparent pagination-button">
+                <li class="page-item previous disabled">
+                    <a class="page-link" href="#" data-page="0" aria-disabled="true" aria-label="Anterior">
+                        <span aria-hidden="true">«</span>
+                    </a>
+                </li>
+                @for (int i = 1; i <= totalPages; i++)
+                {
+                    <li class="page-item@(i == 1 ? " active" : "")">
+                        <a class="page-link" href="#" data-page="@i">@i</a>
+                    </li>
+                }
+                <li class="page-item next@(totalPages == 1 ? " disabled" : "")">
+                    <a class="page-link" href="#" data-page="2" aria-disabled="@(totalPages == 1)" aria-label="Siguiente">
+                        <span aria-hidden="true">»</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
 
-<!-- JSON-LD Structured Data for Aggregate Rating -->
-<script type="application/ld+json">
-{
-  "@@context": "https://schema.org",
-  "@@type": "AggregateRating",
-  "itemReviewed": {
-    "@@type": "Organization",
-    "name": "Estudio Jurídico López Giacomelli"
-  },
-  "ratingValue": "@averageRating.ToString("0.0", CultureInfo.InvariantCulture)",
-  "reviewCount": "@reviewCount"
-}
-</script>

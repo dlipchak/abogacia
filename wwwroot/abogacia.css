@@ -326,28 +326,49 @@ a.current {
   }
 }
 
-.galleryImg1 {
-  
-  background-position: 0% 92%;
+/* General Background Styling for Swiper Slides */
+.swiper-slide-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover; /* Ensures the image covers the container */
+  background-position: center; /* Centers the background image */
+  z-index: 0; /* Keeps it beneath the content */
 }
 
+/* Overlay for Swiper Slides */
+.swiper-slide-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right, #002f4b, grey); /* Overlay effect */
+  opacity: 0.4;
+  z-index: 1; /* Stays on top of the background image */
+}
+
+/* Individual Background Position Adjustments */
+.galleryImg1 {
+  background-position: 0 92%; /* Adjust specific positioning for Slide 1 */
+}
 
 @media (max-width: 991.98px) {
   .galleryImg1 {
-    background-position: 40% 72%;
+    background-position: 40% 72%; /* Adjust for smaller screens */
   }
 }
 
 .galleryImg2 {
-
-  background-position: 0% 26%;
+  background-position: 0 26%; /* Adjust specific positioning for Slide 2 */
 }
-
 
 .galleryImg3 {
-  background-position: top top;
+  background-position: top center; /* Adjust specific positioning for Slide 3 */
 }
-
 
 
 @media (max-width: 575.98px) {
@@ -621,12 +642,7 @@ a.current {
 
 @font-face {
   font-family: "webfont-medical-icons";
-  src: url("/fonts/webfont-medical-icons.eot");
-  src: url("/fonts/webfont-medical-icons.eot?#iefix")
-      format("embedded-opentype"),
-    url("/fonts/webfont-medical-icons.ttf") format("truetype"),
-    url("/fonts/webfont-medical-icons.woff2") format("woff2"),
-    url("/fonts/webfont-medical-icons.svg#webfont-medical-icons") format("svg");
+  src: url("fonts/webfont-medical-icons.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -967,14 +983,19 @@ small {
     z-index: 0;
 }
 
+.swiper-slide-bg picture {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
 .swiper-slide-bg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
 }
 
-.swiper-slide-bg:before {
+.swiper-slide-bg::after {
     content: '';
     position: absolute;
     top: 0;
@@ -989,5 +1010,29 @@ small {
 @media (max-width: 991.98px) {
     .swiper-slide-bg img {
         object-position: 40% 72%;
+    }
+}
+
+/* Swiper Preloader */
+.swiper-lazy-preloader {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -21px;
+    margin-top: -21px;
+    z-index: 10;
+    transform-origin: 50%;
+    box-sizing: border-box;
+    border: 4px solid var(--themecolor);
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: swiper-preloader-spin 1s infinite linear;
+}
+
+@keyframes swiper-preloader-spin {
+    100% {
+        transform: rotate(360deg);
     }
 }

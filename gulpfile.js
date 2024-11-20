@@ -50,20 +50,15 @@ gulp.task('min:js', async function () {
                     comments: false // Remove comments
                 }
             }))
-            // First create and record the non-gzipped version
+            // Only rev and record the minified version
             .pipe(rev())
             .pipe(gulp.dest('.'))
             .pipe(rev.manifest('wwwroot/rev-manifest.json', {
                 merge: true
             }))
             .pipe(gulp.dest('.'))
-            // Then create and record the gzipped version
+            // Create gzipped version without adding to manifest
             .pipe(gzip())
-            .pipe(rev())
-            .pipe(gulp.dest('.'))
-            .pipe(rev.manifest('wwwroot/rev-manifest.json', {
-                merge: true
-            }))
             .pipe(gulp.dest('.'));
     }));
 });
@@ -88,14 +83,15 @@ gulp.task('min:css', async function () {
         .pipe(gulp.src('./wwwroot/abogacia.css'))
         .pipe(concat(cssBundles[0].outputFileName))
         .pipe(cssmin())
-        .pipe(rev())
-        .pipe(gulp.dest('.'))
-        .pipe(gzip())
+        // Only rev and record the minified version
         .pipe(rev())
         .pipe(gulp.dest('.'))
         .pipe(rev.manifest('wwwroot/rev-manifest.json', {
             merge: true
         }))
+        .pipe(gulp.dest('.'))
+        // Create gzipped version without adding to manifest
+        .pipe(gzip())
         .pipe(gulp.dest('.'));
 });
 
@@ -151,14 +147,6 @@ gulp.task('gzip', function () {
         );
     }
 
-    // Gzip font files
-    tasks.push(
-        gulp.src(fontFiles)
-            .pipe(gzip({ append: true }))
-            .pipe(gulp.dest('wwwroot/css/fonts'))
-            .on('end', () => console.log(`Gzipped font files.`))
-    );
-
     return merge(tasks);
 });
 
@@ -188,17 +176,17 @@ const getBundles = (regexPattern) => {
 gulp.task('min', gulp.series('min:js', 'min:css', 'min:html'));
 
 // Font Optimization Task (without Gzip)
-gulp.task('font-optimize', async function () {
-    const ttf2woff2 = await import('gulp-ttf2woff2'); // Dynamically import gulp-ttf2woff2
+// gulp.task('font-optimize', async function () {
+//     const ttf2woff2 = await import('gulp-ttf2woff2'); // Dynamically import gulp-ttf2woff2
 
-    return gulp.src('wwwroot/css/fonts/**/*.{woff,ttf,otf}') // Target fonts in the specified directory
-        .pipe(ttf2woff2.default())                            // Convert to WOFF2 format
-        .pipe(gulp.dest('wwwroot/css/fonts'))                 // Save WOFF2 files
-        .on('end', () => console.log('Fonts optimized.'));
-});
+//     return gulp.src('wwwroot/css/fonts/**/*.{woff,ttf,otf}') // Target fonts in the specified directory
+//         .pipe(ttf2woff2.default())                            // Convert to WOFF2 format
+//         .pipe(gulp.dest('wwwroot/css/fonts'))                 // Save WOFF2 files
+//         .on('end', () => console.log('Fonts optimized.'));
+// });
 
 // Default task to clean, minify, and gzip files in strict sequence
-gulp.task('default', gulp.series('clean', 'min', 'gzip', 'font-optimize'));
+gulp.task('default', gulp.series('clean', 'min', 'gzip'));
 
 gulp.task('watch', function() {
     gulp.watch([
