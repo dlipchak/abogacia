@@ -1,0 +1,18 @@
+/* faqs */
+
+.toggle-title {
+    color: #222;
+    cursor: pointer;
+    padding: 20px 0;
+}
+
+.toggle-title:hover {
+    color: var(--themecolor);
+}
+
+.toggle-content {
+    border-bottom: 1px solid #eee;
+    padding-top: 20px;
+}
+
+/* end faqs */

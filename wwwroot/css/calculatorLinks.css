@@ -1,0 +1,26 @@
+/* calculator links */
+
+@media (max-width: 414px) {
+    #calculatorLinks .button.button-desc {
+        padding: 24px 12px;
+        font-size: 1.02rem;
+    }
+}
+
+.work-accident-calculator-button,
+.work-accident-calculator-button:hover {
+    background-color: #249ece !important;
+}
+
+.traffic-accident-calculator-button,
+.traffic-accident-calculator-button:hover {
+    background-color: #002bb3 !important;
+}
+
+.dismissal-calculator-button,
+.dismissal-calculator-button:hover {
+    background-color: #d53d0d !important;
+}
+
+
+/* end calculator links */

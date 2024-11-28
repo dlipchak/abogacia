@@ -1,68 +1,158 @@
 ﻿@model ContactModel
-<main id="main">@Html.Partial("ContactUsPartial")</main>
-@section styles {
-    <style type="text/css">
-        small {
-            color: red;
-            font-size: 14pt;
-        }
-    </style>
+@using Microsoft.AspNetCore.Hosting
+@using Microsoft.Extensions.Hosting
+
+@inject IWebHostEnvironment Environment
+
+@section Styles {
+    <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile("contactUs.css")">
 }
 
-@section scripts{
+@section PreloadLinks {
+    @if (!Environment.IsDevelopment())
+    {
+        <link rel="preload" href="@VersionedFileHelper.GetVersionedFile("contactUs.css")" as="style">
+    }
+}
 
-    <script type="text/javascript" >
-        $(function () {
-            $(".alert").hide();
-            $("#sendBtn").on("click", (e) => {
-                var form = $("#contactform")[0];
-                var valid = form.checkValidity();
-                if (valid) {
-                    e.preventDefault();
-                    $(".contact-us-spinner").removeClass("invisible");
-                    const contactForm = {
-                        name: $("#name").val(),
-                        email: $("#email").val(),
-                        phone: $("#phone").val(),
-                        subject: $("#subject").val(),
 
-                        message: $("#message").val(),
-                    };
-                    $.post("ContactUs/SendEmail", contactForm, (ret) => {
-                        $(".contact-us-spinner").addClass("invisible");
-                        $(".alert").show();
-                        window.setTimeout(function () {
-                            $(".alert").hide("slow");
-                        }, 5000);
-                    });
-                }
-            });
-        });
-    </script>
+
+<title class="logo">Contacto</title>
+<section id="content">
+    <div class="content-wrap">
+        <div class="container">
+            <div class="row gutter-40 col-mb-80">
+
+                <div class="postcontent col-lg-9">
+                    <div class="row">
+                        <div class="ml-3">
+                            <h3>Envienos su consulta</h3>
+                        </div>
+                        <div class="ml-3">
+                            <div class="alert alert-success d-none" role="alert">
+                                Gracias por su mensaje, pronto le responderemos!
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="mb-0 needs-validation" id="template-contactform" name="template-contactform"
+                        novalidate>
+                        <div class="form-process">
+                            <div class="css3-spinner">
+                                <div class="css3-spinner-scaler"></div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4 form-group">
+                                <label for="name">Nombre <small>*</small></label>
+                                <input type="text" id="name" name="name" value="" class="form-control" required />
+                                <div class="invalid-feedback">
+                                    Por favor, ingrese su nombre
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 form-group">
+                                <label for="email">Email <small>*</small></label>
+                                <input type="email" id="email" name="email" value="" class="form-control" required />
+                                <div class="invalid-feedback">
+                                    Por favor, ingrese un email válido
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 form-group">
+                                <label for="phone">Teléfono</label>
+                                <input type="text" id="phone" name="phone" value="" type="phone"
+                                    class="form-control no-validation" />
+                            </div>
+
+                            <div class="w-100"></div>
+
+                            <div class="col-md-8 form-group">
+                                <label for="subject">Asunto <small>*</small></label>
+                                <input type="text" id="subject" name="subject" value="" class="form-control" required />
+                                <div class="invalid-feedback">
+                                    Por favor, ingrese el asunto
+                                </div>
+                            </div>
+
+                            <div class="w-100"></div>
+
+                            <div class="col-12 form-group">
+                                <label for="message">Mensaje <small>*</small></label>
+                                <textarea class="form-control" id="message" name="message" rows="6" cols="30"
+                                    required></textarea>
+                                <div class="invalid-feedback">
+                                    Por favor, ingrese su mensaje
+                                </div>
+                            </div>
+
+                            <div class="col-12 form-group">
+                                <button class="button button-3d m-0" type="submit" id="sendBtn" name="sendBtn">
+                                    Enviar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="sidebar col-lg-3">
+                    <div title="Phone Number"><strong>Tel:</strong></div>
+                    +54-1161980179<br />
+                    <div title="Email"><strong>Email:</strong></div>
+                    estudiolopezgiacomelli@gmail.com
+
+                    <div class="widget border-0 pt-0">
+                        <a href="https://www.facebook.com/Estudio-Jur%C3%ADdico-Lopez-Giacomelli-2000856223478787"
+                            target="_blank" class="social-icon border-transparent color-facebook  h-bg-facebook"
+                            title="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/estudiolopezgiacomelli/" target="_blank"
+                            class="social-icon border-transparent color-instagram  h-bg-instagram" title="Instagram">
+                            <i class="bi-instagram"></i>
+                            <i class="bi-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+@section scripts {
+
+    <script src="@VersionedFileHelper.GetVersionedFile("contactUs.js")"></script>
+
+
     <script type="application/ld+json">
-        {
-          "@@context": "https://schema.org",
-          "@@type": "ContactPage",
-          "name": "Contacto",
-          "description": "Página de contacto del Estudio Jurídico López Giacomelli donde los usuarios pueden enviar consultas.",
-          "url": "https://estudiolopezgiacomelli.com.ar/contacto",
-          "contactPoint": {
-            "@@type": "ContactPoint",
-            "telephone": "+54-1161980179",
-            "contactType": "Customer Support",
-            "areaServed": "AR",
-            "availableLanguage": "Spanish"
-          },
-          "address": {
-            "@@type": "PostalAddress",
-            "addressLocality": "Capital Federal",
-            "addressCountry": "Argentina"
-          },
-          "sameAs": [
-            "https://www.facebook.com/Estudio-Jurídico-Lopez-Giacomelli-2000856223478787",
-            "https://www.instagram.com/estudiolopezgiacomelli/"
-          ]
-        }
-        </script>
-        
+                                                                                                                                {
+                                                                                                                                  "@@context": "https://schema.org",
+                                                                                                                                  "@@type": "ContactPage",
+                                                                                                                                  "name": "Contacto",
+                                                                                                                                  "description": "Página de contacto del Estudio Jurídico López Giacomelli donde los usuarios pueden enviar consultas.",
+                                                                                                                                  "url": "https://estudiolopezgiacomelli.com.ar/contacto",
+                                                                                                                                  "contactPoint": {
+                                                                                                                                    "@@type": "ContactPoint",
+                                                                                                                                    "telephone": "+54-1161980179",
+                                                                                                                                    "contactType": "Customer Support",
+                                                                                                                                    "areaServed": "AR",
+                                                                                                                                    "availableLanguage": "Spanish"
+                                                                                                                                  },
+                                                                                                                                  "address": {
+                                                                                                                                    "@@type": "PostalAddress",
+                                                                                                                                    "addressLocality": "Capital Federal",
+                                                                                                                                    "addressCountry": "Argentina"
+                                                                                                                                  },
+                                                                                                                                  "sameAs": [
+                                                                                                                                    "https://www.facebook.com/Estudio-Jurídico-Lopez-Giacomelli-2000856223478787",
+                                                                                                                                    "https://www.instagram.com/estudiolopezgiacomelli/"
+                                                                                                                                  ]
+                                                                                                                                }
+                                                                                                                            </script>
 }

@@ -1,4 +1,5 @@
 {
-  "wwwroot/css/site.min.css": "wwwroot/css/site-777be6e539.min.css",
-  "wwwroot/js/site.min.js": "wwwroot/js/site-b76a48a39b.min.js"
+  "calculatorWorkDismissal.js": "calculatorWorkDismissal.bundle.24675f91.js",
+  "calculatorWorkAccident.js": "calculatorWorkAccident.bundle.e36826c3.js",
+  "[name].css": "[name].bundle.556b56d5.css"
 }

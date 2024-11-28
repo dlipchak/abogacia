@@ -1,0 +1,30 @@
+@import '@css/style.css';
+@import '@css/font-icons.css';
+/* @import '@css/layout.css';
+
+@import '@css/gallery.css';
+
+@import '@css/calculatorLinks.css'; */
+
+@import '@css/abogacia.css';
+
+@import '@css/reviews.css';
+
+
+/*home page*/
+.heading-block:after {
+    display: inline;
+}
+
+.swiper-slide-bg:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right, #002f4b, grey);
+    opacity: 0.4;
+}
+
+/* end home page */

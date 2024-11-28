@@ -16,8 +16,8 @@
     <None Include="wwwroot\css\fonts\font-icons-snapchat.svg" />
     <None Include="wwwroot\css\fonts\font-icons.svg" />
     <None Include="wwwroot\css\fonts\lined-icons.svg" />
-    <None Include="wwwroot\css\fonts\Simple-Line-Icons.dev.svg" />
-    <None Include="wwwroot\css\fonts\Simple-Line-Icons.svg" />
+    <None Include="wwwroot\css\fonts\simple-line-icons.dev.svg" />
+    <None Include="wwwroot\css\fonts\simple-line-icons.svg" />
     <None Include="wwwroot\images\backup\logo-white.png" />
     <None Include="wwwroot\images\backup\logo.png" />
     <None Include="wwwroot\images\icons\iconalt.svg" />

@@ -1,0 +1,8 @@
+@model (string Title, string Subtitle, string ClassName)
+
+<section id="hero-title" class="heroHeader @Model.ClassName min-vh-60">
+    <div class="container clearfix d-flex flex-column align-items-start">
+        <h1>@Model.Title</h1>
+        <h2>@Model.Subtitle</h2>
+    </div>
+</section>

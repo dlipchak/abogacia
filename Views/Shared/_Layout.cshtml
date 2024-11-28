@@ -7,46 +7,42 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
 
     <title>@(ViewData["Title"] ?? "Estudio Jurídico López Giacomelli - Especialistas en accidentes y despidos")</title>
-    <meta name="description" content="@(ViewData["Description"] ?? "Abogados especialistas en accidentes y derecho laboral en Argentina.")">
-    <meta name="keywords" content="@(ViewData["Keywords"] ?? "abogados, accidentes de tránsito, accidentes laborales, despidos, derecho laboral, indemnización")">
+    <meta name="description"
+        content="@(ViewData["Description"] ?? "Abogados especialistas en accidentes y derecho laboral en Argentina.")">
+    <meta name="keywords"
+        content="@(ViewData["Keywords"] ?? "abogados, accidentes de tránsito, accidentes laborales, despidos, derecho laboral, indemnización")">
     <link rel="canonical" href="https://estudiolopezgiacomelli.com.ar/@(ViewData["Canonical"] ?? "")" />
     <link rel="alternate" hreflang="es-AR" href="https://estudiolopezgiacomelli.com.ar/" />
     <link rel="alternate" hreflang="es" href="https://estudiolopezgiacomelli.com.ar/" />
-    
-    </script>
 
     <link rel="icon" href="/images/logo.ico" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Poppins:300,500,700&display=swap" rel="stylesheet" />
-    
-    @if (@env.IsDevelopment()) {
-      <link rel="stylesheet" href="~/css/bootstrap.css" type="text/css" />
-      <link rel="stylesheet" href="~/style.css" type="text/css" />
-      <link rel="stylesheet" href="~/css/swiper.css" type="text/css" />
-      <link rel="stylesheet" href="~/css/dark.css" type="text/css" />
-      <link rel="stylesheet" href="~/css/font-icons.css" type="text/css" />
-      <link rel="stylesheet" href="~/css/real-estate/css/font-icons.css" type="text/css" />
-      <link rel="stylesheet" href="~/css/animate.css" type="text/css" />
-      <link rel="stylesheet" href="~/css/magnific-popup.css" type="text/css" />
-      <link rel="stylesheet" href="~/abogacia.css" type="text/css" />
-      
-      } else {
-      <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile("/css/site.min.css")" />
-      }
- 
+    @* <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+          media="print" 
+          onload="this.media='all'"> *@
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap"
+        rel="stylesheet">
+
+
     @RenderSection("Styles", required: false)
-    <a
-    href="https://api.whatsapp.com/send?phone=541161980179"
-    class="icon-whatsapp contact-us-whatsapp"
-    target="_blank"
-  ></a>
+    @RenderSection("PreloadLinks", required: false)
+    <a href="https://api.whatsapp.com/send?phone=541161980179" class="bi-whatsapp contact-us-whatsapp"
+        target="_blank"></a>
 </head>
-<body class="stretched " data-loader="2" data-loader-timeout="20">
+
+<body class="stretched">
     <div id="wrapper" class="clearfix">
         @Html.Partial("Header")
         @RenderBody()
@@ -54,48 +50,11 @@
         @Html.Partial("Footer")
     </div>
 
-    <div id="gotoTop" class="icon-angle-up"></div>
+    <div id="gotoTop" class="uil uil-angle-up"></div>
 
-    @if (@env.IsDevelopment()) {
-   <script src="~/js/jquery.js"></script>
-      <!-- <script src="~/js/functions.js"></script> 
-       <script src="~/js/plugins.parallax.min.js"></script> 
-       <script src="~/js/plugins.pagetransition.min.js"></script> 
-       <script src="~/js/plugins.lazyload.min.js"></script> 
-       <script src="~/js/plugins.easing.min.js"></script> 
-       <script src="~/js/plugins.bootstrap.min.js"></script>   
-      <script src="~/js/utils.js"></script>
-      <script src="~/js/components/moment.js"></script>
-      <script src="~/js/calculators/calculatorWorkDismissal.js"></script>
-      <script src="~/js/calculators/calculatorTrafficAccident.js"></script>
-      <script src="~/js/calculators/calculatorWorkAccident.js"></script> -->
-      <!-- <script src="~/js/plugins.lazyload.min.js"></script>  -->
-      <script>
-        $("body").bind("copy paste cut drag drop", function (e) {
-          e.preventDefault();
-        });
-  //       window.lazyLoadInstance = new LazyLoad({
-	// 	threshold: 150,
-	// 	elements_selector: '.lazy',
-	// 	class_loading: 'lazy-loading',
-	// 	class_loaded: 'lazy-loaded',
-	// 	class_error: 'lazy-error',
-	// 	callback_loaded: (el)=>{
-	// 		$(window).trigger( 'lazyLoadLoaded' );
-	// 	}
-	// });
-      </script>
- <script src="~/js/googleReviewsPlugin.js"></script> 
-      
-      <!-- <script src="~/js/plugins.animations.js"></script>
-          <script src="~/js/plugins.bootstrap.js"></script>
-          <script src="~/js/plugins.easing.js"></script>
-          <script src="~/js/plugins.swiper.js"></script>
-          <script src="~/js/plugins.flexslider.js"></script> -->
-      <!-- <script src="~/js/googleMaps.js"></script> -->
-        @* <script src="@VersionedFileHelper.GetVersionedFile("/js/site.min.js")"></script> *@
-      } else {
-      <script src="@VersionedFileHelper.GetVersionedFile("/js/site.min.js")" defer></script>
-      } @RenderSection("Scripts", required: false)
+
+    <script src="/js/functions.js"></script>
+    @RenderSection("Scripts", required: false)
 </body>
+
 </html>

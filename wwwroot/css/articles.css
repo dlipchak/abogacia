@@ -1,0 +1,25 @@
+/* articles */
+#articleSection {
+    margin: 0px 0 !important;
+    padding: 15px 0 !important;
+}
+
+.promo .icon-check-circle1 {
+    font-size: 34px;
+}
+
+.promo .iconlist>li [class^="icon-"]:first-child,
+.iconlist>li [class*=" icon-"]:first-child {
+    width: 19px;
+    top: 5px;
+}
+
+
+
+@media (max-width: 414px) {
+    .promoInmediata {
+        margin-left: 40px;
+    }
+}
+
+/* end articles */

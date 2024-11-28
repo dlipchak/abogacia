@@ -1,22 +1,25 @@
-﻿<title class="logo">
-  Calculadora de indemnización por accidentes laborales. 
-  
-  </title>
+﻿@using Microsoft.AspNetCore.Hosting
+@using Microsoft.Extensions.Hosting
 
-<section
-  id="page-title"
-  class="calculatorHeader calculatorWorkAccidentHeader min-vh-60 page-title-parallax page-title-dark include-header"
->
-  <div class="container clearfix">
-    <div>
-      <h3 class="articleTitle">Accidentes laborales</h3>
-    </div>
+@inject IWebHostEnvironment Environment
 
-    <h1 class="articleTitle">Calculadora de indemnización</h1>
-  </div>
-</section>
+@section PreloadLinks {
+  <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile("calculatorWorkAccident.css")">
+}
 
-<section id="content" class="calculatorWorkAccident">
+
+<title class="logo">
+  Calculadora de indemnización por accidentes laborales.
+
+</title>
+
+@await Html.PartialAsync("_HeroSection", (
+  Title: "Accidentes laborales",
+  Subtitle: "Calculadora de indemnización",
+  ClassName: "calculatorWorkAccidentHeader"
+  ))
+
+<section id=" content" class="calculatorWorkAccident">
   <div class="content-wrap pt-0">
     <div class="section mt-0">
       <div class="container mt-5">
@@ -25,42 +28,21 @@
             <form class="mt-3">
               <div class="form-row">
                 <div class="form-group col-md-12">
-                  <label for="salary"
-                    ><small>*</small> Ingreso Base Mensual:</label
-                  >
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="salary"
-                    name="salary"
-                    placeholder="Por ej: 5000"
-                  />
+                  <label for="salary"><small>*</small> Ingreso Base Mensual:</label>
+                  <input type="number" class="form-control" id="salary" name="salary" placeholder="Por ej: 5000" />
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-12">
-                  <label for="saincapacitylary"
-                    ><small>*</small> Porcentaje de incapacidad:</label
-                  >
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="incapacity"
-                    name="incapacity"
-                    placeholder="Por ej: 30"
-                  />
+                  <label for="saincapacitylary"><small>*</small> Porcentaje de incapacidad:</label>
+                  <input type="number" class="form-control" id="incapacity" name="incapacity"
+                    placeholder="Por ej: 30" />
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label for="age"><small>*</small> Edad:</label>
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="age"
-                    name="age"
-                    placeholder="Por ej: 25"
-                  />
+                  <input type="number" class="form-control" id="age" name="age" placeholder="Por ej: 25" />
                 </div>
               </div>
 
@@ -68,43 +50,19 @@
                 <div class="form-group col-md-12">
                   <label for="age">Lugar de accidente:</label>
                   <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input required valid"
-                      type="radio"
-                      name="accident-place"
-                      id="accident-place-work"
-                      value="work"
-                      checked
-                    />
-                    <label
-                      class="form-check-label nott"
-                      for="accident-place-work"
-                      >En el Trabajo</label
-                    >
+                    <input class="form-check-input required valid" type="radio" name="accident-place"
+                      id="accident-place-work" value="work" checked />
+                    <label class="form-check-label nott" for="accident-place-work">En el Trabajo</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input valid"
-                      type="radio"
-                      name="accident-place"
-                      id="accident-place-initinere"
-                      value="initinere"
-                    />
-                    <label
-                      class="form-check-label nott"
-                      for="accident-place-initinere"
-                      >In itinere</label
-                    >
+                    <input class="form-check-input valid" type="radio" name="accident-place"
+                      id="accident-place-initinere" value="initinere" />
+                    <label class="form-check-label nott" for="accident-place-initinere">In itinere</label>
                   </div>
                 </div>
               </div>
 
-              <button
-                class="btn btn-success"
-                type="button"
-                id="btnCalculate"
-                disabled
-              >
+              <button class="btn btn-success" type="button" id="btnCalculate" disabled>
                 Calcular
               </button>
 
@@ -141,17 +99,15 @@
               MINISTERIO DE SALUD Y DESARROLLO SOCIAL.
             </p>
             <p>
-              <strong class="green"
-                >Accidente in itinere (camino al trabajo o de regreso a
-                casa)</strong
-              >: los accidentes in itinere (del latin “itinere”: “en curso”) se
+              <strong class="green">Accidente in itinere (camino al trabajo o de regreso a
+                casa)</strong>: los accidentes in itinere (del latin “itinere”: “en curso”) se
               encuentran definidos en el artículo sexto de la Ley de Riesgos del
               Trabajo (Ley 24.557) como: “todo
               <span class="green">acontecimiento súbito y violento</span>
               ocurrido por el hecho o en ocasión del trabajo, o en el
               <span class="green">
-                trayecto entre el domicilio del trabajador y el lugar de trabajo </span
-              >, siempre y cuando el damnificado no hubiere interrumpido o
+                trayecto entre el domicilio del trabajador y el lugar de trabajo </span>, siempre y cuando el
+              damnificado no hubiere interrumpido o
               alterado dicho trayecto por causas ajenas al trabajo”.
             </p>
             <p>
@@ -235,4 +191,8 @@
     }
   }
   </script>
-  
+
+
+@section Scripts {
+  <script src="@VersionedFileHelper.GetVersionedFile("calculatorWorkAccident.js")"></script>
+}

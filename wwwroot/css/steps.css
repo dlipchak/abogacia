@@ -1,0 +1,38 @@
+/* steps */
+
+.feature-box-border .feature-box {
+    position: relative;
+}
+
+.feature-box-border .feature-box:not(.noborder)::after {
+    content: "";
+    position: absolute;
+    top: calc(64px + 7px);
+    left: 59px;
+    width: 2px;
+    height: calc(100% - 79px);
+    background-color: #eee;
+    z-index: 0;
+}
+
+.feature-box-border .fbox-icon i,
+.feature-box-border .fbox-border.fbox-light .fbox-icon i {
+    line-height: 60px;
+    font-size: 24px;
+    z-index: 1;
+    text-align: center;
+}
+
+.fbox-border.fbox-light .fbox-icon a {
+    background-color: #fff;
+}
+
+.fbox-border.fbox-effect .fbox-icon i::after {
+    background-color: #0f6458;
+}
+
+.trafficAccidentSteps .fbox-content {
+    height: auto !important;
+}
+
+/* end steps */

@@ -6,6 +6,8 @@
 (function() {
 	'use strict';
 
+	var $ = jQuery.noConflict();
+
 	/*
 		Reposition the HotSpots during init and resize windows
 	*/
@@ -16,8 +18,8 @@
 		var bannerWidth = $(options.mainselector).width();
 		var bannerHeight = $(options.mainselector).height();
 		$(options.selector).each(function() {
-			var xPos = $(this).attr('x');
-			var yPos = $(this).attr('y');
+			var xPos = $(this).attr('data-x');
+			var yPos = $(this).attr('data-y');
 			xPos = xPos / imageWidth * bannerWidth;
 			yPos = yPos / imageHeight * bannerHeight;
 
@@ -52,10 +54,10 @@
 
 	$.fn.hotSpot = function( options ) {
 
-	// Extend our default options with those provided.
-	// Note that the first argument to extend is an empty
-	// object – this is to keep from overriding our "defaults" object.
-	var _options = $.extend( {}, $.fn.hotSpot.defaults, options );
+		// Extend our default options with those provided.
+		// Note that the first argument to extend is an empty
+		// object – this is to keep from overriding our "defaults" object.
+		var _options = $.extend( {}, $.fn.hotSpot.defaults, options );
 
 		// Position each hotspot
 		this.each(function() {
@@ -89,7 +91,7 @@
 	$.fn.hotSpot.defaults = {
 		mainselector: '.hotspot-img',
 		selector: '.hot-spot',
-		imageselector: '.img-responsive',
+		imageselector: 'img',
 		tooltipselector: '.tooltip',
 		bindselector: 'hover'
 	};

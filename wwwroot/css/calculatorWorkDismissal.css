@@ -1,0 +1,16 @@
+@import '@css/style.css';
+@import '@css/font-icons.css';
+@import '@css/layout.css';
+
+
+@import '@css/hero.css';
+
+@import '@css/calculatorLinks.css';
+
+/* calculatorDismissal */
+.calculatorDismissalHeader {
+
+    background: url("/images/calculators/dismissal-calculator.webp") center center / cover no-repeat;
+}
+
+/* end calculatorDismissalHeader */

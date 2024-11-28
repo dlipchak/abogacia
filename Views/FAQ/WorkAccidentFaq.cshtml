@@ -1,1041 +1,623 @@
-﻿<title class="logo">Accidentes laborales. Preguntas frecuentes.</title>
-<section
-  id="page-title"
-  class="workAccidentFaqHeader faqHeader min-vh-60 page-title-parallax page-title-dark include-header"
->
-  <div class="container clearfix">
-    <div>
-      <h3 class="articleTitle">Accidentes laborales</h3>
-    </div>
+﻿@using Microsoft.AspNetCore.Hosting
+@using Microsoft.Extensions.Hosting
 
-    <h1 class="articleTitle">Preguntas Frecuentes</h1>
-  </div>
-</section>
+@inject IWebHostEnvironment Environment
+
+@section Styles {
+  @if (Environment.IsDevelopment())
+  {
+    <link rel="stylesheet" href="~/style.css">
+    <link rel="stylesheet" href="~/css/font-icons.css">
+    <link rel="stylesheet" href="~/abogacia.css">
+  }
+  else
+  {
+    <link rel="stylesheet" href="~/dist/faqWorkAccident.css">
+  }
+}
+
+@section PreloadLinks {
+
+  @if (!Environment.IsDevelopment())
+  {
+    <link rel="preload" href="~/dist/faqWorkAccident.css" as="style">
+  }
+}
+
+<title class="logo">Accidentes laborales. Preguntas frecuentes.</title>
+
+@await Html.PartialAsync("_HeroSection", (
+  Title: "Accidentes laborales",
+  Subtitle: "Preguntas Frecuentes",
+  ClassName: "workAccidentFaqHeader"
+  ))
+
 
 <section id="faq" class="container container-block mt-5">
   <div class="col-xs-12">
-    <div class="trust-col">
-      <div
-        class="panel-group shortcodes"
-        id="accordion"
-        role="tablist"
-        aria-multiselectable="true"
-      >
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="heading13">
-            <h4 class="panel-title">
-              <a
-                class="collapsed"
-                data-toggle="collapse"
-                data-parent="#accordion"
-                href="#collapse13"
-                aria-expanded="false"
-                aria-controls="heading13"
-              >
-                ¿Cómo actuar ante un accidente laboral?
-              </a>
-            </h4>
-          </div>
-          <div
-            id="collapse13"
-            class="panel-collapse collapse"
-            role="tabpanel"
-            aria-labelledby="heading13"
-            aria-expanded="false"
-          >
-            <div class="panel-body">
-              <p>
-                <span style="font-weight: 400"
-                  >Si Ud. es v&iacute;ctima de un accidente en su trabajo, de un
-                  accidente in itinere (camino al trabajo o de regreso a su casa
-                  desde el trabajo) o de una enfermedad profesional, lo primero
-                  que debe hacer es informar a su empleador. Ser&aacute; su
-                  empleador quien informe a la ART lo sucedido (aunque
-                  tambi&eacute;n puede hacerlo usted mismo informando en forma
-                  directa a su ART).</span
-                >
-              </p>
-              <p>
-                <span style="font-weight: 400"
-                  >El paso siguiente es pedirle una copia de la denuncia a su
-                  empleador.</span
-                >
-              </p>
-              <p>
-                <span style="font-weight: 400"
-                  >Una vez iniciado el tratamiento m&eacute;dico en su ART,
-                  usted debe </span
-                ><strong
-                  >conservar todas las constancias m&eacute;dicas por
-                  m&iacute;nimas qu&eacute; sean</strong
-                ><span style="font-weight: 400"
-                  >, para poder acreditar en el futuro la atenci&oacute;n
-                  recibida.</span
-                >
-              </p>
-              <p>
-                <span style="font-weight: 400"
-                  >Durante este proceso le recordamos que siempre es fundamental
-                  asesorarse legalmente.
-                </span>
-              </p>
-              <p>
-                <strong
-                  >Tenga presente que, asi como en el caso de los seguros
-                  automotores, el negocio de las ARTs es pagarle a usted lo
-                  menos posible. En gran parte de los casos, pese a existir
-                  accidentes grav&iacute;simos y pruebas contundentes de
-                  secuelas, las ARTs brindan una atenci&oacute;n m&eacute;dica
-                  m&iacute;nima y luego le dan el alta al paciente sin ningun
-                  tipo de incapacidad o con un porcentaje muy bajo.</strong
-                >
-              </p>
-              <p>
-                <span style="font-weight: 400"
-                  >Si usted ya atraves&oacute; este proceso y no est&aacute; de
-                  acuerdo con la incapacidad que le asign&oacute; su ART
-                  a&uacute;n est&aacute; a tiempo de asesorarse.
-                </span>
-              </p>
-              <p>
-                <span style="font-weight: 400">A grandes rasgos, </span
-                ><strong
-                  >el procedimiento que siguen las ART es el de notificar el
-                  alta (con o sin incapacidad) por carta documento,
-                  inform&aacute;ndole a usted que tiene la posibilidad de
-                  concurrir a </strong
-                ><strong>Comisi&oacute;n M&eacute;dica</strong
-                ><strong> sin necesidad de abogado</strong
-                ><span style="font-weight: 400">. Lamentablemente, </span
-                ><strong>este es un </strong
-                ><strong
-                  >tr&aacute;mite administrativo ileg&iacute;timo que ha sido
-                  declarado inconstitucional por la propia Corte Suprema de
-                  Justicia</strong
-                ><span style="font-weight: 400">. Ello debido a que </span
-                ><strong
-                  >no interviene un Juez que garantice sus derechos y por si
-                  fuera poco lo empujan a concurrir sin un abogado de confianza
-                  con el conocimiento necesario para proteger sus
-                  intereses</strong
-                ><strong>.</strong>
-              </p>
-              <p>
-                <strong>Se aprovechan del desconocimiento de la gente</strong
-                ><span style="font-weight: 400">
-                  y bajo la apariencia de brindarle otra instancia de reclamo,
-                  lo que buscan es legitimar un procedimiento que permita
-                  pagarle a la v&iacute;ctima lo menos posible.</span
-                >
-              </p>
-              <p>
-                <strong>No se deje enga&ntilde;ar</strong
-                ><span style="font-weight: 400"
-                  >, ante tales injusticias del sistema nosotros nos paramos del
-                  lado del trabajador a defender sus derechos.</span
-                >
-              </p>
-              <p>
-                <strong>Le recordamos que </strong
-                ><strong
-                  >el reclamo se realiza directamente a la ART. Su empleador no
-                  tiene relaci&oacute;n alguna con el reclamo</strong
-                ><span style="font-weight: 400">
-                  y la indemnizaci&oacute;n que reciba usted proviene
-                  &uacute;nicamente de la ART. Al realizar el reclamo usted no
-                  perjudica de ningun modo a su patron ni pone en riesgo su
-                  trabajo.</span
-                >
-              </p>
-              <p>
-                <span style="font-weight: 400"
-                  >Es fundamental resaltar este punto ya que </span
-                ><strong
-                  >mucha gente cree que al hacer un reclamo por accidente
-                  laboral perjudica a su empleador y por tener una idea
-                  equivocada elige resignar sus derechos.</strong
-                >
-              </p>
-              <p>
-                <strong
-                  ><strong>Consultenos</strong
-                  ><span style="font-weight: 400">
-                    y le explicaremos de qu&eacute; forma cobrar lo que responde
-                    sin arriesgar su empleo.</span
-                  ></strong
-                >
-              </p>
-            </div>
+    <div class="faqs">
+      <div class="toggle faq">
+        <div class="toggle-header">
+          <div class="toggle-title">
+            ¿Cómo actuar ante un accidente laboral?
           </div>
         </div>
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="heading14">
-            <h4 class="panel-title">
-              <a
-                class="collapsed"
-                data-toggle="collapse"
-                data-parent="#accordion"
-                href="#collapse14"
-                aria-expanded="false"
-                aria-controls="heading14"
-              >
-                ¿Qué son los accidentes in itinere?
-              </a>
-            </h4>
-          </div>
-          <div
-            id="collapse14"
-            class="panel-collapse collapse"
-            role="tabpanel"
-            aria-labelledby="heading14"
-            aria-expanded="false"
-          >
-            <div class="panel-body">
-              <p>
-                <span style="font-weight: 400"
-                  >Los accidentes in itinere (del latin &ldquo;itinere&rdquo;:
-                  &ldquo;en curso&rdquo;) se encuentran definidos en el
-                  art&iacute;culo sexto de la La Ley de Riesgos del Trabajo (Ley
-                  24.557) como: &ldquo;todo acontecimiento s&uacute;bito y
-                  violento ocurrido por el hecho o en ocasi&oacute;n del
-                  trabajo, o en el trayecto entre el domicilio del trabajador y
-                  el lugar de trabajo, siempre y cuando el damnificado no
-                  hubiere interrumpido o alterado dicho trayecto por causas
-                  ajenas al trabajo&rdquo;.</span
-                >
-              </p>
-              <p>
-                <strong>Ejemplo 1:</strong>
-                <strong>El trabajador, luego de salir de su casa</strong
-                ><span style="font-weight: 400"> y llegando al trabajo, </span
-                ><strong>sufre un robo</strong
-                ><span style="font-weight: 400">
-                  con herida de arma blanca, con cortes en el brazo, ocurrido en
-                  el trayecto al trabajo.</span
-                >
-              </p>
-              <p>
-                <strong>Ejemplo 2:</strong
-                ><span style="font-weight: 400"> El trabajador, </span
-                ><strong
-                  >volviendo a su hogar al salir de su jornada, caminando por la
-                  vereda</strong
-                ><span style="font-weight: 400">, pisa mal y cae con </span
-                ><strong>fractura de rodilla</strong
-                ><span style="font-weight: 400">.</span>
-              </p>
-              <p>
-                <span style="font-weight: 400">Como se puede apreciar, </span
-                ><strong
-                  >es todo accidente sufrido por el trabajador en el trayecto
-                  entre el hogar y el trabajo, ya sea yendo o volviendo del
-                  mismo, siempre y cuando el damnificado no hubiere interrumpido
-                  o alterado dicho trayecto por causas ajenas al trabajo</strong
-                ><span style="font-weight: 400">.</span>
-              </p>
-              <p>
-                <span style="font-weight: 400"
-                  >En estos casos, la ART deber&aacute; brindar las prestaciones
-                  m&eacute;dicas y dinerarias hasta el alta m&eacute;dica o
-                  t&eacute;rmino legal, y si del accidente in itinere, han
-                  quedado secuelas tanto ps&iacute;quicas como f&iacute;sicas en
-                  la salud del trabajador, &eacute;ste tiene el derecho a ser
-                  indemnizado conforme la normativa vigente.</span
-                >
-              </p>
-              <p>
-                <strong
-                  >Tenga presente que, asi como en el caso de los seguros
-                  automotores, el negocio de las ARTs es pagarle a usted lo
-                  menos posible. En gran parte de los casos, pese a existir
-                  accidentes grav&iacute;simos y pruebas contundentes de
-                  secuelas, las ARTs brindan una atenci&oacute;n m&eacute;dica
-                  m&iacute;nima y luego le dan el alta al paciente sin ningun
-                  tipo de incapacidad o con un porcentaje muy bajo.</strong
-                >
-              </p>
-              <p>
-                <strong><strong>&nbsp;</strong></strong>
-              </p>
-              <p>
-                <strong>No se deje enga&ntilde;ar</strong
-                ><span style="font-weight: 400"
-                  >, ante tales injusticias del sistema nosotros nos paramos del
-                  lado del trabajador a defender sus derechos.</span
-                >
-              </p>
-              <p>
-                <strong>Le recordamos que </strong
-                ><strong
-                  >el reclamo se realiza directamente a la ART. Su empleador no
-                  tiene relaci&oacute;n alguna con el reclamo</strong
-                ><span style="font-weight: 400">
-                  y la indemnizaci&oacute;n que reciba usted proviene
-                  &uacute;nicamente de la ART. Al realizar el reclamo usted no
-                  perjudica de ningun modo a su patron ni pone en riesgo su
-                  trabajo.</span
-                >
-              </p>
-              <p>
-                <span style="font-weight: 400"
-                  >Es fundamental resaltar este punto ya que </span
-                ><strong
-                  >mucha gente cree que al hacer un reclamo por accidente
-                  laboral perjudica a su empleador y por tener una idea
-                  equivocada elige resignar sus derechos.</strong
-                >
-              </p>
-              <p>
-                <strong
-                  ><strong>Consultenos</strong
-                  ><span style="font-weight: 400">
-                    y le explicaremos de qu&eacute; forma cobrar lo que responde
-                    sin arriesgar su empleo.</span
-                  ></strong
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="heading15">
-            <h4 class="panel-title">
-              <a
-                class="collapsed"
-                data-toggle="collapse"
-                data-parent="#accordion"
-                href="#collapse15"
-                aria-expanded="false"
-                aria-controls="heading15"
-              >
-                ¿Qué son las enfermedades profesionales?
-              </a>
-            </h4>
-          </div>
-          <div
-            id="collapse15"
-            class="panel-collapse collapse"
-            role="tabpanel"
-            aria-labelledby="heading15"
-            aria-expanded="false"
-          >
-            <div class="panel-body">
-              <p>
-                <span style="font-weight: 400">Las </span
-                ><strong>enfermedades</strong
-                ><span style="font-weight: 400">
-                  profesionales son aquellas </span
-                ><strong>producidas por causa del trabajo</strong
-                ><span style="font-weight: 400"
-                  >, a aquellos trabajadores que prestan tareas expuestos a
-                  factores de riesgo, como ser: movimientos forzosos y
-                  repetitivos, ruidos en el ambiente de trabajo,
-                  manipulaci&oacute;n de sustancias qu&iacute;micas e
-                  inhalaci&oacute;n de gases, entre otros.</span
-                >
-              </p>
-              <p>
-                <span style="font-weight: 400"
-                  >La Ley de Riesgos del Trabajo (Ley 24.557) las define en su
-                  art&iacute;culo sexto como &ldquo;aquellas que se encuentran
-                  incluidas en el listado que elaborar&aacute; y revisar&aacute;
-                  el Poder Ejecutivo, conforme al procedimiento del
-                  art&iacute;culo 40 apartado 3 de esta ley. El listado
-                  identificar&aacute; agente de riesgo, cuadros cl&iacute;nicos,
-                  exposici&oacute;n y actividades en capacidad de determinar la
-                  enfermedad profesional.&rdquo;</span
-                >
-              </p>
-              <p>
-                <strong>Ejemplo 1</strong><strong>:</strong
-                ><span style="font-weight: 400">
-                  El trabajador, mec&aacute;nico industrial, </span
-                ><strong>expuesto a altos niveles sonoros</strong
-                ><span style="font-weight: 400">
-                  en el puesto de trabajo, padece hipoacusia bilateral.</span
-                >
-              </p>
-              <p>
-                <strong>Ejemplo 2</strong><strong>:</strong
-                ><span style="font-weight: 400">
-                  El trabajador, operario de m&aacute;quina, expuesto a </span
-                ><strong>movimientos repetitivos del hombro derecho</strong
-                ><span style="font-weight: 400"
-                  >, padece tendinitis del hombro.</span
-                >
-              </p>
-              <p>
-                <strong>Ejemplo 3</strong><strong>:</strong
-                ><span style="font-weight: 400">
-                  El trabajador, docente de escuela, expuesto a la </span
-                ><strong>sobrecarga del uso de la voz</strong
-                ><span style="font-weight: 400"
-                  >, padece disfon&iacute;a persistente</span
-                >
-              </p>
-              <p>
-                <span style="font-weight: 400"
-                  >En estos casos, la ART deber&aacute; brindar las prestaciones
-                  m&eacute;dicas y dinerarias hasta el alta m&eacute;dica o
-                  plazo legal, y si de la enfermedad profesional, han quedado
-                  secuelas tanto ps&iacute;quicas como f&iacute;sicas en la
-                  salud del trabajador, &eacute;ste tiene el derecho a ser
-                  indemnizado conforme la normativa vigente.</span
-                >
-              </p>
-              <p>
-                <strong
-                  >Tenga presente que, asi como en el caso de los seguros
-                  automotores, el negocio de las ARTs es pagarle a usted lo
-                  menos posible. En gran parte de los casos, pese a existir
-                  accidentes grav&iacute;simos y pruebas contundentes de
-                  secuelas, las ARTs brindan una atenci&oacute;n m&eacute;dica
-                  m&iacute;nima y luego le dan el alta al paciente sin ningun
-                  tipo de incapacidad o con un porcentaje muy bajo.</strong
-                >
-              </p>
-              <p>
-                <strong>No se deje enga&ntilde;ar</strong
-                ><span style="font-weight: 400"
-                  >, ante tales injusticias del sistema nosotros nos paramos del
-                  lado del trabajador a defender sus derechos.</span
-                >
-              </p>
-              <p>
-                <strong
-                  >Le recordamos que el reclamo se realiza directamente a la
-                  ART. Su empleador no tiene relaci&oacute;n alguna con el
-                  reclamo</strong
-                ><span style="font-weight: 400">
-                  y la indemnizaci&oacute;n que reciba usted proviene
-                  &uacute;nicamente de la ART. Al realizar el reclamo usted no
-                  perjudica de ningun modo a su patron ni pone en riesgo su
-                  trabajo.</span
-                >
-              </p>
-              <p>
-                <span style="font-weight: 400"
-                  >Es fundamental resaltar este punto ya que </span
-                ><strong
-                  >mucha gente cree que al hacer un reclamo por accidente
-                  laboral perjudica a su empleador y por tener una idea
-                  equivocada elige resignar sus derechos.</strong
-                >
-              </p>
-              <p>
-                <strong
-                  ><strong>Consultenos</strong
-                  ><span style="font-weight: 400">
-                    y le explicaremos de qu&eacute; forma cobrar lo que responde
-                    sin arriesgar su empleo.</span
-                  ></strong
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="heading16">
-            <h4 class="panel-title">
-              <a
-                class="collapsed"
-                data-toggle="collapse"
-                data-parent="#accordion"
-                href="#collapse16"
-                aria-expanded="false"
-                aria-controls="heading16"
-              >
-                ¿Qué diferencia hay entre un accidente de trabajo y una
-                enfermedad profesional?
-              </a>
-            </h4>
-          </div>
-          <div
-            id="collapse16"
-            class="panel-collapse collapse"
-            role="tabpanel"
-            aria-labelledby="heading16"
-            aria-expanded="false"
-          >
-            <div class="panel-body">
-              <p>
-                <span style="font-weight: 400"
-                  >Los accidentes de trabajo pueden deberse a un evento
-                  s&uacute;bito espec&iacute;fico o, puede ocurrir que
-                  paulatinamente se produzca una </span
-                ><strong>enfermedad profesional</strong
-                ><span style="font-weight: 400">; es decir, </span
-                ><strong
-                  >patolog&iacute;as que pueden generarse a trav&eacute;s del
-                  tiempo debido a labores repetitivas</strong
-                ><span style="font-weight: 400"
-                  >, como el s&iacute;ndrome de t&uacute;nel carpiano o las
-                  hernias de disco.</span
-                >
-              </p>
-              <p>
-                <strong
-                  ><span style="font-weight: 400"
-                    >Las enfermedades laborales </span
-                  ><strong
-                    >tambi&eacute;n pueden adquirirse por encontrarse expuesto
-                    en el trabajo a agentes contaminantes o infecciosos</strong
-                  ><span style="font-weight: 400">.</span></strong
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="heading17">
-            <h4 class="panel-title">
-              <a
-                class="collapsed"
-                data-toggle="collapse"
-                data-parent="#accordion"
-                href="#collapse17"
-                aria-expanded="false"
-                aria-controls="heading17"
-              >
-                ¿Es necesario un abogado en todos los casos de lesiones o
-                enfermedades relacionadas con el trabajo?
-              </a>
-            </h4>
-          </div>
-          <div
-            id="collapse17"
-            class="panel-collapse collapse"
-            role="tabpanel"
-            aria-labelledby="heading17"
-            aria-expanded="false"
-          >
-            <div class="panel-body">
-              <p>
-                <strong
-                  >Siempre es necesario contar con un abogado que defienda sus
-                  derechos</strong
-                ><span style="font-weight: 400">. </span>
-              </p>
-              <p>
-                <span style="font-weight: 400">Esto es as&iacute; porque </span
-                ><strong
-                  >es habitual que las Aseguradoras de Riesgos de Trabajo
-                  tiendan a rechazar los siniestros</strong
-                ><span style="font-weight: 400">
-                  fund&aacute;ndose en que, seg&uacute;n su criterio, existen
-                  determinadas lesiones o enfermedades por las que ellas no
-                  deben responder.
-                </span>
-              </p>
-              <p>
-                <strong
-                  >Por otra parte, en el caso de que hayan aceptado
-                  responsabilizarse por el siniestro, la atenci&oacute;n
-                  m&eacute;dica que brindan a los asegurados no alcanza los
-                  standards previstos por la Ley </strong
-                ><span style="font-weight: 400"
-                  >(mala atenci&oacute;n m&eacute;dica, no env&iacute;o de
-                  remises, etc.) </span
-                ><strong
-                  >y siempre, al momento de determinar los puntos de incapacidad
-                  van a otorgar mucho menos de lo que corresponde</strong
-                ><span style="font-weight: 400"
-                  >, o lo que se hubiera conseguido con la intervenci&oacute;n
-                  de un abogado que defienda los derechos del trabajador.
-                  Naturalmente, al ser las Aseguradores de Riesgos de Trabajo
-                  quienes por Ley pueden dictaminar en primer t&eacute;rmino los
-                  puntos de incapacidad, y ser ellas quien pagan la
-                  indemnizaci&oacute;n, van a pagar al trabajador mucho menos de
-                  lo que le corresponde.</span
-                >
-              </p>
-              <p>
-                <strong
-                  ><span style="font-weight: 400">La </span
-                  ><strong
-                    >puja entre los derechos del trabajador y los intereses
-                    econ&oacute;micos de estas lucrativas corporaciones generan
-                    problemas complejos</strong
-                  ><span style="font-weight: 400">
-                    que dan lugar a conflicto, y all&iacute; es cuando se
-                    necesita un abogado con experiencia protegiendo tus
-                    derechos.</span
-                  ></strong
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="heading18">
-            <h4 class="panel-title">
-              <a
-                class="collapsed"
-                data-toggle="collapse"
-                data-parent="#accordion"
-                href="#collapse18"
-                aria-expanded="false"
-                aria-controls="heading18"
-              >
-                Si contrato a un abogado, ¿significa que estoy demandando a mi
-                empleador?
-              </a>
-            </h4>
-          </div>
-          <div
-            id="collapse18"
-            class="panel-collapse collapse"
-            role="tabpanel"
-            aria-labelledby="heading18"
-            aria-expanded="false"
-          >
-            <div class="panel-body">
-              <p>
-                <strong
-                  >Nunca demandamos a tu empleador<span
-                    style="font-weight: 400"
-                  >
-                    y siempre intentamos llegar a un acuerdo con las ART sin
-                    llegar a demandarlas. S&oacute;lo las demandamos si contamos
-                    con instrucciones de nuestros clientes.</span
-                  ></strong
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="heading19">
-            <h4 class="panel-title">
-              <a
-                class="collapsed"
-                data-toggle="collapse"
-                data-parent="#accordion"
-                href="#collapse19"
-                aria-expanded="false"
-                aria-controls="heading19"
-              >
-                ¿Los resultados realmente van a ser diferentes con un abogado?
-              </a>
-            </h4>
-          </div>
-          <div
-            id="collapse19"
-            class="panel-collapse collapse"
-            role="tabpanel"
-            aria-labelledby="heading19"
-            aria-expanded="false"
-          >
-            <div class="panel-body">
-              <p>
-                <strong
-                  ><span style="font-weight: 400">Claro! </span>El
-                  <span style="text-decoration: underline"
-                    >empleado que se presenta solo</span
-                  >
-                  ante su Aseguradora o la Superintendencia es un
-                  <span style="text-decoration: underline"
-                    >blanco f&aacute;cil</span
-                  >
-                  frente a estructuras corporativas organizadas para la
-                  obtenci&oacute;n de lucro a costa del trabajador.
-                  <span style="font-weight: 400"
-                    >Contar con un abogado que defienda tus derechos es
-                    fundamental. La gran cantidad de clientes que hemos
-                    asesorado acreditan su satisfacci&oacute;n con nuestro
-                    servicio. Nos caracterizamos por un fuerte compromiso con
-                    los intereses de nuestros clientes y estamos orientados a
-                    obtener </span
-                  >resultados concretos en poco tiempo.</strong
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="heading20">
-            <h4 class="panel-title">
-              <a
-                class="collapsed"
-                data-toggle="collapse"
-                data-parent="#accordion"
-                href="#collapse20"
-                aria-expanded="false"
-                aria-controls="heading20"
-              >
-                ¿Cómo puedo contratar un abogado si no tengo dinero?
-              </a>
-            </h4>
-          </div>
-          <div
-            id="collapse20"
-            class="panel-collapse collapse"
-            role="tabpanel"
-            aria-labelledby="heading20"
-            aria-expanded="false"
-          >
-            <div class="panel-body">
-              <p>
-                <strong
-                  ><span style="font-weight: 400">Al tomar un caso, </span
-                  >nuestro estudio afronta todos los costos para llevar adelante
-                  el reclamo. Nuestros honorarios consisten en un porcentaje de
-                  lo que cobre nuestro cliente.<span style="font-weight: 400">
-                    Es decir, </span
-                  >si no ganamos el caso, no cobramos.</strong
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="heading21">
-            <h4 class="panel-title">
-              <a
-                class="collapsed"
-                data-toggle="collapse"
-                data-parent="#accordion"
-                href="#collapse21"
-                aria-expanded="false"
-                aria-controls="heading21"
-              >
-                ¿Debo someterme a los dictámenes de las Comisiónes Médicas de la
-                Superintendencia de Riesgos del Trabajo?
-              </a>
-            </h4>
-          </div>
-          <div
-            id="collapse21"
-            class="panel-collapse collapse"
-            role="tabpanel"
-            aria-labelledby="heading21"
-            aria-expanded="false"
-          >
-            <div class="panel-body">
-              <p>
-                <span style="font-weight: 400">Nuestra sugerencia es </span
-                ><span style="text-decoration: underline"
-                  ><strong
-                    >NUNCA acudir a las Comisiónes M&eacute;dicas</strong
-                  ></span
-                ><span style="font-weight: 400"
-                  >, ya que una vez que all&iacute; se ha dictaminado una
-                  incapacidad es algo dif&iacute;cil elevarla. No obstante ello, </span
-                ><strong
-                  >si por desconocimiento o por no contar con la asistencia de
-                  un abogado especializado usted ha concurrido a estas
-                  Comisiónes, debe saber que lo que ellas dictaminan no tiene
-                  ning&uacute;n valor frente a un Juez</strong
-                ><span style="font-weight: 400"
-                  >. Las Comisiónes no tienen la &uacute;ltima palabra. Por otra
-                  parte, nuestra experiencia nos muestra que muchas veces </span
-                ><strong
-                  >los m&eacute;dicos que integran las Comisiónes son los mismos
-                  m&eacute;dicos que defienden los derechos de la ART</strong
-                ><span style="font-weight: 400">.</span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="heading22">
-            <h4 class="panel-title">
-              <a
-                class="collapsed"
-                data-toggle="collapse"
-                data-parent="#accordion"
-                href="#collapse22"
-                aria-expanded="false"
-                aria-controls="heading22"
-              >
-                ¿Las Comisiónes Médicas de la SRT tienen competencia, idoneidad
-                y son aptas para cumplir con su función?
-              </a>
-            </h4>
-          </div>
-          <div
-            id="collapse22"
-            class="panel-collapse collapse"
-            role="tabpanel"
-            aria-labelledby="heading22"
-            aria-expanded="false"
-          >
-            <div class="panel-body">
-              <p>
-                <span style="text-decoration: underline"
-                  ><strong>No</strong></span
-                ><strong>, y por eso no hay que acudir a ellas.</strong
-                ><span style="font-weight: 400">
-                  S&oacute;lo la Justicia ofrece garant&iacute;as de objetividad
-                  que no brinda la Superintendencia y sus Comisiónes
-                  M&eacute;dicas. La Corte Suprema de la Naci&oacute;n ha
-                  determinado que las v&iacute;ctimas de accidentes laborales
-                  pueden recurrir al Juez Laboral ya que s&oacute;lo all&iacute;
-                  el trabajador gozar&aacute; de las garant&iacute;as del debido
-                  proceso, la defensa en juicio y el acceso inmediato ante la
-                  Justicia. </span
-                ><strong
-                  >Las Comisiónes M&eacute;dicas obstruyen el acceso directo y
-                  r&aacute;pido del trabajador a la justicia</strong
-                ><span style="font-weight: 400">
-                  especializada, ya que los infortunios del trabajador no son ni
-                  m&aacute;s ni menos que un conflicto jur&iacute;dico de
-                  naturaleza laboral. Ellas se constituyen en &oacute;rganos
-                  dilatorios innecesarios.</span
-                >
-              </p>
-              <p>&nbsp;</p>
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="heading23">
-            <h4 class="panel-title">
-              <a
-                class="collapsed"
-                data-toggle="collapse"
-                data-parent="#accordion"
-                href="#collapse23"
-                aria-expanded="false"
-                aria-controls="heading23"
-              >
-                ¿Qué ocurre si lo despiden durante su recuperación a causa de un
-                accidente o enfermedad?
-              </a>
-            </h4>
-          </div>
-          <div
-            id="collapse23"
-            class="panel-collapse collapse"
-            role="tabpanel"
-            aria-labelledby="heading23"
-            aria-expanded="false"
-          >
-            <div class="panel-body">
-              <p>
-                <span style="font-weight: 400"
-                  >En estos casos, como m&iacute;nimo el empleador est&aacute;
-                  obligado a abonar, adem&aacute;s de la </span
-                ><strong>indemnizaci&oacute;n</strong
-                ><span style="font-weight: 400">
-                  por despido injustificado, todos los salarios correspondientes
-                  al tiempo que a&uacute;n faltase para llegar a la fecha del
-                  alta m&eacute;dica.</span
-                >
-              </p>
-              <p>
-                <span style="font-weight: 400"
-                  >Recuerde que el reclamo por accidente o enfermedad
-                  profesional se realiza contra su ART y no contra su empleador
-                  con lo cual usted no pone en riesgo su trabajo.
-                </span>
-              </p>
-              <p>
-                <strong
-                  ><span style="font-weight: 400"
-                    >De todas formas, es posible que a ra&iacute;z de la
-                    incapacidad generada por el accidente usted ya no posea la
-                    utilidad para su empleador que pose&iacute;a antes del
-                    mismo. Ello debido a que su capacidad productiva se
-                    vi&oacute; disminuida. Pese a lo injusto de esa
-                    situaci&oacute;n, es posible que su empleador lo despedida.
-                    Es por eso que </span
-                  ><strong
-                    >nosotros efectuamos el reclamo a la ART a ra&iacute;z del
-                    accidente, pero tambi&eacute;n a su empleador, si usted es
-                    despedido sin causa.</strong
-                  ></strong
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="heading24">
-            <h4 class="panel-title">
-              <a
-                class="collapsed"
-                data-toggle="collapse"
-                data-parent="#accordion"
-                href="#collapse24"
-                aria-expanded="false"
-                aria-controls="heading24"
-              >
-                Si usted recibió dinero de su A.R.T por el accidente o
-                enfermedad profesional, y le parece poco ¿Puede reclamar una
-                suma mayor?
-              </a>
-            </h4>
-          </div>
-          <div
-            id="collapse24"
-            class="panel-collapse collapse"
-            role="tabpanel"
-            aria-labelledby="heading24"
-            aria-expanded="false"
-          >
-            <div class="panel-body">
-              <p>
-                <span style="font-weight: 400"
-                  >Recuerde que el negocio de la ART es pagar lo menos posible.
-                  Ellas especulan con que usted no quiera asesorarse con un
-                  abogado para no tener que pagarle honorarios pero la realidad
-                  es qu&eacute; la &uacute;nica forma en que realmente
-                  obtendr&aacute; la indemnizaci&oacute;n que le corresponde es
-                  asesorandose con su abogado de confianza. Es por ello
-                  qu&eacute; </span
-                ><strong
-                  >si la indemnizaci&oacute;n que cobr&oacute; le parece
-                  injusta, est&aacute; a tiempo de contactarnos y reclamar un
-                  monto mayor, acorde a su incapacidad</strong
-                ><span style="font-weight: 400">.</span>
-              </p>
-              <p>
-                <strong
-                  ><span style="font-weight: 400">Un </span
-                  ><span style="text-decoration: underline"
-                    ><strong>dato importante</strong></span
-                  ><span style="font-weight: 400"> es que </span
-                  ><strong
-                    >las ART no suelen reconocer da&ntilde;o
-                    psicol&oacute;gico</strong
-                  ><span style="font-weight: 400">
-                    en las personas que sufren estos sucesos traum&aacute;ticos.
-                    Lamentablemente, muchas de las v&iacute;ctimas adquieren
-                    graves trastornos ps&iacute;quicos que no son contemplados a
-                    la hora de indemnizar </span
-                  ><strong
-                    >a menos que usted se asesore adecuadamente con un abogado
-                    de confianza</strong
-                  ><span style="font-weight: 400">.</span></strong
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="heading25">
-            <h4 class="panel-title">
-              <a
-                class="collapsed"
-                data-toggle="collapse"
-                data-parent="#accordion"
-                href="#collapse25"
-                aria-expanded="false"
-                aria-controls="heading25"
-              >
-                ¿Por qué la ART rechaza mi HERNIA DE DISCO/CERVICAL?
-              </a>
-            </h4>
-          </div>
-          <div
-            id="collapse25"
-            class="panel-collapse collapse"
-            role="tabpanel"
-            aria-labelledby="heading25"
-            aria-expanded="false"
-          >
-            <div class="panel-body">
-              <p>
-                <span style="font-weight: 400">Las ART </span
-                ><strong>nunca van a aceptar la enfermedad</strong
-                ><span style="font-weight: 400">
-                  aduciendo que es preexistente o inculpable, esto lo hacen </span
-                ><strong
-                  >para desgastar al trabajador y que este desista en
-                  reclamar</strong
-                ><span style="font-weight: 400"> lo que le corresponde .</span>
-              </p>
-              <p>
-                <span style="font-weight: 400"
-                  >Tambi&eacute;n es probable que no le quieran tomar la
-                  denuncia de la enfermedad, para cubrirse ante futuros
-                  reclamos</span
-                >
-              </p>
-              <p>
-                <span style="font-weight: 400"
-                  >Se denomina Enfermedad inculpable a toda aquella que padezca
-                  el trabajador y que no sea profesional u originada por el
-                  trabajo, o que no responda a una causa ocasiónada
-                  intencionalmente por el trabajador.</span
-                >
-              </p>
-              <p>
-                <strong>Mediante una carta las ART se desligan</strong
-                ><span style="font-weight: 400">
-                  de atender al trabajador , </span
-                ><strong>y lo derivan a la obra social </strong
-                ><span style="font-weight: 400">para su atenci&oacute;n .</span>
-              </p>
-              <p>
-                <span style="font-weight: 400">De esta forma, </span
-                ><strong
-                  >al no tomar la denuncia y al no brindar las prestaciones
-                  m&eacute;dicas tratan de desligarse de futuros
-                  reclamos.</strong
-                >
-              </p>
-              <p>
-                <span style="font-weight: 400"
-                  >Si Ud. Sufre de alg&uacute;n tipo de hernia y esta tiene
-                  relaci&oacute;n con su trabajo (es decir que realiza tareas
-                  que demandan esfuerzo f&iacute;sico y/o movimientos
-                  repetitivos ) </span
-                ><strong
-                  >denuncie la enfermedad ante la ART cuanto antes, y si no le
-                  quieren tomar la denuncia </strong
-                ><span style="text-decoration: underline"
-                  ><strong>comuniquese</strong> </span
-                ><span style="font-weight: 400"
-                  >asi le brindamos asesor&iacute;a legal para obtener su justa
-                  indemnizaci&oacute;n.</span
-                >
-              </p>
-              <p>
-                <strong
-                  ><span style="font-weight: 400"
-                    >Haga valer sus derechos, consulte sin cargo.</span
-                  ></strong
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="heading26">
-            <h4 class="panel-title">
-              <a
-                class="collapsed"
-                data-toggle="collapse"
-                data-parent="#accordion"
-                href="#collapse26"
-                aria-expanded="false"
-                aria-controls="heading26"
-              >
-                ¿Cuánto tiempo tengo para reclamar una indemnización?
-              </a>
-            </h4>
-          </div>
-          <div
-            id="collapse26"
-            class="panel-collapse collapse"
-            role="tabpanel"
-            aria-labelledby="heading26"
-            aria-expanded="false"
-          >
-            <div class="panel-body">
-              <p>Tiene dos años a partir del alta médica.</p>
-            </div>
-          </div>
+        <div class="toggle-content">
+          <p>
+            <span style="font-weight: 400">Si Ud. es v&iacute;ctima de un accidente en su trabajo, de un
+              accidente in itinere (camino al trabajo o de regreso a su casa
+              desde el trabajo) o de una enfermedad profesional, lo primero
+              que debe hacer es informar a su empleador. Ser&aacute; su
+              empleador quien informe a la ART lo sucedido (aunque
+              tambi&eacute;n puede hacerlo usted mismo informando en forma
+              directa a su ART).</span>
+          </p>
+          <p>
+            <span style="font-weight: 400">El paso siguiente es pedirle una copia de la denuncia a su
+              empleador.</span>
+          </p>
+          <p>
+            <span style="font-weight: 400">Una vez iniciado el tratamiento m&eacute;dico en su ART,
+              usted debe </span><strong>conservar todas las constancias m&eacute;dicas por
+              m&iacute;nimas qu&eacute; sean</strong><span style="font-weight: 400">, para poder acreditar en el futuro
+              la atenci&oacute;n
+              recibida.</span>
+          </p>
+          <p>
+            <span style="font-weight: 400">Durante este proceso le recordamos que siempre es fundamental
+              asesorarse legalmente.
+            </span>
+          </p>
+          <p>
+            <strong>Tenga presente que, asi como en el caso de los seguros
+              automotores, el negocio de las ARTs es pagarle a usted lo
+              menos posible. En gran parte de los casos, pese a existir
+              accidentes grav&iacute;simos y pruebas contundentes de
+              secuelas, las ARTs brindan una atenci&oacute;n m&eacute;dica
+              m&iacute;nima y luego le dan el alta al paciente sin ningun
+              tipo de incapacidad o con un porcentaje muy bajo.</strong>
+          </p>
+          <p>
+            <span style="font-weight: 400">Si usted ya atraves&oacute; este proceso y no est&aacute; de
+              acuerdo con la incapacidad que le asign&oacute; su ART
+              a&uacute;n est&aacute; a tiempo de asesorarse.
+            </span>
+          </p>
+          <p>
+            <span style="font-weight: 400">A grandes rasgos, </span><strong>el procedimiento que siguen las ART es el de
+              notificar el
+              alta (con o sin incapacidad) por carta documento,
+              inform&aacute;ndole a usted que tiene la posibilidad de
+              concurrir a </strong><strong>Comisi&oacute;n M&eacute;dica</strong><strong> sin necesidad de
+              abogado</strong><span style="font-weight: 400">. Lamentablemente, </span><strong>este es un
+            </strong><strong>tr&aacute;mite administrativo ileg&iacute;timo que ha sido
+              declarado inconstitucional por la propia Corte Suprema de
+              Justicia</strong><span style="font-weight: 400">. Ello debido a que </span><strong>no interviene un Juez
+              que garantice sus derechos y por si
+              fuera poco lo empujan a concurrir sin un abogado de confianza
+              con el conocimiento necesario para proteger sus
+              intereses</strong><strong>.</strong>
+          </p>
+          <p>
+            <strong>Se aprovechan del desconocimiento de la gente</strong><span style="font-weight: 400">
+              y bajo la apariencia de brindarle otra instancia de reclamo,
+              lo que buscan es legitimar un procedimiento que permita
+              pagarle a la v&iacute;ctima lo menos posible.</span>
+          </p>
+          <p>
+            <strong>No se deje enga&ntilde;ar</strong><span style="font-weight: 400">, ante tales injusticias del
+              sistema nosotros nos paramos del
+              lado del trabajador a defender sus derechos.</span>
+          </p>
+          <p>
+            <strong>Le recordamos que </strong><strong>el reclamo se realiza directamente a la ART. Su empleador no
+              tiene relaci&oacute;n alguna con el reclamo</strong><span style="font-weight: 400">
+              y la indemnizaci&oacute;n que reciba usted proviene
+              &uacute;nicamente de la ART. Al realizar el reclamo usted no
+              perjudica de ningun modo a su patron ni pone en riesgo su
+              trabajo.</span>
+          </p>
+          <p>
+            <span style="font-weight: 400">Es fundamental resaltar este punto ya que </span><strong>mucha gente cree que
+              al hacer un reclamo por accidente
+              laboral perjudica a su empleador y por tener una idea
+              equivocada elige resignar sus derechos.</strong>
+          </p>
+          <p>
+            <strong><strong>Consultenos</strong><span style="font-weight: 400">
+                y le explicaremos de qu&eacute; forma cobrar lo que responde
+                sin arriesgar su empleo.</span></strong>
+          </p>
         </div>
       </div>
+
+      <div class="toggle faq">
+        <div class="toggle-header">
+          <div class="toggle-title">
+            ¿Qué son los accidentes in itinere?
+          </div>
+        </div>
+        <div class="toggle-content">
+          <p>
+            <span style="font-weight: 400">Los accidentes in itinere (del latin &ldquo;itinere&rdquo;:
+              &ldquo;en curso&rdquo;) se encuentran definidos en el
+              art&iacute;culo sexto de la La Ley de Riesgos del Trabajo (Ley
+              24.557) como: &ldquo;todo acontecimiento s&uacute;bito y
+              violento ocurrido por el hecho o en ocasi&oacute;n del
+              trabajo, o en el trayecto entre el domicilio del trabajador y
+              el lugar de trabajo, siempre y cuando el damnificado no
+              hubiere interrumpido o alterado dicho trayecto por causas
+              ajenas al trabajo&rdquo;.</span>
+          </p>
+          <p>
+            <strong>Ejemplo 1:</strong>
+            <strong>El trabajador, luego de salir de su casa</strong><span style="font-weight: 400"> y llegando al
+              trabajo, </span><strong>sufre un robo</strong><span style="font-weight: 400">
+              con herida de arma blanca, con cortes en el brazo, ocurrido en
+              el trayecto al trabajo.</span>
+          </p>
+          <p>
+            <strong>Ejemplo 2:</strong><span style="font-weight: 400"> El trabajador, </span><strong>volviendo a su
+              hogar al salir de su jornada, caminando por la
+              vereda</strong><span style="font-weight: 400">, pisa mal y cae con </span><strong>fractura de
+              rodilla</strong><span style="font-weight: 400">.</span>
+          </p>
+          <p>
+            <span style="font-weight: 400">Como se puede apreciar, </span><strong>es todo accidente sufrido por el
+              trabajador en el trayecto
+              entre el hogar y el trabajo, ya sea yendo o volviendo del
+              mismo, siempre y cuando el damnificado no hubiere interrumpido
+              o alterado dicho trayecto por causas ajenas al trabajo</strong><span style="font-weight: 400">.</span>
+          </p>
+          <p>
+            <span style="font-weight: 400">En estos casos, la ART deber&aacute; brindar las prestaciones
+              m&eacute;dicas y dinerarias hasta el alta m&eacute;dica o
+              t&eacute;rmino legal, y si del accidente in itinere, han
+              quedado secuelas tanto ps&iacute;quicas como f&iacute;sicas en
+              la salud del trabajador, &eacute;ste tiene el derecho a ser
+              indemnizado conforme la normativa vigente.</span>
+          </p>
+          <p>
+            <strong>Tenga presente que, asi como en el caso de los seguros
+              automotores, el negocio de las ARTs es pagarle a usted lo
+              menos posible. En gran parte de los casos, pese a existir
+              accidentes grav&iacute;simos y pruebas contundentes de
+              secuelas, las ARTs brindan una atenci&oacute;n m&eacute;dica
+              m&iacute;nima y luego le dan el alta al paciente sin ningun
+              tipo de incapacidad o con un porcentaje muy bajo.</strong>
+          </p>
+          <p>
+            <strong><strong>&nbsp;</strong></strong>
+          </p>
+          <p>
+            <strong>No se deje enga&ntilde;ar</strong><span style="font-weight: 400">, ante tales injusticias del
+              sistema nosotros nos paramos del
+              lado del trabajador a defender sus derechos.</span>
+          </p>
+          <p>
+            <strong>Le recordamos que </strong><strong>el reclamo se realiza directamente a la ART. Su empleador no
+              tiene relaci&oacute;n alguna con el reclamo</strong><span style="font-weight: 400">
+              y la indemnizaci&oacute;n que reciba usted proviene
+              &uacute;nicamente de la ART. Al realizar el reclamo usted no
+              perjudica de ningun modo a su patron ni pone en riesgo su
+              trabajo.</span>
+          </p>
+          <p>
+            <span style="font-weight: 400">Es fundamental resaltar este punto ya que </span><strong>mucha gente cree que
+              al hacer un reclamo por accidente
+              laboral perjudica a su empleador y por tener una idea
+              equivocada elige resignar sus derechos.</strong>
+          </p>
+          <p>
+            <strong><strong>Consultenos</strong><span style="font-weight: 400">
+                y le explicaremos de qu&eacute; forma cobrar lo que responde
+                sin arriesgar su empleo.</span></strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="toggle faq">
+        <div class="toggle-header">
+          <div class="toggle-title">
+            ¿Qué son las enfermedades profesionales?
+          </div>
+        </div>
+        <div class="toggle-content">
+          <p>
+            <span style="font-weight: 400">Las </span><strong>enfermedades</strong><span style="font-weight: 400">
+              profesionales son aquellas </span><strong>producidas por causa del trabajo</strong><span
+              style="font-weight: 400">, a aquellos trabajadores que prestan tareas expuestos a
+              factores de riesgo, como ser: movimientos forzosos y
+              repetitivos, ruidos en el ambiente de trabajo,
+              manipulaci&oacute;n de sustancias qu&iacute;micas e
+              inhalaci&oacute;n de gases, entre otros.</span>
+          </p>
+          <p>
+            <span style="font-weight: 400">La Ley de Riesgos del Trabajo (Ley 24.557) las define en su
+              art&iacute;culo sexto como &ldquo;aquellas que se encuentran
+              incluidas en el listado que elaborar&aacute; y revisar&aacute;
+              el Poder Ejecutivo, conforme al procedimiento del
+              art&iacute;culo 40 apartado 3 de esta ley. El listado
+              identificar&aacute; agente de riesgo, cuadros cl&iacute;nicos,
+              exposici&oacute;n y actividades en capacidad de determinar la
+              enfermedad profesional.&rdquo;</span>
+          </p>
+          <p>
+            <strong>Ejemplo 1</strong><strong>:</strong><span style="font-weight: 400">
+              El trabajador, mec&aacute;nico industrial, </span><strong>expuesto a altos niveles sonoros</strong><span
+              style="font-weight: 400">
+              en el puesto de trabajo, padece hipoacusia bilateral.</span>
+          </p>
+          <p>
+            <strong>Ejemplo 2</strong><strong>:</strong><span style="font-weight: 400">
+              El trabajador, operario de m&aacute;quina, expuesto a </span><strong>movimientos repetitivos del hombro
+              derecho</strong><span style="font-weight: 400">, padece tendinitis del hombro.</span>
+          </p>
+          <p>
+            <strong>Ejemplo 3</strong><strong>:</strong><span style="font-weight: 400">
+              El trabajador, docente de escuela, expuesto a la </span><strong>sobrecarga del uso de la voz</strong><span
+              style="font-weight: 400">, padece disfon&iacute;a persistente</span>
+          </p>
+          <p>
+            <span style="font-weight: 400">En estos casos, la ART deber&aacute; brindar las prestaciones
+              m&eacute;dicas y dinerarias hasta el alta m&eacute;dica o
+              plazo legal, y si de la enfermedad profesional, han quedado
+              secuelas tanto ps&iacute;quicas como f&iacute;sicas en la
+              salud del trabajador, &eacute;ste tiene el derecho a ser
+              indemnizado conforme la normativa vigente.</span>
+          </p>
+          <p>
+            <strong>Tenga presente que, asi como en el caso de los seguros
+              automotores, el negocio de las ARTs es pagarle a usted lo
+              menos posible. En gran parte de los casos, pese a existir
+              accidentes grav&iacute;simos y pruebas contundentes de
+              secuelas, las ARTs brindan una atenci&oacute;n m&eacute;dica
+              m&iacute;nima y luego le dan el alta al paciente sin ningun
+              tipo de incapacidad o con un porcentaje muy bajo.</strong>
+          </p>
+          <p>
+            <strong>No se deje enga&ntilde;ar</strong><span style="font-weight: 400">, ante tales injusticias del
+              sistema nosotros nos paramos del
+              lado del trabajador a defender sus derechos.</span>
+          </p>
+          <p>
+            <strong>Le recordamos que el reclamo se realiza directamente a la
+              ART. Su empleador no tiene relaci&oacute;n alguna con el
+              reclamo</strong><span style="font-weight: 400">
+              y la indemnizaci&oacute;n que reciba usted proviene
+              &uacute;nicamente de la ART. Al realizar el reclamo usted no
+              perjudica de ningun modo a su patron ni pone en riesgo su
+              trabajo.</span>
+          </p>
+          <p>
+            <span style="font-weight: 400">Es fundamental resaltar este punto ya que </span><strong>mucha gente cree que
+              al hacer un reclamo por accidente
+              laboral perjudica a su empleador y por tener una idea
+              equivocada elige resignar sus derechos.</strong>
+          </p>
+          <p>
+            <strong><strong>Consultenos</strong><span style="font-weight: 400">
+                y le explicaremos de qu&eacute; forma cobrar lo que responde
+                sin arriesgar su empleo.</span></strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="toggle faq">
+        <div class="toggle-header">
+          <div class="toggle-title">
+            ¿Qué diferencia hay entre un accidente de trabajo y una enfermedad profesional?
+          </div>
+        </div>
+        <div class="toggle-content">
+          <p>
+            <span style="font-weight: 400">Los accidentes de trabajo pueden deberse a un evento
+              s&uacute;bito espec&iacute;fico o, puede ocurrir que
+              paulatinamente se produzca una </span><strong>enfermedad profesional</strong><span
+              style="font-weight: 400">; es decir, </span><strong>patolog&iacute;as que pueden generarse a trav&eacute;s
+              del
+              tiempo debido a labores repetitivas</strong><span style="font-weight: 400">, como el s&iacute;ndrome de
+              t&uacute;nel carpiano o las
+              hernias de disco.</span>
+          </p>
+          <p>
+            <strong><span style="font-weight: 400">Las enfermedades laborales </span><strong>tambi&eacute;n pueden
+                adquirirse por encontrarse expuesto
+                en el trabajo a agentes contaminantes o infecciosos</strong><span
+                style="font-weight: 400">.</span></strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="toggle faq">
+        <div class="toggle-header">
+          <div class="toggle-title">
+            ¿Es necesario un abogado en todos los casos de lesiones o enfermedades relacionadas con el trabajo?
+          </div>
+        </div>
+        <div class="toggle-content">
+          <p>
+            <strong>Siempre es necesario contar con un abogado que defienda sus
+              derechos</strong><span style="font-weight: 400">. </span>
+          </p>
+          <p>
+            <span style="font-weight: 400">Esto es as&iacute; porque </span><strong>es habitual que las Aseguradoras de
+              Riesgos de Trabajo
+              tiendan a rechazar los siniestros</strong><span style="font-weight: 400">
+              fund&aacute;ndose en que, seg&uacute;n su criterio, existen
+              determinadas lesiones o enfermedades por las que ellas no
+              deben responder.
+            </span>
+          </p>
+          <p>
+            <strong>Por otra parte, en el caso de que hayan aceptado
+              responsabilizarse por el siniestro, la atenci&oacute;n
+              m&eacute;dica que brindan a los asegurados no alcanza los
+              standards previstos por la Ley </strong><span style="font-weight: 400">(mala atenci&oacute;n
+              m&eacute;dica, no env&iacute;o de
+              remises, etc.) </span><strong>y siempre, al momento de determinar los puntos de incapacidad
+              van a otorgar mucho menos de lo que corresponde</strong><span style="font-weight: 400">, o lo que se
+              hubiera conseguido con la intervenci&oacute;n
+              de un abogado que defienda los derechos del trabajador.
+              Naturalmente, al ser las Aseguradores de Riesgos de Trabajo
+              quienes por Ley pueden dictaminar en primer t&eacute;rmino los
+              puntos de incapacidad, y ser ellas quien pagan la
+              indemnizaci&oacute;n, van a pagar al trabajador mucho menos de
+              lo que le corresponde.</span>
+          </p>
+          <p>
+            <strong><span style="font-weight: 400">La </span><strong>puja entre los derechos del trabajador y los
+                intereses
+                econ&oacute;micos de estas lucrativas corporaciones generan
+                problemas complejos</strong><span style="font-weight: 400">
+                que dan lugar a conflicto, y all&iacute; es cuando se
+                necesita un abogado con experiencia protegiendo tus
+                derechos.</span></strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="toggle faq">
+        <div class="toggle-header">
+          <div class="toggle-title">
+            Si contrato a un abogado, ¿significa que estoy demandando a mi empleador?
+          </div>
+        </div>
+        <div class="toggle-content">
+          <p>
+            <strong>Nunca demandamos a tu empleador<span style="font-weight: 400">
+                y siempre intentamos llegar a un acuerdo con las ART sin
+                llegar a demandarlas. S&oacute;lo las demandamos si contamos
+                con instrucciones de nuestros clientes.</span></strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="toggle faq">
+        <div class="toggle-header">
+          <div class="toggle-title">
+            ¿Los resultados realmente van a ser diferentes con un abogado?
+          </div>
+        </div>
+        <div class="toggle-content">
+          <p>
+            <strong><span style="font-weight: 400">Claro! </span>El
+              <span style="text-decoration: underline">empleado que se presenta solo</span>
+              ante su Aseguradora o la Superintendencia es un
+              <span style="text-decoration: underline">blanco f&aacute;cil</span>
+              frente a estructuras corporativas organizadas para la
+              obtenci&oacute;n de lucro a costa del trabajador.
+              <span style="font-weight: 400">Contar con un abogado que defienda tus derechos es
+                fundamental. La gran cantidad de clientes que hemos
+                asesorado acreditan su satisfacci&oacute;n con nuestro
+                servicio. Nos caracterizamos por un fuerte compromiso con
+                los intereses de nuestros clientes y estamos orientados a
+                obtener </span>resultados concretos en poco tiempo.</strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="toggle faq">
+        <div class="toggle-header">
+          <div class="toggle-title">
+            ¿Cómo puedo contratar un abogado si no tengo dinero?
+          </div>
+        </div>
+        <div class="toggle-content">
+          <p>
+            <strong><span style="font-weight: 400">Al tomar un caso, </span>nuestro estudio afronta todos los costos
+              para llevar adelante
+              el reclamo. Nuestros honorarios consisten en un porcentaje de
+              lo que cobre nuestro cliente.<span style="font-weight: 400">
+                Es decir, </span>si no ganamos el caso, no cobramos.</strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="toggle faq">
+        <div class="toggle-header">
+          <div class="toggle-title">
+            ¿Debo someterme a los dictámenes de las Comisiónes Médicas de la Superintendencia de Riesgos del Trabajo?
+          </div>
+        </div>
+        <div class="toggle-content">
+          <p>
+            <span style="font-weight: 400">Nuestra sugerencia es </span><span
+              style="text-decoration: underline"><strong>NUNCA acudir a las Comisiónes
+                M&eacute;dicas</strong></span><span style="font-weight: 400">, ya que una vez que all&iacute; se ha
+              dictaminado una
+              incapacidad es algo dif&iacute;cil elevarla. No obstante ello, </span><strong>si por desconocimiento o por
+              no contar con la asistencia de
+              un abogado especializado usted ha concurrido a estas
+              Comisiónes, debe saber que lo que ellas dictaminan no tiene
+              ning&uacute;n valor frente a un Juez</strong><span style="font-weight: 400">. Las Comisiónes no tienen la
+              &uacute;ltima palabra. Por otra
+              parte, nuestra experiencia nos muestra que muchas veces </span><strong>los m&eacute;dicos que integran las
+              Comisiónes son los mismos
+              m&eacute;dicos que defienden los derechos de la ART</strong><span style="font-weight: 400">.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="toggle faq">
+        <div class="toggle-header">
+          <div class="toggle-title">
+            ¿Las Comisiónes Médicas de la SRT tienen competencia, idoneidad y son aptas para cumplir con su función?
+          </div>
+        </div>
+        <div class="toggle-content">
+          <p>
+            <span style="text-decoration: underline"><strong>No</strong></span><strong>, y por eso no hay que acudir a
+              ellas.</strong><span style="font-weight: 400">
+              S&oacute;lo la Justicia ofrece garant&iacute;as de objetividad
+              que no brinda la Superintendencia y sus Comisiónes
+              M&eacute;dicas. La Corte Suprema de la Naci&oacute;n ha
+              determinado que las v&iacute;ctimas de accidentes laborales
+              pueden recurrir al Juez Laboral ya que s&oacute;lo all&iacute;
+              el trabajador gozar&aacute; de las garant&iacute;as del debido
+              proceso, la defensa en juicio y el acceso inmediato ante la
+              Justicia. </span><strong>Las Comisiónes M&eacute;dicas obstruyen el acceso directo y
+              r&aacute;pido del trabajador a la justicia</strong><span style="font-weight: 400">
+              especializada, ya que los infortunios del trabajador no son ni
+              m&aacute;s ni menos que un conflicto jur&iacute;dico de
+              naturaleza laboral. Ellas se constituyen en &oacute;rganos
+              dilatorios innecesarios.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="toggle faq">
+        <div class="toggle-header">
+          <div class="toggle-title">
+            ¿Qué ocurre si lo despiden durante su recuperación a causa de un accidente o enfermedad?
+          </div>
+        </div>
+        <div class="toggle-content">
+          <p>
+            <span style="font-weight: 400">En estos casos, como m&iacute;nimo el empleador est&aacute;
+              obligado a abonar, adem&aacute;s de la </span><strong>indemnizaci&oacute;n</strong><span
+              style="font-weight: 400">
+              por despido injustificado, todos los salarios correspondientes
+              al tiempo que a&uacute;n faltase para llegar a la fecha del
+              alta m&eacute;dica.</span>
+          </p>
+          <p>
+            <span style="font-weight: 400">Recuerde que el reclamo por accidente o enfermedad
+              profesional se realiza contra su ART y no contra su empleador
+              con lo cual usted no pone en riesgo su trabajo.
+            </span>
+          </p>
+          <p>
+            <strong><span style="font-weight: 400">De todas formas, es posible que a ra&iacute;z de la
+                incapacidad generada por el accidente usted ya no posea la
+                utilidad para su empleador que pose&iacute;a antes del
+                mismo. Ello debido a que su capacidad productiva se
+                vi&oacute; disminuida. Pese a lo injusto de esa
+                situaci&oacute;n, es posible que su empleador lo despedida.
+                Es por eso que </span><strong>nosotros efectuamos el reclamo a la ART a ra&iacute;z del
+                accidente, pero tambi&eacute;n a su empleador, si usted es
+                despedido sin causa.</strong></strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="toggle faq">
+        <div class="toggle-header">
+          <div class="toggle-title">
+            Si usted recibió dinero de su A.R.T por el accidente o enfermedad profesional, y le parece poco ¿Puede
+            reclamar una suma mayor?
+          </div>
+        </div>
+        <div class="toggle-content">
+          <p>
+            <span style="font-weight: 400">Recuerde que el negocio de la ART es pagar lo menos posible.
+              Ellas especulan con que usted no quiera asesorarse con un
+              abogado para no tener que pagarle honorarios pero la realidad
+              es qu&eacute; la &uacute;nica forma en que realmente
+              obtendr&aacute; la indemnizaci&oacute;n que le corresponde es
+              asesorandose con su abogado de confianza. Es por ello
+              qu&eacute; </span><strong>si la indemnizaci&oacute;n que cobr&oacute; le parece
+              injusta, est&aacute; a tiempo de contactarnos y reclamar un
+              monto mayor, acorde a su incapacidad</strong><span style="font-weight: 400">.</span>
+          </p>
+          <p>
+            <strong><span style="font-weight: 400">Un </span><span style="text-decoration: underline"><strong>dato
+                  importante</strong></span><span style="font-weight: 400"> es que </span><strong>las ART no suelen
+                reconocer da&ntilde;o
+                psicol&oacute;gico</strong><span style="font-weight: 400">
+                en las personas que sufren estos sucesos traum&aacute;ticos.
+                Lamentablemente, muchas de las v&iacute;ctimas adquieren
+                graves trastornos ps&iacute;quicos que no son contemplados a
+                la hora de indemnizar </span><strong>a menos que usted se asesore adecuadamente con un abogado
+                de confianza</strong><span style="font-weight: 400">.</span></strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="toggle faq">
+        <div class="toggle-header">
+          <div class="toggle-title">
+            ¿Por qué la ART rechaza mi HERNIA DE DISCO/CERVICAL?
+          </div>
+        </div>
+        <div class="toggle-content">
+          <p>
+            <span style="font-weight: 400">Las ART </span><strong>nunca van a aceptar la enfermedad</strong><span
+              style="font-weight: 400">
+              aduciendo que es preexistente o inculpable, esto lo hacen </span><strong>para desgastar al trabajador y
+              que este desista en
+              reclamar</strong><span style="font-weight: 400"> lo que le corresponde .</span>
+          </p>
+          <p>
+            <span style="font-weight: 400">Tambi&eacute;n es probable que no le quieran tomar la
+              denuncia de la enfermedad, para cubrirse ante futuros
+              reclamos</span>
+          </p>
+          <p>
+            <span style="font-weight: 400">Se denomina Enfermedad inculpable a toda aquella que padezca
+              el trabajador y que no sea profesional u originada por el
+              trabajo, o que no responda a una causa ocasiónada
+              intencionalmente por el trabajador.</span>
+          </p>
+          <p>
+            <strong>Mediante una carta las ART se desligan</strong><span style="font-weight: 400">
+              de atender al trabajador , </span><strong>y lo derivan a la obra social </strong><span
+              style="font-weight: 400">para su atenci&oacute;n .</span>
+          </p>
+          <p>
+            <span style="font-weight: 400">De esta forma, </span><strong>al no tomar la denuncia y al no brindar las
+              prestaciones
+              m&eacute;dicas tratan de desligarse de futuros
+              reclamos.</strong>
+          </p>
+          <p>
+            <span style="font-weight: 400">Si Ud. Sufre de alg&uacute;n tipo de hernia y esta tiene
+              relaci&oacute;n con su trabajo (es decir que realiza tareas
+              que demandan esfuerzo f&iacute;sico y/o movimientos
+              repetitivos ) </span><strong>denuncie la enfermedad ante la ART cuanto antes, y si no le
+              quieren tomar la denuncia </strong><span style="text-decoration: underline"><strong>comuniquese</strong>
+            </span><span style="font-weight: 400">asi le brindamos asesor&iacute;a legal para obtener su justa
+              indemnizaci&oacute;n.</span>
+          </p>
+          <p>
+            <strong><span style="font-weight: 400">Haga valer sus derechos, consulte sin cargo.</span></strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="toggle faq">
+        <div class="toggle-header">
+          <div class="toggle-title">
+            ¿Cuánto tiempo tengo para reclamar una indemnización?
+          </div>
+        </div>
+        <div class="toggle-content">
+          <p>Tiene dos años a partir del alta médica.</p>
+        </div>
+      </div>
+
     </div>
+
   </div>
 </section>
 <div class="section">
@@ -1179,4 +761,15 @@
     }
   }
   </script>
-  
+
+@section Scripts {
+  @if (Environment.IsDevelopment())
+  {
+    <script src="~/js/functions.js"></script>
+    <script src="~/js/googleReviewsPlugin.js"></script>
+  }
+  else
+  {
+    <script src="~/dist/work.js"></script>
+  }
+}

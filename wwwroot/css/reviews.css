@@ -1,0 +1,286 @@
+/* reviews */
+
+
+/* Container for the reviews section */
+.custom-reviews-carousel {
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+/* Header for the review summary */
+.custom-reviews-carousel .review-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Container for the reviews section */
+.custom-reviews-carousel .google-logo {
+    width: 80px;
+    height: 40px;
+    /* Adjust height as necessary */
+    background-image: url("../images/google-logo.svg");
+    /* Use a relative path */
+    background-size: contain;
+    /* Scale image to fit */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+.custom-reviews-carousel .review-summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.custom-reviews-carousel .review-summary .rating {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.custom-reviews-carousel .review-summary .stars {
+    color: #ffd700;
+    font-size: 1.2em;
+    margin-right: 5px;
+}
+
+.custom-reviews-carousel .review-summary .reviews-count {
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Review card grid layout */
+.custom-reviews-carousel .reviews-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+@media (min-width: 1024px) {
+    .custom-reviews-carousel .reviews-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+/* Styling for individual review cards */
+.custom-reviews-carousel .review-card {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px 0;
+}
+
+/* Align reviewer's name next to the image */
+.custom-reviews-carousel .entry-header {
+    display: flex;
+    align-items: center;
+}
+
+/* Ensure the image is circular and aligned properly */
+.custom-reviews-carousel .entry-image {
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-bottom: 0px;
+}
+
+.custom-reviews-carousel .entry-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Reviewer name styling */
+.custom-reviews-carousel .entry-title {
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* Information section within review card */
+.custom-reviews-carousel .review-info {
+    display: flex;
+    align-items: center;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 8px;
+}
+
+.custom-reviews-carousel .review-rating {
+    color: #ffd700;
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.custom-reviews-carousel .review-date {
+    font-size: 0.85em;
+    color: #666;
+}
+
+/* Content section within review card */
+.custom-reviews-carousel .entry-content {
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+/* Pagination styling */
+.custom-reviews-carousel .pagination-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.custom-reviews-carousel .pagination {
+    display: flex;
+    gap: 5px;
+}
+
+.custom-reviews-carousel .page-item {
+    list-style: none;
+}
+
+/* .custom-reviews-carousel .page-link {
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-reviews-carousel .page-link:hover {
+    background-color: #555;
+  }
+  
+  .custom-reviews-carousel .page-item.active .page-link {
+    background-color: #666;
+  }
+  
+  .custom-reviews-carousel .page-item.disabled .page-link {
+    background-color: #ccc;
+    pointer-events: none;
+  } */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .custom-reviews-carousel .reviews-container {
+        grid-template-columns: 1fr;
+    }
+
+    .custom-reviews-carousel .pagination-container {
+        justify-content: center;
+    }
+}
+
+/* Disabled button styling */
+.custom-reviews-carousel .pagination .page-item.disabled .page-link {
+    background-color: #ccc;
+    /* Light grey background for disabled state */
+    color: #999;
+    /* Greyed-out text color for disabled state */
+    pointer-events: none;
+    /* Prevents any interaction */
+    opacity: 0.6;
+    /* Slightly transparent to show it's disabled */
+    cursor: not-allowed;
+    /* Shows "not-allowed" cursor on hover */
+}
+
+/* Make pagination responsive and compact */
+.pagination-container {
+    max-width: 100%;
+    overflow-x: auto;
+    /* Enables horizontal scroll if needed */
+    white-space: nowrap;
+    /* Prevents pagination items from wrapping */
+    padding: 0 10px;
+}
+
+.pagination .page-item {
+    margin: 0 3px;
+}
+
+.pagination .page-link {
+    padding: 4px 8px;
+    /* Reduced padding for smaller screens */
+    font-size: 0.9em;
+    /* Reduced font size */
+}
+
+.swiper-slide-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.swiper-slide-bg picture {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.swiper-slide-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-slide-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right, #002f4b, grey);
+    opacity: 0.4;
+    z-index: 1;
+}
+
+@media (max-width: 991.98px) {
+    .swiper-slide-bg img {
+        object-position: 40% 72%;
+    }
+}
+
+/* Swiper Preloader */
+.swiper-lazy-preloader {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -21px;
+    margin-top: -21px;
+    z-index: 10;
+    transform-origin: 50%;
+    box-sizing: border-box;
+    border: 4px solid var(--themecolor);
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: swiper-preloader-spin 1s infinite linear;
+}
+
+@keyframes swiper-preloader-spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* end reviews */

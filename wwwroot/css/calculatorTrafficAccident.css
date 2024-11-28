@@ -1,0 +1,15 @@
+@import '@css/style.css';
+@import '@css/font-icons.css';
+@import '@css/layout.css';
+
+@import '@css/hero.css';
+
+@import '@css/calculatorLinks.css';
+
+/* calculatorTrafficAccident */
+
+.calculatorTrafficAccidentHeader {
+    background: url("/images/calculators/traffic-accident-calculator.webp") center center / cover no-repeat;
+}
+
+/* end calculatorTrafficAccident */

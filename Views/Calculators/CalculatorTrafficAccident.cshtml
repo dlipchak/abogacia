@@ -1,18 +1,30 @@
-﻿
+﻿@using Microsoft.AspNetCore.Hosting
+@using Microsoft.Extensions.Hosting
+
+@inject IWebHostEnvironment Environment
+
+@section Styles {
+  <link rel="stylesheet" href="~/dist/calculatorTrafficAccident.css" asp-append-version="true">
+}
+
+
+@section PreloadLinks {
+  @if (!Environment.IsDevelopment())
+  {
+    <link rel="preload" href="~/dist/calculatorTrafficAccident.css" as="style">
+  }
+}
+
+
+
 <title class="logo">Calculadora de indemnización por accidentes de tránsito</title>
-<section
-  id="page-title"
-  class="calculatorHeader calculatorTrafficAccidentHeader min-vh-60 page-title-parallax page-title-dark include-header"
->
-<div class="container clearfix">
-<div>
-  <h3 class="articleTitle">Accidentes de Tránsito</h3>
-</div>
 
-<h1 class="articleTitle">Calculadora de indemnización</h1>
-</div>
+@await Html.PartialAsync("_HeroSection", (
+  Title: "Accidentes de Tránsito",
+  Subtitle: "Calculadora de indemnización",
+  ClassName: "calculatorTrafficAccidentHeader"
+  ))
 
-</section>
 <section id="content" class="calculatorTrafficAccident">
   <div class="content-wrap pt-0">
     <div class="section mt-0">
@@ -23,48 +35,24 @@
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label for="age"><small>*</small> Edad:</label>
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="age"
-                    name="age"
-                    placeholder="Por ej: 25"
-                  />
+                  <input type="number" class="form-control" id="age" name="age" placeholder="Por ej: 25" />
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-12">
-                  <label for="saincapacitylary"
-                    ><small>*</small> Porcentaje de incapacidad:</label
-                  >
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="incapacity"
-                    name="incapacity"
-                    placeholder="Por ej: 30"
-                  />
+                  <label for="saincapacitylary"><small>*</small> Porcentaje de incapacidad:</label>
+                  <input type="number" class="form-control" id="incapacity" name="incapacity"
+                    placeholder="Por ej: 30" />
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label for="salary"><small>*</small> Ingreso mensual:</label>
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="salary"
-                    name="salary"
-                    placeholder="Por ej: 5000"
-                  />
+                  <input type="number" class="form-control" id="salary" name="salary" placeholder="Por ej: 5000" />
                 </div>
               </div>
-         
-              <button
-                class="btn btn-success"
-                type="button"
-                id="btnCalculate"
-                disabled
-              >
+
+              <button class="btn btn-success" type="button" id="btnCalculate" disabled>
                 Calcular
               </button>
 
@@ -78,60 +66,80 @@
             </form>
           </div>
           <div class="col-md-6">
-           
-              <b class="green">Ingresos mensuales:</b
-              ><p>Se calcula el promedio anual con base en los ingresos mensuales, incluyendo el sueldo anual complementario. <br>
-                En el caso de actividades no remuneradas como ama de caso o para los menores de edad corresponde al juez definir la presente suma. </p>
-             
-              <b class="green">Edad:</b
-            <p> Edad a la fecha del accidente.</p>
-            
-              <b class="green">Incapacidad</b
-              ><p>
-                Porcentaje de incapacidad psicofísica (daño físico y psíquico) <br>
-             
-                Se define de acuerdo a la gravedad de las secuelas producto del accidente. Es fundamental contar con asesoramiento médico y legal a los fines de tener una idea precisa del mismo.
-              </p>
-        
+
+            <b class="green">Ingresos mensuales:</b>
+            <p>Se calcula el promedio anual con base en los ingresos mensuales, incluyendo el sueldo anual
+              complementario. <br>
+              En el caso de actividades no remuneradas como ama de caso o para los menores de edad corresponde al juez
+              definir la presente suma. </p>
+
+            <b class="green">Edad:</b <p> Edad a la fecha del accidente.</p>
+
+            <b class="green">Incapacidad</b>
+            <p>
+              Porcentaje de incapacidad psicofísica (daño físico y psíquico) <br>
+
+              Se define de acuerdo a la gravedad de las secuelas producto del accidente. Es fundamental contar con
+              asesoramiento médico y legal a los fines de tener una idea precisa del mismo.
+            </p>
+
           </div>
         </div>
       </div>
     </div>
     <div class="container">
       <p>
-        La siniestralidad vial es uno de los flagelos más graves que aquejan a nuestro país. La inobservancia de la normativa de tránsito, la falta de conciencia sobre los riesgos de sufrir un accidente y las deficientes medidas de prevención implementadas por el Estado tiene como correlato un alto índice de siniestralidad que se cobra innumerables vidas a diario.
+        La siniestralidad vial es uno de los flagelos más graves que aquejan a nuestro país. La inobservancia de la
+        normativa de tránsito, la falta de conciencia sobre los riesgos de sufrir un accidente y las deficientes medidas
+        de prevención implementadas por el Estado tiene como correlato un alto índice de siniestralidad que se cobra
+        innumerables vidas a diario.
       </p>
       <p>
-        También es cierto que una gran parte de los accidentes que vemos cotidianamente causan lesiones de distinta gravedad y que las <span class="green">aseguradoras plantean innumerables obstáculos para indemnizar a los damnificados.</span> Nuestra tarea es allanar esos obstáculos brindándole una atención personalizada durante el transcurso del reclamo aportándole una <span class="green">solución rápida e integral para que usted pueda cobrar su indemnización.</span>
+        También es cierto que una gran parte de los accidentes que vemos cotidianamente causan lesiones de distinta
+        gravedad y que las <span class="green">aseguradoras plantean innumerables obstáculos para indemnizar a los
+          damnificados.</span> Nuestra tarea es allanar esos obstáculos brindándole una atención personalizada durante
+        el transcurso del reclamo aportándole una <span class="green">solución rápida e integral para que usted pueda
+          cobrar su indemnización.</span>
       </p>
       <p>
-        
-Vale destacar que para calcular la reparación del daño de la persona que sufre lesiones a raíz de un accidente de tránsito, se utiliza la <span class="green">fórmula establecida en el Fallo Mendez.</span>
-Esa misma fórmula la cual explicaremos más abajo, es la utilizada por nuestra calculadora para brindarle a usted una estimación de la indemnización que le corresponde.
-No obstante ello, <span class="green">no existe un criterio rígido que obligue al Juez a aplicar a rajatabla el resultado de dicha fórmula</span> al momento de fijar la indemnización.  
-Este cálculo le brinda una aproximación la cual podrá ser modificada en base a su sana crítica y criterio de razonabilidad a los fines de garantizar la reparación íntegra del daño padecido por el damnificado.
+
+        Vale destacar que para calcular la reparación del daño de la persona que sufre lesiones a raíz de un accidente
+        de tránsito, se utiliza la <span class="green">fórmula establecida en el Fallo Mendez.</span>
+        Esa misma fórmula la cual explicaremos más abajo, es la utilizada por nuestra calculadora para brindarle a usted
+        una estimación de la indemnización que le corresponde.
+        No obstante ello, <span class="green">no existe un criterio rígido que obligue al Juez a aplicar a rajatabla el
+          resultado de dicha fórmula</span> al momento de fijar la indemnización.
+        Este cálculo le brinda una aproximación la cual podrá ser modificada en base a su sana crítica y criterio de
+        razonabilidad a los fines de garantizar la reparación íntegra del daño padecido por el damnificado.
 
       </p>
       <p>
-        <h3>
-          ¿Qué importancia tiene el Fallo Méndez?
-        </h3>
-        Para facilitar su comprensión sobre la forma de calcular su indemnización es importante saber que dicho fallo actualiza las variables de cálculo mejorando las indemnizaciónes ya que:
+      <h3>
+        ¿Qué importancia tiene el Fallo Méndez?
+      </h3>
+      Para facilitar su comprensión sobre la forma de calcular su indemnización es importante saber que dicho fallo
+      actualiza las variables de cálculo mejorando las indemnizaciónes ya que:
 
-        <ul class="ml-3 mt-2">
-          <li>
-           <b> Eleva la vida productiva de los trabajadores a la edad de 75 años</b>, la fórmula anterior ( Fallo Vuotto) tenía como tope la edad de 65 años.
-          </li>
-          <li>
-            <b>Reduce la tasa de interés al 4%</b>, dado que con la fórmula anterior (fallo Vuotto, se empleaba una tasa de interés del 6%.
-          </li>
-          <li><b>El cálculo del daño moral queda a discrecionalidad y valuación del juez.</b></li>
+      <ul class="ml-3 mt-2">
+        <li>
+          <b> Eleva la vida productiva de los trabajadores a la edad de 75 años</b>, la fórmula anterior ( Fallo Vuotto)
+          tenía como tope la edad de 65 años.
+        </li>
+        <li>
+          <b>Reduce la tasa de interés al 4%</b>, dado que con la fórmula anterior (fallo Vuotto, se empleaba una tasa
+          de interés del 6%.
+        </li>
+        <li><b>El cálculo del daño moral queda a discrecionalidad y valuación del juez.</b></li>
 
-        </ul>
-        
+      </ul>
+
       </p>
-          <p>
-        Nuestro Estudio integrado por <span class="green">abogados especializados y profesionales médicos de excelencia</span> le brindan la asistencia legal y médica necesaria para que conozca a fondo sus derechos y los haga valer. Nuestro respaldo y asesoramiento personalizado le darán <span class="green">acceso a la máxima indemnización y a la mejor atención médica.</span> Consultenos sin compromiso <a href="@Url.Action("index", "Contacto")">AQUÍ</a>
+      <p>
+        Nuestro Estudio integrado por <span class="green">abogados especializados y profesionales médicos de
+          excelencia</span> le brindan la asistencia legal y médica necesaria para que conozca a fondo sus derechos y
+        los haga valer. Nuestro respaldo y asesoramiento personalizado le darán <span class="green">acceso a la máxima
+          indemnización y a la mejor atención médica.</span> Consultenos sin compromiso <a
+          href="@Url.Action("index", "Contacto")">AQUÍ</a>
       </p>
     </div>
     <div class="divider"></div>
@@ -157,4 +165,7 @@ Este cálculo le brinda una aproximación la cual podrá ser modificada en base 
     }
   }
   </script>
-  
+
+@section Scripts {
+  <script src="~/dist/calculatorTrafficAccident.js"></script>
+}

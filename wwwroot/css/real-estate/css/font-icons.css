@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'realestate-icons';
-	src: url('fonts/realestate.woff2?ixg742') format('woff2');
+	src: url('../../../fonts/realestate.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;

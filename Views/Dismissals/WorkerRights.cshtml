@@ -1,224 +1,268 @@
-﻿
-<title class="logo">
-  Derechos del trabajador
-  
-  </title>
-<section
-  id="page-title"
-  class="workerRights  min-vh-60 page-title-parallax page-title-dark include-header"
->
-<div class="container clearfix"><h1 class="articleTitle">derechos del trabajador</h1></div>
+﻿@using Microsoft.AspNetCore.Hosting
+@using Microsoft.Extensions.Hosting
 
-</div>
+@inject IWebHostEnvironment Environment
+
+@section Styles {
+    @if (Environment.IsDevelopment())
+    {
+        <link rel="stylesheet" href="~/style.css">
+        <link rel="stylesheet" href="~/css/font-icons.css">
+        <link rel="stylesheet" href="~/abogacia.css">
+    }
+    else
+    {
+        <link rel="stylesheet" href="~/dist/workerRights.css">
+    }
+}
+
+@section PreloadLinks {
+    @if (!Environment.IsDevelopment())
+    {
+        <link rel="preload" href="~/dist/workerRights.css" as="style">
+    }
+}
+
+@section Scripts {
+    @if (Environment.IsDevelopment())
+    {
+        <script src="~/js/functions.js"></script>
+        <script src="~/js/googleReviewsPlugin.js"></script>
+        <script src="~/js/pages/workerRights/workerRights.js"></script>
+    }
+    else
+    {
+        <script src="~/dist/workerRights.js"></script>
+    }
+}
+
+<title class="logo">Derechos del trabajador</title>
+
+<section id="page-title" class="parallax scroll-detect vh-75 align-items-center justify-content-center d-flex">
+    <div class="container clearfix">
+        <div>
+            <h3 class="articleTitle">Derechos laborales</h3>
+        </div>
+        <h1 class="articleTitle subTitle">Conocé tus derechos</h1>
+    </div>
+    <img src="/images/articles/WorkerRights.webp" 
+         alt="Derechos del trabajador" 
+         width="800" 
+         height="400" 
+         fetchpriority="high"
+         decoding="async" 
+         loading="eager" 
+         class="parallax-bg">
 </section>
-  <section id="content">
-    <div class="content-wrap pt-0">
-      <div class="mt-0">
-        <div class="container mt-5">
 
-          <h2>
-            ¿Qué protección brindan las leyes a los trabajadores?
-          </h2>
-          <p>
-            El derecho laboral argentino compuesto por diversas leyes, reglamentos y convenios colectivos consagra una <span class="green">amplia gama de derechos</span> para todos los trabajadores del país.
-          </p>
-          <p>
-            Cierto es que debido a las sucesivas crisis económicas y políticas estas normas se modifican constantemente resultando por momentos contradictorias y de variada interpretación creando un clima de incertidumbre para todo trabajador.
-          </p>
-          <p>
+ <section id="content">
+    <div class="content-wrap pt-0">
+        <div class="mt-0">
+            <div class="container mt-5">
+
+                <h2>
+                    ¿Qué protección brindan las leyes a los trabajadores?
+                </h2>
+                <p>
+                    El derecho laboral argentino compuesto por diversas leyes, reglamentos y convenios colectivos consagra una <span class="green">amplia gama de derechos</span> para todos los trabajadores del país.
+                </p>
+                <p>
+                    Cierto es que debido a las sucesivas crisis económicas y políticas estas normas se modifican constantemente resultando por momentos contradictorias y de variada interpretación creando un clima de incertidumbre para todo trabajador.
+                </p>
+                <p>
   
 Como profesionales somos conscientes de la <span class="green">importancia que tiene para una persona perder su trabajo</span> y del peso que tiene nuestra asistencia legal para transmitirle tranquilidad y <span class="green">brindarle una solución acorde a sus necesidades.</span>
-          </p>
+                </p>
 
-          <h2>
-            ¿Qué debo hacer si recibo presiones constantes para renunciar a mi trabajo?
-          </h2>
-          <p>
-            A menudo recibimos consultas de clientes que llegan a <span class="green">acuerdos perjudiciales con sus empleadores forzados por la necesidad económica</span> o que deciden presentar la <span class="green">renuncia ante las permanentes presiones</span> que reciben, <span class="green">resignando</span> de esa manera la posibilidad de cobrar la <span class="green">indemnización que les corresponde.</span>
-          </p>
-          <p>
-            Tenga en cuenta que su forma de actuar es determinante a la hora de definir la responsabilidad de la desvinculación, y que <span class="green">en ocasiónes conducirse de forma equivocada o tardía puede derivar en la pérdida de su derecho a reclamar o en una notoria reducción de su indemnización.</span>
-          </p>
-          <p>
-            
-              Por ello <span class="green">
-                es fundamental contar con el asesoramiento legal
-                especializado
-              </span> que brinda nuestro Estudio. Para que usted sepa
-              desde un principio cuales son los pasos correctos para hacer valer
-              sus derechos y evitar cualquier tipo de abuso por parte de su
-              empleador.
-          
-          </p>
-          <p>
-     
-              Cuando se produce un despido existen diversas alternativas que deben considerarse para conocer la indemnización que corresponde al trabajador como consecuencia de dicha disolución.
+                <h2>
+                    ¿Qué debo hacer si recibo presiones constantes para renunciar a mi trabajo?
+                </h2>
+                <p>
+                    A menudo recibimos consultas de clientes que llegan a <span class="green">acuerdos perjudiciales con sus empleadores forzados por la necesidad económica</span> o que deciden presentar la <span class="green">renuncia ante las permanentes presiones</span> que reciben, <span class="green">resignando</span> de esa manera la posibilidad de cobrar la <span class="green">indemnización que les corresponde.</span>
+                </p>
+                <p>
+                    Tenga en cuenta que su forma de actuar es determinante a la hora de definir la responsabilidad de la desvinculación, y que <span class="green">en ocasiónes conducirse de forma equivocada o tardía puede derivar en la pérdida de su derecho a reclamar o en una notoria reducción de su indemnización.</span>
+                </p>
+                <p>
+                    
+                    Por ello <span class="green">
+                        es fundamental contar con el asesoramiento legal
+                        especializado
+                    </span> que brinda nuestro Estudio. Para que usted sepa
+                    desde un principio cuales son los pasos correctos para hacer valer
+                    sus derechos y evitar cualquier tipo de abuso por parte de su
+                    empleador.
+              
+                </p>
+                <p>
+           
+                    Cuando se produce un despido existen diversas alternativas que deben considerarse para conocer la indemnización que corresponde al trabajador como consecuencia de dicha disolución.
 
-          </p>
-          <p>
-            Nuestra <span class="green">calculadora</span> es una herramienta práctica que lo ayudará a
-            conocer de manera estimativa cual es el monto que a usted le
-            corresponde. Si usted desea calcular su indemnización por “despido
-            sin causa” presione <a href="@Url.Action("despidos", "Calculators")">AQUÍ.</a>
-          </p>
-          <p>
-            Recuerde siempre que estamos para ayudarlo y su consulta no molesta.
-            Consultenos <a href="@Url.Action("index", "Contacto")">AQUÍ</a>.
-          </p>
+                </p>
+                <p>
+                    Nuestra <span class="green">calculadora</span> es una herramienta práctica que lo ayudará a
+                    conocer de manera estimativa cual es el monto que a usted le
+                    corresponde. Si usted desea calcular su indemnización por “despido
+                    sin causa” presione <a href="@Url.Action("despidos", "Calculators")">AQUÍ.</a>
+                </p>
+                <p>
+                    Recuerde siempre que estamos para ayudarlo y su consulta no molesta.
+                    Consultenos <a href="@Url.Action("index", "Contacto")">AQUÍ</a>.
+                </p>
 
-          <div class="divider"></div>
-          <div class="row mt-5">
-            <div class="col-md-12">
-              <h3 class="font-weight-bold">
-                Derechos fundamentales de los trabajadores consagrados por el
-                artículo 14 bis de la Constitución
-              </h3>
+                <div class="divider"></div>
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <h3 class="font-weight-bold">
+                            Derechos fundamentales de los trabajadores consagrados por el
+                            artículo 14 bis de la Constitución
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="row align-items-center gutter-50 col-mb-80 mt-5">
+                    <div class="col-md-6 workerRightsIconsFirstCol">
+                        <div class="row feature-box-border col-mb-30 align-items-center">
+                            <div class="col-md-8 feature-box fbox-color">
+                                <div class="fbox-icon">
+                                    <a><i class="fa-solid fa-toolbox"></i></a>
+                                </div>
+                                <div class="fbox-content">
+                                    <h3 class="nott text-larger font-weight-normal mb-2 mt-3">
+                                        Condiciones dignas y equitativas de labor
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div class="clear"></div>
+
+                            <div class="col-md-8 feature-box fbox-color">
+                                <div class="fbox-icon">
+                                    <a><i class="fa-solid fa-people-carry-box"></i></a>
+                                </div>
+                                <div class="fbox-content">
+                                    <h3 class="nott text-larger font-weight-normal mb-2 mt-3">
+                                        Trabajador debidamente registrado
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div class="clear"></div>
+
+                            <div class="col-md-8 feature-box fbox-color">
+                                <div class="fbox-icon">
+                                    <a><i class="bi-check2-square"></i></a>
+                                </div>
+                                <div class="fbox-content">
+                                    <h3 class="nott text-larger font-weight-normal mb-2 mt-3">
+                                        Jornada limitada
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div class="clear"></div>
+
+                            <div class="col-md-8 feature-box fbox-color">
+                                <div class="fbox-icon">
+                                    <a><i class="bi-sun-fill"></i></a>
+                                </div>
+                                <div class="fbox-content">
+                                    <h3 class="nott text-larger font-weight-normal mb-2 mt-3">
+                                        Descanso y vacaciones pagados
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+
+                            <div class="col-md-8 feature-box fbox-color noborder border-small-device">
+                                <div class="fbox-icon">
+                                    <a><i class="fa-solid fa-comment-dollar"></i></a>
+                                </div>
+                                <div class="fbox-content">
+                                    <h3 class="nott text-larger font-weight-normal mb-2 mt-3">
+                                        Retribución justa
+                                    </h3>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 workerRightsIconsSecondCol">
+                        <div class="row feature-box-border col-mb-30 align-items-center">
+                           
+                            <div class="col-md-8 feature-box fbox-color">
+                                <div class="fbox-icon">
+                                    <a><i class="bi-exclamation-circle-fill"></i></a>
+                                </div>
+                                <div class="fbox-content">
+                                    <h3 class="nott text-larger font-weight-normal mb-2 mt-3">
+                                        Salario mínimo vital móvil
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div class="clear"></div>
+
+                            <div class="col-md-8 feature-box fbox-color">
+                                <div class="fbox-icon">
+                                    <a><i class="uil-notes"></i></a>
+                                </div>
+                                <div class="fbox-content">
+                                    <h3 class="nott text-larger font-weight-normal mb-2 mt-3">
+                                        Igual remuneración por igual tarea
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div class="clear"></div>
+
+                            <div class="col-md-8 feature-box fbox-color">
+                                <div class="fbox-icon">
+                                    <a><i class="bi-exclamation-triangle-fill"></i></a>
+                                </div>
+                                <div class="fbox-content">
+                                    <h3 class="nott text-larger font-weight-normal mb-2 mt-3">
+                                        Protección contra el despido arbitrario
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div class="clear"></div>
+
+                            <div class="col-md-8 feature-box fbox-color noborder">
+                                <div class="fbox-icon">
+                                    <a><i class="fa-solid fa-truck"></i></a>
+                                </div>
+                                <div class="fbox-content">
+                                    <h3 class="nott text-larger font-weight-normal mb-2 mt-3">
+                                        Organización sindical libre y democrática
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="container clearfix mb-5">
+                    @Html.Partial("CalculatorsLinks")
+                </div>
             </div>
-          </div>
-
-          <div class="row align-items-center gutter-50 col-mb-80 mt-5">
-            <div class="col-md-6 workerRightsIconsFirstCol">
-              <div class="row feature-box-border col-mb-30 align-items-center">
-                <div class="col-md-8 feature-box fbox-color">
-                  <div class="fbox-icon">
-                    <a><i class="icon-toolbox"></i></a>
-                  </div>
-                  <div class="fbox-content">
-                    <h3 class="nott text-larger font-weight-normal mb-2 mt-3">
-                      Condiciones dignas y equitativas de labor
-                    </h3>
-                  </div>
-                </div>
-
-                <div class="clear"></div>
-
-                <div class="col-md-8 feature-box fbox-color">
-                  <div class="fbox-icon">
-                    <a><i class="icon-people-carry"></i></a>
-                  </div>
-                  <div class="fbox-content">
-                    <h3 class="nott text-larger font-weight-normal mb-2 mt-3">
-                      Trabajador debidamente registrado
-                    </h3>
-                  </div>
-                </div>
-
-                <div class="clear"></div>
-
-                <div class="col-md-8 feature-box fbox-color">
-                  <div class="fbox-icon">
-                    <a><i class="icon-checkbox-checked"></i></a>
-                  </div>
-                  <div class="fbox-content">
-                    <h3 class="nott text-larger font-weight-normal mb-2 mt-3">
-                      Jornada limitada
-                    </h3>
-                  </div>
-                </div>
-
-                <div class="clear"></div>
-
-                <div class="col-md-8 feature-box fbox-color">
-                  <div class="fbox-icon">
-                    <a><i class="icon-line-sun"></i></a>
-                  </div>
-                  <div class="fbox-content">
-                    <h3 class="nott text-larger font-weight-normal mb-2 mt-3">
-                      Descanso y vacaciones pagados
-                    </h3>
-                  </div>
-                </div>
-                <div class="clear"></div>
-
-                <div class="col-md-8 feature-box fbox-color noborder border-small-device">
-                  <div class="fbox-icon">
-                    <a><i class="icon-comment-dollar"></i></a>
-                  </div>
-                  <div class="fbox-content">
-                    <h3 class="nott text-larger font-weight-normal mb-2 mt-3">
-                      Retribución justa
-                    </h3>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-            <div class="col-md-6 workerRightsIconsSecondCol">
-              <div class="row feature-box-border col-mb-30 align-items-center">
-               
-                <div class="col-md-8 feature-box fbox-color">
-                  <div class="fbox-icon">
-                    <a><i class="icon-exclamation-sign"></i></a>
-                  </div>
-                  <div class="fbox-content">
-                    <h3 class="nott text-larger font-weight-normal mb-2 mt-3">
-                      Salario mínimo vital móvil
-                    </h3>
-                  </div>
-                </div>
-
-                <div class="clear"></div>
-
-                <div class="col-md-8 feature-box fbox-color">
-                  <div class="fbox-icon">
-                    <a><i class="icon-line2-notebook"></i></a>
-                  </div>
-                  <div class="fbox-content">
-                    <h3 class="nott text-larger font-weight-normal mb-2 mt-3">
-                      Igual remuneración por igual tarea
-                    </h3>
-                  </div>
-                </div>
-
-                <div class="clear"></div>
-
-                <div class="col-md-8 feature-box fbox-color">
-                  <div class="fbox-icon">
-                    <a><i class="icon-line-alert-triangle"></i></a>
-                  </div>
-                  <div class="fbox-content">
-                    <h3 class="nott text-larger font-weight-normal mb-2 mt-3">
-                      Protección contra el despido arbitrario
-                    </h3>
-                  </div>
-                </div>
-
-                <div class="clear"></div>
-
-                <div class="col-md-8 feature-box fbox-color noborder">
-                  <div class="fbox-icon">
-                    <a><i class="icon-truck"></i></a>
-                  </div>
-                  <div class="fbox-content">
-                    <h3 class="nott text-larger font-weight-normal mb-2 mt-3">
-                      Organización sindical libre y democrática
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="divider"></div>
-          <div class="container clearfix mb-5">
-            @Html.Partial("CalculatorsLinks")
-          </div>
         </div>
-      </div>
     </div>
-  </section>
+</section> 
 
 </section>
 
 @{
-  var jsonLdModel = new JsonLdModel
-  {
-    Headline = ViewData["Title"].ToString(),
-    Description = ViewData["Description"].ToString(),
-    Keywords = ViewData["Keywords"].ToString(),
-    ImageName = "services/WorkerRights.jpeg", 
-    Category = "Derechos del trabajador",     
-    ArticleBody = "Este artículo ofrece una guía esencial sobre cómo actuar tras sufrir un accidente de tránsito. Nuestro estudio jurídico, compuesto por abogados y profesionales médicos de primer nivel, se especializa en la gestión de reclamos por accidentes de tránsito, incluyendo aquellos en los que el afectado es peatón, conductor o pasajero. Destacamos la importancia de anotar los datos del vehículo involucrado, tomar fotografías del lugar y buscar asistencia médica inmediata, incluso si las lesiones parecen leves. Además, proporcionamos herramientas para calcular orientativamente la indemnización correspondiente y estamos disponibles para consultas sin compromiso."
-  };
+    var jsonLdModel = new JsonLdModel
+    {
+        Headline = ViewData["Title"].ToString(),
+        Description = ViewData["Description"].ToString(),
+        Keywords = ViewData["Keywords"].ToString(),
+        ImageName = "services/WorkerRights.jpeg", 
+        Category = "Derechos del trabajador",     
+        ArticleBody = "Este artículo ofrece una guía esencial sobre cómo actuar tras sufrir un accidente de tránsito. Nuestro estudio jurídico, compuesto por abogados y profesionales médicos de primer nivel, se especializa en la gestión de reclamos por accidentes de tránsito, incluyendo aquellos en los que el afectado es peatón, conductor o pasajero. Destacamos la importancia de anotar los datos del vehículo involucrado, tomar fotografías del lugar y buscar asistencia médica inmediata, incluso si las lesiones parecen leves. Además, proporcionamos herramientas para calcular orientativamente la indemnización correspondiente y estamos disponibles para consultas sin compromiso."
+    };
 }
 
 @Html.Partial("_ArticleJsonLdSchema", jsonLdModel)

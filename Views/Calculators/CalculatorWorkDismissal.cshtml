@@ -1,17 +1,20 @@
-﻿<title class="logo">Calculadora de indemnización por despido</title>
+﻿@using Microsoft.AspNetCore.Hosting
+@using Microsoft.Extensions.Hosting
 
-<section
-  id="page-title"
-  class="calculatorHeader calculatorDismissalHeader min-vh-60 page-title-parallax page-title-dark include-header"
->
-  <div class="container clearfix">
-    <div>
-      <h3 class="articleTitle">Despidos</h3>
-    </div>
+@inject IWebHostEnvironment Environment
 
-    <h1 class="articleTitle">Calculadora de indemnización</h1>
-  </div>
-</section>
+@section PreloadLinks {
+  <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile("calculatorWorkDismissal.css")">
+}
+
+
+<title class="logo">Calculadora de indemnización por despido</title>
+
+@await Html.PartialAsync("_HeroSection", (
+  Title: "Despidos",
+  Subtitle: "Calculadora de indemnización",
+  ClassName: "calculatorDismissalHeader"
+  ))
 
 <section id="content" class="calculatorWorkDismissal">
   <div class="content-wrap pt-0">
@@ -22,64 +25,34 @@
             <form class="">
               <div class="form-row">
                 <div class="form-group col-md-12">
-                  <label for="startDate"
-                    ><small>*</small> Fecha de ingreso:</label
-                  >
-                  <input
-                    type="date"
-                    class="form-control"
-                    id="startDate"
-                    name="startDate"
-                  />
+                  <label for="startDate"><small>*</small> Fecha de ingreso:</label>
+                  <input type="date" class="form-control" id="startDate" name="startDate" />
                 </div>
               </div>
 
               <div class="form-row">
                 <div class="form-group col-md-12">
-                  <label for="endDate"
-                    ><small>*</small> Fecha de despido:</label
-                  >
-                  <input
-                    type="date"
-                    class="form-control"
-                    id="endDate"
-                    name="endDate"
-                  />
+                  <label for="endDate"><small>*</small> Fecha de despido:</label>
+                  <input type="date" class="form-control" id="endDate" name="endDate" />
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-12">
-                  <label for="bestSalary"
-                    ><small>*</small> Mejor sueldo bruto:</label
-                  >
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="bestSalary"
-                    name="bestSalary"
-                  />
+                  <label for="bestSalary"><small>*</small> Mejor sueldo bruto:</label>
+                  <input type="number" class="form-control" id="bestSalary" name="bestSalary" />
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label for="notice"><small>*</small> Hubo preaviso:</label>
-                  <select
-                    id="noticeSelect"
-                    class="form-control"
-                    name="preaviso"
-                  >
+                  <select id="noticeSelect" class="form-control" name="preaviso">
                     <option selected id="noNotice">Sin preaviso</option>
                     <option id="notice">Con preaviso</option>
                   </select>
                 </div>
               </div>
 
-              <button
-                class="btn btn-success"
-                type="button"
-                disabled
-                id="btnCalculate"
-              >
+              <button class="btn btn-success" type="button" disabled id="btnCalculate">
                 Calcular
               </button>
               <div class="style-msg successmsg invisible">
@@ -97,14 +70,13 @@
               LCT es igual a
               <span class="green">
                 1 mes de sueldo por cada año de servicio o fracción mayor de
-                TRES (3) meses </span
-              >, tomando como referencia la mejor remuneración mensual, normal y
+                TRES (3) meses </span>, tomando como referencia la mejor remuneración mensual, normal y
               habitual del último año.
             </p>
             <p>
               <b class="green">MEJOR SUELDO BRUTO:</b> mejor remuneración
               mensual, normal y habitual, es decir, el salario más elevado que
-              usted percibió durante el último año incluyendo horas extras,
+              sted percibió durante el último año incluyendo horas extras,
               proporcional de aguinaldo y demás conceptos no remunerativos
               (bonos, propinas, comisiónes, viáticos etc.) en la medida en que
               su percepción sea normal y habitual.
@@ -131,8 +103,7 @@
         sentido a los fines de proteger a los trabajadores. Pese a ello,
         <span class="green">
           en muchas oportunidades el empleador invoca causas que no cumplen los
-          estándares mínimos fijados por las leyes laborales </span
-        >. De esa manera
+          estándares mínimos fijados por las leyes laborales </span>. De esa manera
         <span class="green">
           presionan al trabajador para que acepte la liquidación final por una
           suma inferior
@@ -150,8 +121,7 @@
         antigüedad y tal como lo contempla el art 245 de la LCT es igual a
         <span class="green">
           1 mes de sueldo por cada año de servicio o fracción mayor de TRES (3)
-          meses </span
-        >, tomando como referencia la mejor remuneración mensual, normal y
+          meses </span>, tomando como referencia la mejor remuneración mensual, normal y
         habitual del último año.
       </p>
       <h4>¿COMO SE CALCULA LA MEJOR REMUNERACIÓN NORMAL Y HABITUAL?</h4>
@@ -277,7 +247,7 @@
         Recuerde siempre que estamos para ayudarlo y su consulta no molesta.
       </p>
 
-      @Html.Partial("WorkDismissalFeatures")
+      @Html.Partial("Partials/WorkDismissalFeatures");
     </div>
     <div class="divider"></div>
 
@@ -301,4 +271,6 @@
     }
   }
   </script>
-  
+@section Scripts {
+  <script src="@VersionedFileHelper.GetVersionedFile("calculatorWorkDismissal.js")"></script>
+}

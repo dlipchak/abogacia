@@ -1,21 +1,22 @@
 ﻿@using AbogaciaCore.Helpers;
 
-<header id="header" class="full-header " data-sticky-class="not-dark">
+<header id="header" class="full-header" >
     <div id="header-wrap">
         <div class="container">
-            <div class="slider-social d-block d-sm-none clearfix ">
+                <div class="slider-social d-block d-sm-none clearfix ">
                 <div class="row justify-content-center border-bottom mb-1" >
-                    <a href="https://www.facebook.com/Estudio-Jur%C3%ADdico-Lopez-Giacomelli-2000856223478787" target="_blank" class="social-icon si-small si-borderless si-facebook si-text-color">
-                        <i class="icon-facebook"></i>
-                        <i class="icon-facebook"></i>
-                    </a>
-                    <a href="https://www.instagram.com/estudiolopezgiacomelli/" target="_blank" class="social-icon si-small si-borderless si-instagram si-text-color">
-                        <i class="icon-instagram"></i>
-                        <i class="icon-instagram"></i>
-                    </a>
+              		<a href="https://www.facebook.com/Estudio-Jur%C3%ADdico-Lopez-Giacomelli-2000856223478787" target="_blank" class="social-icon border-transparent color-facebook  h-bg-facebook" title="Facebook">
+										<i class="fa-brands fa-facebook-f"></i>
+										<i class="fa-brands fa-facebook-f"></i>
+									</a>
+
+									<a href="https://www.instagram.com/estudiolopezgiacomelli/" target="_blank" class="social-icon border-transparent color-instagram  h-bg-instagram" title="Instagram">
+										<i class="bi-instagram"></i>
+										<i class="bi-instagram"></i>
+									</a>
                 </div>
       
-            </div>
+             </div>
 
             <div class="header-row mb-2">
                 <!-- Logo
@@ -23,33 +24,36 @@
                 <div id="logo">
 
                     <a href="@Url.Action("Index", "Home")"
-                    class="standard-logo"><img src="/images/logo.png" alt="Estudio Lopez Giacomelli"></a>
-                    <a href="@Url.Action("Index", "Home")"
-                    class="retina-logo" ><img src="/images/logo.png" alt="Estudio Lopez Giacomelli"></a>
+                    class="standard-logo" aria-label="Ir a la página principal"><img src="/images/logo.png" alt="Logo Estudio Lopez Giacomelli"></a>
                 </div>
                 <!-- #logo end -->
 
-                <div id="primary-menu-trigger">
-                    <svg class="svg-trigger" viewBox="0 0 100 100">
-                        <path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path>
-                        <path d="m 30,50 h 40"></path>
-                        <path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
-                    </svg>
-                </div>
+					<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
 
                 <!-- Primary Navigation
                         ============================================= -->
                 <nav class="primary-menu">
                     <ul class="menu-container">
 
-                        <li class="menu-item @Html.IsSelected(action:"Index",controller:"Home",cssClass:"current")">
+                        <li class="menu-item  @Html.IsSelected(action:"Index",controller:"Home",cssClass:"current")">
                             <a class="menu-link" href="@Url.Action("Index", "Home")">Inicio</a>
                         </li>
                         <!-- <li class="menu-item @Html.IsSelected(action:"Index",controller:"AboutUs",cssClass:"current")">
                             <a class="menu-link" href="@Url.Action("Index", "AboutUs")">Nosotros</a>
                         </li> -->
                         <li class="menu-item @Html.IsSelected(action:"Index",controller:"Articles",cssClass:"current")">
-                            <a class="menu-link" href="#"><div>Accidentes</div></a>
+                            <a href="javascript:void(0)" 
+                               class="menu-link" 
+                               aria-label="Menú de Accidentes"
+                               role="button"
+                               aria-expanded="false"
+                               aria-haspopup="true">
+                                <div>Accidentes</div>
+                            </a>
                             <ul class="sub-menu-container">
                                 <li class="menu-item">
                                     <a class="menu-link" href="#"><div>De Tránsito</div></a>
@@ -109,17 +113,29 @@
 
                     </ul>
                 </nav>
+
+                <div class="col-md-1 d-lg-block d-none ">
+									<a href="https://www.facebook.com/Estudio-Jur%C3%ADdico-Lopez-Giacomelli-2000856223478787" target="_blank" class="social-icon border-transparent color-facebook  h-bg-facebook" title="Facebook">
+										<i class="fa-brands fa-facebook-f"></i>
+										<i class="fa-brands fa-facebook-f"></i>
+									</a>
+
+									<a href="https://www.instagram.com/estudiolopezgiacomelli/" target="_blank" class="social-icon border-transparent color-instagram  h-bg-instagram" title="Instagram">
+										<i class="bi-instagram"></i>
+										<i class="bi-instagram"></i>
+									</a>
+				</div>
                 
-                <div class="slider-social  d-lg-block d-none clearfix">
-					<a href="https://www.facebook.com/Estudio-Jur%C3%ADdico-Lopez-Giacomelli-2000856223478787" target="_blank" class="social-icon si-small si-borderless si-facebook si-text-color ">
-						<i class="icon-facebook"></i>
-						<i class="icon-facebook"></i>
+                @* <div class="slider-social  d-lg-block d-none clearfix">
+					<a href="https://www.facebook.com/Estudio-Jur%C3%ADdico-Lopez-Giacomelli-2000856223478787" target="_blank" class="social-icon si-small si-borderless si-facebook si-text-color " aria-label="Síguenos en Facebook">
+						<i class="fa-brands fa-square-facebook" aria-hidden="true"></i>
+
 					</a>
-					<a href="https://www.instagram.com/estudiolopezgiacomelli/" target="_blank" class="social-icon si-small si-borderless si-instagram si-text-color">
-						<i class="icon-instagram"></i>
-						<i class="icon-instagram"></i>
+					<a href="https://www.instagram.com/estudiolopezgiacomelli/" target="_blank" class="social-icon si-small si-borderless si-instagram si-text-color" aria-label="Síguenos en Instagram">
+						<i class="icon-instagram" aria-hidden="true"></i>
+						<i class="icon-instagram" aria-hidden="true"></i>
 					</a>
-                </div>
+                </div> *@
           
                 <!-- #primary-menu end -->
             </div>

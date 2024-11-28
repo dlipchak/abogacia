@@ -1,0 +1,1133 @@
+/* header styles */
+.header-wrap-clone {
+  height: var(--header-height) !important;
+  position: absolute !important;
+}
+
+
+.result {
+  font-weight: bold;
+}
+
+a.current {
+  color: var(--themecolor) !important;
+}
+
+#header.full-header #logo {
+  font-size: 27px;
+}
+
+
+#logo a {
+  font-size: 26px !important;
+  font-weight: 500 !important;
+}
+
+#logo img {
+  height: 65px !important;
+}
+
+@media (min-width: 992px) {
+  .sticky-header-shrink #header-wrap #logo img {
+    height: 45px !important;
+  }
+}
+
+@media (max-width: 414px) {
+  #logo img {
+    height: 40px !important;
+  }
+}
+
+#primary-menu-trigger {
+  width: 36px !important;
+}
+
+@media (max-width: 320px) {
+  #logo img {
+    height: 30px !important;
+  }
+}
+
+
+/* end header styles */
+
+/*home page*/
+.heading-block:after {
+  display: inline;
+}
+
+/* end home page */
+
+/* contact us */
+
+.contact-us-spinner {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: visible;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* end contact us */
+
+
+/* services */
+
+.AccidentesEnTransportePublico {
+  padding: 250px 0px !important;
+  background-image: url("/images/articles/accidente-en-transporte-publico.jpeg");
+  background-size: cover !important;
+  background-position: 0px -469.481px !important;
+}
+
+@supports (background-image: url("/images/articles/accidente-en-transporte-publico.avif")) {
+  .AccidentesEnTransportePublico {
+    background-image: url("/images/articles/accidente-en-transporte-publico.avif") !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .AccidentesEnTransportePublico {
+    padding: 116px 0px !important;
+    background-position: 0px 0px !important;
+  }
+}
+
+.Covid19 {
+  padding: 250px !important;
+  background-image: url("/images/articles/covid19.jpeg") !important;
+  background-size: cover !important;
+  background-position: 64% !important;
+}
+
+@supports (background-image: url("/images/articles/covid19.avif")) {
+  .Covid19 {
+    background-image: url("/images/articles/covid19.avif") !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .Covid19 {
+    padding: 0px !important;
+  }
+}
+
+.HowToActOnTrafficAccident {
+  padding: 250px 0px !important;
+  background-image: url("/images/articles/accidentesDeTransito.jpeg") !important;
+  background-size: cover !important;
+  background-position: 0px 59.519px !important;
+}
+
+@supports (background-image: url("/images/articles/accidentesDeTransito.avif")) {
+  .HowToActOnTrafficAccident {
+    background-image: url("/images/articles/accidentesDeTransito.avif") !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .HowToActOnTrafficAccident {
+    padding: 0px !important;
+    background-position: 0px 0px !important;
+  }
+}
+
+.AccidentesEnAuto {
+  padding: 250px !important;
+  background-image: url("/images/articles/accidente-en-automovil.jpg") !important;
+  background-size: cover !important;
+  background-position: 0px 50px !important;
+}
+
+@supports (background-image: url("/images/articles/accidente-en-automovil.avif")) {
+  .AccidentesEnAuto {
+    background-image: url("/images/articles/accidente-en-automovil.avif") !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .AccidentesEnAuto {
+    padding: 0px !important;
+    background-position: 79% !important;
+  }
+}
+
+.AccidentesEnMoto {
+  padding: 250px !important;
+  background-image: url("/images/articles/accidente-en-moto.jpg") !important;
+  background-size: cover !important;
+  background-position: 0px -320.481px !important;
+}
+
+@supports (background-image: url("/images/articles/accidente-en-moto.avif")) {
+  .AccidentesEnMoto {
+    background-image: url("/images/articles/accidente-en-moto.avif") !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .AccidentesEnMoto {
+    padding: 0px !important;
+    background-position: 75% !important;
+  }
+}
+
+.AccidentesEnBicicleta {
+  padding: 250px !important;
+  background-image: url("/images/articles/accidente-en-bicicleta.jpg") !important;
+  background-size: cover !important;
+  background-position: 0px -151.481px !important;
+}
+
+@supports (background-image: url("/images/articles/accidente-en-bicicleta.avif")) {
+  .AccidentesEnBicicleta {
+    background-image: url("/images/articles/accidente-en-bicicleta.avif") !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .AccidentesEnBicicleta {
+    padding: 0px !important;
+    background: url("/images/articles/accidente-en-bicicleta.jpg") 15% / cover no-repeat !important;
+  }
+}
+
+.AccidentesComoAcompanantes {
+  padding: 250px !important;
+  background-image: url("/images/articles/accidentes-como-acompanantes.jpeg") !important;
+  background-size: cover !important;
+  background-position: 0px -151.481px !important;
+}
+
+@supports (background-image: url("/images/articles/accidentes-como-acompanantes.avif")) {
+  .AccidentesComoAcompanantes {
+    background-image: url("/images/articles/accidentes-como-acompanantes.avif") !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .AccidentesComoAcompanantes {
+    padding: 0px !important;
+    background: url("/images/articles/accidentes-como-acompanantes.jpeg") 17% / cover no-repeat !important;
+  }
+}
+
+.AccidentesComoPeaton {
+  padding: 250px !important;
+  background-image: url("/images/articles/peatones.jpeg") !important;
+  background-size: cover !important;
+  background-position: 0px -151.481px !important;
+}
+
+@supports (background-image: url("/images/articles/peatones.avif")) {
+  .AccidentesComoPeaton {
+    background-image: url("/images/articles/peatones.avif") !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .AccidentesComoPeaton {
+    padding: 0px !important;
+    background: url("/images/articles/peatones.jpeg") 17% / cover no-repeat !important;
+  }
+}
+
+.DestruccionTotal {
+  padding: 250px !important;
+  background-image: url("/images/articles/destruccion-total.jpeg") !important;
+  background-size: cover !important;
+  background-position: 0px -151.481px !important;
+}
+
+@supports (background-image: url("/images/articles/destruccion-total.avif")) {
+  .DestruccionTotal {
+    background-image: url("/images/articles/destruccion-total.avif") !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .DestruccionTotal {
+    padding: 0px !important;
+    background: url("/images/articles/destruccion-total.jpeg") 50% / cover no-repeat !important;
+  }
+}
+
+.AccidentesDeTrabajo {
+  padding: 250px !important;
+  background-image: url("/images/articles/accidentes-en-ocasion-del-trabajo.jpeg") !important;
+  background-size: cover !important;
+  background-position: 0px -151.481px !important;
+}
+
+@supports (background-image: url("/images/articles/accidentes-en-ocasion-del-trabajo.avif")) {
+  .AccidentesDeTrabajo {
+    background-image: url("/images/articles/accidentes-en-ocasion-del-trabajo.avif") !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .AccidentesDeTrabajo {
+    padding: 0px !important;
+    background-position: 50% !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+}
+
+.AccidentesInItinere {
+  padding: 250px !important;
+  background-image: url("/images/articles/accidentes-initinere.jpeg") !important;
+  background-size: cover !important;
+  background-position: 0px -151.481px !important;
+}
+
+@supports (background-image: url("/images/articles/accidentes-initinere.avif")) {
+  .AccidentesInItinere {
+    background-image: url("/images/articles/accidentes-initinere.avif") !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .AccidentesInItinere {
+    padding: 0px !important;
+    background-position: 50% !important;
+  }
+}
+
+.EnfermedadesProfesionales {
+  padding: 250px !important;
+  background-image: url("/images/articles/enfermedades-profesionales.jpeg") !important;
+  background-size: cover !important;
+  background-position: 98% !important;
+}
+
+@supports (background-image: url("/images/articles/enfermedades-profesionales.avif")) {
+  .EnfermedadesProfesionales {
+    background-image: url("/images/articles/enfermedades-profesionales.avif") !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .EnfermedadesProfesionales {
+    padding: 0px !important;
+    background-position: 90% !important;
+  }
+}
+
+.workerRights {
+  padding: 250px !important;
+  background-image: url("/images/articles/WorkerRights.jpeg") !important;
+  background-size: cover !important;
+  background-position: 0px -151.481px !important;
+}
+
+@supports (background-image: url("/images/articles/WorkerRights.avif")) {
+  .workerRights {
+    background-image: url("/images/articles/WorkerRights.avif") !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .workerRights {
+    padding: 0px !important;
+    background-position: 0px 0px !important;
+  }
+}
+
+/* services */
+
+
+/* gallery */
+@media (max-width: 991.98px) {
+  .galleryTitle {
+    font-size: 30px;
+  }
+}
+
+.galleryTitle {
+  font-size: 40px;
+}
+
+/* General Background Styling for Swiper Slides */
+.swiper-slide-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  /* Ensures the image covers the container */
+  background-position: center;
+  /* Centers the background image */
+  z-index: 0;
+  /* Keeps it beneath the content */
+}
+
+/* Overlay for Swiper Slides */
+.swiper-slide-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right, #002f4b, grey);
+  /* Overlay effect */
+  opacity: 0.4;
+  z-index: 1;
+  /* Stays on top of the background image */
+}
+
+/* Individual Background Position Adjustments */
+.galleryImg1 {
+  background-position: 0 92%;
+  /* Adjust specific positioning for Slide 1 */
+}
+
+@media (max-width: 991.98px) {
+  .galleryImg1 {
+    background-position: 40% 72%;
+    /* Adjust for smaller screens */
+  }
+}
+
+.galleryImg2 {
+  background-position: 0 26%;
+  /* Adjust specific positioning for Slide 2 */
+}
+
+.galleryImg3 {
+  background-position: top center;
+  /* Adjust specific positioning for Slide 3 */
+}
+
+/* end gallery */
+
+
+@media (max-width: 575.98px) {
+
+  .container,
+  #header.full-header .container,
+  .container-fullwidth {
+    width: 100% !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+/* hero header */
+
+#hero-title h1,
+h2 {
+  line-height: 55px;
+  display: inline-block !important;
+  background: rgba(26, 188, 156, 0.65) !important;
+  padding: 12px !important;
+  text-align: left !important;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .9) !important;
+}
+
+#hero-title h2 {
+  font-size: 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 991.98px) {
+
+  #hero-title h1,
+  h2 {
+    font-size: 30px !important;
+    line-height: 32px;
+  }
+
+}
+
+.articleTitle {
+  line-height: 55px !important;
+  display: inline-block !important;
+  background: rgba(26, 188, 156, 0.65) !important;
+  padding: 12px !important;
+  text-align: left !important;
+  font-weight: 600;
+}
+
+.articleSubTitle {
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, .9) !important;
+  text-transform: uppercase !important;
+}
+
+
+.articleCategoryTitle {
+  line-height: 55px !important;
+  background: rgba(26, 188, 156, 0.65) !important;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: left !important;
+  margin-bottom: 5px;
+  display: inline-block !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 991.98px) {
+  .articleCategoryTitle {
+    float: left !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .articleTitle {
+    font-size: 30px !important;
+    line-height: 32px !important;
+    float: left;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #hero-title {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+}
+
+.heroHeader {
+  padding: 250px !important;
+}
+
+@media (max-width: 991.98px) {
+  .heroHeader {
+    padding: 0px !important;
+    background-position: 0px 0px !important;
+  }
+}
+
+/* end hero header */
+
+
+/* trafficAccidentFaq */
+
+.trafficAccidentFaqHeader {
+  padding: 250px !important;
+  background: url("/images/faq/faq-traffic-accident.jpeg") center center / cover no-repeat;
+}
+
+@supports (background-image: url("/images/faq/faq-traffic-accident.avif")) {
+  .trafficAccidentFaqHeader {
+    background: url("/images/faq/faq-traffic-accident.avif") center center / cover no-repeat;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .trafficAccidentFaqHeader {
+    padding: 0px !important;
+    background-position: -385px 0px !important;
+  }
+}
+
+/* end trafficAccidentFaq */
+
+
+/* workAccidentFaq */
+.workAccidentFaqHeader {
+  padding: 250px !important;
+  background: url("/images/faq/faq-work-accident.jpeg") center center / cover no-repeat;
+}
+
+@supports (background-image: url("/images/faq/faq-work-accident.avif")) {
+  .workAccidentFaqHeader {
+    background: url("/images/faq/faq-work-accident.avif") center center / cover no-repeat;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .workAccidentFaqHeader {
+    padding: 0px !important;
+  }
+}
+
+/* end workAccidentFaq*/
+
+
+/* dismissalsFaq */
+
+.dismissalsFaqHeader {
+  padding: 250px !important;
+  background: url("/images/faq/faq-dismissals-2.jpeg") right center / cover no-repeat;
+}
+
+@supports (background-image: url("/images/faq/faq-dismissals-2.avif")) {
+  .dismissalsFaqHeader {
+    background: url("/images/faq/faq-dismissals-2.avif") right center / cover no-repeat;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .dismissalsFaqHeader {
+    padding: 0px !important;
+    background-position: 0px 0px !important;
+  }
+}
+
+/* end dismissalsFaq */
+
+
+/* calculatorWorkAccident */
+
+.calculatorWorkAccidentHeader {
+
+  background: url("/images/calculators/work-accident-calculator.webp") center center / cover no-repeat;
+
+}
+
+/* end calculatorWorkAccidentHeader */
+
+/* calculatorTrafficAccident */
+
+.calculatorTrafficAccidentHeader {
+  background: url("/images/calculators/traffic-accident-calculator.webp") center center / cover no-repeat;
+}
+
+/* end calculatorTrafficAccident */
+
+/* calculatorDismissal */
+.calculatorDismissalHeader {
+
+  background: url("/images/calculators/dismissal-calculator.webp") center center / cover no-repeat;
+}
+
+/* end calculatorDismissalHeader */
+
+
+
+
+.stretched #gotoTop {
+  bottom: 100px;
+}
+
+/* worker rights */
+
+@media (max-width: 991.98px) {
+  .workerRightsIconsFirstCol {
+    padding-bottom: 36px !important;
+  }
+
+  .border-small-device::after {
+    content: "" !important;
+    position: absolute !important;
+    top: calc(64px + 7px) !important;
+    left: 59px !important;
+    width: 2px !important;
+    height: calc(100% - 79px) !important;
+    background-color: #eee !important;
+    z-index: 0 !important;
+  }
+}
+
+.workerRightsIconsSecondCol {
+  margin-bottom: 100px !important;
+}
+
+/* end worker rights */
+
+
+
+/* layout */
+
+.contact-us-whatsapp,
+.contact-us-whatsapp:hover {
+  width: 60px;
+  height: 60px;
+  z-index: 599;
+  position: fixed;
+  line-height: 60px;
+  text-align: center;
+  top: auto;
+  right: 18px;
+  left: auto;
+  bottom: 19px;
+  cursor: pointer;
+  background-color: #25d366;
+  color: #fff;
+  font-size: 36px;
+  border-radius: 50px;
+}
+
+.green {
+  color: #1abc9c !important;
+}
+
+a {
+  font-weight: bolder;
+}
+
+:root {
+  --cnvs-body-font: "Poppins", sans-serif;
+  --cnvs-primary-font: "Poppins", sans-serif;
+  --cnvs-secondary-font: "Playfair Display", serif;
+}
+
+
+/* end layout */
+
+/* foter */
+#footer {
+  margin-top: 0px !important;
+}
+
+.footerLogo {
+  color: #1abc9c;
+}
+
+
+/* end footer */
+
+/* steps */
+
+.feature-box-border .feature-box {
+  position: relative;
+}
+
+.feature-box-border .feature-box:not(.noborder)::after {
+  content: "";
+  position: absolute;
+  top: calc(64px + 7px);
+  left: 59px;
+  width: 2px;
+  height: calc(100% - 79px);
+  background-color: #eee;
+  z-index: 0;
+}
+
+.feature-box-border .fbox-icon i,
+.feature-box-border .fbox-border.fbox-light .fbox-icon i {
+  line-height: 60px;
+  font-size: 24px;
+  z-index: 1;
+  text-align: center;
+}
+
+.fbox-border.fbox-light .fbox-icon a {
+  background-color: #fff;
+}
+
+.fbox-border.fbox-effect .fbox-icon i::after {
+  background-color: #0f6458;
+}
+
+.trafficAccidentSteps .fbox-content {
+  height: auto !important;
+}
+
+/* end steps */
+
+
+/* @font-face {
+  font-family: "webfont-medical-icons";
+  src: url("fonts/webfont-medical-icons.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-medical-"],
+[class*=" icon-medical-"] {
+  display: inline-block;
+  font-family: "webfont-medical-icons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-medical-ambulance:before {
+  content: "\e66e";
+} */
+
+
+
+
+/* calculator links */
+
+@media (max-width: 414px) {
+  #calculatorLinks .button.button-desc {
+    padding: 24px 12px;
+    font-size: 1.02rem;
+  }
+}
+
+.work-accident-calculator-button,
+.work-accident-calculator-button:hover {
+  background-color: #249ece !important;
+}
+
+.traffic-accident-calculator-button,
+.traffic-accident-calculator-button:hover {
+  background-color: #002bb3 !important;
+}
+
+.dismissal-calculator-button,
+.dismissal-calculator-button:hover {
+  background-color: #d53d0d !important;
+}
+
+
+/* end calculator links */
+
+
+small {
+  color: red;
+  font-size: 14pt;
+}
+
+
+/* articles */
+#articleSection {
+  margin: 0px 0 !important;
+  padding: 15px 0 !important;
+}
+
+.promo .icon-check-circle1 {
+  font-size: 34px;
+}
+
+.promo .iconlist>li [class^="icon-"]:first-child,
+.iconlist>li [class*=" icon-"]:first-child {
+  width: 19px;
+  top: 5px;
+}
+
+
+
+@media (max-width: 414px) {
+  .promoInmediata {
+    margin-left: 40px;
+  }
+}
+
+/* end articles */
+
+
+/* reviews */
+
+
+/* Container for the reviews section */
+.custom-reviews-carousel {
+  margin: 20px auto;
+  padding: 0 10px;
+}
+
+/* Header for the review summary */
+.custom-reviews-carousel .review-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Container for the reviews section */
+.custom-reviews-carousel .google-logo {
+  width: 80px;
+  height: 40px;
+  /* Adjust height as necessary */
+  background-image: url("../images/google-logo.svg");
+  /* Use a relative path */
+  background-size: contain;
+  /* Scale image to fit */
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto 10px;
+  display: block;
+}
+
+.custom-reviews-carousel .review-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.custom-reviews-carousel .review-summary .rating {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.custom-reviews-carousel .review-summary .stars {
+  color: #ffd700;
+  font-size: 1.2em;
+  margin-right: 5px;
+}
+
+.custom-reviews-carousel .review-summary .reviews-count {
+  color: #666;
+  font-size: 0.9em;
+}
+
+/* Review card grid layout */
+.custom-reviews-carousel .reviews-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+@media (min-width: 1024px) {
+  .custom-reviews-carousel .reviews-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+/* Styling for individual review cards */
+.custom-reviews-carousel .review-card {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px 0;
+}
+
+/* Align reviewer's name next to the image */
+.custom-reviews-carousel .entry-header {
+  display: flex;
+  align-items: center;
+}
+
+/* Ensure the image is circular and aligned properly */
+.custom-reviews-carousel .entry-image {
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-bottom: 0px;
+}
+
+.custom-reviews-carousel .entry-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Reviewer name styling */
+.custom-reviews-carousel .entry-title {
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* Information section within review card */
+.custom-reviews-carousel .review-info {
+  display: flex;
+  align-items: center;
+  font-size: 0.85em;
+  color: #666;
+  margin-top: 8px;
+}
+
+.custom-reviews-carousel .review-rating {
+  color: #ffd700;
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+.custom-reviews-carousel .review-date {
+  font-size: 0.85em;
+  color: #666;
+}
+
+/* Content section within review card */
+.custom-reviews-carousel .entry-content {
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+/* Pagination styling */
+.custom-reviews-carousel .pagination-container {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.custom-reviews-carousel .pagination {
+  display: flex;
+  gap: 5px;
+}
+
+.custom-reviews-carousel .page-item {
+  list-style: none;
+}
+
+/* .custom-reviews-carousel .page-link {
+  padding: 10px 15px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.custom-reviews-carousel .page-link:hover {
+  background-color: #555;
+}
+
+.custom-reviews-carousel .page-item.active .page-link {
+  background-color: #666;
+}
+
+.custom-reviews-carousel .page-item.disabled .page-link {
+  background-color: #ccc;
+  pointer-events: none;
+} */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .custom-reviews-carousel .reviews-container {
+    grid-template-columns: 1fr;
+  }
+
+  .custom-reviews-carousel .pagination-container {
+    justify-content: center;
+  }
+}
+
+/* Disabled button styling */
+.custom-reviews-carousel .pagination .page-item.disabled .page-link {
+  background-color: #ccc;
+  /* Light grey background for disabled state */
+  color: #999;
+  /* Greyed-out text color for disabled state */
+  pointer-events: none;
+  /* Prevents any interaction */
+  opacity: 0.6;
+  /* Slightly transparent to show it's disabled */
+  cursor: not-allowed;
+  /* Shows "not-allowed" cursor on hover */
+}
+
+/* Make pagination responsive and compact */
+.pagination-container {
+  max-width: 100%;
+  overflow-x: auto;
+  /* Enables horizontal scroll if needed */
+  white-space: nowrap;
+  /* Prevents pagination items from wrapping */
+  padding: 0 10px;
+}
+
+.pagination .page-item {
+  margin: 0 3px;
+}
+
+.pagination .page-link {
+  padding: 4px 8px;
+  /* Reduced padding for smaller screens */
+  font-size: 0.9em;
+  /* Reduced font size */
+}
+
+.swiper-slide-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.swiper-slide-bg picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.swiper-slide-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-slide-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right, #002f4b, grey);
+  opacity: 0.4;
+  z-index: 1;
+}
+
+@media (max-width: 991.98px) {
+  .swiper-slide-bg img {
+    object-position: 40% 72%;
+  }
+}
+
+/* Swiper Preloader */
+.swiper-lazy-preloader {
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -21px;
+  margin-top: -21px;
+  z-index: 10;
+  transform-origin: 50%;
+  box-sizing: border-box;
+  border: 4px solid var(--themecolor);
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: swiper-preloader-spin 1s infinite linear;
+}
+
+@keyframes swiper-preloader-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* end reviews */
+
+/* faqs */
+
+.toggle-title {
+  color: #222;
+  cursor: pointer;
+  padding: 20px 0;
+}
+
+.toggle-title:hover {
+  color: var(--themecolor);
+}
+
+.toggle-content {
+  border-bottom: 1px solid #eee;
+  padding-top: 20px;
+}
+
+/* end faqs */

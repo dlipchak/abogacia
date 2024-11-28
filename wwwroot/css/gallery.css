@@ -1,0 +1,65 @@
+/* gallery */
+@media (max-width: 991.98px) {
+    .galleryTitle {
+        font-size: 30px;
+    }
+}
+
+.galleryTitle {
+    font-size: 40px;
+}
+
+/* General Background Styling for Swiper Slides */
+.swiper-slide-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    /* Ensures the image covers the container */
+    background-position: center;
+    /* Centers the background image */
+    z-index: 0;
+    /* Keeps it beneath the content */
+}
+
+/* Overlay for Swiper Slides */
+.swiper-slide-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right, #002f4b, grey);
+    /* Overlay effect */
+    opacity: 0.4;
+    z-index: 1;
+    /* Stays on top of the background image */
+}
+
+/* Individual Background Position Adjustments */
+.galleryImg1 {
+    background-position: 0 92%;
+    /* Adjust specific positioning for Slide 1 */
+}
+
+@media (max-width: 991.98px) {
+    .galleryImg1 {
+        background-position: 40% 72%;
+        /* Adjust for smaller screens */
+    }
+}
+
+.galleryImg2 {
+    background-position: 0 26%;
+    /* Adjust specific positioning for Slide 2 */
+}
+
+.galleryImg3 {
+    background-position: top center;
+    /* Adjust specific positioning for Slide 3 */
+}
+
+/* end gallery */
