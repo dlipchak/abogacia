@@ -339,5 +339,9 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 wwwroot/rev-manifest-*.json.gz
+
 *.min.*
 *.gz
+*.br
+wwwroot/dist/*
+wwwroot/rev-manifest.json

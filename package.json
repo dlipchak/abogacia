@@ -8,6 +8,7 @@
     "@fullhuman/postcss-purgecss": "^6.0.0",
     "autoprefixer": "^10.4.20",
     "babel-loader": "^9.2.1",
+    "clean-webpack-plugin": "^4.0.0",
     "compression-webpack-plugin": "^11.1.0",
     "copy-webpack-plugin": "^12.0.2",
     "critical": "^7.2.1",
