@@ -3,8 +3,12 @@
 
 @inject IWebHostEnvironment Environment
 
-@section PreloadLinks {
-  <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile("calculatorWorkAccident.css")">
+@section Styles {
+  <link rel="preload" href="@VersionedFileHelper.GetVersionedFile("calculatorWorkAccident.css")" as="style" 
+        onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile("calculatorWorkAccident.css")">
+  </noscript>
 }
 
 

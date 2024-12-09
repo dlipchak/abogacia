@@ -1,18 +1,25 @@
 /* faqs */
 
 .toggle-title {
-    color: #222;
-    cursor: pointer;
-    padding: 20px 0;
+  color: #222;
+  cursor: pointer;
+  padding: 25px 0;
 }
 
 .toggle-title:hover {
-    color: var(--themecolor);
+  color: var(--themecolor);
 }
 
 .toggle-content {
-    border-bottom: 1px solid #eee;
-    padding-top: 20px;
+  /* border-bottom: 1px solid #eee;
+    padding-top: 20px; */
 }
 
 /* end faqs */
+
+.faqs .toggle {
+  border-bottom: 1px solid #eee;
+  /* border-bottom: 1px solid var(--cnvs-toggle-bg-color); */
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}

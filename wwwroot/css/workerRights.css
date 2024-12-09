@@ -1,24 +1,51 @@
+@import "@css/style.css";
+@import "@css/font-icons.css";
+@import "@css/layout.css";
+
+@import "@css/hero.css";
+
+@import "@css/calculatorLinks.css";
+
 /* worker rights */
 
 @media (max-width: 991.98px) {
-    .workerRightsIconsFirstCol {
-        padding-bottom: 36px !important;
-    }
+  .workerRightsIconsFirstCol {
+    padding-bottom: 36px !important;
+  }
 
-    .border-small-device::after {
-        content: "" !important;
-        position: absolute !important;
-        top: calc(64px + 7px) !important;
-        left: 59px !important;
-        width: 2px !important;
-        height: calc(100% - 79px) !important;
-        background-color: #eee !important;
-        z-index: 0 !important;
-    }
+  .border-small-device::after {
+    content: "" !important;
+    position: absolute !important;
+    top: calc(64px + 7px) !important;
+    left: 59px !important;
+    width: 2px !important;
+    height: calc(100% - 79px) !important;
+    background-color: #eee !important;
+    z-index: 0 !important;
+  }
 }
 
 .workerRightsIconsSecondCol {
-    margin-bottom: 100px !important;
+  margin-bottom: 100px !important;
 }
 
+.workerRights {
+  padding: 250px !important;
+  background-image: url("/images/articles/WorkerRights.jpeg") !important;
+  background-size: cover !important;
+  background-position: 0px -151.481px !important;
+}
+
+@supports (background-image: url("/images/articles/WorkerRights.avif")) {
+  .workerRights {
+    background-image: url("/images/articles/WorkerRights.avif") !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .workerRights {
+    padding: 0px !important;
+    background-position: 0px 0px !important;
+  }
+}
 /* end worker rights */

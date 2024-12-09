@@ -5,18 +5,13 @@
 @inject IWebHostEnvironment Environment
 
 @section Styles {
-    <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile("contactUs.css")">
+    <link rel="preload" href="@VersionedFileHelper.GetVersionedFile("contactUs.css")" as="style" 
+          onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile("contactUs.css")">
+    </noscript>
 }
-
-@section PreloadLinks {
-    @if (!Environment.IsDevelopment())
-    {
-        <link rel="preload" href="@VersionedFileHelper.GetVersionedFile("contactUs.css")" as="style">
-    }
-}
-
-
-
+  
 <title class="logo">Contacto</title>
 <section id="content">
     <div class="content-wrap">
@@ -25,10 +20,10 @@
 
                 <div class="postcontent col-lg-9">
                     <div class="row">
-                        <div class="ml-3">
+                        <div class="ms-3">
                             <h3>Envienos su consulta</h3>
                         </div>
-                        <div class="ml-3">
+                        <div class="ms-3">
                             <div class="alert alert-success d-none" role="alert">
                                 Gracias por su mensaje, pronto le responderemos!
                             </div>
@@ -123,36 +118,32 @@
     </div>
 </section>
 
-
-
-@section scripts {
-
-    <script src="@VersionedFileHelper.GetVersionedFile("contactUs.js")"></script>
-
-
+@section Scripts {
     <script type="application/ld+json">
-                                                                                                                                {
-                                                                                                                                  "@@context": "https://schema.org",
-                                                                                                                                  "@@type": "ContactPage",
-                                                                                                                                  "name": "Contacto",
-                                                                                                                                  "description": "Página de contacto del Estudio Jurídico López Giacomelli donde los usuarios pueden enviar consultas.",
-                                                                                                                                  "url": "https://estudiolopezgiacomelli.com.ar/contacto",
-                                                                                                                                  "contactPoint": {
-                                                                                                                                    "@@type": "ContactPoint",
-                                                                                                                                    "telephone": "+54-1161980179",
-                                                                                                                                    "contactType": "Customer Support",
-                                                                                                                                    "areaServed": "AR",
-                                                                                                                                    "availableLanguage": "Spanish"
-                                                                                                                                  },
-                                                                                                                                  "address": {
-                                                                                                                                    "@@type": "PostalAddress",
-                                                                                                                                    "addressLocality": "Capital Federal",
-                                                                                                                                    "addressCountry": "Argentina"
-                                                                                                                                  },
-                                                                                                                                  "sameAs": [
-                                                                                                                                    "https://www.facebook.com/Estudio-Jurídico-Lopez-Giacomelli-2000856223478787",
-                                                                                                                                    "https://www.instagram.com/estudiolopezgiacomelli/"
-                                                                                                                                  ]
-                                                                                                                                }
-                                                                                                                            </script>
-}
+        {
+          "@@context": "https://schema.org",
+          "@@type": "ContactPage",
+          "name": "Contacto",
+          "description": "Página de contacto del Estudio Jurídico López Giacomelli donde los usuarios pueden enviar consultas.",
+          "url": "https://estudiolopezgiacomelli.com.ar/contacto",
+          "contactPoint": {
+            "@@type": "ContactPoint",
+            "telephone": "+54-1161980179",
+            "contactType": "Customer Support",
+            "areaServed": "AR",
+            "availableLanguage": "Spanish"
+          },
+          "address": {
+            "@@type": "PostalAddress",
+            "addressLocality": "Capital Federal",
+            "addressCountry": "Argentina"
+          },
+          "sameAs": [
+            "https://www.facebook.com/Estudio-Jurídico-Lopez-Giacomelli-2000856223478787",
+            "https://www.instagram.com/estudiolopezgiacomelli/"
+          ]
+        }
+    </script>
+    
+    <script src="@VersionedFileHelper.GetVersionedFile("contactUs.js")"></script>
+  }

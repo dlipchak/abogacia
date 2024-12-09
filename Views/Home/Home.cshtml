@@ -4,11 +4,17 @@
   ViewData["Keywords"] = "abogados, accidentes de tránsito, accidentes laborales, despidos, derecho laboral, Argentina";
   ViewData["Canonical"] = "/";
 }
-@section PreloadLinks {
-    <link rel="preload" href="~/images/home/gallery/1.avif" as="image">
-    <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile("home.css")">
-}
 
+@section Styles {
+    <link rel="preload" href="~/images/home/gallery/1.webp" as="image">
+    <link rel="preload" href="@VersionedFileHelper.GetVersionedFile("home.css")" as="style" 
+          onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile("home.css")">
+    </noscript>
+    
+  }
+  
 <!-- Page Title -->
 <title>Abogados Especialistas en Accidentes y Despidos - Estudio Jurídico López Giacomelli</title>
 
@@ -29,13 +35,13 @@
                             <img data-src="images/home/services/accidentesDeTrabajo.jpeg" alt="Asesoría en Accidentes de Trabajo" class="lazy" />
                         </picture>
                     </div>
-                    <div class="fbox-content px-0 ml-2">
+                    <div class="fbox-content px-0 ms-2">
                         <h3>Accidentes de trabajo</h3>
                         <ul class="iconlist iconlist-color mb-0">
-                            <li><i class="icon-caret-right"></i> Determinación de incapacidad</li>
-                            <li><i class="icon-caret-right"></i> Superintendencia de Riesgos del Trabajo</li>
-                            <li><i class="icon-caret-right"></i> Comisiónes Médicas</li>
-                            <li><i class="icon-caret-right"></i> Coberturas especiales por Covid-19</li>
+                            <li><i class="bi-caret-right-fill"></i> Determinación de incapacidad</li>
+                            <li><i class="bi-caret-right-fill"></i> Superintendencia de Riesgos del Trabajo</li>
+                            <li><i class="bi-caret-right-fill"></i> Comisiónes Médicas</li>
+                            <li><i class="bi-caret-right-fill"></i> Coberturas especiales por Covid-19</li>
                         </ul>
                     </div>
                 </div>
@@ -50,13 +56,13 @@
                             <img data-src="images/home/services/accidentesDeTransito.jpeg" alt="Asesoría en Accidentes de Tránsito" class="lazy" />
                         </picture>
                     </div>
-                    <div class="fbox-content px-0 ml-2">
+                    <div class="fbox-content px-0 ms-2">
                         <h3>Accidentes de tránsito</h3>
                         <ul class="iconlist iconlist-color mb-0">
-                            <li><i class="icon-caret-right"></i> Reclamos a aseguradoras por accidentes de tránsito</li>
-                            <li><i class="icon-caret-right"></i> Lesiones a peatones, motos y ciclistas</li>
-                            <li><i class="icon-caret-right"></i> Acuerdos express con aseguradoras</li>
-                            <li><i class="icon-caret-right"></i> Cobertura para Rappi, Glovo, Pedidos Ya, Uber</li>
+                            <li><i class="bi-caret-right-fill"></i> Reclamos a aseguradoras por accidentes de tránsito</li>
+                            <li><i class="bi-caret-right-fill"></i> Lesiones a peatones, motos y ciclistas</li>
+                            <li><i class="bi-caret-right-fill"></i> Acuerdos express con aseguradoras</li>
+                            <li><i class="bi-caret-right-fill"></i> Cobertura para Rappi, Glovo, Pedidos Ya, Uber</li>
                         </ul>
                     </div>
                 </div>
@@ -71,13 +77,13 @@
                             <img data-src="images/home/services/despidos.jpeg" alt="Asesoría en Despidos Laborales" class="lazy" />
                         </picture>
                     </div>
-                    <div class="fbox-content px-0 ml-2">
+                    <div class="fbox-content px-0 ms-2">
                         <h3>Despidos</h3>
                         <ul class="iconlist iconlist-color mb-0">
-                            <li><i class="icon-caret-right"></i> Indemnizaciones por despido y trabajo en negro</li>
-                            <li><i class="icon-caret-right"></i> Acuerdos en SECLO y salarios mínimos por sector</li>
-                            <li><i class="icon-caret-right"></i> Acoso laboral y licencias especiales</li>
-                            <li><i class="icon-caret-right"></i> Doble indemnización por Covid-19</li>
+                            <li><i class="bi-caret-right-fill"></i> Indemnizaciones por despido y trabajo en negro</li>
+                            <li><i class="bi-caret-right-fill"></i> Acuerdos en SECLO y salarios mínimos por sector</li>
+                            <li><i class="bi-caret-right-fill"></i> Acoso laboral y licencias especiales</li>
+                            <li><i class="bi-caret-right-fill"></i> Doble indemnización por Covid-19</li>
                         </ul>
                     </div>
                 </div>
@@ -121,34 +127,34 @@
   </div>
 </section>
 
-<script type="application/ld+json">
-  {
-      "@@context": "https://schema.org",
-      "@@type": "LegalService",
-      "name": "Estudio Jurídico López Giacomelli",
-      "url": "https://estudiolopezgiacomelli.com.ar/",
-      "description": "Estudio Jurídico especializado en accidentes de tránsito, laborales y despidos.",
-      "address": {
-          "@@type": "PostalAddress",
-          "addressLocality": "Buenos Aires",
-          "addressRegion": "CABA",
-          "addressCountry": "AR"
-      },
-      "telephone": "+54 11 6198 0179",
-      "areaServed": {
-          "@@type": "Place",
-          "name": "Buenos Aires, Argentina"
-      },
-      "aggregateRating": {
-          "@@type": "AggregateRating",
-          "ratingValue": "5.0",
-          "reviewCount": "67"
-      },
-      "openingHours": "Mo-Fr 09:00-18:00",
-      "serviceType": ["Accidentes de Tránsito", "Accidentes Laborales", "Derecho Laboral", "Despidos", "Asesoría en Reclamos de Indemnización"]
-  }
-  </script>
-  
 @section Scripts {
-  <script src="@VersionedFileHelper.GetVersionedFile("home.js")"></script>
-}
+    <script type="application/ld+json">
+        {
+            "@@context": "https://schema.org",
+            "@@type": "LegalService",
+            "name": "Estudio Jurídico López Giacomelli",
+            "url": "https://estudiolopezgiacomelli.com.ar/",
+            "description": "Estudio Jurídico especializado en accidentes de tránsito, laborales y despidos.",
+            "address": {
+                "@@type": "PostalAddress",
+                "addressLocality": "Buenos Aires",
+                "addressRegion": "CABA",
+                "addressCountry": "AR"
+            },
+            "telephone": "+54 11 6198 0179",
+            "areaServed": {
+                "@@type": "Place",
+                "name": "Buenos Aires, Argentina"
+            },
+            "aggregateRating": {
+                "@@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "67"
+            },
+            "openingHours": "Mo-Fr 09:00-18:00",
+            "serviceType": ["Accidentes de Tránsito", "Accidentes Laborales", "Derecho Laboral", "Despidos", "Asesoría en Reclamos de Indemnización"]
+        }
+        </script>
+        
+    <script src="@VersionedFileHelper.GetVersionedFile("home.js")"></script>
+  }

@@ -4,51 +4,25 @@
 @inject IWebHostEnvironment Environment
 
 @section Styles {
-  @if (Environment.IsDevelopment())
-  {
-    <link rel="stylesheet" href="~/style.css">
-    <link rel="stylesheet" href="~/css/font-icons.css">
-    <link rel="stylesheet" href="~/abogacia.css">
-  }
-  else
-  {
-    <link rel="stylesheet" href="~/dist/faqTrafficAccident.css">
-  }
+  <link rel="preload" href="@VersionedFileHelper.GetVersionedFile("faqTrafficAccident.css")" as="style" 
+        onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile("faqTrafficAccident.css")">
+  </noscript>
 }
-
-@section PreloadLinks {
-
-  @if (!Environment.IsDevelopment())
-  {
-    <link rel="preload" href="~/dist/faqTrafficAccident.css" as="style">
-  }
-}
-
-
 
 <title class="logo">
   Accidentes de tránsito.
   Preguntas frecuentes.
 
 </title>
-<section id="page-title"
-  class="faqHeader trafficAccidentFaqHeader  min-vh-60   page-title-parallax page-title-dark include-header">
-  <img src="/images/faq/faq-traffic-accident.webp" alt="Preguntas frecuentes sobre accidentes de tránsito" width="800"
-    height="400" fetchpriority="high" decoding="async" loading="eager" class="header-image">
-  <div class="container clearfix">
-    <div>
-      <h3 class="articleTitle">Accidentes de tránsito</h3>
-    </div>
 
-    <h1 class="articleTitle subTitle">Preguntas Frecuentes</h1>
-  </div>
-
-</section>
+@await Html.PartialAsync("_HeroSection", ( Title: "Accidentes de tránsito",
+Subtitle: "Preguntas Frecuentes", ClassName: "trafficAccidentFaqHeader" ))
 
 </section>
 <section id="faq" class="container container-block mt-5">
   <div class="col-xs-12">
-
 
     <div class="faqs" id="accordion" role="tablist" aria-multiselectable="true">
       <div class="toggle faq">
@@ -651,14 +625,6 @@
   }
   </script>
 
-@section Scripts {
-  @if (Environment.IsDevelopment())
-  {
-    <script src="~/js/functions.js"></script>
-    <script src="~/js/googleReviewsPlugin.js"></script>
+  @section Scripts {
+    <script src="@VersionedFileHelper.GetVersionedFile("faqTrafficAccident.js")"></script>
   }
-  else
-  {
-    <script src="~/dist/faqTrafficAccident.js"></script>
-  }
-}

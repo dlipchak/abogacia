@@ -1,12 +1,13 @@
 ﻿@using Microsoft.AspNetCore.Hosting
 @using Microsoft.Extensions.Hosting
 
-@inject IWebHostEnvironment Environment
-
-@section PreloadLinks {
-  <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile("calculatorWorkDismissal.css")">
+@section Styles {
+  <link rel="preload" href="@VersionedFileHelper.GetVersionedFile("calculatorWorkDismissal.css")" as="style" 
+        onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile("calculatorWorkDismissal.css")">
+  </noscript>
 }
-
 
 <title class="logo">Calculadora de indemnización por despido</title>
 
@@ -201,7 +202,7 @@
         circunstancias que analizaremos a continuación el empleador deberá
         abonar una indemnización agravada:
       </p>
-      <ol class="ml-3">
+      <ol class="ms-3">
         <li>
           <span class="green">
             Despido de trabajador sin registrar o “en negro” (total o
@@ -247,7 +248,7 @@
         Recuerde siempre que estamos para ayudarlo y su consulta no molesta.
       </p>
 
-      @Html.Partial("Partials/WorkDismissalFeatures");
+      @Html.Partial("Partials/WorkDismissalFeatures")
     </div>
     <div class="divider"></div>
 
@@ -255,22 +256,22 @@
   </div>
 </section>
 
-<script type="application/ld+json">
-  {
-    "@@context": "https://schema.org",
-    "@@type": "WebApplication",
-    "name": "Calculadora de Indemnización por Despido",
-    "description": "Herramienta para calcular estimaciones de indemnización por despido, proporcionada por el Estudio Jurídico López Giacomelli.",
-    "url": "https://estudiolopezgiacomelli.com.ar/calculadoras/despido",
-    "applicationCategory": "LegalCalculator",
-    "operatingSystem": "All",
-    "provider": {
-      "@@type": "Organization",
-      "name": "Estudio Jurídico López Giacomelli",
-      "url": "https://estudiolopezgiacomelli.com.ar"
-    }
-  }
-  </script>
 @section Scripts {
+  <script type="application/ld+json">
+    {
+      "@@context": "https://schema.org",
+      "@@type": "WebApplication",
+      "name": "Calculadora de Indemnización por Despido",
+      "description": "Herramienta para calcular estimaciones de indemnización por despido, proporcionada por el Estudio Jurídico López Giacomelli.",
+      "url": "https://estudiolopezgiacomelli.com.ar/calculadoras/despido",
+      "applicationCategory": "LegalCalculator",
+      "operatingSystem": "All",
+      "provider": {
+        "@@type": "Organization",
+        "name": "Estudio Jurídico López Giacomelli",
+        "url": "https://estudiolopezgiacomelli.com.ar"
+      }
+    }
+    </script>
   <script src="@VersionedFileHelper.GetVersionedFile("calculatorWorkDismissal.js")"></script>
 }

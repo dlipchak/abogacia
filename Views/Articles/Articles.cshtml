@@ -1,5 +1,19 @@
-﻿<!-- test -->
+﻿<!-- @using AbogaciaCore.Helpers; -->
+
+<!-- test -->
 @model ArticleModel
+
+@section Styles {
+  @{
+    var cssFileName = Model.Article.LowerFirstLetter() + ".css";
+  }
+  <link rel="preload" href="@VersionedFileHelper.GetVersionedFile(cssFileName)" as="style" 
+        onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile(cssFileName)">
+  </noscript>
+}
+
 <!-- test -->
 @Html.Partial("ArticlesHeader")
 
@@ -20,17 +34,17 @@
       <h3 style="font-weight: 600">
         <ul class="iconlist iconlist-color mb-0">
           <li>
-            <i class="icon-check-circle1 mr-3"></i>
+            <i class="bi-check-circle me-4"></i>
             <span>NO COBRAMOS GASTOS</span
             ><span class="destacado"> NI ADELANTOS.</span>
           </li>
           <li>
-            <i class="icon-check-circle1 mr-3"></i><span> ACUERDOS EXPRESS</span
+            <i class="bi-check-circle me-4"></i><span> ACUERDOS EXPRESS</span
             ><span class="destacado"> CON ASEGURADORAS. </span>
           </li>
 
           <li>
-            <i class="icon-check-circle1 mr-3"></i>
+            <i class="bi-check-circle me-4"></i>
             <span>RECLAMO EN</span>
             <span class="destacado">
               FORMA <span class="promoInmediata">INMEDIATA.</span></span
@@ -44,13 +58,11 @@
 
 <div class="container clearfix mb-5">@Html.Partial("CalculatorsLinks")</div>
 
-@section styles{
-<style>
-  .destacado {
-    color: #fc5f07;
-    font-weight: 700;
+@section Scripts {
+  @{
+    var jsFileName = Model.Article.LowerFirstLetter() + ".js";
   }
-</style>
 
+  <script src="@VersionedFileHelper.GetVersionedFile(jsFileName)"></script>
 }
 

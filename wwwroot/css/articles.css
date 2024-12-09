@@ -1,25 +1,60 @@
+@import "@css/style.css";
+@import "@css/font-icons.css";
+@import "@css/layout.css";
+@import "@css/services.css";
+
+@import "@css/hero.css";
+
+@import "@css/calculatorLinks.css";
+
 /* articles */
 #articleSection {
-    margin: 0px 0 !important;
-    padding: 15px 0 !important;
+  margin: 0px 0 !important;
+  padding: 15px 0 !important;
 }
 
-.promo .icon-check-circle1 {
-    font-size: 34px;
+.promo .bi-check-circle {
+  font-size: 34px;
 }
 
-.promo .iconlist>li [class^="icon-"]:first-child,
-.iconlist>li [class*=" icon-"]:first-child {
-    width: 19px;
-    top: 5px;
+.promo .iconlist > li [class^="icon-"]:first-child,
+.iconlist > li [class*=" icon-"]:first-child {
+  width: 19px;
+  top: 5px;
 }
-
-
 
 @media (max-width: 414px) {
-    .promoInmediata {
-        margin-left: 40px;
-    }
+  .promoInmediata {
+    margin-left: 40px;
+  }
 }
 
+.destacado {
+  color: #fc5f07;
+  font-weight: 700;
+}
+
+.iconlist > li i:first-child {
+  width: 19px;
+  top: 5px;
+}
+
+.iconlist {
+  list-style-type: none;
+  --cnvs-iconlist-size: initial;
+  --cnvs-iconlist-color: initial;
+  --cnvs-iconlist-margin: 0;
+  --cnvs-iconlist-gutter: 0;
+  --cnvs-iconlist-offset: initial;
+  padding-left: inherit;
+  margin-left: inherit;
+}
+
+.iconlist li > * {
+  flex: unset;
+}
+
+.iconlist li {
+  gap: 0.2em;
+}
 /* end articles */

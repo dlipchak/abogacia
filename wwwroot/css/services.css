@@ -1,264 +1,264 @@
 /* services */
 
 .AccidentesEnTransportePublico {
-    padding: 250px 0px !important;
-    background-image: url("/images/articles/accidente-en-transporte-publico.jpeg");
-    background-size: cover !important;
-    background-position: 0px -469.481px !important;
+  padding: 250px 0px !important;
+  background-image: url("/images/articles/accidente-en-transporte-publico.jpeg");
+  background-size: cover !important;
+  background-position: 0px -469.481px !important;
 }
 
-@supports (background-image: url("/images/articles/accidente-en-transporte-publico.avif")) {
-    .AccidentesEnTransportePublico {
-        background-image: url("/images/articles/accidente-en-transporte-publico.avif") !important;
-    }
+@supports (
+  background-image: url("/images/articles/accidente-en-transporte-publico.avif")
+) {
+  .AccidentesEnTransportePublico {
+    background-image: url("/images/articles/accidente-en-transporte-publico.avif") !important;
+  }
 }
 
 @media (max-width: 991.98px) {
-    .AccidentesEnTransportePublico {
-        padding: 116px 0px !important;
-        background-position: 0px 0px !important;
-    }
+  .AccidentesEnTransportePublico {
+    padding: 116px 0px !important;
+    background-position: 0px 0px !important;
+  }
 }
 
 .Covid19 {
-    padding: 250px !important;
-    background-image: url("/images/articles/covid19.jpeg") !important;
-    background-size: cover !important;
-    background-position: 64% !important;
+  padding: 250px !important;
+  background-image: url("/images/articles/covid19.jpeg") !important;
+  background-size: cover !important;
+  background-position: 64% !important;
 }
 
 @supports (background-image: url("/images/articles/covid19.avif")) {
-    .Covid19 {
-        background-image: url("/images/articles/covid19.avif") !important;
-    }
+  .Covid19 {
+    background-image: url("/images/articles/covid19.avif") !important;
+  }
 }
 
 @media (max-width: 991.98px) {
-    .Covid19 {
-        padding: 0px !important;
-    }
+  .Covid19 {
+    padding: 0px !important;
+  }
 }
 
 .HowToActOnTrafficAccident {
-    padding: 250px 0px !important;
-    background-image: url("/images/articles/accidentesDeTransito.jpeg") !important;
-    background-size: cover !important;
-    background-position: 0px 59.519px !important;
+  padding: 250px 0px !important;
+  background-image: url("/images/articles/accidentesDeTransito.jpeg") !important;
+  background-size: cover !important;
+  background-position: 0px 59.519px !important;
 }
 
-@supports (background-image: url("/images/articles/accidentesDeTransito.avif")) {
-    .HowToActOnTrafficAccident {
-        background-image: url("/images/articles/accidentesDeTransito.avif") !important;
-    }
+@supports (
+  background-image: url("/images/articles/accidentesDeTransito.avif")
+) {
+  .HowToActOnTrafficAccident {
+    background-image: url("/images/articles/accidentesDeTransito.avif") !important;
+  }
 }
 
 @media (max-width: 991.98px) {
-    .HowToActOnTrafficAccident {
-        padding: 0px !important;
-        background-position: 0px 0px !important;
-    }
+  .HowToActOnTrafficAccident {
+    padding: 0px !important;
+    background-position: 0px 0px !important;
+  }
 }
 
 .AccidentesEnAuto {
-    padding: 250px !important;
-    background-image: url("/images/articles/accidente-en-automovil.jpg") !important;
-    background-size: cover !important;
-    background-position: 0px 50px !important;
+  padding: 250px !important;
+  background-image: url("/images/articles/accidente-en-automovil.jpg") !important;
+  background-size: cover !important;
+  background-position: 0px 50px !important;
 }
 
-@supports (background-image: url("/images/articles/accidente-en-automovil.avif")) {
-    .AccidentesEnAuto {
-        background-image: url("/images/articles/accidente-en-automovil.avif") !important;
-    }
+@supports (
+  background-image: url("/images/articles/accidente-en-automovil.avif")
+) {
+  .AccidentesEnAuto {
+    background-image: url("/images/articles/accidente-en-automovil.avif") !important;
+  }
 }
 
 @media (max-width: 991.98px) {
-    .AccidentesEnAuto {
-        padding: 0px !important;
-        background-position: 79% !important;
-    }
+  .AccidentesEnAuto {
+    padding: 0px !important;
+    background-position: 79% !important;
+  }
 }
 
 .AccidentesEnMoto {
-    padding: 250px !important;
-    background-image: url("/images/articles/accidente-en-moto.jpg") !important;
-    background-size: cover !important;
-    background-position: 0px -320.481px !important;
+  padding: 250px !important;
+  background-image: url("/images/articles/accidente-en-moto.jpg") !important;
+  background-size: cover !important;
+  background-position: 0px -320.481px !important;
 }
 
 @supports (background-image: url("/images/articles/accidente-en-moto.avif")) {
-    .AccidentesEnMoto {
-        background-image: url("/images/articles/accidente-en-moto.avif") !important;
-    }
+  .AccidentesEnMoto {
+    background-image: url("/images/articles/accidente-en-moto.avif") !important;
+  }
 }
 
 @media (max-width: 991.98px) {
-    .AccidentesEnMoto {
-        padding: 0px !important;
-        background-position: 75% !important;
-    }
+  .AccidentesEnMoto {
+    padding: 0px !important;
+    background-position: 75% !important;
+  }
 }
 
 .AccidentesEnBicicleta {
-    padding: 250px !important;
-    background-image: url("/images/articles/accidente-en-bicicleta.jpg") !important;
-    background-size: cover !important;
-    background-position: 0px -151.481px !important;
+  padding: 250px !important;
+  background-image: url("/images/articles/accidente-en-bicicleta.jpg") !important;
+  background-size: cover !important;
+  background-position: 0px -151.481px !important;
 }
 
-@supports (background-image: url("/images/articles/accidente-en-bicicleta.avif")) {
-    .AccidentesEnBicicleta {
-        background-image: url("/images/articles/accidente-en-bicicleta.avif") !important;
-    }
+@supports (
+  background-image: url("/images/articles/accidente-en-bicicleta.avif")
+) {
+  .AccidentesEnBicicleta {
+    background-image: url("/images/articles/accidente-en-bicicleta.avif") !important;
+  }
 }
 
 @media (max-width: 991.98px) {
-    .AccidentesEnBicicleta {
-        padding: 0px !important;
-        background: url("/images/articles/accidente-en-bicicleta.jpg") 15% / cover no-repeat !important;
-    }
+  .AccidentesEnBicicleta {
+    padding: 0px !important;
+    background: url("/images/articles/accidente-en-bicicleta.jpg") 15% / cover
+      no-repeat !important;
+  }
 }
 
 .AccidentesComoAcompanantes {
-    padding: 250px !important;
-    background-image: url("/images/articles/accidentes-como-acompanantes.jpeg") !important;
-    background-size: cover !important;
-    background-position: 0px -151.481px !important;
+  padding: 250px !important;
+  background-image: url("/images/articles/accidentes-como-acompanantes.jpeg") !important;
+  background-size: cover !important;
+  background-position: 0px -151.481px !important;
 }
 
-@supports (background-image: url("/images/articles/accidentes-como-acompanantes.avif")) {
-    .AccidentesComoAcompanantes {
-        background-image: url("/images/articles/accidentes-como-acompanantes.avif") !important;
-    }
+@supports (
+  background-image: url("/images/articles/accidentes-como-acompanantes.avif")
+) {
+  .AccidentesComoAcompanantes {
+    background-image: url("/images/articles/accidentes-como-acompanantes.avif") !important;
+  }
 }
 
 @media (max-width: 991.98px) {
-    .AccidentesComoAcompanantes {
-        padding: 0px !important;
-        background: url("/images/articles/accidentes-como-acompanantes.jpeg") 17% / cover no-repeat !important;
-    }
+  .AccidentesComoAcompanantes {
+    padding: 0px !important;
+    background: url("/images/articles/accidentes-como-acompanantes.jpeg") 17% /
+      cover no-repeat !important;
+  }
 }
 
 .AccidentesComoPeaton {
-    padding: 250px !important;
-    background-image: url("/images/articles/peatones.jpeg") !important;
-    background-size: cover !important;
-    background-position: 0px -151.481px !important;
+  padding: 250px !important;
+  background-image: url("/images/articles/peatones.jpeg") !important;
+  background-size: cover !important;
+  background-position: 0px -151.481px !important;
 }
 
 @supports (background-image: url("/images/articles/peatones.avif")) {
-    .AccidentesComoPeaton {
-        background-image: url("/images/articles/peatones.avif") !important;
-    }
+  .AccidentesComoPeaton {
+    background-image: url("/images/articles/peatones.avif") !important;
+  }
 }
 
 @media (max-width: 991.98px) {
-    .AccidentesComoPeaton {
-        padding: 0px !important;
-        background: url("/images/articles/peatones.jpeg") 17% / cover no-repeat !important;
-    }
+  .AccidentesComoPeaton {
+    padding: 0px !important;
+    background: url("/images/articles/peatones.jpeg") 17% / cover no-repeat !important;
+  }
 }
 
 .DestruccionTotal {
-    padding: 250px !important;
-    background-image: url("/images/articles/destruccion-total.jpeg") !important;
-    background-size: cover !important;
-    background-position: 0px -151.481px !important;
+  padding: 250px !important;
+  background-image: url("/images/articles/destruccion-total.jpeg") !important;
+  background-size: cover !important;
+  background-position: 0px -151.481px !important;
 }
 
 @supports (background-image: url("/images/articles/destruccion-total.avif")) {
-    .DestruccionTotal {
-        background-image: url("/images/articles/destruccion-total.avif") !important;
-    }
+  .DestruccionTotal {
+    background-image: url("/images/articles/destruccion-total.avif") !important;
+  }
 }
 
 @media (max-width: 991.98px) {
-    .DestruccionTotal {
-        padding: 0px !important;
-        background: url("/images/articles/destruccion-total.jpeg") 50% / cover no-repeat !important;
-    }
+  .DestruccionTotal {
+    padding: 0px !important;
+    background: url("/images/articles/destruccion-total.jpeg") 50% / cover
+      no-repeat !important;
+  }
 }
 
 .AccidentesDeTrabajo {
-    padding: 250px !important;
-    background-image: url("/images/articles/accidentes-en-ocasion-del-trabajo.jpeg") !important;
-    background-size: cover !important;
-    background-position: 0px -151.481px !important;
+  padding: 250px !important;
+  background-image: url("/images/articles/accidentes-en-ocasion-del-trabajo.jpeg") !important;
+  background-size: cover !important;
+  background-position: 0px -151.481px !important;
 }
 
-@supports (background-image: url("/images/articles/accidentes-en-ocasion-del-trabajo.avif")) {
-    .AccidentesDeTrabajo {
-        background-image: url("/images/articles/accidentes-en-ocasion-del-trabajo.avif") !important;
-    }
+@supports (
+  background-image:
+    url("/images/articles/accidentes-en-ocasion-del-trabajo.avif")
+) {
+  .AccidentesDeTrabajo {
+    background-image: url("/images/articles/accidentes-en-ocasion-del-trabajo.avif") !important;
+  }
 }
 
 @media (max-width: 991.98px) {
-    .AccidentesDeTrabajo {
-        padding: 0px !important;
-        background-position: 50% !important;
-        background-size: cover !important;
-        background-repeat: no-repeat !important;
-    }
+  .AccidentesDeTrabajo {
+    padding: 0px !important;
+    background-position: 50% !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
 }
 
 .AccidentesInItinere {
-    padding: 250px !important;
-    background-image: url("/images/articles/accidentes-initinere.jpeg") !important;
-    background-size: cover !important;
-    background-position: 0px -151.481px !important;
+  padding: 250px !important;
+  background-image: url("/images/articles/accidentes-initinere.jpeg") !important;
+  background-size: cover !important;
+  background-position: 0px -151.481px !important;
 }
 
-@supports (background-image: url("/images/articles/accidentes-initinere.avif")) {
-    .AccidentesInItinere {
-        background-image: url("/images/articles/accidentes-initinere.avif") !important;
-    }
+@supports (
+  background-image: url("/images/articles/accidentes-initinere.avif")
+) {
+  .AccidentesInItinere {
+    background-image: url("/images/articles/accidentes-initinere.avif") !important;
+  }
 }
 
 @media (max-width: 991.98px) {
-    .AccidentesInItinere {
-        padding: 0px !important;
-        background-position: 50% !important;
-    }
+  .AccidentesInItinere {
+    padding: 0px !important;
+    background-position: 50% !important;
+  }
 }
 
 .EnfermedadesProfesionales {
-    padding: 250px !important;
-    background-image: url("/images/articles/enfermedades-profesionales.jpeg") !important;
-    background-size: cover !important;
-    background-position: 98% !important;
+  padding: 250px !important;
+  background-image: url("/images/articles/enfermedades-profesionales.jpeg") !important;
+  background-size: cover !important;
+  background-position: 98% !important;
 }
 
-@supports (background-image: url("/images/articles/enfermedades-profesionales.avif")) {
-    .EnfermedadesProfesionales {
-        background-image: url("/images/articles/enfermedades-profesionales.avif") !important;
-    }
-}
-
-@media (max-width: 991.98px) {
-    .EnfermedadesProfesionales {
-        padding: 0px !important;
-        background-position: 90% !important;
-    }
-}
-
-.workerRights {
-    padding: 250px !important;
-    background-image: url("/images/articles/WorkerRights.jpeg") !important;
-    background-size: cover !important;
-    background-position: 0px -151.481px !important;
-}
-
-@supports (background-image: url("/images/articles/WorkerRights.avif")) {
-    .workerRights {
-        background-image: url("/images/articles/WorkerRights.avif") !important;
-    }
+@supports (
+  background-image: url("/images/articles/enfermedades-profesionales.avif")
+) {
+  .EnfermedadesProfesionales {
+    background-image: url("/images/articles/enfermedades-profesionales.avif") !important;
+  }
 }
 
 @media (max-width: 991.98px) {
-    .workerRights {
-        padding: 0px !important;
-        background-position: 0px 0px !important;
-    }
+  .EnfermedadesProfesionales {
+    padding: 0px !important;
+    background-position: 90% !important;
+  }
 }
 
 /* services */

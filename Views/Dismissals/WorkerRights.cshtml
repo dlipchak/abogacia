@@ -1,59 +1,19 @@
-﻿@using Microsoft.AspNetCore.Hosting
-@using Microsoft.Extensions.Hosting
-
-@inject IWebHostEnvironment Environment
-
+﻿
 @section Styles {
-    @if (Environment.IsDevelopment())
-    {
-        <link rel="stylesheet" href="~/style.css">
-        <link rel="stylesheet" href="~/css/font-icons.css">
-        <link rel="stylesheet" href="~/abogacia.css">
-    }
-    else
-    {
-        <link rel="stylesheet" href="~/dist/workerRights.css">
-    }
-}
-
-@section PreloadLinks {
-    @if (!Environment.IsDevelopment())
-    {
-        <link rel="preload" href="~/dist/workerRights.css" as="style">
-    }
-}
-
-@section Scripts {
-    @if (Environment.IsDevelopment())
-    {
-        <script src="~/js/functions.js"></script>
-        <script src="~/js/googleReviewsPlugin.js"></script>
-        <script src="~/js/pages/workerRights/workerRights.js"></script>
-    }
-    else
-    {
-        <script src="~/dist/workerRights.js"></script>
-    }
-}
-
+    <link rel="preload" href="@VersionedFileHelper.GetVersionedFile("workerRights.css")" as="style" 
+          onload="this.onload=null;this.rel='stylesheet'">    
+    <noscript>
+      <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile("workerRights.css")">   
+    </noscript>
+  }
+  
 <title class="logo">Derechos del trabajador</title>
 
-<section id="page-title" class="parallax scroll-detect vh-75 align-items-center justify-content-center d-flex">
-    <div class="container clearfix">
-        <div>
-            <h3 class="articleTitle">Derechos laborales</h3>
-        </div>
-        <h1 class="articleTitle subTitle">Conocé tus derechos</h1>
-    </div>
-    <img src="/images/articles/WorkerRights.webp" 
-         alt="Derechos del trabajador" 
-         width="800" 
-         height="400" 
-         fetchpriority="high"
-         decoding="async" 
-         loading="eager" 
-         class="parallax-bg">
-</section>
+@await Html.PartialAsync("_HeroSection", (
+  Title: "Derechos Laborales",
+  Subtitle: "Conocé tus derechos",
+  ClassName: "workerRights"
+  ))
 
  <section id="content">
     <div class="content-wrap pt-0">
@@ -205,7 +165,7 @@ Como profesionales somos conscientes de la <span class="green">importancia que t
 
                             <div class="col-md-8 feature-box fbox-color">
                                 <div class="fbox-icon">
-                                    <a><i class="uil-notes"></i></a>
+                                    <a><i class="bi-pencil-square"></i></a>
                                 </div>
                                 <div class="fbox-content">
                                     <h3 class="nott text-larger font-weight-normal mb-2 mt-3">
@@ -253,16 +213,20 @@ Como profesionales somos conscientes de la <span class="green">importancia que t
 
 </section>
 
-@{
-    var jsonLdModel = new JsonLdModel
-    {
-        Headline = ViewData["Title"].ToString(),
-        Description = ViewData["Description"].ToString(),
-        Keywords = ViewData["Keywords"].ToString(),
-        ImageName = "services/WorkerRights.jpeg", 
-        Category = "Derechos del trabajador",     
-        ArticleBody = "Este artículo ofrece una guía esencial sobre cómo actuar tras sufrir un accidente de tránsito. Nuestro estudio jurídico, compuesto por abogados y profesionales médicos de primer nivel, se especializa en la gestión de reclamos por accidentes de tránsito, incluyendo aquellos en los que el afectado es peatón, conductor o pasajero. Destacamos la importancia de anotar los datos del vehículo involucrado, tomar fotografías del lugar y buscar asistencia médica inmediata, incluso si las lesiones parecen leves. Además, proporcionamos herramientas para calcular orientativamente la indemnización correspondiente y estamos disponibles para consultas sin compromiso."
-    };
-}
-
-@Html.Partial("_ArticleJsonLdSchema", jsonLdModel)
+@section Scripts {
+    @{
+        var jsonLdModel = new JsonLdModel
+        {
+            Headline = ViewData["Title"].ToString(),
+            Description = ViewData["Description"].ToString(),
+            Keywords = ViewData["Keywords"].ToString(),
+            ImageName = "services/WorkerRights.jpeg", 
+            Category = "Derechos del trabajador",     
+            ArticleBody = "Este artículo ofrece una guía esencial sobre cómo actuar tras sufrir un accidente de tránsito. Nuestro estudio jurídico, compuesto por abogados y profesionales médicos de primer nivel, se especializa en la gestión de reclamos por accidentes de tránsito, incluyendo aquellos en los que el afectado es peatón, conductor o pasajero. Destacamos la importancia de anotar los datos del vehículo involucrado, tomar fotografías del lugar y buscar asistencia médica inmediata, incluso si las lesiones parecen leves. Además, proporcionamos herramientas para calcular orientativamente la indemnización correspondiente y estamos disponibles para consultas sin compromiso."
+        };
+    }
+    
+    @Html.Partial("_ArticleJsonLdSchema", jsonLdModel)
+    
+    <script src="@VersionedFileHelper.GetVersionedFile("workerRights.js")"></script>
+  }

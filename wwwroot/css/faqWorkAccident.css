@@ -1,0 +1,30 @@
+@import "@css/style.css";
+@import "@css/font-icons.css";
+@import "@css/layout.css";
+
+@import "@css/hero.css";
+
+@import "@css/calculatorLinks.css";
+@import "@css/faqs.css";
+
+/* workAccidentFaq */
+.workAccidentFaqHeader {
+  padding: 250px !important;
+  background: url("/images/faq/faq-work-accident.jpeg") center center / cover
+    no-repeat;
+}
+
+@supports (background-image: url("/images/faq/faq-work-accident.avif")) {
+  .workAccidentFaqHeader {
+    background: url("/images/faq/faq-work-accident.avif") center center / cover
+      no-repeat;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .workAccidentFaqHeader {
+    padding: 0px !important;
+  }
+}
+
+/* end workAccidentFaq*/

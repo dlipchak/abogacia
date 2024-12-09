@@ -1,23 +1,21 @@
 ﻿
 @using AbogaciaCore.Helpers;
 
-
 <h1 class="text-center clearfix text-uppercase">Calculadoras de indemnización</h1>
 <div id="calculatorLinks" class="row justify-content-around col-mb-50">
 
-
     <div class="col-sm-12 col-lg-4 @Html.IsSelected(action:"accidentes-laborales",controller:"Calculators",cssClass:"d-none")">
-      <a href="@Url.Action("accidentes-laborales", "Calculators")" class="w-100 button button-3d work-accident-calculator-button button-desc"
+      <a href="@Url.Action("accidentes-laborales", "Calculators")" class="w-100 button button-3d work-accident-calculator-button button-desc d-flex align-items-center"
         ><i class="bi-calculator"></i> Accidente laboral</a
       >
     </div>
     <div class="col-sm-12 col-lg-4 @Html.IsSelected(action:"accidentes-de-transito",controller:"Calculators",cssClass:"d-none")">
-      <a href="@Url.Action("accidentes-de-transito", "Calculators")"  class=" w-100 button button-3d traffic-accident-calculator-button  button-desc"
+      <a href="@Url.Action("accidentes-de-transito", "Calculators")"  class=" w-100 button button-3d traffic-accident-calculator-button  button-desc d-flex align-items-center"
         ><i class="bi-calculator"></i> Accidente de tránsito</a
       >
     </div>
     <div class="col-sm-12 col-lg-4 @Html.IsSelected(action:"despidos",controller:"Calculators",cssClass:"d-none")">
-      <a href="@Url.Action("despidos", "Calculators")"  class="w-100 button button-3d  dismissal-calculator-button button-desc"
+      <a href="@Url.Action("despidos", "Calculators")"  class="w-100 button button-3d  dismissal-calculator-button button-desc d-flex align-items-center"
         ><i class="bi-calculator"></i> Despido sin causa</a
       >
     </div>

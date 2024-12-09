@@ -1,4 +1,4 @@
-import "@css/homePage.css";
+import "@css/faqWorkAccident.css";
 
 // Scripts
 import "@js/googleReviewsPlugin";

@@ -1,110 +1,108 @@
 /* hero header */
 
 @media (max-width: 575.98px) {
-
-    .container,
-    #header.full-header .container,
-    .container-fullwidth {
-        width: 100% !important;
-        padding-left: 16px !important;
-        padding-right: 16px !important;
-    }
+  .container,
+  #header.full-header .container,
+  .container-fullwidth {
+    width: 100% !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
 }
 
-#hero-title h1,
-h2 {
-    line-height: 55px;
-    display: inline-block !important;
-    background: rgba(26, 188, 156, 0.65) !important;
-    padding: 12px !important;
-    text-align: left !important;
-    font-weight: 700;
-    color: rgba(255, 255, 255, .9) !important;
+#hero-title h1 {
+  line-height: 55px;
+  display: inline-block !important;
+  background: rgba(26, 188, 156, 0.65) !important;
+  padding: 12px !important;
+  text-align: left !important;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 #hero-title h2 {
-    font-size: 40px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+  line-height: 55px;
+  display: inline-block !important;
+  background: rgba(26, 188, 156, 0.65) !important;
+  padding: 12px !important;
+  text-align: left !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 @media (max-width: 991.98px) {
-
-    #hero-title h1,
-    h2 {
-        font-size: 30px !important;
-        line-height: 32px;
-    }
-
+  #hero-title h1,
+  #hero-title h2 {
+    font-size: 30px !important;
+    line-height: 32px;
+  }
 }
 
 .articleTitle {
-    line-height: 55px !important;
-    display: inline-block !important;
-    background: rgba(26, 188, 156, 0.65) !important;
-    padding: 12px !important;
-    text-align: left !important;
-    font-weight: 600;
+  line-height: 55px !important;
+  display: inline-block !important;
+  background: rgba(26, 188, 156, 0.65) !important;
+  padding: 12px !important;
+  text-align: left !important;
+  font-weight: 600;
 }
 
 .articleSubTitle {
-    font-size: 40px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    color: rgba(255, 255, 255, .9) !important;
-    text-transform: uppercase !important;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-transform: uppercase !important;
 }
-
 
 .articleCategoryTitle {
-    line-height: 55px !important;
-    background: rgba(26, 188, 156, 0.65) !important;
-    padding-left: 15px;
-    padding-right: 15px;
-    text-align: left !important;
-    margin-bottom: 5px;
-    display: inline-block !important;
-    color: rgba(255, 255, 255, 0.9) !important;
-    font-size: 20px;
-    font-weight: 600;
-    font-family: "Poppins", sans-serif;
+  line-height: 55px !important;
+  background: rgba(26, 188, 156, 0.65) !important;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: left !important;
+  margin-bottom: 5px;
+  display: inline-block !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
 }
 
 @media (max-width: 991.98px) {
-    .articleCategoryTitle {
-        float: left !important;
-    }
+  .articleCategoryTitle {
+    float: left !important;
+  }
 }
 
 @media (max-width: 991.98px) {
-    .articleTitle {
-        font-size: 30px !important;
-        line-height: 32px !important;
-        float: left;
-    }
+  .articleTitle {
+    font-size: 30px !important;
+    line-height: 32px !important;
+    float: left;
+  }
 }
 
 @media (max-width: 991.98px) {
-    #hero-title {
-        height: 400px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }
+  #hero-title {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .heroHeader {
-    padding: 250px;
+  padding: 250px;
 }
 
 @media (max-width: 991.98px) {
-    .heroHeader {
-        padding: 0px;
-        background-position: 0px 0px !important;
-    }
+  .heroHeader {
+    padding: 0px;
+    background-position: 0px 0px !important;
+  }
 }
-
-
 
 /* end hero header */
