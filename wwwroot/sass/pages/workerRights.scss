@@ -1,0 +1,37 @@
+@import "../style";
+@import "@css/font-icons.css";
+@import "../common/layout";
+@import "../common/hero";
+@import "../common/calculatorLinks";
+@import "../common/faqs";
+
+/* worker rights */
+
+@media (max-width: 991.98px) {
+  .workerRightsIconsFirstCol {
+    padding-bottom: 36px !important;
+  }
+
+  .border-small-device::after {
+    content: "" !important;
+    position: absolute !important;
+    top: calc(64px + 7px) !important;
+    left: 59px !important;
+    width: 2px !important;
+    height: calc(100% - 79px) !important;
+    background-color: #eee !important;
+    z-index: 0 !important;
+  }
+}
+
+.workerRightsIconsSecondCol {
+  margin-bottom: 100px !important;
+}
+
+.workerRights {
+  background: url("/images/articles/WorkerRights.webp") center center / cover
+    no-repeat;
+  background-position: 0px 110.519px !important;
+}
+
+/* end worker rights */

@@ -97,7 +97,6 @@ namespace AbogaciaCore
             services.AddHttpContextAccessor();
         }
 
-
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, IHttpContextAccessor httpContextAccessor)
         {
@@ -122,6 +121,7 @@ namespace AbogaciaCore
             provider.Mappings[".br"] = "application/x-brotli"; // Explicit MIME type for Brotli
             provider.Mappings[".gz"] = "application/gzip"; // Explicit MIME type for Gzip
 
+            app.UseCompressedFiles();
             app.UseStaticFiles(new StaticFileOptions
             {
                 ContentTypeProvider = provider,
@@ -191,6 +191,9 @@ namespace AbogaciaCore
             });
 
             VersionedFileHelper.Configure(app.ApplicationServices.GetRequiredService<IHttpContextAccessor>());
+
+            var accessor = app.ApplicationServices.GetRequiredService<IHttpContextAccessor>();
+            AssetHelper.Configure(accessor);
         }
 
     }

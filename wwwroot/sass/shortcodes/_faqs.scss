@@ -11,11 +11,11 @@
 .faqlist {
 	li {
 		margin-bottom: 5px;
-		font-size: 15px;
+		font-size: 1rem;
 		a {
-			color: #444;
+			color: var(--#{$cnvs-prefix}contrast-700);
 			&:hover {
-				color: $theme-color !important;
+				color: var(--#{$cnvs-prefix}themecolor) !important;
 			}
 		}
 	}

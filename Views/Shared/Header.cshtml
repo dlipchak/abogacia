@@ -45,18 +45,19 @@
                         <!-- <li class="menu-item @Html.IsSelected(action:"Index",controller:"AboutUs",cssClass:"current")">
                             <a class="menu-link" href="@Url.Action("Index", "AboutUs")">Nosotros</a>
                         </li> -->
-                        <li class="menu-item @Html.IsSelected(action:"Index",controller:"Articles",cssClass:"current")">
-                            <a href="javascript:void(0)" 
+                        <li class="menu-item @Html.IsSelected(controller:"Articles",cssClass:"current")">
+                            <a href="#" 
                                class="menu-link" 
-                               aria-label="Menú de Accidentes"
-                               role="button"
-                               aria-expanded="false"
-                               aria-haspopup="true">
+                               aria-label="Menú de Accidentes">
                                 <div>Accidentes</div>
                             </a>
                             <ul class="sub-menu-container">
                                 <li class="menu-item">
-                                    <a class="menu-link" href="#"><div>De Tránsito</div></a>
+                                    <a href="#" 
+                                       class="menu-link"
+                                       aria-label="Menú de Accidentes de Tránsito">
+                                        <div>De Tránsito</div>
+                                    </a>
                                     <ul class="sub-menu-container">
                                         <li class="menu-item"><a class="menu-link" href="@Url.Action("como-actuar-ante-un-accidente-de-transito", "Articles")">Como actuar ante un accidente de tránsito</a></li>
                                         <li class="menu-item"><a class="menu-link" href="@Url.Action("accidentes-en-transporte-publico", "Articles")">En Transporte publico</a></li>
@@ -70,7 +71,11 @@
                                     </ul>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link" href="#"><div>Laborales</div></a>
+                                    <a href="#" 
+                                       class="menu-link"
+                                       aria-label="Menú de Accidentes Laborales">
+                                        <div>Laborales</div>
+                                    </a>
                                     <ul class="sub-menu-container">
                                         <li class="menu-item"><a class="menu-link" href="@Url.Action("Covid19", "Articles")" >Covid-19</a></li>
                                         <li class="menu-item"><a class="menu-link" href="@Url.Action("accidentes-de-trabajo", "Articles")">En ocasión del trabajo</a></li>
@@ -83,7 +88,14 @@
                         </li>
 
                         <li class="menu-item @Html.IsSelected(controller:"Dismissals",cssClass:"current") ">
-                            <a href="#" class="menu-link"><div>Despidos</div></a>
+                            <a href="#" 
+                               class="menu-link"
+                               aria-label="Menú de Despidos"
+                               role="button"
+                               aria-expanded="false"
+                               aria-haspopup="true">
+                                <div>Despidos</div>
+                            </a>
                             <ul class="sub-menu-container">
                                 <li class="menu-item"><a class="menu-link @Html.IsSelected(controller:"Dismissals",cssClass:"current",action:"derechos-del-trabajador")" href="@Url.Action("derechos-del-trabajador", "Dismissals")">Derechos del trabajador</a></li>
                                 <li class="menu-item"><a class="menu-link @Html.IsSelected(controller:"Calculators",cssClass:"current",action:"despidos")" href="@Url.Action("despidos", "Calculators")">Calculadora Despido</a></li>
@@ -91,7 +103,14 @@
                             </ul>
                         </li>
                         <li class="menu-item @Html.IsSelected(controller:"Calculators",cssClass:"current") ">
-                            <a href="#" class="menu-link"><div>Calculadoras</div></a>
+                            <a href="#" 
+                               class="menu-link"
+                               aria-label="Menú de Calculadoras"
+                               role="button"
+                               aria-expanded="false"
+                               aria-haspopup="true">
+                                <div>Calculadoras</div>
+                            </a>
                             <ul class="sub-menu-container">
                                 <li class="menu-item"><a class="menu-link @Html.IsSelected(controller:"Calculators",cssClass:"current",action:"accidentes-laborales")" href="@Url.Action("accidentes-laborales", "Calculators")">Calculadora accidente laboral</a></li>
                                 <li class="menu-item"><a class="menu-link @Html.IsSelected(controller:"Calculators",cssClass:"current",action:"accidentes-de-transito")" href="@Url.Action("accidentes-de-transito", "Calculators")">Calculadora accidente de tránsito</a></li>
@@ -99,7 +118,14 @@
                             </ul>
                         </li>
                         <li class="menu-item @Html.IsSelected(controller:"FAQ",cssClass:"current") ">
-                            <a href="#" class="menu-link"><div>Preguntas frecuentes</div></a>
+                            <a href="#" 
+                               class="menu-link"
+                               aria-label="Menú de Preguntas Frecuentes"
+                               role="button"
+                               aria-expanded="false"
+                               aria-haspopup="true">
+                                <div>Preguntas frecuentes</div>
+                            </a>
                             <ul class="sub-menu-container">
                                 <li class="menu-item"><a class="menu-link @Html.IsSelected(controller:"FAQ",cssClass:"current",action:"accidentes-laborales")" href="@Url.Action("accidentes-laborales", "FAQ")">Accidentes laborales</a></li>
                                 <li class="menu-item"><a class="menu-link @Html.IsSelected(controller:"FAQ",cssClass:"current",action:"accidentes-de-transito")" href="@Url.Action("accidentes-de-transito", "FAQ")">Accidentes de tránsito</a></li>

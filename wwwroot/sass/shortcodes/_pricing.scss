@@ -1,4 +1,3 @@
-
 /*-----------------------------------------------------------------------------------
 
 	Shortcodes: pricing.scss
@@ -11,9 +10,53 @@ $pricing-prefix: pricing;
 	Pricing Boxes
 -----------------------------------------------------------------*/
 
+
+
+.#{$pricing-prefix},
+[class*=#{$pricing-prefix}-] {
+	--#{$cnvs-prefix}pricing-base-color :         	#{$pricing-base-color};
+	--#{$cnvs-prefix}pricing-background :         	 #{$pricing-background};
+
+	--#{$cnvs-prefix}pricing-border-size   :         #{$pricing-border-size};
+	--#{$cnvs-prefix}pricing-border-color  :         #{$pricing-border-color};
+	--#{$cnvs-prefix}pricing-border-radius :         #{$pricing-border-radius};
+
+	--#{$cnvs-prefix}pricing-title-padding        :         #{$pricing-title-padding};
+	--#{$cnvs-prefix}pricing-title-bg             :          #{$pricing-title-bg};
+	--#{$cnvs-prefix}pricing-title-border         :          #{$pricing-title-border};
+	--#{$cnvs-prefix}pricing-title-font-size      :         #{$pricing-title-font-size};
+	--#{$cnvs-prefix}pricing-title-font-weight    :         #{$pricing-title-font-weight};
+	--#{$cnvs-prefix}pricing-title-font-spacing   :         #{$pricing-title-font-spacing};
+	--#{$cnvs-prefix}pricing-title-font-transform :         #{$pricing-title-font-transform};
+	--#{$cnvs-prefix}pricing-title-font-color     :         #{$pricing-title-font-color};
+
+	--#{$cnvs-prefix}pricing-price-padding             :          #{$pricing-price-padding};
+	--#{$cnvs-prefix}pricing-price-color               :          #{$pricing-price-color};
+	--#{$cnvs-prefix}pricing-price-font-size           :         #{$pricing-price-font-size};
+	--#{$cnvs-prefix}pricing-price-bottom-border-width :         #{$pricing-price-bottom-border-width};
+	--#{$cnvs-prefix}pricing-price-bottom-border-size  :          #{$pricing-price-bottom-border-size};
+	--#{$cnvs-prefix}pricing-price-currency-icon       :          #{$pricing-price-currency-icon};
+	--#{$cnvs-prefix}pricing-price-month               :          #{$pricing-price-month};
+
+	--#{$cnvs-prefix}pricing-features-padding      :          #{$pricing-features-padding};
+	--#{$cnvs-prefix}pricing-features-font-padding :         #{$pricing-features-font-padding};
+	--#{$cnvs-prefix}pricing-features-font-size    :         #{$pricing-features-font-size};
+
+	--#{$cnvs-prefix}pricing-popular-bg                :          #{$pricing-popular-bg};
+	--#{$cnvs-prefix}pricing-popular-title-padding     :          #{$pricing-popular-title-padding};
+	--#{$cnvs-prefix}pricing-popular-font-color        :          #{$pricing-popular-font-color};
+	--#{$cnvs-prefix}pricing-popular-title-font-size   :          #{$pricing-popular-title-font-size};
+	--#{$cnvs-prefix}pricing-popular-pricing-font-size :          #{$pricing-popular-pricing-font-size};
+	--#{$cnvs-prefix}pricing-popular-box-shadow        :         #{$pricing-popular-box-shadow};
+
+	--#{$cnvs-prefix}pricing-minimal-bg :          #{$pricing-minimal-bg};
+
+	--#{$cnvs-prefix}pricing-extended-padding :         #{$pricing-extended-padding};
+
+}
 .#{$pricing-prefix} {
 	position: relative;
-	[class^=col-] {
+	> [class^="col-"] {
 		margin-top: 1.25rem;
 	}
 	/* Pricing Boxesma
@@ -21,38 +64,40 @@ $pricing-prefix: pricing;
 	&-box {
 		position: relative;
 		overflow: hidden;
-		border: $pricing-border-size solid $pricing-border-color;
-		border-radius: $pricing-border-radius;
-		background-color: $pricing-background;
+		border: var(--#{$cnvs-prefix}pricing-border-size) solid var(--#{$cnvs-prefix}pricing-border-color);
+		border-radius: var(--#{$cnvs-prefix}pricing-border-radius);
+		background-color: var(--#{$cnvs-prefix}pricing-background);
 	}
 	/* Pricing Boxes - Title
 	-----------------------------------------------------------------*/
 	&-title {
-		padding: $pricing-title-padding 0;
-		background-color: $pricing-title-bg;
-		border-bottom: $pricing-title-border;
+		padding: var(--#{$cnvs-prefix}pricing-title-padding) 0;
+		background-color: var(--#{$cnvs-prefix}pricing-title-bg);
+		border-bottom: var(--#{$cnvs-prefix}pricing-title-border);
 		letter-spacing: 1px;
 		h3 {
 			margin: 0;
-			font-size: $pricing-title-font-size;
-			font-weight: $pricing-title-font-weight;
-			color: $pricing-title-font-color;
+			font-size: var(--#{$cnvs-prefix}pricing-title-font-size);
+			font-weight: var(--#{$cnvs-prefix}pricing-title-font-weight);
+			color: var(--#{$cnvs-prefix}pricing-title-font-color);
 		}
 		span {
 			display: block;
-			color: lighten($pricing-base-color, 20);
+			color: var(--#{$cnvs-prefix}contrast-600);
 			font-weight: 300;
-			font-size: $pricing-title-font-size * 0.7;
+			font-size: calc(var(--#{$cnvs-prefix}pricing-title-font-size) * 0.7);
 			margin: 3px 0;
-			text-transform: $pricing-title-font-transform;
+			text-transform: var(--#{$cnvs-prefix}pricing-title-font-transform);
 		}
 
 		&.title-sm {
 			h3 {
-				font-size: decimal-ceil($pricing-title-font-size * 0.8333, 3);
+				font-size: calc(var(--#{$cnvs-prefix}pricing-title-font-size) * 0.8333);
 			}
 			span {
-				font-size: decimal-floor($pricing-title-font-size / 1.714, 3);
+				font-size: calc(
+					var(--#{$cnvs-prefix}pricing-title-font-size / 1.714)
+				);
 			}
 		}
 	}
@@ -60,62 +105,64 @@ $pricing-prefix: pricing;
 	-----------------------------------------------------------------*/
 	&-price {
 		position: relative;
-		padding: $pricing-price-padding 0;
-		color: $pricing-price-color;
-		font-size: $pricing-price-font-size;
+		padding: var(--#{$cnvs-prefix}pricing-price-padding) 0;
+		color: var(--#{$cnvs-prefix}pricing-price-color);
+		font-size: var(--#{$cnvs-prefix}pricing-price-font-size);
 		line-height: 1;
 		.price-unit {
 			display: inline-block;
 			vertical-align: top;
 			margin: 7px 3px 0 0;
-			font-size: $pricing-price-currency-icon;
+			font-size: var(--#{$cnvs-prefix}pricing-price-currency-icon);
 			font-weight: normal;
 		}
 		.price-tenure {
 			vertical-align: baseline;
-			font-size: $pricing-price-month;
+			font-size: var(--#{$cnvs-prefix}pricing-price-month);
 			font-weight: normal;
 			letter-spacing: 1px;
-			color: lighten($pricing-base-color, 33.33%);
+			color: var(--#{$cnvs-prefix}contrast-600);
 			margin: 0 0 0 3px;
 		}
 	}
 	/* Pricing Boxes - Features
 	-----------------------------------------------------------------*/
 	&-features {
-		border-top: $pricing-border-size solid $pricing-border-color;
-		border-bottom: $pricing-border-size solid $pricing-border-color;
-		background-color: darken($body-bg, 2.35);
-		padding: $pricing-features-padding 0;
+		border-top: var(--#{$cnvs-prefix}pricing-border-size) solid var(--#{$cnvs-prefix}pricing-border-color);
+		border-bottom: var(--#{$cnvs-prefix}pricing-border-size) solid var(--#{$cnvs-prefix}pricing-border-color);
+		background-color: var(--#{$cnvs-prefix}contrast-100);
+		padding: var(--#{$cnvs-prefix}pricing-features-padding) 0;
 		ul {
 			margin: 0;
 			list-style: none;
 		}
 		li {
-			padding: $pricing-features-font-padding 0;
+			padding: var(--#{$cnvs-prefix}pricing-features-font-padding) 0;
 		}
 	}
 	/* Pricing Boxes - Action
 	-----------------------------------------------------------------*/
-	&-action { padding: ($pricing-title-padding * 1.25) 0; }
+	&-action {
+		padding: calc(var(--#{$cnvs-prefix}pricing-title-padding) * 1.25) 0;
+	}
 
 	/* Pricing Boxes - Best Price
 	-----------------------------------------------------------------*/
 	&-highlight {
-		box-shadow: $pricing-popular-box-shadow;
+		box-shadow: var(--#{$cnvs-prefix}pricing-popular-box-shadow);
 		z-index: 10;
 		@if $pricing-popular-title-padding > 30 {
-			margin: - round($pricing-popular-title-padding / 2) (-$pricing-border-size);
+			margin: calc(var(--#{$cnvs-prefix}pricing-popular-title-padding) * -0.5) calc(-1 * var(--#{$cnvs-prefix}pricing-border-size));
 		} @else {
-			margin: (-$pricing-popular-title-padding) (-$pricing-border-size);
+			margin: calc(-1 * var(--#{$cnvs-prefix}pricing-popular-title-padding)) calc(-1 * var(--#{$cnvs-prefix}pricing-border-size));
 		}
 		.#{$pricing-prefix}-title,
 		.#{$pricing-prefix}-features {
-			background-color: $body-bg;
+			background-color: var(--#{$cnvs-prefix}pricing-background);
 		}
 
 		.#{$pricing-prefix}-price {
-			font-size: $pricing-popular-pricing-font-size;
+			font-size: var(--#{$cnvs-prefix}pricing-popular-pricing-font-size);
 		}
 	}
 
@@ -131,21 +178,22 @@ $pricing-prefix: pricing;
 		}
 	}
 
-
 	/* Pricing Boxes - Minimal
 	-----------------------------------------------------------------*/
 	@at-root .#{$pricing-prefix}-minimal {
 		.#{$pricing-prefix}-price {
-			background-color: $pricing-minimal-bg;
-			border-bottom: $pricing-border-size solid $pricing-border-color;
-			&::after { display: none; }
+			background-color: var(--#{$cnvs-prefix}pricing-minimal-bg);
+			border-bottom: var(--#{$cnvs-prefix}pricing-border-size) solid var(--#{$cnvs-prefix}pricing-border-color);
+			&::after {
+				display: none;
+			}
 		}
 	}
 
 	/* Pricing Boxes - Extended
 	-----------------------------------------------------------------*/
 	@at-root .#{$pricing-prefix}-extended {
-		background-color: $pricing-minimal-bg;
+		background-color: var(--#{$cnvs-prefix}pricing-minimal-bg);
 		text-align: left;
 		.#{$pricing-prefix}-title {
 			background-color: transparent;
@@ -157,14 +205,19 @@ $pricing-prefix: pricing;
 			background-color: transparent;
 		}
 		.#{$pricing-prefix}-action-area {
-			border-left: $pricing-title-border;
-			background-color: $pricing-title-bg;
-			padding: $pricing-extended-padding;
+			border-left: var(--#{$cnvs-prefix}pricing-title-border);
+			background-color: var(--#{$cnvs-prefix}pricing-title-bg);
+			padding: var(--#{$cnvs-prefix}pricing-extended-padding);
 			text-align: center;
 			.#{$pricing-prefix}-price,
-			.#{$pricing-prefix}-action { padding: 0; }
-			.#{$pricing-prefix}-price { padding-bottom: $pricing-popular-title-padding;
-				&::after { display: none; }
+			.#{$pricing-prefix}-action {
+				padding: 0;
+			}
+			.#{$pricing-prefix}-price {
+				padding-bottom: var(--#{$cnvs-prefix}pricing-popular-title-padding);
+				&::after {
+					display: none;
+				}
 				span.price-tenure {
 					display: block;
 					margin: 10px 0 0 0;
@@ -175,11 +228,11 @@ $pricing-prefix: pricing;
 			}
 		}
 		.#{$pricing-prefix}-meta {
-			color: lighten($pricing-base-color, 33.33%);
+			color: var(--#{$cnvs-prefix}contrast-600);
 			font-weight: 300;
-			font-size: round($pricing-title-font-size * 0.7);
-			letter-spacing: $pricing-title-font-spacing;
-			text-transform: $pricing-title-font-transform;
+			font-size: calc(var(--#{$cnvs-prefix}pricing-title-font-size) * 0.7);
+			letter-spacing: var(--#{$cnvs-prefix}pricing-title-font-spacing);
+			text-transform: var(--#{$cnvs-prefix}pricing-title-font-transform);
 			padding-bottom: 10px;
 		}
 	}
@@ -190,15 +243,22 @@ $pricing-prefix: pricing;
 		.#{$pricing-prefix}-box {
 			float: left;
 			width: 20%;
-			margin-top: $pricing-popular-title-padding;
-			&.best-price { margin-top: 0; }
-			&:nth-child(5) { margin-left: -$pricing-border-size ; }
+			margin-top: var(--#{$cnvs-prefix}pricing-popular-title-padding);
+			&.best-price {
+				margin-top: 0;
+			}
+			&:nth-child(5) {
+				margin-left: calc(-1 * var(--#{$cnvs-prefix}pricing-border-size));
+			}
 		}
-		.#{$pricing-prefix}-title h3 { font-size: $pricing-title-font-size; }
-		.best-price .#{$pricing-prefix}-title h3 { font-size: $pricing-title-font-size; }
+		.#{$pricing-prefix}-title h3 {
+			font-size: var(--#{$cnvs-prefix}pricing-title-font-size);
+		}
+		.best-price .#{$pricing-prefix}-title h3 {
+			font-size: var(--#{$cnvs-prefix}pricing-title-font-size);
+		}
 	}
 }
-
 
 .table-comparison {
 	text-align: center;

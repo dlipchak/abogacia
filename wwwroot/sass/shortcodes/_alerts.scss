@@ -12,26 +12,33 @@
 .style-msg2 {
 	position: relative;
 	display: block;
-	color: $text-color;
+	color: var(--#{$cnvs-prefix}heading-color);
 	border-left: $alert-left-border solid $alert-left-border-color;
 	margin-bottom: 20px;
 }
 
 .style-msg2 { border-left-color: $alert-left-border-color; }
 
-@if $theme-colors {
-	@each $color, $value in $theme-colors {
-	  .#{$color}msg {
-	    @include alert-variant(theme-color-level($color, $alert-bg-level), theme-color-level($color, $alert-border-level), theme-color-level($color, $alert-color-level));
-	  }
-	}
-	.errormsg {
-		@include alert-variant(theme-color-level(("danger"), $alert-bg-level), theme-color-level(("danger"), $alert-border-level), theme-color-level(("danger"), $alert-color-level));;
+@each $state, $value in $theme-colors {
+	.#{$state}msg {
+		background: shift-color($value, $alert-bg-scale);
+		border-color: shift-color($value, $alert-border-scale);
+		color: shift-color($value, $alert-color-scale);
 	}
 
-	.alertmsg {
-		@include alert-variant(theme-color-level(("warning"), $alert-bg-level), theme-color-level(("warning"), $alert-border-level), theme-color-level(("warning"), $alert-color-level));;
-	}
+}
+
+.errormsg {
+	background: shift-color($danger, $alert-bg-scale);
+	border-color: shift-color($danger, $alert-border-scale);
+	color: shift-color($danger, $alert-color-scale);
+}
+
+
+.alertmsg {
+	background: shift-color($warning, $alert-bg-scale);
+	border-color: shift-color($warning, $alert-border-scale);
+	color: shift-color($warning, $alert-color-scale);
 }
 
 .style-msg .sb-msg,
@@ -39,9 +46,9 @@
 .style-msg2 .sb-msg {
 	display: block;
 	padding: $alert-padding;
-	border-left: 1px solid rgba(255,255,255,0.5);
+	border-left: 1px solid rgba(white,0.5);
 	font-size: $alert-title;
-	text-shadow: 1px 1px 1px rgba(255,255,255,0.6);
+	text-shadow: 1px 1px 1px rgba(white,0.6);
 }
 
 .style-msg2 .msgtitle {
@@ -54,8 +61,8 @@
 
 .style-msg-light .sb-msg,
 .style-msg-light .msgtitle {
-	color: #FFF;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	color: var(--#{$prefix}white);
+	text-shadow: 1px 1px 1px rgba(black,0.3);
 }
 
 .style-msg2 .sb-msg { font-weight: normal; }
@@ -78,9 +85,9 @@
 	margin-right: 5px;
 }
 
-.style-msg .close {
+.style-msg .btn-close {
 	position: absolute;
-	top: 10px;
+	top: 0;
 	left: auto;
-	right: 10px;
+	right: 0;
 }

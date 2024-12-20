@@ -1,18 +1,18 @@
-
 /* ----------------------------------------------------------------
 
 	footer.scss
 
 -----------------------------------------------------------------*/
 
-
 /* ----------------------------------------------------------------
 	Footer
 -----------------------------------------------------------------*/
 #footer {
+	--#{$cnvs-prefix}footer-top-border: #{$footer-top-border};
+	--#{$cnvs-prefix}copyrights-link-color: var(--#{$cnvs-prefix}contrast-500);
 	position: relative;
-	background-color: $footer-bg;
-	border-top: $footer-top-border;
+	background-color: var(--#{$cnvs-prefix}footer-bg);
+	border-top: var(--#{$cnvs-prefix}footer-top-border);
 }
 
 @if $footer-sticky-global {
@@ -27,7 +27,9 @@
 		#slider:not(.slider-parallax-invisible),
 		#page-submenu,
 		#page-title,
-		#content { z-index: 2; }
+		#content {
+			z-index: 2;
+		}
 	}
 }
 
@@ -35,7 +37,9 @@
 	.sticky-footer #slider:not(.slider-parallax-invisible),
 	.sticky-footer #page-submenu,
 	.sticky-footer #page-title,
-	.sticky-footer #content { z-index: 2; }
+	.sticky-footer #content {
+		z-index: 2;
+	}
 
 	.sticky-footer #footer {
 		position: sticky;
@@ -45,49 +49,61 @@
 	}
 }
 
-#footer .footer-widgets-wrap {
-	position: relative;
-	padding: $content-padding 0;
+#footer {
+	.footer-widgets-wrap {
+		position: relative;
+		padding: var(--#{$cnvs-prefix}content-padding) 0;
+	}
 }
 
 #copyrights {
-	padding: round($content-padding / 2) 0;
-	background-color: darken($footer-bg, 6.67);
-	font-size: $copyrights-font-size;
-	line-height: $line-height-content;
+	padding: calc(var(--#{$cnvs-prefix}content-padding) * 0.5) 0;
+	background-color: var(--#{$cnvs-prefix}contrast-300);
+	font-size: var(--#{$cnvs-prefix}copyrights-font-size);
+	line-height: var(--#{$cnvs-prefix}line-height-content);
 
 	i.footer-icon {
 		position: relative;
 		top: 1px;
-		font-size: $copyrights-font-size;
-		width: $copyrights-font-size;
+		font-size: var(--#{$cnvs-prefix}copyrights-font-size);
+		width: var(--#{$cnvs-prefix}copyrights-font-size);
 		text-align: center;
 		margin-right: 3px;
 	}
 
+	.text-end a:last-child {
+		margin-right: 0;
+	}
+}
+
+.copyright-links {
+	margin-top: 0.5rem;
+	color: var(--#{$cnvs-prefix}copyrights-link-color);
 	a {
 		display: inline-block;
-		margin: 0 3px;
-		color: darken($text-color, 6.67);
-		border-bottom: 1px dotted $text-color;
+		margin: 0 0.25rem;
+		color: var(--#{$cnvs-prefix}copyrights-link-color);
+		border-bottom: 1px dotted var(--#{$cnvs-prefix}copyrights-link-color);
 		&:hover {
-			color: lighten($text-color, 6.67);
-			border-bottom: 1px solid lighten($text-color, 13.33);
+			opacity: .91;
+		}
+		&:first-child {
+			margin-left: 0;
 		}
 	}
-	.text-right a:last-child { margin-right: 0; }
 }
 
-
-.copyrights-menu { margin-bottom: 10px;
+.copyrights-menu {
+	margin-bottom: 10px;
 	a {
-		font-size: $copyrights-font-size;
+		font-size: var(--#{$cnvs-prefix}copyrights-font-size);
 		margin: 0 10px;
 		border-bottom: 0 !important;
-		&:first-child { margin-left: 0; }
+		&:first-child {
+			margin-left: 0;
+		}
 	}
 }
-
 
 .footer-logo {
 	display: block;

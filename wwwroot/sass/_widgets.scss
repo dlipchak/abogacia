@@ -1,4 +1,3 @@
-
 /* ----------------------------------------------------------------
 
 	widgets.scss
@@ -9,31 +8,49 @@
 	Widgets
 -----------------------------------------------------------------*/
 
+:root,
+.not-dark {
+	--#{$cnvs-prefix}widget-border 			  :          #{$widget-border};
+}
 
 .widget {
-	position: relative;
-	margin-top: $widget-margin;
+	--#{$cnvs-prefix}widget-border 			  :          #{$widget-border};
+	--#{$cnvs-prefix}widget-margin 			  :          #{$widget-margin};
+	--#{$cnvs-prefix}widget-title-margin         :          #{$widget-title-margin};
+	--#{$cnvs-prefix}widget-title-font-size      :          #{$widget-title-font-size};
+	--#{$cnvs-prefix}widget-title-font-weight    :          #{$widget-title-font-weight};
+	--#{$cnvs-prefix}widget-title-letter-spacing :          #{$widget-title-letter-spacing};
+	--#{$cnvs-prefix}widget-title-text-transform :          #{$widget-title-text-transform};
 
-	p { line-height: 1.7; }
+	position: relative;
+	margin-top: var(--#{$cnvs-prefix}widget-margin);
+
+	p {
+		line-height: 1.7;
+	}
 
 	.sidebar-widgets-wrap & {
-		padding-top: $widget-margin;
-		border-top: $widget-border;
+		padding-top: var(--#{$cnvs-prefix}widget-margin);
+		border-top: var(--#{$cnvs-prefix}widget-border);
 		&:first-child {
 			padding-top: 0;
 			border-top: 0;
 		}
-		> h4 { letter-spacing: $widget-title-letter-spacing + 1px; }
+		> h4 {
+			letter-spacing: calc(var(--#{$cnvs-prefix}widget-title-letter-spacing) + 1px);
+		}
 	}
 
-	&:first-child { margin-top: 0; }
+	&:first-child {
+		margin-top: 0;
+	}
 
 	> h4 {
-		margin-bottom: $widget-title-margin;
-		font-size: $widget-title-font-size;
-		font-weight: $widget-title-font-weight;
-		letter-spacing: $widget-title-letter-spacing;
-		text-transform: $widget-title-text-transform;
+		margin-bottom: var(--#{$cnvs-prefix}widget-title-margin);
+		font-size: var(--#{$cnvs-prefix}widget-title-font-size);
+		font-weight: var(--#{$cnvs-prefix}widget-title-font-weight);
+		letter-spacing: var(--#{$cnvs-prefix}widget-title-letter-spacing);
+		text-transform: var(--#{$cnvs-prefix}widget-title-text-transform);
 	}
 
 	/* Widget - Links
@@ -53,22 +70,28 @@
 			margin: 0;
 		}
 		li {
-			padding: 4px 0;
-			font-size: 15px;
+			display: flex;
+			padding: 0.25rem 0;
+			font-size: 1rem;
 			a {
 				display: inline-block;
-				padding: 0 3px 0 12px;
+				padding: 0 0.25rem 0 0.75rem;
 				border: none !important;
-				color: $text-color;
-				&:hover { color: #000; }
+				color: var(--#{$cnvs-prefix}heading-color);
+				&:hover {
+					color: var(--#{$cnvs-prefix}themecolor);
+				}
 			}
 		}
 		&:not(.widget-li-noicon) li::before {
-			content: $widget-icon;
-			font-family: $widget-icon-font-family;
-			display: inline-block;
+			content: "\F231";
+			font-family: "bootstrap-icons";
+			display: inline-flex;
+			align-self: center;
+			justify-self: center;
 			position: relative;
-			top: 1px;
+			font-size: 0.75rem;
+			line-height: inherit;
 			left: 0;
 		}
 		&.widget-li-noicon li a {
@@ -76,19 +99,25 @@
 		}
 		> ul {
 			margin-top: -4px !important;
-			> li:first-child { border-top: 0 !important; }
+			> li:first-child {
+				border-top: 0 !important;
+			}
 		}
-		ul ul { margin-left: 15px; }
+		ul ul {
+			margin-left: 1rem;
+		}
 	}
 	&_recent_comments li::before {
-		content: $widget-comment-icon;
+		content: "\F249";
 	}
 
 	/* Widget - Testimonial & Twitter
 	-----------------------------------------------------------------*/
 
-	.testimonial{
-		&.no-image .testi-image { display: none; }
+	.testimonial {
+		&.no-image .testi-image {
+			display: none;
+		}
 
 		&.twitter-scroll {
 			.testi-image {
@@ -102,10 +131,10 @@
 					height: 28px;
 				}
 				i {
-					background-color: darken($body-bg, 6.67);
+					background-color: var(--#{$cnvs-prefix}contrast-100);
 					line-height: 28px;
 					font-size: 0.875rem;
-					color: lighten($text-color, 26.67);
+					color: var(--#{$cnvs-prefix}contrast-300);
 				}
 			}
 		}
@@ -117,9 +146,10 @@
 			height: 42px;
 		}
 
-		p { font-size: 0.875rem; }
+		p {
+			font-size: 0.875rem;
+		}
 	}
-
 }
 
 @include media-breakpoint-only(md) {
@@ -143,23 +173,27 @@
 	}
 }
 
-
 /* Widget - Quick Contact Form
 -----------------------------------------------------------------*/
 
-.quick-contact-widget{
+.quick-contact-widget {
 	&.form-widget {
 		.form-control,
 		.input-group,
-		.sm-form-control { margin-bottom: 10px; }
+		.sm-form-control {
+			margin-bottom: 10px;
+		}
 
-		.form-control { margin-bottom: 0; }
+		.form-control {
+			margin-bottom: 0;
+		}
 	}
 }
 
 .quick-contact-widget.form-widget form,
-#template-contactform { position: relative; }
-
+#template-contactform {
+	position: relative;
+}
 
 /* Newsletter Widget
 -----------------------------------------------------------------*/
@@ -170,38 +204,33 @@
 	line-height: 1.5;
 }
 
-
 /* Twitter Feed Widget
 -----------------------------------------------------------------*/
 
 .widget-twitter-feed {
-	li { margin: 15px 0 0 0;
-		&:first-child { margin-top: 0; }
-	}
-	small {
-		display: block;
-		margin-top: 3px;
-	}
-	a:not(:hover) { color: lighten($text-color, 33.33); }
+	.twitter-feed {
+		--#{$cnvs-prefix}iconlist-size: 1.5rem;
+		--#{$cnvs-prefix}iconlist-offset: 0.375rem;
+		--#{$cnvs-prefix}iconlist-gutter: 1rem;
+		li:not(:first-child) {
+			margin-top: 1.125rem;
+		}
 
-	.twitter-feed:not(.twitter-feed-avatar) a.twitter-avatar,
-	.twitter-feed.twitter-feed-avatar i.icon-twitter { display: none; }
+		li {
+			div {
+				font-size: 1rem;
+			}
+		}
 
-	.twitter-feed-avatar { margin-left: 44px;
-		> li a.twitter-avatar {
+		small {
 			display: block;
-			position: absolute;
-			left: -44px;
-			text-align: center;
-			top: 2px;
-			width: 32px;
-			height: 32px;
+			margin-top: 0.25rem;
+			a:not(:hover) {
+				color: var(--#{$cnvs-prefix}contrast-600);
+			}
 		}
 	}
-
-	a.twitter-avatar img { border-radius: 50%; }
 }
-
 
 /* Widget Filter Links
 -----------------------------------------------------------------*/
@@ -218,73 +247,85 @@
 		right: 0;
 		font-size: 12px;
 		line-height: 22px;
-		a { color: red !important; }
-		&.active-filter { display: none; }
+		a {
+			color: red !important;
+		}
+		&.active-filter {
+			display: none;
+		}
 	}
 
-	&:not(:first-child) .widget-filter-reset { top: 50px; }
+	&:not(:first-child) .widget-filter-reset {
+		top: 50px;
+	}
 
 	li {
-			position: relative;
-			font-size: 15px;
-			line-height: 24px;
-			&:not(:first-child) { margin-top: 10px; }
-			a {
-				display: block;
-				color: $text-color;
-				font-family: $heading-font;
-				font-weight: 500;
-			}
+		position: relative;
+		font-size: 15px;
+		line-height: 24px;
+		&:not(:first-child) {
+			margin-top: 10px;
+		}
+		a {
+			display: block;
+			color: var(--#{$cnvs-prefix}heading-color);
+			font-family: var(--#{$cnvs-prefix}primary-font);
+			font-weight: 500;
+		}
 
-			span {
+		span {
+			&:not(.d-inline-block) {
 				position: absolute;
 				top: 1px;
 				left: auto;
 				right: 0;
-				font-size: 11px;
-				width: 22px;
-				height: 22px;
-				line-height: 22px;
-				text-align: center;
-				color: lighten($text-color, 20);
-				background-color: darken($body-bg, 6.67);
-				border-radius: 50%;
 			}
-			&:hover a { color: lighten($text-color, 20); }
-			&.active-filter a { font-weight: 700; }
-			&.active-filter span {
-				color: #FFF !important;
-				background-color: $theme-color !important;
-				text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-			}
+			margin-left: 0.25rem;
+			font-size: 11px;
+			width: 22px;
+			height: 22px;
+			line-height: 22px;
+			text-align: center;
+			color: var(--#{$cnvs-prefix}contrast-600);
+			background-color: var(--#{$cnvs-prefix}contrast-200);
+			border-radius: 50%;
 		}
+		&:hover a {
+			color: var(--#{$cnvs-prefix}contrast-600);
+		}
+		&.active-filter a {
+			font-weight: 700;
+		}
+		&.active-filter span {
+			color: #fff !important;
+			background-color: var(
+				--#{$cnvs-prefix}themecolor
+			) !important;
+			text-shadow: 1px 1px 1px rgba(black, 0.1);
+		}
+	}
 }
-
 
 /* Tag Cloud
 -----------------------------------------------------------------*/
 
-.tagcloud { margin-bottom: -2px;
+.tagcloud {
+	margin-bottom: -2px;
+	display: flex;
+	flex-wrap: wrap;
 	a {
-		display: block;
-		float: left;
 		margin-right: 4px;
 		margin-bottom: 4px;
 		padding: 3px 6px;
-		border: 1px solid darken($body-bg, 10.20);
+		border: 1px solid var(--#{$cnvs-prefix}contrast-300);
 		font-size: 13px !important;
-		color: lighten($text-color, 13.33);
+		color: var(--#{$cnvs-prefix}contrast-700);
 		border-radius: 2px;
-
-		body:not(.device-touch) & {
-			-webkit-transition: all .3s ease-in-out;
-			-o-transition: all .3s ease-in-out;
-			transition: all .3s ease-in-out;
-		}
+		@include transition(all 0.3s ease-in-out);
 
 		&:hover {
-			border-color: $theme-color !important;
-			color: $theme-color !important;
+			border-color: var(--#{$cnvs-prefix}themecolor) !important;
+			color: var(--#{$cnvs-prefix}themecolor) !important;
 		}
 	}
 }

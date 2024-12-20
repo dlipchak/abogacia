@@ -3,14 +3,6 @@
 
 @inject IWebHostEnvironment Environment
 
-@section Styles {
-  <link rel="preload" href="@VersionedFileHelper.GetVersionedFile("faqDismissal.css")" as="style" 
-        onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile("faqDismissal.css")">
-  </noscript>
-}
-
 <title class="logo">Despidos. Preguntas frecuentes</title>
 
 @await Html.PartialAsync("_HeroSection", ( Title: "Despidos",
@@ -269,120 +261,118 @@ Subtitle: "Preguntas Frecuentes", ClassName: "dismissalsFaqHeader" ))
   <div class="container clearfix">@Html.Partial("CalculatorsLinks")</div>
 </div>
 
-<script type="application/ld+json">
-  {
-      "@@context": "https://schema.org",
-      "@@type": "FAQPage",
-      "url": "https://estudiolopezgiacomelli.com.ar/preguntas-frecuentes/despidos",
-      "mainEntity": [
-          {
-              "@@type": "Question",
-              "name": "¿CÓMO SE CALCULA LA INDEMNIZACIÓN POR DESPIDO SIN CAUSA?",
-              "acceptedAnswer": {
-                  "@@type": "Answer",
-                  "text": "La indemnización por “despido sin causa” está directamente ligada a su antigüedad y tal como lo contempla el art 245 de la LCT es igual a UN (1) mes de sueldo por cada año de servicio o fracción mayor de TRES (3) meses, tomando como referencia la mejor remuneración mensual, normal y habitual del último año."
-              }
-          },
-          {
-              "@@type": "Question",
-              "name": "¿CÓMO SE CALCULA LA MEJOR REMUNERACIÓN NORMAL Y HABITUAL?",
-              "acceptedAnswer": {
-                  "@@type": "Answer",
-                  "text": "Al hablar de la mejor remuneración mensual, normal y habitual nos referimos al salario más elevado que usted percibió durante el último año incluyendo horas extras, proporcional de aguinaldo y demás conceptos no remunerativos (bonos, propinas, comisiónes, viáticos etc.) en la medida en que su percepción sea normal y habitual."
-              }
-          },
-          {
-              "@@type": "Question",
-              "name": "¿EXISTEN DIFERENCIAS ENTRE LA "LIQUIDACIÓN FINAL" Y LA "INDEMNIZACIÓN POR DESPIDO"?",
-              "acceptedAnswer": {
-                  "@@type": "Answer",
-                  "text": "Un error bastante habitual es confundir ambos conceptos considerando que definen lo mismo. Sin embargo, cuando hablamos de "liquidación final" nos referimos a toda suma que le corresponde al trabajador al producirse la desvinculación independientemente de las causas que la motivaron (despido con o sin causa o renuncia). Esto significa que al trabajador siempre le corresponderá el cobro de las sumas que comprenden el concepto de "liquidación final" (vacaciones proporcionales, SAC proporcional, etc.). Distinto es el caso de la "indemnización por despido sin causa" que deberá sumarse al importe de la "liquidación final" siempre y cuando el despido se produzca sin una causa justa."
-              }
-          },
-          {
-              "@@type": "Question",
-              "name": "¿QUÉ ES LA INDEMNIZACIÓN AGRAVADA Y EN QUÉ CASOS APLICA?",
-              "acceptedAnswer": {
-                  "@@type": "Answer",
-                  "text": "Cabe destacar que existe en determinados casos una protección especial para el trabajador. De producirse el despido en las circunstancias que analizaremos a continuación el empleador deberá abonar una indemnización agravada: a. Protección de la Maternidad: para gozar de dicha protección la trabajadora deberá en primer lugar notificar al empleador (mediante TCL) su situación de embarazo y la fecha presunta de parto. Si el despido se produce desde 7 meses y medio antes del parto o 7 meses y medio después, se presume que el despido se debe a la notificación enviada y en ese caso el empleador deberá abonar una multa adicional de 1 año de remuneraciones (es decir 13 sueldos, al incluir el SAC). b. Protección del Casamiento: también tiene el trabajador/a la obligación de notificar (mediante TCL) que se va a casar junto con la fecha de casamiento. Si el despido se produce dentro de los 3 meses anteriores al casamiento y 6 meses posteriores al mismo operará la misma presunción que en el caso de maternidad y el empleador deberá abonar una multa adicional de 1 año de remuneraciones (es decir 13 sueldos, al incluir el SAC). c. Despido de trabajador sin registrar o "en negro": En estos casos son 2 las leyes aplicables: la 24.013 y la 25.323. Si el trabajador intima a su empleador a registrar debidamente la relación previo a ser despedido, se aplicarán en forma combinada las indemnizaciones establecidas en ambas leyes. Si la intimación se produjera luego de despedido, aplicarán únicamente las indemnizaciones que establece la ley 25.323."
-              }
-          },
-          {
-              "@@type": "Question",
-              "name": "¿QUÉ ES LA INDEMNIZACIÓN SUSTITUTIVA DE PREAVISO?",
-              "acceptedAnswer": {
-                  "@@type": "Answer",
-                  "text": "Se llama preaviso a la notificación fehaciente efectuada por ambas partes respecto de la decisión de concluir con la relación laboral que los une. El trabajador debe hacerla por TCL con una antelación de 15 días. El empleador debe avisar al trabajador por carta documento con una antelación que varía según la antigüedad del trabajador: a. Será de 15 días si el trabajador se encuentra en el periodo de prueba. En este caso la indemnización por incumplimiento será equivalente a 15 días de su salario. b. Será de 30 días si el trabajador tiene hasta 5 años de antigüedad. En este caso la indemnización por incumplimiento será equivalente a 30 días de su salario. c. Será de 60 días si el trabajador tiene más de 5 años de antigüedad. En este caso la indemnización por incumplimiento será equivalente a 60 días de su salario. Tenga presente que en todos los casos deberá incluirse el proporcional de su aguinaldo."
-              }
-          },
-          {
-              "@@type": "Question",
-              "name": "¿QUÉ ES LA INTEGRACIÓN DEL MES DE DESPIDO?",
-              "acceptedAnswer": {
-                  "@@type": "Answer",
-                  "text": "Es el despido impuesto por el empleador, sin mediar preaviso, que se produce en fecha diferente al último día del mes. Ante ello, se deberá abonar al trabajador un monto equivalente a su salario, en proporción a los días que restan entre la fecha del despido y el último día del mes en que se produjo ese despido. Ejemplo: si lo despiden a usted el 3 de octubre restarán 27 días para que finalice el mes. En ese caso deberán abonarle el salario correspondiente a esos 27 días. Para su cálculo corresponde también aplicar el proporcional de su aguinaldo. Quedan exceptuados de su cobro los trabajadores en periodo de prueba."
-              }
-          },
-          {
-              "@@type": "Question",
-              "name": "¿EN QUÉ CONSISTE UN "ACUERDO LABORAL"?",
-              "acceptedAnswer": {
-                  "@@type": "Answer",
-                  "text": "Es aquel que firman el empleador y el trabajador al llegar a un arreglo para desvincularlo de la empresa. Para tener validez se debe formalizar a través del Servicio de Conciliación Obligatoria (SECLO) dependiente del Ministerio de Trabajo en la Ciudad Autónoma de Buenos Aires, o ante las oficinas del Ministerio de Trabajo Provinciales, o tribunal laboral pertinente según corresponda. Este tipo de acuerdos requieren intervención de un abogado propio, brindando una solución rápida y eficaz para el trabajador ya que se evita llegar a juicio."
-              }
-          },
-          {
-              "@@type": "Question",
-              "name": "¿QUÉ SE CONSIDERA COMO "ABANDONO DE TRABAJO"?",
-              "acceptedAnswer": {
-                  "@@type": "Answer",
-                  "text": "Para que exista abandono de trabajo, el trabajador debe haber sido previamente intimado por su empleador mediante carta documento a su domicilio, a retomar sus tareas por un plazo de 48hs. Si el trabajador no responde a esa intimación mediante telegrama, ni se presenta a trabajar se considerará que hizo "abandono de trabajo"."
-              }
-          },
-          {
-              "@@type": "Question",
-              "name": "¿QUÉ ES EL DESPIDO INDIRECTO?",
-              "acceptedAnswer": {
-                  "@@type": "Answer",
-                  "text": "Cuando el empleador incumple con sus obligaciones coloca al trabajador en una situación tal que puede configurar una "injuria". Es decir que si la falta del empleador es suficientemente grave, el trabajador mediante la debida intimación por telegrama a su patron podría considerarse "despedido sin causa"."
-              }
-          },
-          {
-              "@@type": "Question",
-              "name": "¿TENGO DERECHO A COBRAR POR LAS "HORAS EXTRA" DE TRABAJO?",
-              "acceptedAnswer": {
-                  "@@type": "Answer",
-                  "text": "Por supuesto que sí. La jornada laboral de trabajo diurno salubre no puede durar más de 8 horas diarias o 48 horas semanales. El tope de 8 horas diarias podrá extenderse máximo 1 hora en la medida en que no se supere el máximo semanal de 48 horas. Si se exceden las 9 horas diarias o las 48 horas semanales el empleador deberá abonar esas horas como "extra"."
-              }
-          },
-          {
-              "@@type": "Question",
-              "name": "¿CÓMO SE CALCULAN LAS "HORAS EXTRA"?",
-              "acceptedAnswer": {
-                  "@@type": "Answer",
-                  "text": "Deberá agregarse a cada hora extra un recargo del 50% si la misma se cumplió de lunes a sábado hasta las 13 hs. Si la misma se cumplió el día sábado pasadas las 13hs, un domingo o un feriado, deberá abonarse un recargo del 100%. Existe un límite máximo de horas extra que puede realizar el trabajador el cual asciende a 3 horas diarias, 30 horas mensuales y 200 anuales."
-              }
-          }
-      ],
-      "image": "https://estudiolopezgiacomelli.com.ar/images/faq/faq-dismissals-2.jpeg",
-      "datePublished": "2024-11-05",
-      "dateModified": "2024-11-05",
-      "author": {
-          "@@type": "Organization",
-          "name": "Estudio Jurídico López Giacomelli",
-          "url": "https://estudiolopezgiacomelli.com.ar"
-      },
-      "publisher": {
-          "@@type": "Organization",
-          "name": "Estudio Jurídico López Giacomelli",
-          "logo": {
-              "@@type": "ImageObject",
-              "url": "https://estudiolopezgiacomelli.com.ar/images/logo.png"
-          }
-      }
-  }
-</script>
-
 @section Scripts {
-  <script src="@VersionedFileHelper.GetVersionedFile("faqDismissal.js")"></script>
+  <script type="application/ld+json">
+    {
+        "@@context": "https://schema.org",
+        "@@type": "FAQPage",
+        "url": "https://estudiolopezgiacomelli.com.ar/preguntas-frecuentes/despidos",
+        "mainEntity": [
+            {
+                "@@type": "Question",
+                "name": "¿CÓMO SE CALCULA LA INDEMNIZACIÓN POR DESPIDO SIN CAUSA?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "La indemnización por “despido sin causa” está directamente ligada a su antigüedad y tal como lo contempla el art 245 de la LCT es igual a UN (1) mes de sueldo por cada año de servicio o fracción mayor de TRES (3) meses, tomando como referencia la mejor remuneración mensual, normal y habitual del último año."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "¿CÓMO SE CALCULA LA MEJOR REMUNERACIÓN NORMAL Y HABITUAL?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "Al hablar de la mejor remuneración mensual, normal y habitual nos referimos al salario más elevado que usted percibió durante el último año incluyendo horas extras, proporcional de aguinaldo y demás conceptos no remunerativos (bonos, propinas, comisiónes, viáticos etc.) en la medida en que su percepción sea normal y habitual."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "¿EXISTEN DIFERENCIAS ENTRE LA "LIQUIDACIÓN FINAL" Y LA "INDEMNIZACIÓN POR DESPIDO"?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "Un error bastante habitual es confundir ambos conceptos considerando que definen lo mismo. Sin embargo, cuando hablamos de "liquidación final" nos referimos a toda suma que le corresponde al trabajador al producirse la desvinculación independientemente de las causas que la motivaron (despido con o sin causa o renuncia). Esto significa que al trabajador siempre le corresponderá el cobro de las sumas que comprenden el concepto de "liquidación final" (vacaciones proporcionales, SAC proporcional, etc.). Distinto es el caso de la "indemnización por despido sin causa" que deberá sumarse al importe de la "liquidación final" siempre y cuando el despido se produzca sin una causa justa."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "¿QUÉ ES LA INDEMNIZACIÓN AGRAVADA Y EN QUÉ CASOS APLICA?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "Cabe destacar que existe en determinados casos una protección especial para el trabajador. De producirse el despido en las circunstancias que analizaremos a continuación el empleador deberá abonar una indemnización agravada: a. Protección de la Maternidad: para gozar de dicha protección la trabajadora deberá en primer lugar notificar al empleador (mediante TCL) su situación de embarazo y la fecha presunta de parto. Si el despido se produce desde 7 meses y medio antes del parto o 7 meses y medio después, se presume que el despido se debe a la notificación enviada y en ese caso el empleador deberá abonar una multa adicional de 1 año de remuneraciones (es decir 13 sueldos, al incluir el SAC). b. Protección del Casamiento: también tiene el trabajador/a la obligación de notificar (mediante TCL) que se va a casar junto con la fecha de casamiento. Si el despido se produce dentro de los 3 meses anteriores al casamiento y 6 meses posteriores al mismo operará la misma presunción que en el caso de maternidad y el empleador deberá abonar una multa adicional de 1 año de remuneraciones (es decir 13 sueldos, al incluir el SAC). c. Despido de trabajador sin registrar o "en negro": En estos casos son 2 las leyes aplicables: la 24.013 y la 25.323. Si el trabajador intima a su empleador a registrar debidamente la relación previo a ser despedido, se aplicarán en forma combinada las indemnizaciones establecidas en ambas leyes. Si la intimación se produjera luego de despedido, aplicarán únicamente las indemnizaciones que establece la ley 25.323."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "¿QUÉ ES LA INDEMNIZACIÓN SUSTITUTIVA DE PREAVISO?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "Se llama preaviso a la notificación fehaciente efectuada por ambas partes respecto de la decisión de concluir con la relación laboral que los une. El trabajador debe hacerla por TCL con una antelación de 15 días. El empleador debe avisar al trabajador por carta documento con una antelación que varía según la antigüedad del trabajador: a. Será de 15 días si el trabajador se encuentra en el periodo de prueba. En este caso la indemnización por incumplimiento será equivalente a 15 días de su salario. b. Será de 30 días si el trabajador tiene hasta 5 años de antigüedad. En este caso la indemnización por incumplimiento será equivalente a 30 días de su salario. c. Será de 60 días si el trabajador tiene más de 5 años de antigüedad. En este caso la indemnización por incumplimiento será equivalente a 60 días de su salario. Tenga presente que en todos los casos deberá incluirse el proporcional de su aguinaldo."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "¿QUÉ ES LA INTEGRACIÓN DEL MES DE DESPIDO?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "Es el despido impuesto por el empleador, sin mediar preaviso, que se produce en fecha diferente al último día del mes. Ante ello, se deberá abonar al trabajador un monto equivalente a su salario, en proporción a los días que restan entre la fecha del despido y el último día del mes en que se produjo ese despido. Ejemplo: si lo despiden a usted el 3 de octubre restarán 27 días para que finalice el mes. En ese caso deberán abonarle el salario correspondiente a esos 27 días. Para su cálculo corresponde también aplicar el proporcional de su aguinaldo. Quedan exceptuados de su cobro los trabajadores en periodo de prueba."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "¿EN QUÉ CONSISTE UN "ACUERDO LABORAL"?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "Es aquel que firman el empleador y el trabajador al llegar a un arreglo para desvincularlo de la empresa. Para tener validez se debe formalizar a través del Servicio de Conciliación Obligatoria (SECLO) dependiente del Ministerio de Trabajo en la Ciudad Autónoma de Buenos Aires, o ante las oficinas del Ministerio de Trabajo Provinciales, o tribunal laboral pertinente según corresponda. Este tipo de acuerdos requieren intervención de un abogado propio, brindando una solución rápida y eficaz para el trabajador ya que se evita llegar a juicio."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "¿QUÉ SE CONSIDERA COMO "ABANDONO DE TRABAJO"?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "Para que exista abandono de trabajo, el trabajador debe haber sido previamente intimado por su empleador mediante carta documento a su domicilio, a retomar sus tareas por un plazo de 48hs. Si el trabajador no responde a esa intimación mediante telegrama, ni se presenta a trabajar se considerará que hizo "abandono de trabajo"."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "¿QUÉ ES EL DESPIDO INDIRECTO?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "Cuando el empleador incumple con sus obligaciones coloca al trabajador en una situación tal que puede configurar una "injuria". Es decir que si la falta del empleador es suficientemente grave, el trabajador mediante la debida intimación por telegrama a su patron podría considerarse "despedido sin causa"."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "¿TENGO DERECHO A COBRAR POR LAS "HORAS EXTRA" DE TRABAJO?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "Por supuesto que sí. La jornada laboral de trabajo diurno salubre no puede durar más de 8 horas diarias o 48 horas semanales. El tope de 8 horas diarias podrá extenderse máximo 1 hora en la medida en que no se supere el máximo semanal de 48 horas. Si se exceden las 9 horas diarias o las 48 horas semanales el empleador deberá abonar esas horas como "extra"."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "¿CÓMO SE CALCULAN LAS "HORAS EXTRA"?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "Deberá agregarse a cada hora extra un recargo del 50% si la misma se cumplió de lunes a sábado hasta las 13 hs. Si la misma se cumplió el día sábado pasadas las 13hs, un domingo o un feriado, deberá abonarse un recargo del 100%. Existe un límite máximo de horas extra que puede realizar el trabajador el cual asciende a 3 horas diarias, 30 horas mensuales y 200 anuales."
+                }
+            }
+        ],
+        "image": "https://estudiolopezgiacomelli.com.ar/images/faq/faq-dismissals-2.jpeg",
+        "datePublished": "2024-11-05",
+        "dateModified": "2024-11-05",
+        "author": {
+            "@@type": "Organization",
+            "name": "Estudio Jurídico López Giacomelli",
+            "url": "https://estudiolopezgiacomelli.com.ar"
+        },
+        "publisher": {
+            "@@type": "Organization",
+            "name": "Estudio Jurídico López Giacomelli",
+            "logo": {
+                "@@type": "ImageObject",
+                "url": "https://estudiolopezgiacomelli.com.ar/images/logo.png"
+            }
+        }
+    }
+  </script>
 }

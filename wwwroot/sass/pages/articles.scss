@@ -1,0 +1,62 @@
+@import "../style";
+@import "@css/font-icons.css";
+@import "../common/layout";
+@import "../common/hero";
+@import "../common/services";
+@import "../common/calculatorLinks";
+
+/* articles */
+#articleSection {
+  margin: 0px 0 !important;
+  padding: 15px 0 !important;
+}
+
+.promo {
+  .bi-check-circle {
+    font-size: 34px;
+  }
+
+  .iconlist > li {
+    [class^="icon-"]:first-child,
+    [class*=" icon-"]:first-child {
+      width: 19px;
+      top: 5px;
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  .promoInmediata {
+    margin-left: 40px;
+  }
+}
+
+.destacado {
+  color: #fc5f07;
+  font-weight: 700;
+}
+
+.iconlist {
+  list-style-type: none;
+  --cnvs-iconlist-size: initial;
+  --cnvs-iconlist-color: initial;
+  --cnvs-iconlist-margin: 0;
+  --cnvs-iconlist-gutter: 0;
+  --cnvs-iconlist-offset: initial;
+  padding-left: inherit;
+  margin-left: inherit;
+
+  > li {
+    gap: 0.2em;
+
+    i:first-child {
+      width: 19px;
+      top: 5px;
+    }
+
+    > * {
+      flex: unset;
+    }
+  }
+}
+/* end articles */

@@ -1,6 +1,5 @@
-
-import '@css/calculatorTrafficAccident.css';
+import "@scss/pages/calculatorTrafficAccident.scss";
 
 // Scripts
-import '@js/googleReviewsPlugin';
-import './calculatorTrafficAccident.js';
+import "@js/common";
+import "./calculatorTrafficAccident.js";

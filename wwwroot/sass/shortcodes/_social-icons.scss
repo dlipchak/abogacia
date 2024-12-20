@@ -33,97 +33,100 @@
 $sicon-prefix: social-icon;
 
 .#{$sicon-prefix} {
-	margin: 0 $social-margins $social-margins 0;
-	width: $social-icon-size;
-	height: $social-icon-size;
-	font-size: $social-icon-font-size;
-	line-height: round($social-icon-size - round($social-icon-border * 2)) !important;
-	color: $social-icon-color;
+
+	--#{$cnvs-prefix}socialicon-size: #{$social-icon-size};
+	--#{$cnvs-prefix}socialicon-gap: #{$social-margins};
+	--#{$cnvs-prefix}socialicon-fontsize: calc( var(--#{$cnvs-prefix}socialicon-size) / 2.5);
+	--#{$cnvs-prefix}socialicon-border: #{$social-icon-border};
+	--#{$cnvs-prefix}socialicon-border-color: #{$social-icon-border-color};
+	--#{$cnvs-prefix}socialicon-lineheight: calc(var(--#{$cnvs-prefix}socialicon-size) - calc(var(--#{$cnvs-prefix}socialicon-border) * 2));
+	--#{$cnvs-prefix}socialicon-rounded: #{$social-icon-rounded};
+	--#{$cnvs-prefix}socialicon-color: #{$social-icon-color};
+
+	float: left;
+	display: block;
+	margin: 0 var(--#{$cnvs-prefix}socialicon-gap) var(--#{$cnvs-prefix}socialicon-gap) 0;
+	width: var(--#{$cnvs-prefix}socialicon-size);
+	height: var(--#{$cnvs-prefix}socialicon-size);
+	font-size: var(--#{$cnvs-prefix}socialicon-fontsize);
+	line-height: var(--#{$cnvs-prefix}socialicon-lineheight) !important;
+	color: var(--#{$cnvs-prefix}socialicon-color);
 	text-shadow: none;
-	border: $social-icon-border solid $social-icon-border-color;
-	border-radius: $social-icon-rounded;
+	border: var(--#{$cnvs-prefix}socialicon-border) solid var(--#{$cnvs-prefix}socialicon-border-color);
+	border-radius: var(--#{$cnvs-prefix}socialicon-rounded);
 	overflow: hidden;
-	.d-flex > &,
-	.d-sm-flex > &,
-	.d-md-flex > &,
-	.d-lg-flex > &,
-	.d-xl-flex > & { float: none; }
-	i {
-		display: block;
-		position: relative;
-		body:not(.device-touch) & {
-			-webkit-transition: all .3s ease;
-			-o-transition: all .3s ease;
-			transition: all .3s ease;
-		}
-		&:last-child { color: #FFF !important; }
+
+	[class*=-flex] > &,
+	[class*=row] > & {
+		float: none;
+		margin-right: var(--#{$cnvs-prefix}socialicon-gap-x);
+		margin-bottom: var(--#{$cnvs-prefix}socialicon-gap-y);
+		flex: 0 0 auto;
 	}
-	&:hover i:first-child { margin-top: - (round($social-icon-size - round($social-icon-border * 2))); }
+
 
 	/* Social Icons - Large
 	-----------------------------------------------------------------*/
+
 	&.si-large {
-		margin: 0 ($social-margins * 2) ($social-margins * 2) 0;
-		width: $social-icon-lg-size;
-		height: $social-icon-lg-size;
-		font-size: $social-icon-lg-font-size;
-		line-height: round($social-icon-lg-size - round($social-icon-border * 2)) !important;
-		&:hover i:first-child { margin-top: - (round($social-icon-lg-size - round($social-icon-border * 2))); }
+		--#{$cnvs-prefix}socialicon-size: 3.5rem;
 	}
 
 	/* Social Icons - Small
 	-----------------------------------------------------------------*/
+
 	&.si-small {
-		width: $social-icon-sm-size;
-		height: $social-icon-sm-size;
-		font-size: $social-icon-sm-font-size;
-		line-height: round($social-icon-sm-size - round($social-icon-border * 2)) !important;
-		&:hover i:first-child { margin-top: - (round($social-icon-sm-size - round($social-icon-border * 2))); }
+		--#{$cnvs-prefix}socialicon-size: 2rem;
+		--#{$cnvs-prefix}socialicon-fontsize: 0.875rem;
 	}
 
-	/* Social Icons - Hover
-		-----------------------------------------------------------------*/
+	i {
+		display: block;
+		position: relative;
+		line-height: inherit;
+		@include transition(all .3s ease);
+		&:last-child {
+			color: #FFF;
+		}
+	}
+
+	&:hover i:first-child {
+		margin-top: calc(var(--#{$cnvs-prefix}socialicon-lineheight) * -1);
+	}
+
 	&:hover {
-		color: $social-icon-color;
+		color: var(--#{$cnvs-prefix}socialicon-color);
 		border-color: transparent;
 	}
-	&.si-colored { border-color: transparent; }
+
+	&.bg-dark,
+	&.bg-dark:hover {
+		color: var(--#{$prefix}gray-200);
+	}
+
+	&.bg-light {
+		--#{$cnvs-prefix}socialicon-color: var(--#{$prefix}gray-900);
+		background-color: var(--#{$prefix}gray-200) !important;
+	}
+
+	&[class*=" bg-"] {
+		border-color: transparent;
+	}
+
+	&.no-transition:hover i:first-child {
+		display: none;
+		margin-top: 0;
+	}
 }
 
-
-/* Social Icons - Rounded
+/* Social Icons - Group
 -----------------------------------------------------------------*/
 
-.si-rounded { border-radius: 50%; }
-
-/* Social Icons - Borderless
------------------------------------------------------------------*/
-
-.si-borderless { border-color: transparent !important; }
-
-/* Social Icons - Dark
------------------------------------------------------------------*/
-
-.si-dark {
-	@include gradient-bg($social-icon-dark-color);
-	color: color-yiq($social-icon-dark-color) !important;
-	border-color: transparent;
-}
-
-/* Social Icons - Light
------------------------------------------------------------------*/
-
-.si-light {
-	@include gradient-bg($social-icon-light-color);
-	color: $social-icon-color !important;
-	border-color: transparent;
-}
-
-/* Social Icons - Colored
------------------------------------------------------------------*/
-
-.si-colored { border-color: transparent !important;
-	i { color: #FFF; }
+[class*=-flex],
+[class*=row]{
+	--#{$cnvs-prefix}socialicon-gap: 5px;
+	--#{$cnvs-prefix}socialicon-gap-x: var(--#{$cnvs-prefix}socialicon-gap);
+	--#{$cnvs-prefix}socialicon-gap-y: 0px;
 }
 
 /* Social Icons - Sticky
@@ -136,58 +139,45 @@ $sicon-prefix: social-icon;
 	width: 36px;
 	z-index: 499;
 	transform: translateY(-50%);
+
 	/* Social Icons - Sticky Right
 	-----------------------------------------------------------------*/
+
 	&.si-sticky-right {
 		left: auto;
 		right: 8px;
 	}
 }
 
-/* Social Icons - Share
------------------------------------------------------------------*/
-
-.si-share {
-	position: relative;
-	padding-left: 5px;
-	border-top: 1px solid darken($body-bg, 6.67);;
-	border-bottom: 1px solid darken($body-bg, 6.67);;
-	span {
-		line-height: 36px;
-		font-weight: bold;
-		font-size: 13px;
-	}
-	.social-icon {
-		margin: -1px 0;
-		border-radius: 0;
-		font-size: 15px;
-	}
-}
 // Social Icons With Classes - Mixin
-@mixin si-color($bg-active:false, $color-active:false) {
+@mixin si-color($bg-active:false, $color-active:false, $border-active:false) {
   @each $name, $hex in $si-colors {
-	@if $bg-active == true {
-		.si-#{$name}:hover,
-		.si-colored.si-#{$name} {
-			@include gradient-bg($hex,1);
+		@if $bg-active == true {
+			.bg-#{$name},
+			.h-bg-#{$name}:hover {
+				background-color: rgba(var(--#{$cnvs-prefix}color-#{$name}-rgb),1) !important;
+			}
 		}
-	}
-	@if $color-active == true {
-		&.si-#{$name} i {
-			color: $hex;
+		@if $color-active == true {
+			.color-#{$name},
+			.h-color-#{$name}:hover {
+				color: rgba(var(--#{$cnvs-prefix}color-#{$name}-rgb),1) !important;
+			}
 		}
-	}
+		@if $border-active == true {
+			.border-#{$name},
+			.h-border-#{$name}:hover {
+				border-color: rgba(var(--#{$cnvs-prefix}color-#{$name}-rgb),1) !important;
+			}
+		}
   }
 }
 
-/* Social Icons - bg-colors
+/* Social Icons - colors
 -----------------------------------------------------------------*/
 @include si-color($bg-active:$social-icon-enable-bg-classes);
 
-/* Social Icons - colors
------------------------------------------------------------------*/
-.si-text-color {
-	@include si-color($color-active: $social-icon-enable-tcolor-classes);
-	&:hover { color: $white; }
-}
+@include si-color($border-active:$social-icon-enable-border-classes);
+
+@include si-color($color-active: $social-icon-enable-color-classes);
 

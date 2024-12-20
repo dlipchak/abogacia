@@ -1,14 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Hosting
 @using Microsoft.Extensions.Hosting
 
-@section Styles {
-  <link rel="preload" href="@VersionedFileHelper.GetVersionedFile("calculatorWorkDismissal.css")" as="style" 
-        onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile("calculatorWorkDismissal.css")">
-  </noscript>
-}
-
 <title class="logo">Calculadora de indemnización por despido</title>
 
 @await Html.PartialAsync("_HeroSection", (
@@ -273,5 +265,4 @@
       }
     }
     </script>
-  <script src="@VersionedFileHelper.GetVersionedFile("calculatorWorkDismissal.js")"></script>
 }

@@ -3,13 +3,6 @@
 
 @inject IWebHostEnvironment Environment
 
-@section Styles {
-  <link rel="preload" href="@VersionedFileHelper.GetVersionedFile("calculatorWorkAccident.css")" as="style" 
-        onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile("calculatorWorkAccident.css")">
-  </noscript>
-}
 
 
 <title class="logo">
@@ -179,6 +172,10 @@
   </div>
 </section>
 
+
+
+@section Scripts {
+  
 <script type="application/ld+json">
   {
     "@@context": "https://schema.org",
@@ -195,8 +192,4 @@
     }
   }
   </script>
-
-
-@section Scripts {
-  <script src="@VersionedFileHelper.GetVersionedFile("calculatorWorkAccident.js")"></script>
 }

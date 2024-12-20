@@ -1,6 +1,5 @@
-
-import '@css/calculatorWorkDismissal.css';
+import "@scss/pages/calculatorWorkDismissal.scss";
 
 // Scripts
-import '@js/googleReviewsPlugin';
-import './calculatorWorkDismissal.js';
+import "@js/common";
+import "./calculatorWorkDismissal.js";

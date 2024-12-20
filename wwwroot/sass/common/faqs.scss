@@ -1,0 +1,28 @@
+/* faqs */
+.toggle {
+  &-title {
+    color: #222;
+    cursor: pointer;
+    padding: 25px 0;
+
+    &:hover {
+      color: var(--themecolor);
+    }
+  }
+
+  &-content {
+    // Commented styles preserved as comments
+    // border-bottom: 1px solid #eee;
+    // padding-top: 20px;
+  }
+}
+
+.faqs {
+  .toggle {
+    border-bottom: 1px solid #eee;
+    // border-bottom: 1px solid var(--cnvs-toggle-bg-color);
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+  }
+}
+/* end faqs */

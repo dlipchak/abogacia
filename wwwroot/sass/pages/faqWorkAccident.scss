@@ -1,0 +1,24 @@
+@import "../style";
+@import "../common/layout";
+@import "../common/hero";
+@import "../common/calculatorLinks";
+@import "../common/faqs";
+
+@import "@css/font-icons.css";
+
+/* workAccidentFaq */
+.workAccidentFaqHeader {
+  padding: 250px !important;
+  background: url("/images/faq/faq-work-accident.jpeg") center center / cover
+    no-repeat;
+
+  @supports (background-image: url("/images/faq/faq-work-accident.avif")) {
+    background: url("/images/faq/faq-work-accident.avif") center center / cover
+      no-repeat;
+  }
+
+  @media (max-width: 991.98px) {
+    padding: 0px !important;
+  }
+}
+/* end workAccidentFaq*/

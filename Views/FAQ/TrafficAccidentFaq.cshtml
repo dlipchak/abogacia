@@ -3,14 +3,6 @@
 
 @inject IWebHostEnvironment Environment
 
-@section Styles {
-  <link rel="preload" href="@VersionedFileHelper.GetVersionedFile("faqTrafficAccident.css")" as="style" 
-        onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile("faqTrafficAccident.css")">
-  </noscript>
-}
-
 <title class="logo">
   Accidentes de tránsito.
   Preguntas frecuentes.
@@ -519,112 +511,110 @@ Subtitle: "Preguntas Frecuentes", ClassName: "trafficAccidentFaqHeader" ))
   <div class="container clearfix">@Html.Partial("CalculatorsLinks")</div>
 </div>
 
-<script type="application/ld+json">
-  {
-    "@@context": "https://schema.org",
-    "@@type": "FAQPage",
-    "url": "https://estudiolopezgiacomelli.com.ar/preguntas-frecuentes/accidentes-de-transito",
-    "mainEntity": [
-      {
-        "@@type": "Question",
-        "name": "¿Cómo actuar ante un accidente de Tránsito?",
-        "acceptedAnswer": {
-          "@@type": "Answer",
-          "text": "Si Ud. es víctima de un accidente de tránsito, sea como peatón, conductor o persona transportada (colectivo, tren, subte, taxi, etc.), lo primero que debe hacer es tomar todos los datos del vehículo que causó el accidente (principalmente patente y seguro). Destacamos que siempre es muy útil tomar los datos de algún testigo que respalde su versión de los hechos. El segundo paso es solicitar asistencia médica inmediata comunicándose al SAME (107) y/o llamar a la Policía (911). En la guardia del Centro Médico donde sea asistido, debe solicitar las constancias de su asistencia y tratamientos recibidos. Recuerde que las constancias médicas son fundamentales para maximizar su indemnización."
-        }
-      },
-      {
-        "@@type": "Question",
-        "name": "¿Quiénes tienen derecho a reclamar por un accidente?",
-        "acceptedAnswer": {
-          "@@type": "Answer",
-          "text": "Tendrá derecho a reclamar el accidentado por lesiones físicas producidas por el accidente. También tendrá derecho a reclamar quien hubiera incurrido en gastos médicos en nombre del asegurado (Ej. Medicamentos, honorarios médicos, prótesis, tratamientos, etc.). En caso de fallecimiento del accidentado directo tendrán derecho a reclamar sus herederos legales (Hijos, esposos, padres, nietos, abuelos). Con ciertas limitaciones en el reclamo ante fallecimiento también tendrán derecho a reclamar los concubinos."
-        }
-      },
-      {
-        "@@type": "Question",
-        "name": "¿Que se puede reclamar por un accidente?",
-        "acceptedAnswer": {
-          "@@type": "Answer",
-          "text": "La persona que haya sufrido lesiones como consecuencia de un accidente de tránsito tiene derecho a reclamar: El daño físico, el daño psicológico, el daño moral, el daño estético, el tratamiento psicológico, el tratamiento kinesiológico, el reintegro de los gastos por honorarios médicos, el reintegro de los gastos por internación, el reintegro de los gastos en medicamentos, el reintegro de los gastos por los traslados, el lucro cesante, la pérdida de chance."
-        }
-      },
-      {
-        "@@type": "Question",
-        "name": "¿Cuánto se cobra de indemnización por un accidente de tránsito?",
-        "acceptedAnswer": {
-          "@@type": "Answer",
-          "text": "En general el monto de la indemnización que pagan las compañías de seguro por el reclamo de un siniestro hecho a través de un abogado es mayor que si se hace de manera particular, esto se debe entre otros factores, a la forma en que la ley obliga a operar a las compañías: cuando se inicia un reclamo mediante representación legal, las aseguradoras deben 'congelar' contablemente el monto máximo estipulado para el tipo de reclamo presentado."
-        }
-      },
-      {
-        "@@type": "Question",
-        "name": "¿Cuánto puede tardar el reclamo?",
-        "acceptedAnswer": {
-          "@@type": "Answer",
-          "text": "Los reclamos extrajudiciales con abogado y los reclamos administrativos (directamente por el accidentado en la compañía) son similares en duración, por lo general van desde los 90 a los 180 días. La vía judicial es más prolongada, pudiendo extenderse entre 3 a 8 años."
-        }
-      },
-      {
-        "@@type": "Question",
-        "name": "¿Cuándo conviene contratar a un abogado para reclamar por el accidente y cuando conviene hacer el reclamo administrativo?",
-        "acceptedAnswer": {
-          "@@type": "Answer",
-          "text": "En general la suma a pagar será mayor iniciando acciones legales pero existen casos particulares en donde es conveniente efectuar el reclamo administrativo simple y no se justifica realizar un reclamo por vías legales."
-        }
-      },
-      {
-        "@@type": "Question",
-        "name": "¿Puedo mandar a arreglar el auto antes de hablar con la compañía de seguros?",
-        "acceptedAnswer": {
-          "@@type": "Answer",
-          "text": "Es conveniente no reparar el vehículo hasta que lo inspeccione la compañía de seguros que deberá cubrir el siniestro. Si necesita repararlo en forma urgente, deberá previamente sacarle fotos color (en al menos una de las fotos debe verse la patente de su vehículo)."
-        }
-      },
-      {
-        "@@type": "Question",
-        "name": "¿Debo mantener el seguro vigente para iniciar la demanda por un accidente?",
-        "acceptedAnswer": {
-          "@@type": "Answer",
-          "text": "No es necesario."
-        }
-      },
-      {
-        "@@type": "Question",
-        "name": "¿Si me lesioné en el accidente, qué necesito para poder reclamar la indemnización por los daños?",
-        "acceptedAnswer": {
-          "@@type": "Answer",
-          "text": "En los juicios por daños es fundamental poder probar lo que se reclama. Es muy importante que guarde todo tipo de documentación, como ser órdenes médicas, recetas, comprobantes de turnos médicos, recibos o facturas por gastos hechos en atención médica o remedios, etc."
-        }
-      },
-      {
-        "@@type": "Question",
-        "name": "¿A qué llamamos Indemnización por esguince cervical?",
-        "acceptedAnswer": {
-          "@@type": "Answer",
-          "text": "El latigazo o esguince cervical es una de las lesiones más comunes ocurridas como resultado de un accidente de tránsito. Las compañías de seguro siempre intentan minimizar estos reclamos cuando son presentados sin representación legal, por lo cual es necesario que un abogado lo asesore en el caso de presentarse este tipo de lesiones."
-        }
-      }
-    ],
-    "image": "https://estudiolopezgiacomelli.com.ar/images/faq/faq-traffic-accident.jpeg",
-    "datePublished": "2024-11-05",
-    "dateModified": "2024-11-05",
-    "author": {
-      "@@type": "Organization",
-      "name": "Estudio Jurídico López Giacomelli",
-      "url": "https://estudiolopezgiacomelli.com.ar"
-    },
-    "publisher": {
-      "@@type": "Organization",
-      "name": "Estudio Jurídico López Giacomelli",
-      "logo": {
-        "@@type": "ImageObject",
-        "url": "https://estudiolopezgiacomelli.com.ar/images/logo.png"
-      }
-    }
-  }
-  </script>
-
   @section Scripts {
-    <script src="@VersionedFileHelper.GetVersionedFile("faqTrafficAccident.js")"></script>
+    <script type="application/ld+json">
+      {
+        "@@context": "https://schema.org",
+        "@@type": "FAQPage",
+        "url": "https://estudiolopezgiacomelli.com.ar/preguntas-frecuentes/accidentes-de-transito",
+        "mainEntity": [
+          {
+            "@@type": "Question",
+            "name": "¿Cómo actuar ante un accidente de Tránsito?",
+            "acceptedAnswer": {
+              "@@type": "Answer",
+              "text": "Si Ud. es víctima de un accidente de tránsito, sea como peatón, conductor o persona transportada (colectivo, tren, subte, taxi, etc.), lo primero que debe hacer es tomar todos los datos del vehículo que causó el accidente (principalmente patente y seguro). Destacamos que siempre es muy útil tomar los datos de algún testigo que respalde su versión de los hechos. El segundo paso es solicitar asistencia médica inmediata comunicándose al SAME (107) y/o llamar a la Policía (911). En la guardia del Centro Médico donde sea asistido, debe solicitar las constancias de su asistencia y tratamientos recibidos. Recuerde que las constancias médicas son fundamentales para maximizar su indemnización."
+            }
+          },
+          {
+            "@@type": "Question",
+            "name": "¿Quiénes tienen derecho a reclamar por un accidente?",
+            "acceptedAnswer": {
+              "@@type": "Answer",
+              "text": "Tendrá derecho a reclamar el accidentado por lesiones físicas producidas por el accidente. También tendrá derecho a reclamar quien hubiera incurrido en gastos médicos en nombre del asegurado (Ej. Medicamentos, honorarios médicos, prótesis, tratamientos, etc.). En caso de fallecimiento del accidentado directo tendrán derecho a reclamar sus herederos legales (Hijos, esposos, padres, nietos, abuelos). Con ciertas limitaciones en el reclamo ante fallecimiento también tendrán derecho a reclamar los concubinos."
+            }
+          },
+          {
+            "@@type": "Question",
+            "name": "¿Que se puede reclamar por un accidente?",
+            "acceptedAnswer": {
+              "@@type": "Answer",
+              "text": "La persona que haya sufrido lesiones como consecuencia de un accidente de tránsito tiene derecho a reclamar: El daño físico, el daño psicológico, el daño moral, el daño estético, el tratamiento psicológico, el tratamiento kinesiológico, el reintegro de los gastos por honorarios médicos, el reintegro de los gastos por internación, el reintegro de los gastos en medicamentos, el reintegro de los gastos por los traslados, el lucro cesante, la pérdida de chance."
+            }
+          },
+          {
+            "@@type": "Question",
+            "name": "¿Cuánto se cobra de indemnización por un accidente de tránsito?",
+            "acceptedAnswer": {
+              "@@type": "Answer",
+              "text": "En general el monto de la indemnización que pagan las compañías de seguro por el reclamo de un siniestro hecho a través de un abogado es mayor que si se hace de manera particular, esto se debe entre otros factores, a la forma en que la ley obliga a operar a las compañías: cuando se inicia un reclamo mediante representación legal, las aseguradoras deben 'congelar' contablemente el monto máximo estipulado para el tipo de reclamo presentado."
+            }
+          },
+          {
+            "@@type": "Question",
+            "name": "¿Cuánto puede tardar el reclamo?",
+            "acceptedAnswer": {
+              "@@type": "Answer",
+              "text": "Los reclamos extrajudiciales con abogado y los reclamos administrativos (directamente por el accidentado en la compañía) son similares en duración, por lo general van desde los 90 a los 180 días. La vía judicial es más prolongada, pudiendo extenderse entre 3 a 8 años."
+            }
+          },
+          {
+            "@@type": "Question",
+            "name": "¿Cuándo conviene contratar a un abogado para reclamar por el accidente y cuando conviene hacer el reclamo administrativo?",
+            "acceptedAnswer": {
+              "@@type": "Answer",
+              "text": "En general la suma a pagar será mayor iniciando acciones legales pero existen casos particulares en donde es conveniente efectuar el reclamo administrativo simple y no se justifica realizar un reclamo por vías legales."
+            }
+          },
+          {
+            "@@type": "Question",
+            "name": "¿Puedo mandar a arreglar el auto antes de hablar con la compañía de seguros?",
+            "acceptedAnswer": {
+              "@@type": "Answer",
+              "text": "Es conveniente no reparar el vehículo hasta que lo inspeccione la compañía de seguros que deberá cubrir el siniestro. Si necesita repararlo en forma urgente, deberá previamente sacarle fotos color (en al menos una de las fotos debe verse la patente de su vehículo)."
+            }
+          },
+          {
+            "@@type": "Question",
+            "name": "¿Debo mantener el seguro vigente para iniciar la demanda por un accidente?",
+            "acceptedAnswer": {
+              "@@type": "Answer",
+              "text": "No es necesario."
+            }
+          },
+          {
+            "@@type": "Question",
+            "name": "¿Si me lesioné en el accidente, qué necesito para poder reclamar la indemnización por los daños?",
+            "acceptedAnswer": {
+              "@@type": "Answer",
+              "text": "En los juicios por daños es fundamental poder probar lo que se reclama. Es muy importante que guarde todo tipo de documentación, como ser órdenes médicas, recetas, comprobantes de turnos médicos, recibos o facturas por gastos hechos en atención médica o remedios, etc."
+            }
+          },
+          {
+            "@@type": "Question",
+            "name": "¿A qué llamamos Indemnización por esguince cervical?",
+            "acceptedAnswer": {
+              "@@type": "Answer",
+              "text": "El latigazo o esguince cervical es una de las lesiones más comunes ocurridas como resultado de un accidente de tránsito. Las compañías de seguro siempre intentan minimizar estos reclamos cuando son presentados sin representación legal, por lo cual es necesario que un abogado lo asesore en el caso de presentarse este tipo de lesiones."
+            }
+          }
+        ],
+        "image": "https://estudiolopezgiacomelli.com.ar/images/faq/faq-traffic-accident.jpeg",
+        "datePublished": "2024-11-05",
+        "dateModified": "2024-11-05",
+        "author": {
+          "@@type": "Organization",
+          "name": "Estudio Jurídico López Giacomelli",
+          "url": "https://estudiolopezgiacomelli.com.ar"
+        },
+        "publisher": {
+          "@@type": "Organization",
+          "name": "Estudio Jurídico López Giacomelli",
+          "logo": {
+            "@@type": "ImageObject",
+            "url": "https://estudiolopezgiacomelli.com.ar/images/logo.png"
+          }
+        }
+      }
+      </script>
   }

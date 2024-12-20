@@ -1,0 +1,47 @@
+/* gallery */
+.galleryTitle {
+  font-size: 40px;
+
+  @media (max-width: 991.98px) {
+    font-size: 30px;
+  }
+}
+
+// Gallery Images
+.galleryImg1 {
+  background-size: cover;
+  background-position: center;
+  background-image: url("/images/home/gallery/1.webp");
+
+  @media (max-width: 991.98px) {
+    background-position: 40% 72%;
+  }
+}
+
+.galleryImg2 {
+  background-size: cover;
+  background-position: center;
+  background-image: url("/images/home/gallery/2.webp");
+}
+
+.galleryImg3 {
+  background-size: cover;
+  background-position: center top;
+  background-image: url("/images/home/gallery/3.webp");
+}
+
+.slider-caption {
+  @media (min-width: 767.98px) {
+    max-width: 70%;
+
+    h2 {
+      font-size: 4rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0;
+    }
+  }
+}
+/* end gallery */

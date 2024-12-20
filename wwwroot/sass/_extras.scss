@@ -1,8 +1,6 @@
 
 /* ----------------------------------------------------------------
-
 	extras.scss
-
 -----------------------------------------------------------------*/
 
 
@@ -11,64 +9,64 @@
 -----------------------------------------------------------------*/
 
 .table {
-	.success { color: #3c763d; }
-	.info { color: #31708f; }
-	.warning { color: #8a6d3b; }
-	.danger { color: #a94442; }
+	.success { color: var(--#{$prefix}success); }
+	.info { color: var(--#{$prefix}info); }
+	.warning { color: var(--#{$prefix}warning); }
+	.danger { color: var(--#{$prefix}danger); }
 }
 
-.btn-link,
-.page-link,
-.page-link:hover,
-.page-link:focus { color: $theme-color; }
-
-.btn-link {
-	&:hover,
-	&:focus { color: #222; }
+ul:not(.pagination) .page {
+	&-link {
+		&,
+		&:hover,
+		&:focus {
+			color: var(--#{$cnvs-prefix}themecolor);
+		}
+	}
 }
 
 .boot-tabs { margin-bottom: 20px !important; }
 
 .carousel-control {
-	.icon-chevron-left,
-	.icon-chevron-right {
+	.fa-chevron-left,
+	.fa-chevron-right {
 		position: absolute;
 		top: 47.5%;
 		z-index: 5;
 		display: inline-block;
 	}
-	.icon-chevron-left { left: 50%; }
-	.icon-chevron-right { right: 50%; }
+	.fa-chevron-left { left: 50%; }
+	.fa-chevron-right { right: 50%; }
 }
 
 .responsive-utilities th small {
 	display: block;
 	font-weight: 400;
-	color: #999;
+	color: var(--#{$cnvs-prefix}contrast-500);
 }
 
 .show-grid [class^=col-] {
 	padding-top: 10px;
 	padding-bottom: 10px;
-	background-color: #EEE;
-	border: 1px solid #DDD;
+	border: 1px solid rgba(var(--#{$cnvs-prefix}contrast-rgb), .15);
+	background-color: rgba(var(--#{$cnvs-prefix}contrast-rgb), .1);
 }
 
 .img-circle { border-radius: 50% !important; }
 
-.page-item.active .page-link,
-.page-link:hover,
-.page-link:focus {
-	color: #FFF !important;
-	background-color: $theme-color !important;
-	border-color: $theme-color !important;
+ul:not(.pagination) .page-item.active .page-link,
+ul:not(.pagination) .page-link:hover,
+ul:not(.pagination) .page-link:focus {
+	color: var(--#{$cnvs-prefix}contrast-0) !important;
+	background-color: var(--#{$cnvs-prefix}themecolor) !important;
+	border-color: var(--#{$cnvs-prefix}themecolor) !important;
 }
 
 .nav-pills {
 	> li.active > {
 		a,
 		a:hover,
-		a:focus { background-color: $theme-color; }
+		a:focus { background-color: var(--#{$cnvs-prefix}themecolor); }
 	}
 }
 
@@ -125,7 +123,7 @@ label{
 	}
 
 	&-fill {
-		fill: $body-bg;
+		fill: var(--#{$cnvs-prefix}body-bg);
 		transform-origin: center;
 		transform: rotateY(0deg);
 	}
@@ -167,8 +165,6 @@ label{
 	left:0;
 	overflow: hidden;
 	border-radius: 4px;
-	-moz-box-shadow: 0 0 5px rgba(0,0,0,.7);
-	-webkit-box-shadow: 0 0 5px rgba(0,0,0,.7);
 	box-shadow: 0 0 5px rgba(0,0,0,.7);
 	background: rgba(0,0,0,.5);
 	img {

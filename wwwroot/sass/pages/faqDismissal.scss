@@ -1,0 +1,24 @@
+@import "../style";
+@import "@css/font-icons.css";
+@import "../common/layout";
+@import "../common/hero";
+@import "../common/calculatorLinks";
+@import "../common/faqs";
+
+/* dismissalsFaq */
+.dismissalsFaqHeader {
+  padding: 250px !important;
+  background: url("/images/faq/faq-dismissals-2.jpeg") right center / cover
+    no-repeat;
+
+  @supports (background-image: url("/images/faq/faq-dismissals-2.avif")) {
+    background: url("/images/faq/faq-dismissals-2.avif") right center / cover
+      no-repeat;
+  }
+
+  @media (max-width: 991.98px) {
+    padding: 0px !important;
+    background-position: 0px 0px !important;
+  }
+}
+/* end dismissalsFaq */

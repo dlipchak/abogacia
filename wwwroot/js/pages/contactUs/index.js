@@ -1,6 +1,5 @@
-
-import '@css/contactUs.css';
+import "@scss/pages/contactUs.scss";
 
 // Scripts
-import '@js/googleReviewsPlugin';
-import './contactUs.js';
+import "@js/common";
+import "./contactUs.js";

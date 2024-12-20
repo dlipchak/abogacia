@@ -1,4 +1,4 @@
-import "@css/workerRights.css";
+import "@scss/pages/workerRights.scss";
 
 // Scripts
-import "@js/googleReviewsPlugin";
+import "@js/common";

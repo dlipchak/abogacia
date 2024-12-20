@@ -1,12 +1,4 @@
 ﻿
-@section Styles {
-    <link rel="preload" href="@VersionedFileHelper.GetVersionedFile("workerRights.css")" as="style" 
-          onload="this.onload=null;this.rel='stylesheet'">    
-    <noscript>
-      <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile("workerRights.css")">   
-    </noscript>
-  }
-  
 <title class="logo">Derechos del trabajador</title>
 
 @await Html.PartialAsync("_HeroSection", (
@@ -227,6 +219,5 @@ Como profesionales somos conscientes de la <span class="green">importancia que t
     }
     
     @Html.Partial("_ArticleJsonLdSchema", jsonLdModel)
-    
-    <script src="@VersionedFileHelper.GetVersionedFile("workerRights.js")"></script>
+
   }

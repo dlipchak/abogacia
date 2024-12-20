@@ -2,14 +2,6 @@
 @using Microsoft.Extensions.Hosting
  @inject IWebHostEnvironment Environment
  
- @section Styles {
-  <link rel="preload" href="@VersionedFileHelper.GetVersionedFile("faqWorkAccident.css")" as="style" 
-        onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile("faqWorkAccident.css")">
-  </noscript>
-}
-
 <title class="logo">Accidentes laborales. Preguntas frecuentes.</title>
 
 @await Html.PartialAsync("_HeroSection", ( Title: "Accidentes laborales",
@@ -781,144 +773,142 @@ Subtitle: "Preguntas Frecuentes", ClassName: "workAccidentFaqHeader" ))
   <div class="container clearfix">@Html.Partial("CalculatorsLinks")</div>
 </div>
 
-<script type="application/ld+json">
-  {
-    "@@context": "https://schema.org",
-    "@@type": "FAQPage",
-    "url": "https://estudiolopezgiacomelli.com.ar/preguntas-frecuentes/acidentes-laborales",
-    "mainEntity": [
-      {
-        "@@type": "Question",
-        "name": "¿Cómo actuar ante un accidente laboral?",
-        "acceptedAnswer": {
-          "@@type": "Answer",
-          "text": "Si Ud. es víctima de un accidente en su trabajo, de un accidente in itinere (camino al trabajo o de regreso a su casa desde el trabajo) o de una enfermedad profesional, lo primero que debe hacer es informar a su empleador. Será su empleador quien informe a la ART lo sucedido. El paso siguiente es pedirle una copia de la denuncia a su empleador. Una vez iniciado el tratamiento médico en su ART, usted debe conservar todas las constancias médicas por mínimas que sean, para poder acreditar en el futuro la atención recibida."
+@section Scripts {
+  <script type="application/ld+json">
+    {
+      "@@context": "https://schema.org",
+      "@@type": "FAQPage",
+      "url": "https://estudiolopezgiacomelli.com.ar/preguntas-frecuentes/acidentes-laborales",
+      "mainEntity": [
+        {
+          "@@type": "Question",
+          "name": "¿Cómo actuar ante un accidente laboral?",
+          "acceptedAnswer": {
+            "@@type": "Answer",
+            "text": "Si Ud. es víctima de un accidente en su trabajo, de un accidente in itinere (camino al trabajo o de regreso a su casa desde el trabajo) o de una enfermedad profesional, lo primero que debe hacer es informar a su empleador. Será su empleador quien informe a la ART lo sucedido. El paso siguiente es pedirle una copia de la denuncia a su empleador. Una vez iniciado el tratamiento médico en su ART, usted debe conservar todas las constancias médicas por mínimas que sean, para poder acreditar en el futuro la atención recibida."
+          }
+        },
+        {
+          "@@type": "Question",
+          "name": "¿Qué son los accidentes in itinere?",
+          "acceptedAnswer": {
+            "@@type": "Answer",
+            "text": "Los accidentes in itinere se encuentran definidos en la Ley de Riesgos del Trabajo como: 'todo acontecimiento súbito y violento ocurrido por el hecho o en ocasión del trabajo, o en el trayecto entre el domicilio del trabajador y el lugar de trabajo, siempre y cuando el damnificado no hubiere interrumpido o alterado dicho trayecto por causas ajenas al trabajo'."
+          }
+        },
+        {
+          "@@type": "Question",
+          "name": "¿Qué son las enfermedades profesionales?",
+          "acceptedAnswer": {
+            "@@type": "Answer",
+            "text": "Las enfermedades profesionales son aquellas producidas por causa del trabajo a aquellos trabajadores que prestan tareas expuestos a factores de riesgo, como ser: movimientos forzosos y repetitivos, ruidos en el ambiente de trabajo, manipulación de sustancias químicas e inhalación de gases."
+          }
+        },
+        {
+          "@@type": "Question",
+          "name": "¿Qué diferencia hay entre un accidente de trabajo y una enfermedad profesional?",
+          "acceptedAnswer": {
+            "@@type": "Answer",
+            "text": "Los accidentes de trabajo pueden deberse a un evento súbito específico, mientras que las enfermedades profesionales son patologías que pueden generarse a través del tiempo debido a labores repetitivas, como el síndrome de túnel carpiano o las hernias de disco."
+          }
+        },
+        {
+          "@@type": "Question",
+          "name": "¿Es necesario un abogado en todos los casos de lesiones o enfermedades relacionadas con el trabajo?",
+          "acceptedAnswer": {
+            "@@type": "Answer",
+            "text": "Siempre es necesario contar con un abogado que defienda sus derechos. Es habitual que las Aseguradoras de Riesgos de Trabajo tiendan a rechazar los siniestros fundándose en que, según su criterio, existen determinadas lesiones o enfermedades por las que ellas no deben responder."
+          }
+        },
+        {
+          "@@type": "Question",
+          "name": "Si contrato a un abogado, ¿significa que estoy demandando a mi empleador?",
+          "acceptedAnswer": {
+            "@@type": "Answer",
+            "text": "Nunca demandamos a tu empleador y siempre intentamos llegar a un acuerdo con las ART sin llegar a demandarlas. Solo las demandamos si contamos con instrucciones de nuestros clientes."
+          }
+        },
+        {
+          "@@type": "Question",
+          "name": "¿Los resultados realmente van a ser diferentes con un abogado?",
+          "acceptedAnswer": {
+            "@@type": "Answer",
+            "text": "Claro! El empleado que se presenta solo ante su Aseguradora es un blanco fácil frente a estructuras corporativas organizadas para la obtención de lucro a costa del trabajador. Contar con un abogado que defienda tus derechos es fundamental."
+          }
+        },
+        {
+          "@@type": "Question",
+          "name": "¿Cómo puedo contratar un abogado si no tengo dinero?",
+          "acceptedAnswer": {
+            "@@type": "Answer",
+            "text": "Al tomar un caso, nuestro estudio afronta todos los costos para llevar adelante el reclamo. Nuestros honorarios consisten en un porcentaje de lo que cobre nuestro cliente. Es decir, si no ganamos el caso, no cobramos."
+          }
+        },
+        {
+          "@@type": "Question",
+          "name": "¿Debo someterme a los dictámenes de las Comisiones Médicas de la Superintendencia de Riesgos del Trabajo?",
+          "acceptedAnswer": {
+            "@@type": "Answer",
+            "text": "Nuestra sugerencia es NUNCA acudir a las Comisiones Médicas, ya que una vez que allí se ha dictaminado una incapacidad es algo difícil elevarla. No obstante ello, si usted ha concurrido a estas Comisiones, debe saber que lo que ellas dictaminan no tiene ningún valor frente a un Juez."
+          }
+        },
+        {
+          "@@type": "Question",
+          "name": "¿Las Comisiones Médicas de la SRT tienen competencia, idoneidad y son aptas para cumplir con su función?",
+          "acceptedAnswer": {
+            "@@type": "Answer",
+            "text": "No, y por eso no hay que acudir a ellas. Solo la Justicia ofrece garantías de objetividad que no brinda la Superintendencia y sus Comisiones Médicas. La Corte Suprema de la Nación ha determinado que las víctimas de accidentes laborales pueden recurrir al Juez Laboral."
+          }
+        },
+        {
+          "@@type": "Question",
+          "name": "¿Qué ocurre si lo despiden durante su recuperación a causa de un accidente o enfermedad?",
+          "acceptedAnswer": {
+            "@@type": "Answer",
+            "text": "En estos casos, como mínimo el empleador está obligado a abonar, además de la indemnización por despido injustificado, todos los salarios correspondientes al tiempo que aún faltase para llegar a la fecha del alta médica."
+          }
+        },
+        {
+          "@@type": "Question",
+          "name": "Si usted recibió dinero de su A.R.T por el accidente o enfermedad profesional, y le parece poco ¿Puede reclamar una suma mayor?",
+          "acceptedAnswer": {
+            "@@type": "Answer",
+            "text": "Recuerde que el negocio de la ART es pagar lo menos posible. Si la indemnización que cobró le parece injusta, está a tiempo de contactarnos y reclamar un monto mayor, acorde a su incapacidad."
+          }
+        },
+        {
+          "@@type": "Question",
+          "name": "¿Por qué la ART rechaza mi HERNIA DE DISCO/CERVICAL?",
+          "acceptedAnswer": {
+            "@@type": "Answer",
+            "text": "Las ART nunca van a aceptar la enfermedad aduciendo que es preexistente o inculpable. Se denomina Enfermedad inculpable a toda aquella que padezca el trabajador y que no sea profesional u originada por el trabajo."
+          }
+        },
+        {
+          "@@type": "Question",
+          "name": "¿Cuánto tiempo tengo para reclamar una indemnización?",
+          "acceptedAnswer": {
+            "@@type": "Answer",
+            "text": "Tiene dos años a partir del alta médica."
+          }
         }
+      ],
+      "image": "https://estudiolopezgiacomelli.com.ar/images/faq/faq-work-accident.jpeg",
+      "datePublished": "2024-11-05",
+      "dateModified": "2024-11-05",
+      "author": {
+        "@@type": "Organization",
+        "name": "Estudio Jurídico López Giacomelli",
+        "url": "https://estudiolopezgiacomelli.com.ar"
       },
-      {
-        "@@type": "Question",
-        "name": "¿Qué son los accidentes in itinere?",
-        "acceptedAnswer": {
-          "@@type": "Answer",
-          "text": "Los accidentes in itinere se encuentran definidos en la Ley de Riesgos del Trabajo como: 'todo acontecimiento súbito y violento ocurrido por el hecho o en ocasión del trabajo, o en el trayecto entre el domicilio del trabajador y el lugar de trabajo, siempre y cuando el damnificado no hubiere interrumpido o alterado dicho trayecto por causas ajenas al trabajo'."
+      "publisher": {
+        "@@type": "Organization",
+        "name": "Estudio Jurídico López Giacomelli",
+        "logo": {
+          "@@type": "ImageObject",
+          "url": "https://estudiolopezgiacomelli.com.ar/images/logo.png"
         }
-      },
-      {
-        "@@type": "Question",
-        "name": "¿Qué son las enfermedades profesionales?",
-        "acceptedAnswer": {
-          "@@type": "Answer",
-          "text": "Las enfermedades profesionales son aquellas producidas por causa del trabajo a aquellos trabajadores que prestan tareas expuestos a factores de riesgo, como ser: movimientos forzosos y repetitivos, ruidos en el ambiente de trabajo, manipulación de sustancias químicas e inhalación de gases."
-        }
-      },
-      {
-        "@@type": "Question",
-        "name": "¿Qué diferencia hay entre un accidente de trabajo y una enfermedad profesional?",
-        "acceptedAnswer": {
-          "@@type": "Answer",
-          "text": "Los accidentes de trabajo pueden deberse a un evento súbito específico, mientras que las enfermedades profesionales son patologías que pueden generarse a través del tiempo debido a labores repetitivas, como el síndrome de túnel carpiano o las hernias de disco."
-        }
-      },
-      {
-        "@@type": "Question",
-        "name": "¿Es necesario un abogado en todos los casos de lesiones o enfermedades relacionadas con el trabajo?",
-        "acceptedAnswer": {
-          "@@type": "Answer",
-          "text": "Siempre es necesario contar con un abogado que defienda sus derechos. Es habitual que las Aseguradoras de Riesgos de Trabajo tiendan a rechazar los siniestros fundándose en que, según su criterio, existen determinadas lesiones o enfermedades por las que ellas no deben responder."
-        }
-      },
-      {
-        "@@type": "Question",
-        "name": "Si contrato a un abogado, ¿significa que estoy demandando a mi empleador?",
-        "acceptedAnswer": {
-          "@@type": "Answer",
-          "text": "Nunca demandamos a tu empleador y siempre intentamos llegar a un acuerdo con las ART sin llegar a demandarlas. Solo las demandamos si contamos con instrucciones de nuestros clientes."
-        }
-      },
-      {
-        "@@type": "Question",
-        "name": "¿Los resultados realmente van a ser diferentes con un abogado?",
-        "acceptedAnswer": {
-          "@@type": "Answer",
-          "text": "Claro! El empleado que se presenta solo ante su Aseguradora es un blanco fácil frente a estructuras corporativas organizadas para la obtención de lucro a costa del trabajador. Contar con un abogado que defienda tus derechos es fundamental."
-        }
-      },
-      {
-        "@@type": "Question",
-        "name": "¿Cómo puedo contratar un abogado si no tengo dinero?",
-        "acceptedAnswer": {
-          "@@type": "Answer",
-          "text": "Al tomar un caso, nuestro estudio afronta todos los costos para llevar adelante el reclamo. Nuestros honorarios consisten en un porcentaje de lo que cobre nuestro cliente. Es decir, si no ganamos el caso, no cobramos."
-        }
-      },
-      {
-        "@@type": "Question",
-        "name": "¿Debo someterme a los dictámenes de las Comisiones Médicas de la Superintendencia de Riesgos del Trabajo?",
-        "acceptedAnswer": {
-          "@@type": "Answer",
-          "text": "Nuestra sugerencia es NUNCA acudir a las Comisiones Médicas, ya que una vez que allí se ha dictaminado una incapacidad es algo difícil elevarla. No obstante ello, si usted ha concurrido a estas Comisiones, debe saber que lo que ellas dictaminan no tiene ningún valor frente a un Juez."
-        }
-      },
-      {
-        "@@type": "Question",
-        "name": "¿Las Comisiones Médicas de la SRT tienen competencia, idoneidad y son aptas para cumplir con su función?",
-        "acceptedAnswer": {
-          "@@type": "Answer",
-          "text": "No, y por eso no hay que acudir a ellas. Solo la Justicia ofrece garantías de objetividad que no brinda la Superintendencia y sus Comisiones Médicas. La Corte Suprema de la Nación ha determinado que las víctimas de accidentes laborales pueden recurrir al Juez Laboral."
-        }
-      },
-      {
-        "@@type": "Question",
-        "name": "¿Qué ocurre si lo despiden durante su recuperación a causa de un accidente o enfermedad?",
-        "acceptedAnswer": {
-          "@@type": "Answer",
-          "text": "En estos casos, como mínimo el empleador está obligado a abonar, además de la indemnización por despido injustificado, todos los salarios correspondientes al tiempo que aún faltase para llegar a la fecha del alta médica."
-        }
-      },
-      {
-        "@@type": "Question",
-        "name": "Si usted recibió dinero de su A.R.T por el accidente o enfermedad profesional, y le parece poco ¿Puede reclamar una suma mayor?",
-        "acceptedAnswer": {
-          "@@type": "Answer",
-          "text": "Recuerde que el negocio de la ART es pagar lo menos posible. Si la indemnización que cobró le parece injusta, está a tiempo de contactarnos y reclamar un monto mayor, acorde a su incapacidad."
-        }
-      },
-      {
-        "@@type": "Question",
-        "name": "¿Por qué la ART rechaza mi HERNIA DE DISCO/CERVICAL?",
-        "acceptedAnswer": {
-          "@@type": "Answer",
-          "text": "Las ART nunca van a aceptar la enfermedad aduciendo que es preexistente o inculpable. Se denomina Enfermedad inculpable a toda aquella que padezca el trabajador y que no sea profesional u originada por el trabajo."
-        }
-      },
-      {
-        "@@type": "Question",
-        "name": "¿Cuánto tiempo tengo para reclamar una indemnización?",
-        "acceptedAnswer": {
-          "@@type": "Answer",
-          "text": "Tiene dos años a partir del alta médica."
-        }
-      }
-    ],
-    "image": "https://estudiolopezgiacomelli.com.ar/images/faq/faq-work-accident.jpeg",
-    "datePublished": "2024-11-05",
-    "dateModified": "2024-11-05",
-    "author": {
-      "@@type": "Organization",
-      "name": "Estudio Jurídico López Giacomelli",
-      "url": "https://estudiolopezgiacomelli.com.ar"
-    },
-    "publisher": {
-      "@@type": "Organization",
-      "name": "Estudio Jurídico López Giacomelli",
-      "logo": {
-        "@@type": "ImageObject",
-        "url": "https://estudiolopezgiacomelli.com.ar/images/logo.png"
       }
     }
-  }
-</script>
-
-@section Scripts {
-  <script src="@VersionedFileHelper.GetVersionedFile("faqWorkAccident.js")"></script>
+  </script>
 }

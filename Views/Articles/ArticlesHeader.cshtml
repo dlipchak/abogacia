@@ -4,6 +4,6 @@
 @await Html.PartialAsync("_HeroSection", (
   Title: @Model.ArticleName,
   Subtitle: "",
-  ClassName: @Model.Article
+  ClassName: @Model.Article.Substring(0, 1).ToLowerInvariant() + @Model.Article.Substring(1)
   ))
 

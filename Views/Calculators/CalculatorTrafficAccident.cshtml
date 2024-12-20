@@ -2,13 +2,7 @@
 @using Microsoft.Extensions.Hosting
 
 @inject IWebHostEnvironment Environment
-@section Styles {
-  <link rel="preload" href="@VersionedFileHelper.GetVersionedFile("calculatorTrafficAccident.css")" as="style" 
-        onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile("calculatorTrafficAccident.css")">
-  </noscript>
-}
+
 <title class="logo">Calculadora de indemnización por accidentes de tránsito</title>
 
 @await Html.PartialAsync("_HeroSection", (
@@ -170,23 +164,22 @@
   </div>
 </section>
 
-<script type="application/ld+json">
-  {
-    "@@context": "https://schema.org",
-    "@@type": "WebApplication",
-    "name": "Calculadora de Indemnización por Accidentes de Tránsito",
-    "description": "Herramienta para calcular estimaciones de indemnización por accidentes de tránsito, proporcionada por el Estudio Jurídico López Giacomelli.",
-    "url": "https://estudiolopezgiacomelli.com.ar/calculadoras/accidentes-de-transito",
-    "applicationCategory": "LegalCalculator",
-    "operatingSystem": "All",
-    "provider": {
-      "@@type": "Organization",
-      "name": "Estudio Jurídico López Giacomelli",
-      "url": "https://estudiolopezgiacomelli.com.ar"
-    }
-  }
-  </script>
-
   @section Scripts {
-  <script src="@VersionedFileHelper.GetVersionedFile("calculatorTrafficAccident.js")"></script>
+
+    <script type="application/ld+json">
+      {
+        "@@context": "https://schema.org",
+        "@@type": "WebApplication",
+        "name": "Calculadora de Indemnización por Accidentes de Tránsito",
+        "description": "Herramienta para calcular estimaciones de indemnización por accidentes de tránsito, proporcionada por el Estudio Jurídico López Giacomelli.",
+        "url": "https://estudiolopezgiacomelli.com.ar/calculadoras/accidentes-de-transito",
+        "applicationCategory": "LegalCalculator",
+        "operatingSystem": "All",
+        "provider": {
+          "@@type": "Organization",
+          "name": "Estudio Jurídico López Giacomelli",
+          "url": "https://estudiolopezgiacomelli.com.ar"
+        }
+      }
+      </script>
 }

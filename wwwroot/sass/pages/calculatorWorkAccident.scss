@@ -1,0 +1,14 @@
+@use "../style";
+@import "@css/font-icons.css";
+@import "../common/layout";
+@import "../common/hero";
+@import "../common/calculatorLinks";
+
+/* calculatorWorkAccident */
+
+.calculatorWorkAccidentHeader {
+  background: url("/images/calculators/work-accident-calculator.webp") center
+    center / cover no-repeat;
+}
+
+/* end calculatorWorkAccident */

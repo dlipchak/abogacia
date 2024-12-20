@@ -12,7 +12,9 @@ dl, dt, dd, ol, ul, li {
 	padding: 0;
 }
 
-em { font-family: $secondary-font; }
+em {
+	font-family: var(--#{$cnvs-prefix}secondary-font);
+}
 
 .clear {
 	clear: both;
@@ -25,8 +27,8 @@ em { font-family: $secondary-font; }
 }
 
 @mixin selection {
-	background: $theme-color;
-	color: $body-bg;
+	background: var(--#{$cnvs-prefix}themecolor);
+	color: var(--#{$cnvs-prefix}body-bg);
 	text-shadow: none;
 }
 
@@ -50,17 +52,25 @@ em { font-family: $secondary-font; }
 	Typography
 -----------------------------------------------------------------*/
 
-
 body {
 	line-height: 1.5;
-	color: $body-text-color;
-	font-family: $body-font;
+	font-size: var(--#{$cnvs-prefix}font-size-body);
+	font-family: var(--#{$cnvs-prefix}body-font);
+	background: var(--#{$cnvs-prefix}body-bg);
+
+	&:not(.stretched) {
+		background: var(--#{$cnvs-prefix}body-bg-boxed);
+	}
 }
 
 a {
-	text-decoration: none !important;
-	color: $theme-color;
-	&:hover { color: #222; }
+	&:not(.btn-link):not(.text-decoration-underline):not(.more-link) {
+		text-decoration: none !important;
+	}
+	color: var(--#{$cnvs-prefix}link-color);
+	&:hover {
+		color: var(--#{$cnvs-prefix}link-hover-color);
+	}
 	img { border: none; }
 }
 
@@ -84,32 +94,76 @@ h3,
 h4,
 h5,
 h6 {
-	color: $heading-color;
-	font-weight: 600;
-	line-height: $line-height-base;
+	color: var(--#{$cnvs-prefix}heading-color);
+	font-weight: var(--#{$cnvs-prefix}headings-font-weight);
+	line-height: var(--#{$cnvs-prefix}line-height-base);
 	margin: 0 0 30px 0;
-	font-family: $heading-font;
+	font-family: var(--#{$cnvs-prefix}primary-font);
 }
-
-h1 { font-size: $font-size-h1; }
-
-h2 { font-size: $font-size-h2; }
-
-h3 { font-size: $font-size-h3; }
-
-h4 {
-	font-size: $font-size-h4;
-	font-weight: 600;
-}
-
-h5 { font-size: $font-size-h5; }
-
-h6 { font-size: $font-size-h6; }
 
 h5,
 h6 {
 	font-weight: bold;
 	margin-bottom: 20px;
+}
+
+h1 {
+	font-size: var(--#{$cnvs-prefix}font-size-h1);
+}
+
+h2 {
+	font-size: var(--#{$cnvs-prefix}font-size-h2);
+}
+
+h3 {
+	font-size: var(--#{$cnvs-prefix}font-size-h3);
+}
+
+h4 {
+	font-size: var(--#{$cnvs-prefix}font-size-h4);
+}
+
+h5 {
+	font-size: var(--#{$cnvs-prefix}font-size-h5);
+}
+
+h6 {
+	font-size: var(--#{$cnvs-prefix}font-size-h6);
+}
+
+.h5 {
+	font-size: $h5-font-size;
+}
+
+.h6 {
+	font-size: $h6-font-size;
+}
+
+h4 {
+	font-weight: 600;
+}
+
+h5,
+h6 {
+	font-weight: bold;
+}
+
+@include media-breakpoint-down(md) {
+	h1 {
+		font-size: 1.75rem;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	h3 {
+		font-size: 1.25rem;
+	}
+
+	h4 {
+		font-size: 1rem;
+	}
 }
 
 h1,
@@ -119,7 +173,7 @@ h4,
 h5,
 h6 {
 	> span:not(.nocolor):not(.badge) {
-		color: $theme-color;
+		color: var(--#{$cnvs-prefix}themecolor);
 	}
 }
 
@@ -135,4 +189,12 @@ table,
 fieldset,
 form { margin-bottom: 30px; }
 
-small { font-family: $body-font; }
+blockquote {
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+small {
+	font-size: var(--#{$cnvs-prefix}font-size-small);
+}

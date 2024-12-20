@@ -13,6 +13,18 @@
 $cd-prefix: countdown;
 
 .#{$cd-prefix} {
+
+	--#{$cnvs-prefix}countdown-size:					#{$countdown-size};
+	--#{$cnvs-prefix}countdown-section:					#{$countdown-section};
+	--#{$cnvs-prefix}countdown-md-size:					#{$countdown-md-size};
+	--#{$cnvs-prefix}countdown-md-section:				#{$countdown-md-section};
+	--#{$cnvs-prefix}countdown-lg-size:					#{$countdown-lg-size};
+	--#{$cnvs-prefix}countdown-lg-section:				#{$countdown-lg-section};
+	--#{$cnvs-prefix}countdown-border:					#{$countdown-border};
+	--#{$cnvs-prefix}countdown-inline-space:			#{$countdown-inline-space};
+	--#{$cnvs-prefix}countdown-large:					#{$countdown-large};
+
+
 	position: relative;
 	display: block;
 	&-row {
@@ -32,33 +44,39 @@ $cd-prefix: countdown;
 		-ms-flex-positive: 1;
 		flex-grow: 1;
 		max-width: 100%;
-		font-size: $countdown-section;
+		font-size: var(--#{$cnvs-prefix}countdown-section);
 		line-height: 1;
 		text-align: center;
-		border-left: $countdown-border;
-		color: #888;
+		border-left: var(--#{$cnvs-prefix}countdown-border);
+		color: var(--#{$cnvs-prefix}contrast-600);
 		text-transform: capitalize;
 		/* Countdown - Medium */
-		.#{$cd-prefix}-medium & { font-size: 0.875rem; }
+
+		.#{$cd-prefix}-medium & {
+			--#{$cnvs-prefix}countdown-section: 0.875rem;
+		}
 		/* Countdown - large */
-		.#{$cd-prefix}-large & { font-size: 18px; }
+
+		.#{$cd-prefix}-large & {
+			--#{$cnvs-prefix}countdown-section: 1.125rem;
+		}
 	}
 
 	&-section:first-child { border-left: 0; }
 
 	&-amount {
 		display: block;
-		font-size: $countdown-size;
-		color: #333;
+		font-size: var(--#{$cnvs-prefix}countdown-size);
+		color: var(--#{$cnvs-prefix}contrast-800);
 		margin-bottom: 5px;
 		/* Countdown - Medium */
 		.#{$cd-prefix}-medium & {
-			font-size: $countdown-md-size;
+			--#{$cnvs-prefix}countdown-size: var(--#{$cnvs-prefix}countdown-md-size);
 			margin-bottom: 7px;
 		}
 		/* Countdown - large */
 		.#{$cd-prefix}-large & {
-			font-size: $countdown-lg-size;
+			--#{$cnvs-prefix}countdown-size: var(--#{$cnvs-prefix}countdown-lg-size);
 			font-weight: 700;
 			margin-bottom: 8px;
 		}
@@ -84,7 +102,7 @@ $cd-prefix: countdown;
 			width: auto;
 			border: none;
 			color: inherit;
-			margin-left: $countdown-inline-space;
+			margin-left: var(--#{$cnvs-prefix}countdown-inline-space);
 			text-transform: inherit;
 			&:first-child { margin-left: 0; }
 		}
@@ -113,13 +131,13 @@ $cd-prefix: countdown;
 			padding: 15px;
 		}
 		.#{$cd-prefix}-amount {
-			width: $countdown-large;
-			height: $countdown-large;
-			line-height: $countdown-large;
+			width: var(--#{$cnvs-prefix}countdown-large);
+			height: var(--#{$cnvs-prefix}countdown-large);
+			line-height: var(--#{$cnvs-prefix}countdown-large);
 			margin-left: auto;
 			margin-right: auto;
 			border-radius: 50%;
-			background-color: rgba(0,0,0,0.2);
+			background-color: rgba(black,0.2);
 			margin-bottom: 15px !important;
 		}
 	}

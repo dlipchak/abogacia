@@ -1,0 +1,47 @@
+@import "../style";
+@import "../common/layout";
+@import "../common/gallery";
+@import "../common/calculatorLinks";
+
+@import "@css/font-icons.css";
+@import "@css/swiper.css";
+
+/*home page*/
+.heading-block {
+  &:after {
+    display: inline;
+  }
+}
+
+.swiper-slide-bg {
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right, #002f4b, grey);
+    opacity: 0.4;
+  }
+}
+
+.iconlist {
+  li {
+    flex-wrap: initial;
+
+    &:first-child {
+      i,
+      img {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        top: 1px;
+        width: 14px;
+        margin-right: 0.5rem;
+        flex: 0 0 auto;
+        // color: #555;
+      }
+    }
+  }
+}

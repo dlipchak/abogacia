@@ -5,16 +5,6 @@
   ViewData["Canonical"] = "/";
 }
 
-@section Styles {
-    <link rel="preload" href="~/images/home/gallery/1.webp" as="image">
-    <link rel="preload" href="@VersionedFileHelper.GetVersionedFile("home.css")" as="style" 
-          onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-      <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile("home.css")">
-    </noscript>
-    
-  }
-  
 <!-- Page Title -->
 <title>Abogados Especialistas en Accidentes y Despidos - Estudio Jurídico López Giacomelli</title>
 
@@ -156,5 +146,5 @@
         }
         </script>
         
-    <script src="@VersionedFileHelper.GetVersionedFile("home.js")"></script>
+    <!-- <script src="@VersionedFileHelper.GetVersionedFile("home.js")"></script> -->
   }

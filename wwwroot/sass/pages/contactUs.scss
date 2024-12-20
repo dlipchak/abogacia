@@ -1,0 +1,25 @@
+@import "../style";
+@import "../common/layout";
+
+@import "@css/font-icons.css";
+
+/* contact us */
+.contact-us-spinner {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: visible;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@media screen and (min-width: 980px) {
+  .content-wrap {
+    padding-top: 200px;
+  }
+}
+/* end contact us */

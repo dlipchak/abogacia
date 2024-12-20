@@ -1,9 +1,14 @@
-﻿<!-- prettier-ignore -->
-@using System.Web.Optimization
+﻿@using System.Web.Optimization
 @using System.Web
-@inject Microsoft.AspNetCore.Hosting.IHostingEnvironment env
 @using Microsoft.AspNetCore.Hosting
+@using Microsoft.Extensions.Hosting
 @using AbogaciaCore.Helpers;
+@inject IWebHostEnvironment WebHostEnvironment
+
+@{
+    var currentUrl = Context.Request.Path.Value?.ToLowerInvariant();
+    var assets = AssetHelper.GetAssetsForUrl(currentUrl, WebHostEnvironment);
+}
 
 <!DOCTYPE html>
 <html lang="es">
@@ -23,25 +28,65 @@
     <link rel="alternate" hreflang="es" href="https://estudiolopezgiacomelli.com.ar/" />
 
     <link rel="icon" href="/images/logo.ico" />
-    @* <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- Font preloading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+    
+    <!-- Base styles to prevent layout shift -->
+    <style>
+        /* Font fallback to prevent layout shift */
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+    </style>
+
+    <!-- Critical CSS -->
+    <!-- @if (!string.IsNullOrEmpty(assets.CriticalCss))
+    {
+        <style>@Html.Raw(assets.CriticalCss)</style>
+    } -->
+
+    <style>
+        .contact-us-whatsapp {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s;
+        }
+        .contact-us-whatsapp.loaded {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+
+    <!-- Font loading -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap"
           media="print" 
-          onload="this.media='all'"> *@
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap"
-        rel="stylesheet">
+          onload="this.media='all'"
+          rel="stylesheet">
+
+    <!-- Non-critical CSS -->
+    @if (!string.IsNullOrEmpty(assets.CssPath))
+    {
+        <!-- <link rel="preload" href="@assets.CssPath" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+        <link rel="stylesheet" href="@assets.CssPath">
+        <!-- <noscript>
+            <link rel="stylesheet" href="@assets.CssPath">
+        </noscript> -->
+    }
 
     @RenderSection("Styles", required: false)
     @RenderSection("PreloadLinks", required: false)
-    <a href="https://api.whatsapp.com/send?phone=541161980179" class="bi-whatsapp contact-us-whatsapp"
-        target="_blank"></a>
 </head>
 
-<body class="stretched">
+<body class="stretched  page-transition" data-loader-color="theme">
+    <!-- WhatsApp button -->
+    <a href="https://api.whatsapp.com/send?phone=541161980179" 
+       class="bi-whatsapp contact-us-whatsapp"
+       target="_blank"
+       rel="noopener">
+    </a>
+
     <div id="wrapper" class="clearfix">
         @Html.Partial("Header")
         @RenderBody()
@@ -51,8 +96,19 @@
 
     <div id="gotoTop" class="uil uil-angle-up"></div>
 
-    <script src="/js/functions.js"></script>
+    <!-- Scripts -->
+    <script src="/dist/functions.js" defer></script>
     @RenderSection("Scripts", required: false)
+
+    @if (!string.IsNullOrEmpty(assets.JsPath))
+    {
+        <script src="@assets.JsPath" defer></script>
+    }
+    <script>
+        document.fonts.ready.then(function() {
+            document.getElementById('whatsappButton').classList.add('loaded');
+        });
+    </script>
 </body>
 
 </html>

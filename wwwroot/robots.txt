@@ -1,11 +1,8 @@
 User-agent: *
 
-# Allow specific files
+# Permitir archivos importantes
 Allow: /robots.txt
 Allow: /sitemap.xml
 
-# Block everything in wwwroot
-Disallow: /
-
-# Point to sitemap
+# Incluir el Sitemap
 Sitemap: https://estudiolopezgiacomelli.com.ar/sitemap.xml

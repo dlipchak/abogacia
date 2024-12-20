@@ -12,37 +12,46 @@
 $promo-prefix: promo;
 
 .#{$promo-prefix} {
+	--#{$cnvs-prefix}promo-span-font-size           :          #{$promo-span-font-size};
+	--#{$cnvs-prefix}promo-uppercase-font-size      :          #{$promo-uppercase-font-size};
+	--#{$cnvs-prefix}promo-uppercase-span-font-size :          #{$promo-uppercase-span-font-size};
+	--#{$cnvs-prefix}promo-border                   :          #{$promo-border};
+	--#{$cnvs-prefix}promo-light                    :          #{$promo-light};
+	--#{$cnvs-prefix}promo-light-text-color         :          #{$promo-light-text-color};
+	--#{$cnvs-prefix}promo-dark                     :          #{$promo-dark};
+	--#{$cnvs-prefix}promo-dark-text-color          :          #{$promo-dark-text-color};
+	--#{$cnvs-prefix}promo-parallax-padding 		 :			#{$promo-parallax-padding};
 	position: relative;
 	h3 {
 		font-weight: bold;
 		margin-bottom: 0;
 		+ span {
 			display: block;
-			color: $promo-light-text-color;
+			color: var(--#{$cnvs-prefix}promo-light-text-color);
 			font-weight: 300;
-			font-size: $promo-span-font-size;
+			font-size: var(--#{$cnvs-prefix}promo-span-font-size);
 			margin-top: 6px;
 		}
 	}
 	@if $promo-uppercase == true {
 		&-uppercase { text-transform: uppercase;
 			h3 {
-				font-size: $promo-uppercase-font-size;
+				font-size: var(--#{$cnvs-prefix}promo-uppercase-span-font-size);
 				+ span {
-					font-size: $promo-uppercase-span-font-size;
+					font-size: var(--#{$cnvs-prefix}promo-span-font-size);
 				}
 			}
 		}
 	}
 	&-border {
-		border: $promo-border;
+		border: var(--#{$cnvs-prefix}promo-border);
 		border-radius: 3px;
 	}
 
 	/* Promo - Light
 	-----------------------------------------------------------------*/
 	&-light {
-		background-color: $promo-light;
+		background-color: var(--#{$cnvs-prefix}promo-light);
 		border-radius: 3px;
 	}
 
@@ -50,12 +59,12 @@ $promo-prefix: promo;
 	-----------------------------------------------------------------*/
 	&-dark {
 		border: 0 !important;
-		background-color: $promo-dark;
-		text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+		background-color: var(--#{$cnvs-prefix}promo-dark);
 		border-radius: 3px;
-		h3 { color: $promo-dark-text-color;
+		h3 {
+			color: var(--#{$cnvs-prefix}promo-dark-text-color);
 			+ span {
-				color: #EEE;
+				color: var(--#{$prefix}gray-100);
 				font-weight: 400;
 			}
 		}
@@ -69,7 +78,9 @@ $promo-prefix: promo;
 	}
 	/* Promo - Parallax
 	-----------------------------------------------------------------*/
-	&.parallax { padding: $promo-parallax-padding 0 !important; }
+	&.parallax {
+		padding: var(--#{$cnvs-prefix}promo-parallax-padding) 0 !important;
+	}
 
 	/* Promo - Mini
 	-----------------------------------------------------------------*/
@@ -77,8 +88,8 @@ $promo-prefix: promo;
 	&-mini {
 		text-align: left;
 		h3 {
-			font-size: $promo-uppercase-font-size;
+			font-size: var(--#{$cnvs-prefix}promo-uppercase-span-font-size);
 		}
-		&.#{$promo-prefix}-uppercase h3 { font-size: $promo-uppercase-span-font-size; }
+		&.#{$promo-prefix}-uppercase h3 { font-size: var(--#{$cnvs-prefix}promo-span-font-size); }
 	}
 }

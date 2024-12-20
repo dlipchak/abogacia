@@ -4,14 +4,6 @@
 
 @inject IWebHostEnvironment Environment
 
-@section Styles {
-    <link rel="preload" href="@VersionedFileHelper.GetVersionedFile("contactUs.css")" as="style" 
-          onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile("contactUs.css")">
-    </noscript>
-}
-  
 <title class="logo">Contacto</title>
 <section id="content">
     <div class="content-wrap">
@@ -145,5 +137,4 @@
         }
     </script>
     
-    <script src="@VersionedFileHelper.GetVersionedFile("contactUs.js")"></script>
   }

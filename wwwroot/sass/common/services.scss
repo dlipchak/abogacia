@@ -1,0 +1,73 @@
+/* services */
+
+.accidentesEnTransportePublico {
+  background: url("/images/articles/accidente-en-transporte-publico.webp")
+    center center / cover no-repeat;
+}
+
+.covid19 {
+  background: url("/images/articles/covid19.webp") 64% center / cover no-repeat;
+}
+
+.howToActOnTrafficAccident {
+  background: url("/images/articles/accidentesDeTransito.webp") center center /
+    cover no-repeat;
+}
+
+.accidentesEnAuto {
+  background: url("/images/articles/accidente-en-automovil.webp") center center /
+    cover no-repeat;
+}
+
+.accidentesEnMoto {
+  background: url("/images/articles/accidente-en-moto.webp") center center /
+    cover no-repeat;
+}
+
+.accidentesEnBicicleta {
+  background: url("/images/articles/accidente-en-bicicleta.webp") center center /
+    cover no-repeat;
+}
+
+.accidentesComoAcompanantes {
+  background: url("/images/articles/accidentes-como-acompanantes.webp") center
+    center / cover no-repeat;
+}
+
+.accidentesComoPeaton {
+  background: url("/images/articles/peatones.webp") center center / cover
+    no-repeat;
+}
+
+.destruccionTotal {
+  background: url("/images/articles/destruccion-total.webp") center center /
+    cover no-repeat;
+}
+
+.accidentesDeTrabajo {
+  background: url("/images/articles/accidentes-en-ocasion-del-trabajo.webp")
+    center center / cover no-repeat;
+}
+
+.accidentesInItinere {
+  background: url("/images/articles/accidentes-initinere.webp") center center /
+    cover no-repeat;
+}
+
+.enfermedadesProfesionales {
+  background: url("/images/articles/enfermedades-profesionales.webp") center
+    center / cover no-repeat;
+}
+
+/* Common styles for all s */
+[class*=""] {
+  padding: 250px 0;
+}
+
+@media (max-width: 991.98px) {
+  [class*=""] {
+    padding: 116px 0;
+  }
+}
+
+/* end services */

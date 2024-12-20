@@ -1,0 +1,85 @@
+.bi-calculator::before {
+    content: "\f1e0"
+}
+.uil-angle-up:before {
+    content: '\eb56'
+}
+.bi-pencil-square::before {
+    content: "\f4ca"
+}
+.fa-ambulance:before,
+.fa-truck-medical:before {
+    content: "\f0f9"
+}
+.fa-car-burst:before,
+.fa-car-crash:before {
+    content: "\f5e1"
+}
+.fa-briefcase-medical:before {
+    content: "\f469"
+}
+.bi-laptop::before {
+    content: "\f456"
+}
+.fa-file-medical:before {
+    content: "\f477"
+}
+.fa-comment-dollar:before {
+    content: "\f651"
+}
+.bi-watch::before {
+    content: "\f616"
+}
+.fa-facebook-f:before {
+    content: "\f39e"
+}
+.bi-instagram::before {
+    content: "\f437"
+}
+.bi-caret-right-fill::before {
+    content: "\f231"
+}
+.bi-whatsapp::before {
+    content: "\f618"
+}
+.bi-check-circle::before {
+    content: "\f26b"
+}
+.fa-toolbox:before {
+    content: "\f552"
+}
+.fa-people-carry-box:before,
+.fa-people-carry:before {
+    content: "\f4ce"
+}
+.bi-check2-square::before {
+    content: "\f271"
+}
+.bi-sun-fill::before {
+    content: "\f5a1"
+}
+.bi-exclamation-circle-fill::before {
+    content: "\f332"
+}
+.bi-exclamation-triangle-fill::before {
+    content: "\f33a"
+}
+.fa-truck:before {
+    content: "\f0d1"
+}
+.uil-angle-right-b::before
+{
+    content:"\eb9f"
+}
+.uil-angle-left-b::before{
+content:"\ec49"
+}
+.uil-angle-up::before{
+ content:"\eb56"
+ }
+ .fa-chevron-right::before{
+    content:"\f054"
+}
+.fa-caret-down:before {
+    content: "\f0d7"
+}

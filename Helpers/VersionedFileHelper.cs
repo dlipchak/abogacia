@@ -21,28 +21,10 @@ public static class VersionedFileHelper
 
         if (!_manifestContent.TryGetValue(fileName, out var versionedFile))
         {
-            return "/dist/" + fileName; // Fallback to non-versioned file
+            return "/dist/" + fileName;
         }
 
-        // Get HttpContext from IHttpContextAccessor
-        var httpContext = _httpContextAccessor?.HttpContext;
-        if (httpContext == null)
-        {
-            return "/dist/" + versionedFile; // Fallback to uncompressed version
-        }
-
-        // Check if the client supports Brotli or Gzip
-        var acceptEncoding = httpContext.Request.Headers["Accept-Encoding"].ToString();
-        if (acceptEncoding.Contains("br"))
-        {
-            return "/dist/" + versionedFile + ".br"; // Return Brotli version
-        }
-        else if (acceptEncoding.Contains("gzip"))
-        {
-            return "/dist/" + versionedFile + ".gz"; // Return Gzip version
-        }
-
-        return "/dist/" + versionedFile; // Return uncompressed version
+        return "/dist/" + versionedFile;
     }
 
     private static Dictionary<string, string> LoadManifest()

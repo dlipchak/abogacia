@@ -1,27 +1,12 @@
-﻿<!-- @using AbogaciaCore.Helpers; -->
-
-<!-- test -->
+﻿@using AbogaciaCore.Helpers;
 @model ArticleModel
 
-@section Styles {
-  @{
-    var cssFileName = Model.Article.LowerFirstLetter() + ".css";
-  }
-  <link rel="preload" href="@VersionedFileHelper.GetVersionedFile(cssFileName)" as="style" 
-        onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="@VersionedFileHelper.GetVersionedFile(cssFileName)">
-  </noscript>
-}
-
-<!-- test -->
 @Html.Partial("ArticlesHeader")
 
 <section id="content">
   <div class="pt-0">
     <div id="articleSection" class="section mt-0">
       <div class="container mt-5">
-        <!-- <h1>@Html.Raw(Model.ArticleName)</h1> -->
         @Html.Partial(Model.Article)
       </div>
     </div>
@@ -57,12 +42,4 @@
 </div>
 
 <div class="container clearfix mb-5">@Html.Partial("CalculatorsLinks")</div>
-
-@section Scripts {
-  @{
-    var jsFileName = Model.Article.LowerFirstLetter() + ".js";
-  }
-
-  <script src="@VersionedFileHelper.GetVersionedFile(jsFileName)"></script>
-}
 
