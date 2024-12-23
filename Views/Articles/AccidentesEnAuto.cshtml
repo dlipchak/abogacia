@@ -34,7 +34,7 @@
   Consultenos sin compromiso <a href="@Url.Action("index", "Contacto")">AQUÍ.</a>
 </p> -->
 
-@Html.Partial("TrafficAccidentSteps")
+<partial name="TrafficAccidentSteps" />
 
 <h2 class="mt-6">¿Cuando se reclaman lesiones en un accidente vial?</h2>
 <p>
@@ -58,7 +58,7 @@
   que le hayan realizado.
 </p>
 
-@Html.Partial("ComoCobroMiIndemnizacion")
+<partial name="ComoCobroMiIndemnizacion" />
 
 @{
   var jsonLdModel = new JsonLdModel
@@ -72,5 +72,5 @@
   };
 }
 
-@Html.Partial("_ArticleJsonLdSchema", jsonLdModel)
+<partial name="_ArticleJsonLdSchema" model="jsonLdModel" />
 

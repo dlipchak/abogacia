@@ -1,11 +1,10 @@
 ﻿@using Microsoft.AspNetCore.Hosting 
 @using Microsoft.Extensions.Hosting
- @inject IWebHostEnvironment Environment
+@inject IWebHostEnvironment Environment
  
 <title class="logo">Accidentes laborales. Preguntas frecuentes.</title>
 
-@await Html.PartialAsync("_HeroSection", ( Title: "Accidentes laborales",
-Subtitle: "Preguntas Frecuentes", ClassName: "workAccidentFaqHeader" ))
+<partial name="_HeroSection" model='( Title: "Accidentes laborales", Subtitle: "Preguntas Frecuentes", ClassName: "workAccidentFaqHeader" )' />
 
 <section id="faq" class="container container-block mt-5">
   <div class="col-xs-12">
@@ -24,7 +23,7 @@ Subtitle: "Preguntas Frecuentes", ClassName: "workAccidentFaqHeader" ))
               desde el trabajo) o de una enfermedad profesional, lo primero que
               debe hacer es informar a su empleador. Ser&aacute; su empleador
               quien informe a la ART lo sucedido (aunque tambi&eacute;n puede
-              hacerlo usted mismo informando en forma directa a su ART).</span
+              hacerlo usted informando en forma directa a su ART).</span
             >
           </p>
           <p>
@@ -76,7 +75,7 @@ Subtitle: "Preguntas Frecuentes", ClassName: "workAccidentFaqHeader" ))
               (con o sin incapacidad) por carta documento, inform&aacute;ndole a
               usted que tiene la posibilidad de concurrir a </strong
             ><strong>Comisi&oacute;n M&eacute;dica</strong
-            ><strong> sin necesidad de abogado</strong
+            ><strong sin necesidad de abogado</strong
             ><span style="font-weight: 400">. Lamentablemente, </span
             ><strong>este es un </strong
             ><strong
@@ -554,9 +553,9 @@ Subtitle: "Preguntas Frecuentes", ClassName: "workAccidentFaqHeader" ))
               abogado especializado usted ha concurrido a estas Comisiónes, debe
               saber que lo que ellas dictaminan no tiene ning&uacute;n valor
               frente a un Juez</strong
-            ><span style="font-weight: 400"
-              >. Las Comisiónes no tienen la &uacute;ltima palabra. Por otra
-              parte, nuestra experiencia nos muestra que muchas veces </span
+            ><span style="font-weight: 400">. Las Comisiónes no tienen la
+              &uacute;ltima palabra. Por otra parte, nuestra experiencia nos
+              muestra que muchas veces </span
             ><strong
               >los m&eacute;dicos que integran las Comisiónes son los mismos
               m&eacute;dicos que defienden los derechos de la ART</strong
@@ -666,7 +665,8 @@ Subtitle: "Preguntas Frecuentes", ClassName: "workAccidentFaqHeader" ))
           </p>
           <p>
             <strong
-              ><span style="font-weight: 400">Un </span
+              ><span style="font-weight: 400"
+                >Un </span
               ><span style="text-decoration: underline"
                 ><strong>dato importante</strong></span
               ><span style="font-weight: 400"> es que </span
@@ -770,7 +770,9 @@ Subtitle: "Preguntas Frecuentes", ClassName: "workAccidentFaqHeader" ))
   </div>
 </section>
 <div class="section">
-  <div class="container clearfix">@Html.Partial("CalculatorsLinks")</div>
+  <div class="container clearfix">
+    <partial name="CalculatorsLinks" />
+  </div>
 </div>
 
 @section Scripts {

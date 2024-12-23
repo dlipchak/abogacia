@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Westwind.AspnetCore.LiveReload;
+using Microsoft.Extensions.Hosting;
 using Westwind.AspNetCore.LiveReload;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
@@ -98,7 +98,7 @@ namespace AbogaciaCore
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IHttpContextAccessor httpContextAccessor)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IHttpContextAccessor httpContextAccessor)
         {
             if (env.IsDevelopment())
             {
@@ -176,7 +176,8 @@ namespace AbogaciaCore
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}"
+                );
             });
 
             // Enable response caching

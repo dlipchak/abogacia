@@ -47,7 +47,7 @@
 </p>
 
 <p>
-  Asimismo, las controversias más comunes que se suscitan hoy día se deben a las
+  Asimismo, las controversias más comunes que se deben a las
   <span class="green">indemnizaciónes insignificantes que ofrecen las ART</span>
   durante el trámite ante la SRT. El objetivo de este procedimiento previo a
   todo reclamo judicial es el de cerrar los reclamos por la mínima indemnización
@@ -60,8 +60,9 @@
   aportan los fondos para pagar los sueldos de estos funcionarios.
 </p>
 
-@Html.Partial("ComoCobroMiIndemnizacionLaboral")
-@Html.Partial("WorkAccidentFeatures") @Html.Partial("WorkAccidentRights")
+<partial name="ComoCobroMiIndemnizacionLaboral" />
+<partial name="WorkAccidentFeatures" />
+<partial name="WorkAccidentRights" />
 
 @{
   var jsonLdModel = new JsonLdModel
@@ -75,4 +76,4 @@
   };
 }
 
-@Html.Partial("_ArticleJsonLdSchema", jsonLdModel)
+<partial name="_ArticleJsonLdSchema" model="jsonLdModel" />

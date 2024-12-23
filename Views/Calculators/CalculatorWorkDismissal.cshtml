@@ -3,11 +3,11 @@
 
 <title class="logo">Calculadora de indemnización por despido</title>
 
-@await Html.PartialAsync("_HeroSection", (
+<partial name="_HeroSection" model='(
   Title: "Despidos",
   Subtitle: "Calculadora de indemnización",
   ClassName: "calculatorDismissalHeader"
-  ))
+  )' />
 
 <section id="content" class="calculatorWorkDismissal">
   <div class="content-wrap pt-0">
@@ -240,11 +240,13 @@
         Recuerde siempre que estamos para ayudarlo y su consulta no molesta.
       </p>
 
-      @Html.Partial("Partials/WorkDismissalFeatures")
+      <partial name="Partials/WorkDismissalFeatures" />
     </div>
     <div class="divider"></div>
 
-    <div class="container clearfix mb-5">@Html.Partial("CalculatorsLinks")</div>
+    <div class="container clearfix mb-5">
+      <partial name="CalculatorsLinks" />
+    </div>
   </div>
 </section>
 

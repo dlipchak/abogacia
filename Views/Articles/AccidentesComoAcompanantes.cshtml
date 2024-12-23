@@ -43,7 +43,7 @@
   Recuerde reclamar siempre las constancias médicas y todos los estudios que le
   hayan realizado.
 </p>
-@Html.Partial("ComoCobroMiIndemnizacion")
+<partial name="ComoCobroMiIndemnizacion" />
 
 @{
   var jsonLdModel = new JsonLdModel
@@ -57,4 +57,4 @@
   };
 }
 
-@Html.Partial("_ArticleJsonLdSchema", jsonLdModel)
+<partial name="_ArticleJsonLdSchema" model="jsonLdModel" />

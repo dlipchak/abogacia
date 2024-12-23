@@ -37,7 +37,8 @@
   <span class="green">Pedidos Ya, Rappi, Glovo, Uber Eats, entre otras.</span>
 </p>
 
-@Html.Partial("TrafficAccidentSteps") @Html.Partial("ComoCobroMiIndemnizacion")
+<partial name="TrafficAccidentSteps" />
+<partial name="ComoCobroMiIndemnizacion" />
 
 @{
   var jsonLdModel = new JsonLdModel
@@ -51,5 +52,5 @@
   };
 }
 
-@Html.Partial("_ArticleJsonLdSchema", jsonLdModel)
+<partial name="_ArticleJsonLdSchema" model="jsonLdModel" />
 

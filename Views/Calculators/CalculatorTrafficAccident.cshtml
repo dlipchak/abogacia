@@ -5,11 +5,11 @@
 
 <title class="logo">Calculadora de indemnización por accidentes de tránsito</title>
 
-@await Html.PartialAsync("_HeroSection", (
+<partial name="_HeroSection" model='(
   Title: "Accidentes de Tránsito",
   Subtitle: "Calculadora de indemnización",
   ClassName: "calculatorTrafficAccidentHeader"
-  ))
+  )' />
 
 <section id="content" class="calculatorTrafficAccident">
   <div class="content-wrap pt-0">
@@ -159,7 +159,7 @@
     </div>
     <div class="divider"></div>
     <div class="container clearfix mb-5">
-      @Html.Partial("CalculatorsLinks")
+      <partial name="CalculatorsLinks" />
     </div>
   </div>
 </section>

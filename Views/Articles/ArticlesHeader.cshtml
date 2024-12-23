@@ -1,9 +1,9 @@
 ﻿@using AbogaciaCore.Helpers;
 @model ArticleModel;
 
-@await Html.PartialAsync("_HeroSection", (
+<partial name="_HeroSection" model='(
   Title: @Model.ArticleName,
   Subtitle: "",
   ClassName: @Model.Article.Substring(0, 1).ToLowerInvariant() + @Model.Article.Substring(1)
-  ))
+  )' />
 

@@ -1,6 +1,4 @@
-﻿@using System.Web.Optimization
-@using System.Web
-@using Microsoft.AspNetCore.Hosting
+﻿@using Microsoft.AspNetCore.Hosting
 @using Microsoft.Extensions.Hosting
 @using AbogaciaCore.Helpers;
 @inject IWebHostEnvironment WebHostEnvironment
@@ -88,10 +86,10 @@
     </a>
 
     <div id="wrapper" class="clearfix">
-        @Html.Partial("Header")
+        <partial name="Header" />
         @RenderBody()
-        @Html.Partial("GoogleReviewsPartial")
-        @Html.Partial("Footer")
+        <partial name="GoogleReviewsPartial" />
+        <partial name="Footer" />
     </div>
 
     <div id="gotoTop" class="uil uil-angle-up"></div>

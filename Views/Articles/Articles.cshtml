@@ -1,13 +1,13 @@
 ﻿@using AbogaciaCore.Helpers;
 @model ArticleModel
 
-@Html.Partial("ArticlesHeader")
+<partial name="ArticlesHeader" />
 
 <section id="content">
   <div class="pt-0">
     <div id="articleSection" class="section mt-0">
       <div class="container mt-5">
-        @Html.Partial(Model.Article)
+        <partial name="@Model.Article" />
       </div>
     </div>
   </div>
@@ -41,5 +41,7 @@
   </div>
 </div>
 
-<div class="container clearfix mb-5">@Html.Partial("CalculatorsLinks")</div>
+<div class="container clearfix mb-5">
+    <partial name="CalculatorsLinks" />
+</div>
 

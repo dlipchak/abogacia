@@ -1,11 +1,11 @@
 ﻿
 <title class="logo">Derechos del trabajador</title>
 
-@await Html.PartialAsync("_HeroSection", (
+<partial name="_HeroSection" model='(
   Title: "Derechos Laborales",
   Subtitle: "Conocé tus derechos",
   ClassName: "workerRights"
-  ))
+  )' />
 
  <section id="content">
     <div class="content-wrap pt-0">
@@ -196,7 +196,7 @@ Como profesionales somos conscientes de la <span class="green">importancia que t
                 </div>
                 <div class="divider"></div>
                 <div class="container clearfix mb-5">
-                    @Html.Partial("CalculatorsLinks")
+                    <partial name="CalculatorsLinks" />
                 </div>
             </div>
         </div>
@@ -218,6 +218,6 @@ Como profesionales somos conscientes de la <span class="green">importancia que t
         };
     }
     
-    @Html.Partial("_ArticleJsonLdSchema", jsonLdModel)
+    <partial name="_ArticleJsonLdSchema" model="jsonLdModel" />
 
   }

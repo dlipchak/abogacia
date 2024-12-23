@@ -58,7 +58,7 @@ Si usted es <span class="green">víctima de un accidente de tránsito</span> com
   </div>
 </div>
 
-@Html.Partial("ComoCobroMiIndemnizacion")
+<partial name="ComoCobroMiIndemnizacion" />
 
 @{
   var jsonLdModel = new JsonLdModel
@@ -72,4 +72,4 @@ Si usted es <span class="green">víctima de un accidente de tránsito</span> com
   };
 }
 
-@Html.Partial("_ArticleJsonLdSchema", jsonLdModel)
+<partial name="_ArticleJsonLdSchema" model="jsonLdModel" />

@@ -21,7 +21,7 @@ public class CompressedFileMiddleware
         var path = context.Request.Path.Value;
 
         // Handle .js and .css files
-        if (!path.EndsWith(".js", StringComparison.OrdinalIgnoreCase) && 
+        if (!path.EndsWith(".js", StringComparison.OrdinalIgnoreCase) &&
             !path.EndsWith(".css", StringComparison.OrdinalIgnoreCase))
         {
             await _next(context);
@@ -31,17 +31,17 @@ public class CompressedFileMiddleware
         // Check if browser supports compression
         var acceptEncoding = context.Request.Headers["Accept-Encoding"].ToString().ToLower();
         var originalPath = Path.Combine(_env.WebRootPath, path.TrimStart('/'));
-        
+
         // Set content type based on file extension
-        var contentType = path.EndsWith(".js", StringComparison.OrdinalIgnoreCase) 
+        var contentType = path.EndsWith(".js", StringComparison.OrdinalIgnoreCase)
             ? "application/javascript"
             : "text/css";
 
         // Try Brotli
         if (acceptEncoding.Contains("br") && File.Exists(originalPath + ".br"))
         {
-            context.Response.Headers.Add("Content-Encoding", "br");
-            context.Response.Headers.Add("Content-Type", contentType);
+            context.Response.Headers["Content-Encoding"] = "br";
+            context.Response.Headers["Content-Type"] = contentType;
             await context.Response.SendFileAsync(originalPath + ".br");
             return;
         }
@@ -49,8 +49,8 @@ public class CompressedFileMiddleware
         // Try Gzip
         if (acceptEncoding.Contains("gzip") && File.Exists(originalPath + ".gz"))
         {
-            context.Response.Headers.Add("Content-Encoding", "gzip");
-            context.Response.Headers.Add("Content-Type", contentType);
+            context.Response.Headers["Content-Encoding"] = "gzip";
+            context.Response.Headers["Content-Type"] = contentType;
             await context.Response.SendFileAsync(originalPath + ".gz");
             return;
         }

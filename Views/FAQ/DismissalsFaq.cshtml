@@ -5,8 +5,7 @@
 
 <title class="logo">Despidos. Preguntas frecuentes</title>
 
-@await Html.PartialAsync("_HeroSection", ( Title: "Despidos",
-Subtitle: "Preguntas Frecuentes", ClassName: "dismissalsFaqHeader" ))
+<partial name="_HeroSection" model='@( new { Title = "Despidos", Subtitle = "Preguntas Frecuentes", ClassName = "dismissalsFaqHeader" } )' />
 
 <section id="faq" class="container container-block mt-5">
 
@@ -151,11 +150,11 @@ Subtitle: "Preguntas Frecuentes", ClassName: "dismissalsFaqHeader" ))
           salario, en proporción a los días que restan entre la fecha
           del despido y el último día del mes en que se produjo ese
           despido. Ejemplo: si lo despiden a usted el 3 de octubre
-          restarán 27 días para que finalice el mes. En ese caso deberán
-          abonarle el salario correspondiente a esos 27 días. Para su
-          cálculo corresponde también aplicar el proporcional de su
-          aguinaldo. Quedan exceptuados de su cobro los trabajadores en
-          periodo de prueba.
+          restarán 27 días para que finalice el mes. En ese caso
+          deberán abonarle el salario correspondiente a esos 27 días.
+          Para su cálculo corresponde también aplicar el proporcional de
+          su aguinaldo. Quedan exceptuados de su cobro los trabajadores
+          en periodo de prueba.
         </p>
       </div>
     </div>
@@ -258,7 +257,9 @@ Subtitle: "Preguntas Frecuentes", ClassName: "dismissalsFaqHeader" ))
 </section>
 
 <div class="section">
-  <div class="container clearfix">@Html.Partial("CalculatorsLinks")</div>
+  <div class="container clearfix">
+    <partial name="CalculatorsLinks" />
+  </div>
 </div>
 
 @section Scripts {

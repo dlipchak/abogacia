@@ -71,19 +71,19 @@
   Fiducario de Enfermedades Profesionales.
 </p>
 
-@Html.Partial("WorkAccidentFeatures")
-@Html.Partial("ComoCobroMiIndemnizacionLaboral")
+<partial name="WorkAccidentFeatures" />
+<partial name="ComoCobroMiIndemnizacionLaboral" />
 
 @{
-  var jsonLdModel = new JsonLdModel
-  {
-    Headline = Model.ArticleName, 
-    Description = ViewData["Description"].ToString(),
-    Keywords = ViewData["Keywords"].ToString(),
-    ImageName = Model.ImageName, 
-    Category = Model.ArticleCategory, 
-    ArticleBody = "Este artículo aborda los derechos y pasos a seguir si ha contraído COVID-19 en el ámbito laboral. Nuestro estudio jurídico, compuesto por abogados y profesionales médicos de primer nivel, se especializa en la gestión de reclamos por accidentes laborales y enfermedades profesionales ante la Superintendencia de Riesgos del Trabajo. Destacamos que, durante la emergencia sanitaria, la enfermedad COVID-19 se considera presuntivamente una enfermedad de carácter profesional para los trabajadores encargados de realizar actividades esenciales. Esto implica que las Aseguradoras de Riesgos del Trabajo (ART) no pueden rechazar la cobertura relativa a la enfermedad y deben otorgar al trabajador las prestaciones médicas y salariales previstas en la Ley de Riesgos del Trabajo. Además, proporcionamos herramientas para calcular orientativamente la indemnización correspondiente y estamos disponibles para consultas sin compromiso."
-  };
+    var jsonLdModel = new JsonLdModel
+    {
+        Headline = Model.ArticleName, 
+        Description = ViewData["Description"].ToString(),
+        Keywords = ViewData["Keywords"].ToString(),
+        ImageName = Model.ImageName, 
+        Category = Model.ArticleCategory, 
+        ArticleBody = "Este artículo aborda los derechos y pasos a seguir si ha contraído COVID-19 en el ámbito laboral. Nuestro estudio jurídico, compuesto por abogados y profesionales médicos de primer nivel, se especializa en la gestión de reclamos por accidentes laborales y enfermedades profesionales ante la Superintendencia de Riesgos del Trabajo. Destacamos que, durante la emergencia sanitaria, la enfermedad COVID-19 se considera presuntivamente una enfermedad de carácter profesional para los trabajadores encargados de realizar actividades esenciales. Esto implica que las Aseguradoras de Riesgos del Trabajo (ART) no pueden rechazar la cobertura relativa a la enfermedad y deben otorgar al trabajador las prestaciones médicas y salariales previstas en la Ley de Riesgos del Trabajo. Además, proporcionamos herramientas para calcular orientativamente la indemnización correspondiente y estamos disponibles para consultas sin compromiso."
+    };
 }
 
-@Html.Partial("_ArticleJsonLdSchema", jsonLdModel)
+<partial name="_ArticleJsonLdSchema" model="jsonLdModel" />
