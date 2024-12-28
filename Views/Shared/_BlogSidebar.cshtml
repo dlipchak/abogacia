@@ -1,0 +1,95 @@
+@model IPublishedContent
+@using Umbraco.Cms.Core.Models.PublishedContent
+@using Umbraco.Extensions
+@using System.Globalization
+@{
+    var culture = new CultureInfo("es-ES");
+}
+
+<aside class="sidebar col-lg-3">
+    <div class="sidebar-widgets-wrap">
+        <div class="widget">
+            <h4>Entradas Recientes</h4>
+            <div class="posts-sm row col-mb-30" id="recent-post-list-sidebar">
+                @foreach (var blogEntry in Model.Descendants().Where(x => x.ContentType.Alias == "blogEntry").OrderByDescending(x => x.CreateDate).Take(5))
+                {
+                    <div class="entry col-12">
+                        <div class="grid-inner row g-0">
+                            <div class="col-auto">
+                                <div class="entry-image">
+                                    <a href="@blogEntry.Url()">
+                                        @if (blogEntry.HasValue("mainImage"))
+                                        {
+                                            <img  src="@(blogEntry.Value<IPublishedContent>("mainImage")?.Url() ?? "#")" alt="@blogEntry.Name">
+                                        }
+                                        else
+                                        {
+                                            <img  src="/images/placeholder.jpg" alt="@blogEntry.Name">
+                                        }
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col ps-3">
+                                <div class="entry-title">
+                                    <h4><a href="@blogEntry.Url()">@blogEntry.Name</a></h4>
+                                </div>
+                                <div class="entry-meta">
+                                    <ul>
+                                        <li><i class="uil uil-schedule"></i> @blogEntry.CreateDate.ToString("dd MMMM yyyy", culture)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="widget">
+            <h4>Categorías</h4>
+            <div class="tagcloud">
+                @foreach (var category in Model.Children().Where(x => x.IsVisible()))
+                {
+                    <a href="@category.Url()">@category.Name</a>
+                }
+            </div>
+        </div>
+
+        <div class="widget">
+            <h4>Noticias Más Leídas</h4>
+            <div class="posts-sm row col-mb-30" id="popular-post-list-sidebar">
+                @foreach (var blogEntry in Model.Descendants().Where(x => x.ContentType.Alias == "blogEntry").OrderByDescending(x => x.Value<int>("viewCount")).Take(5))
+                {
+                    <div class="entry col-12">
+                        <div class="grid-inner row g-0">
+                            <div class="col-auto">
+                                <div class="entry-image">
+                                    <a href="@blogEntry.Url()">
+                                        @if (blogEntry.HasValue("mainImage"))
+                                        {
+                                            <img  src="@(blogEntry.Value<IPublishedContent>("mainImage")?.Url() ?? "#")" alt="@blogEntry.Name()">
+                                        }
+                                        else
+                                        {
+                                            <img  src="/images/placeholder.jpg" alt="@blogEntry.Name()">
+                                        }
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col ps-3">
+                                <div class="entry-title">
+                                    <h4><a href="@blogEntry.Url()">@blogEntry.Name()</a></h4>
+                                </div>
+                                <div class="entry-meta">
+                                    <ul>
+                                        <li><i class="uil uil-eye"></i> @blogEntry.Value("viewCount") vistas</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</aside> 

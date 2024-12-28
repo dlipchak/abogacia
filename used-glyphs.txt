@@ -80,6 +80,11 @@ content:"\ec49"
  .fa-chevron-right::before{
     content:"\f054"
 }
-.fa-caret-down:before {
+.fa-caret-down::before {
     content: "\f0d7"
 }
+.uil-schedule::before{
+    content:"\e8db"
+}
+.uil-eye::before{content:"\ebaf"}
+.uil-folder::before{content:"\e942"}

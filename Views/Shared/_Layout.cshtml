@@ -25,6 +25,19 @@
     <link rel="alternate" hreflang="es-AR" href="https://estudiolopezgiacomelli.com.ar/" />
     <link rel="alternate" hreflang="es" href="https://estudiolopezgiacomelli.com.ar/" />
 
+    <!-- Open Graph / Social Media Meta Tags -->
+    @if (ViewData["OgTitle"] != null)
+    {
+        <meta property="og:title" content="@ViewData["OgTitle"]" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://estudiolopezgiacomelli.com.ar/@(ViewData["Canonical"] ?? "")" />
+        <meta property="og:description" content="@ViewData["OgDescription"]" />
+        @if (!string.IsNullOrEmpty(ViewData["OgImage"]?.ToString()))
+        {
+            <meta property="og:image" content="@ViewData["OgImage"]" />
+        }
+    }
+
     <link rel="icon" href="/images/logo.ico" />
 
     <!-- Font preloading -->

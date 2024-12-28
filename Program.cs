@@ -13,30 +13,39 @@ using Microsoft.AspNetCore.Server.Kestrel.Core;
 using AbogaciaCore;
 using AbogaciaCore.Helpers;
 using Westwind.AspNetCore.LiveReload;
+using Umbraco.Cms.Core.DependencyInjection;
+using Umbraco.Cms.Web.Website.Controllers;
+using Umbraco.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container
-builder.Services.AddLiveReload(config =>
-{
-    // Optional configuration for LiveReload
-});
+// ------------------------------------------
+// UMBRACO CONFIG
+// ------------------------------------------
+builder.CreateUmbracoBuilder()
+    .AddBackOffice()
+    .AddWebsite()
+    .AddDeliveryApi()
+    .AddComposers()
+    .Build();
 
+// ------------------------------------------
+// SERVICE REGISTRATIONS
+// ------------------------------------------
+builder.Services.AddLiveReload();
 builder.Services.AddHttpClient();
 
-// Configure Cookie Policies
 builder.Services.Configure<CookiePolicyOptions>(options =>
 {
     options.CheckConsentNeeded = context => true;
     options.MinimumSameSitePolicy = SameSiteMode.None;
 });
 
-// Add Razor Pages and MVC with runtime compilation
+// Traditional controllers + Razor Pages
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
-builder.Services.AddMvc(option => option.EnableEndpointRouting = false).AddRazorRuntimeCompilation();
 
-// Add Response Compression for dynamic content only
+// Response compression
 builder.Services.AddResponseCompression(options =>
 {
     options.EnableForHttps = true;
@@ -49,30 +58,28 @@ builder.Services.AddResponseCompression(options =>
         "text/xml"
     };
 });
-
-// Configure Brotli Compression
 builder.Services.Configure<BrotliCompressionProviderOptions>(options =>
 {
     options.Level = CompressionLevel.Optimal;
 });
-
-// Configure Gzip Compression
 builder.Services.Configure<GzipCompressionProviderOptions>(options =>
 {
     options.Level = CompressionLevel.Optimal;
 });
 
-// Add static file extension mappings
+// Static file mappings
 builder.Services.Configure<FileExtensionContentTypeProvider>(options =>
 {
     options.Mappings[".avif"] = "image/avif";
 });
 
-// Add Response Caching
+// Response caching + HttpContext accessor
 builder.Services.AddResponseCaching();
 builder.Services.AddHttpContextAccessor();
 
-// Configure Kestrel
+// ------------------------------------------
+// KESTREL CONFIG
+// ------------------------------------------
 builder.WebHost.ConfigureKestrel((context, options) =>
 {
     if (context.HostingEnvironment.IsDevelopment())
@@ -97,9 +104,29 @@ builder.WebHost.ConfigureKestrel((context, options) =>
     }
 });
 
+// Add CORS services
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        builder =>
+        {
+            builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+        });
+});
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline
+// ------------------------------------------
+// BOOT UMBRACO
+// ------------------------------------------
+await app.BootUmbracoAsync();
+
+// ------------------------------------------
+// MIDDLEWARE PIPELINE
+// ------------------------------------------
 if (app.Environment.IsDevelopment())
 {
     app.UseLiveReload();
@@ -115,13 +142,13 @@ app.UseHttpsRedirection();
 app.UseResponseCompression();
 app.UseCookiePolicy();
 
-// Use StaticFiles with custom configurations
+// Serve static files (including .br, .gz, etc.)
 var provider = new FileExtensionContentTypeProvider();
 provider.Mappings[".avif"] = "image/avif";
 provider.Mappings[".br"] = "application/x-brotli";
 provider.Mappings[".gz"] = "application/gzip";
 
-app.UseCompressedFiles();
+app.UseCompressedFiles(); // if you have a custom extension that does the same
 app.UseStaticFiles(new StaticFileOptions
 {
     ContentTypeProvider = provider,
@@ -155,35 +182,9 @@ app.UseStaticFiles(new StaticFileOptions
     }
 });
 
-// Middleware to redirect /servicios/* to /guias/*
-app.Use(async (context, next) =>
-{
-    var requestPath = context.Request.Path.Value?.ToLower();
-
-    if (requestPath?.StartsWith("/servicios/") == true)
-    {
-        var newPath = requestPath.Replace("/servicios/", "/guias/");
-        context.Response.StatusCode = 301;
-        context.Response.Headers["Location"] = newPath;
-        return;
-    }
-
-    await next();
-});
-
-// Use MVC with default route
-app.UseMvc(routes =>
-{
-    routes.MapRoute(
-        name: "default",
-        template: "{controller=Home}/{action=Index}/{id?}"
-    );
-});
-
-// Enable response caching
 app.UseResponseCaching();
 
-// Localization configuration
+// Localization
 app.UseRequestLocalization(new RequestLocalizationOptions
 {
     DefaultRequestCulture = new RequestCulture("es-ES"),
@@ -191,8 +192,69 @@ app.UseRequestLocalization(new RequestLocalizationOptions
     SupportedUICultures = new List<CultureInfo> { new CultureInfo("es-ES") }
 });
 
+// Example custom redirect from /servicios/* to /guias/*
+app.Use(async (context, next) =>
+{
+    var requestPath = context.Request.Path.Value?.ToLower();
+    if (requestPath?.StartsWith("/servicios/") == true)
+    {
+        var newPath = requestPath.Replace("/servicios/", "/guias/");
+        context.Response.StatusCode = 301;
+        context.Response.Headers["Location"] = newPath;
+        return;
+    }
+    await next();
+});
+
+// Configure accessors
 var accessor = app.Services.GetRequiredService<IHttpContextAccessor>();
 VersionedFileHelper.Configure(accessor);
 AssetHelper.Configure(accessor);
 
+// ------------------------------------------
+// USE ROUTING
+// ------------------------------------------
+app.UseRouting();
+
+// ------------------------------------------
+// UMBRACO MIDDLEWARE
+// ------------------------------------------
+// By default, "UseWebsiteEndpoints()" will route *all* front-end pages to Umbraco.
+// If you only need Umbraco for /novedades (plus backoffice), you can do partial routing or
+// keep the entire site under Umbraco. Below is the standard "use all Umbraco routes" approach.
+app.UseUmbraco()
+    .WithMiddleware(u =>
+    {
+        u.UseBackOffice();
+        u.UseWebsite();
+    })
+    .WithEndpoints(u =>
+    {
+        u.UseInstallerEndpoints();
+        u.UseBackOfficeEndpoints();
+        u.UseWebsiteEndpoints();
+    });
+
+// ------------------------------------------
+// ADD YOUR OWN CONTROLLER ROUTES
+// ------------------------------------------
+// For everything else that is *not* handled by Umbraco or static files
+app.UseEndpoints(endpoints =>
+{
+    // Normal MVC or Razor Pages route
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}"
+    );
+
+    // Razor Pages (if you have them)
+    endpoints.MapRazorPages();
+});
+
+// Add CORS middleware
+app.UseCors("AllowAll");
+
+// ------------------------------------------
+// RUN
+// ------------------------------------------
 app.Run();

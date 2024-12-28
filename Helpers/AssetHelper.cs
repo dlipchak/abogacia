@@ -50,6 +50,24 @@ public static class AssetHelper
         var path = currentUrl.Split('?')[0].TrimEnd('/');
         if (string.IsNullOrEmpty(path)) path = "/";
 
+        // Check if this is a novedades path
+        if (path.StartsWith("/novedades"))
+        {
+            var segments = path.Split('/').Length;
+            if (segments >= 4)
+            {
+                return new PageAssets { EntryName = "blogEntry" };
+            }
+            else if (segments == 3)
+            {
+                return new PageAssets { EntryName = "blogEntryCategory" };
+            }
+            else if (segments == 2)
+            {
+                return new PageAssets { EntryName = "blog" };
+            }
+        }
+
         if (!UrlToEntryMap.Value.TryGetValue(path, out var entryName))
         {
             return new PageAssets();
@@ -57,8 +75,6 @@ public static class AssetHelper
 
         var assets = new PageAssets { EntryName = entryName };
 
-        // if (env.EnvironmentName != "Development")
-        // {
         var viewportType = "desktop";
         var userAgent = _httpContextAccessor?.HttpContext?.Request.Headers["User-Agent"].ToString();
         if (userAgent?.Contains("Mobile") == true)
@@ -75,7 +91,6 @@ public static class AssetHelper
         {
             assets.CriticalCss = File.ReadAllText(criticalPath);
         }
-        // }
 
         return assets;
     }

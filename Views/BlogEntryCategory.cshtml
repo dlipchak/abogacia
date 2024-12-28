@@ -1,0 +1,43 @@
+﻿@using Umbraco.Extensions
+@using Umbraco.Cms.Web.Common.PublishedModels
+@using Umbraco.Cms.Core.Models.PublishedContent
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<IPublishedContent>
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+	var articles = Model.Children.Where(x => x.ContentType.Alias == "blogEntry");
+}
+
+<!-- Page Title -->
+<section class="page-title bg-transparent">
+	<div class="container mt-6">
+		<div class="page-title-row">
+			<div class="page-title-content">
+				<h1>@Model.Name</h1>
+				<span>Artículos en esta categoría</span>
+			</div>
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="/">Inicio</a></li>
+					<li class="breadcrumb-item"><a href="/novedades">Novedades</a></li>
+					<li class="breadcrumb-item active" aria-current="page">@Model.Name</li>
+				</ol>
+			</nav>
+		</div>
+	</div>
+</section>
+
+<!-- Content -->
+<section id="content">
+		<div class="container">
+			<div class="row gx-5 col-mb-80">
+				<!-- Post Content -->
+				<main class="postcontent col-lg-9">
+					@await Html.PartialAsync("_BlogEntryList", articles)
+				</main>
+
+				<!-- Sidebar -->
+				@await Html.PartialAsync("_BlogSidebar", Model.Parent as IPublishedContent)
+			</div>
+		</div>
+</section>
+            

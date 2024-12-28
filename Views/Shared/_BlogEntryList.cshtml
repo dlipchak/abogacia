@@ -1,0 +1,42 @@
+@using Umbraco.Extensions
+@using Umbraco.Cms.Core.Models.PublishedContent
+@using System.Globalization
+@model IEnumerable<IPublishedContent>
+@{
+    var culture = new CultureInfo("es-ES");
+}
+
+<!-- Posts -->
+<div id="posts" class="row gutter-30">
+    @foreach (var blogEntry in Model)
+    {
+        <div class="entry col-12">
+            <div class="grid-inner">
+                @if (blogEntry.HasValue("mainImage"))
+                {
+                    <div class="entry-image">
+                        <a href="@blogEntry.Url()">
+                            <img src="@(blogEntry.Value<IPublishedContent>("mainImage")?.Url() ?? "#")" alt="@blogEntry.Name()">
+                        </a>
+                    </div>
+                }
+                <div class="entry-title">
+                    <h2><a href="@blogEntry.Url()">@blogEntry.Name()</a></h2>
+                </div>
+                <div class="entry-meta">
+                    <ul>
+                        <li><i class="uil uil-schedule"></i> @blogEntry.CreateDate.ToString("dd MMMM yyyy", culture)</li>
+                        <li><i class="uil uil-folder"></i> <a href="@blogEntry.Parent.Url()">@blogEntry.Parent.Name()</a></li>
+                    </ul>
+                </div>
+                @if (blogEntry.HasValue("summary"))
+                {
+                    <div class="entry-content">
+                        <p>@blogEntry.Value("summary")</p>
+                        <a href="@blogEntry.Url()" class="more-link">Leer más</a>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+</div> 

@@ -1,6 +1,7 @@
 import os
 import re
 import subprocess
+import argparse
 
 def extract_unicodes_from_icons(file_path):
     """
@@ -55,15 +56,20 @@ def subset_fonts(unicodes, fonts_dir):
             print(f"Successfully subsetted {font_file} to {output_file}")
 
 def main():
+    parser = argparse.ArgumentParser(description='Subset fonts based on used Unicode glyphs.')
+    parser.add_argument('--fonts-dir', 
+                      default="C:\\Repos\\abogacia\\wwwroot\\css",
+                      help='Directory containing the fonts to subset (default: C:\\Repos\\abogacia\\wwwroot\\css)')
+    args = parser.parse_args()
+
     try:
         icons_file = "C:\\Repos\\abogacia\\used-glyphs.txt"
         print(f"Reading Unicode glyphs from file: {icons_file}")
         unicodes = extract_unicodes_from_icons(icons_file)
         print("Extracted Unicode glyphs:", unicodes)
 
-        fonts_dir = "C:\\Repos\\abogacia\\wwwroot\\css"
-        print(f"Processing .woff2 fonts in directory: {fonts_dir}")
-        subset_fonts(unicodes, fonts_dir)
+        print(f"Processing .woff2 fonts in directory: {args.fonts_dir}")
+        subset_fonts(unicodes, args.fonts_dir)
     except Exception as e:
         print("An error occurred:", e)
 

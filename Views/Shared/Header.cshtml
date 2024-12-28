@@ -133,6 +133,10 @@
                             </ul>
                         </li>
 
+                        <li class="menu-item @Html.IsSelected(controller:"NovedadesFolder",cssClass:"current")">
+                            <a class="menu-link" href="/novedades">Novedades</a>
+                        </li>
+
                     <li class="menu-item @Html.IsSelected(action: "index", controller: "Contacto", cssClass: "current")">
                         <a class="menu-link" href="@Url.Action("index", "Contacto")">Contáctenos</a>
                     </li>

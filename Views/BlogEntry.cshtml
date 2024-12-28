@@ -1,0 +1,246 @@
+﻿@using Umbraco.Cms.Core.Models.PublishedContent
+@using Umbraco.Cms.Web.Common.PublishedModels
+@using Umbraco.Extensions
+@using Umbraco.Cms.Core.Services
+@using System.Globalization
+@inject IContentService ContentService
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<IPublishedContent>
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+	var culture = new CultureInfo("es-ES");
+
+	// Set SEO meta tags
+	ViewData["Title"] = Model.HasValue("metaTitle") ? Model.Value<string>("metaTitle") : Model.Name;
+	ViewData["Description"] = Model.HasValue("metaDescription") ? Model.Value<string>("metaDescription") : Model.Value<string>("summary");
+	ViewData["Keywords"] = Model.HasValue("metaKeywords") ? Model.Value<string>("metaKeywords") : "";
+	ViewData["Canonical"] = Model.HasValue("canonicalUrl") ? Model.Value<string>("canonicalUrl") : Model.Url();
+
+	// Open Graph meta tags
+	ViewData["OgTitle"] = ViewData["Title"];
+	ViewData["OgDescription"] = ViewData["Description"];
+	ViewData["OgImage"] = Model.HasValue("ogImage") ? Model.Value<IPublishedContent>("ogImage")?.Url() : 
+						 (Model.HasValue("mainImage") ? Model.Value<IPublishedContent>("mainImage")?.Url() : "");
+
+	// Increment view count
+	try
+	{
+		var content = ContentService.GetById(Model.Id);
+		if (content != null)
+		{
+			var currentViews = content.GetValue<int>("viewCount");
+			content.SetValue("viewCount", currentViews + 1);
+			ContentService.SaveAndPublish(content);
+			
+			// Debug information
+			System.Diagnostics.Debug.WriteLine($"Article ID: {Model.Id}");
+			System.Diagnostics.Debug.WriteLine($"Current views: {currentViews}");
+		}
+		else
+		{
+			System.Diagnostics.Debug.WriteLine($"Content not found for ID: {Model.Id}");
+		}
+	}
+	catch (Exception ex)
+	{
+		// Log the error but don't block the page from loading
+		System.Diagnostics.Debug.WriteLine($"Error updating view count: {ex.Message}");
+		System.Diagnostics.Debug.WriteLine($"Stack trace: {ex.StackTrace}");
+	}
+}
+
+<section id="page-title">
+	<div class="container clearfix">
+		<h1>@Model.Name</h1>
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="/">Inicio</a></li>
+			<li class="breadcrumb-item"><a href="/novedades">Novedades</a></li>
+			<li class="breadcrumb-item"><a href="@Model.Parent.Url()">@Model.Parent.Name</a></li>
+			<li class="breadcrumb-item active" aria-current="page">@Model.Name</li>
+		</ol>
+	</div>
+</section>
+
+<section id="content">
+		<div class="container clearfix">
+			<div class="row gutter-40 col-mb-80">
+				<!-- Post Content -->
+				<div class="postcontent col-lg-9">
+					<div class="single-post mb-0">
+						<!-- Single Post -->
+						<div class="entry clearfix">
+							<!-- Entry Title -->
+							<div class="entry-title">
+								<h2>@Model.Name</h2>
+							</div>
+
+							<!-- Entry Meta -->
+							<div class="entry-meta">
+								<ul>
+									<li><i class="uil uil-schedule"></i> @Model.CreateDate.ToString("dd MMMM yyyy", culture)</li>
+									<li><i class="uil uil-folder"></i> <a href="@Model.Parent.Url()">@Model.Parent.Name</a></li>
+								</ul>
+							</div>
+
+							<!-- Entry Image -->
+							@if (Model.HasValue("mainImage"))
+							{
+								<div class="entry-image">
+									<img src="@(Model.Value<IPublishedContent>("mainImage")?.Url() ?? "#")" alt="@Model.Name">
+								</div>
+							}
+
+							<!-- Entry Content -->
+							<div class="entry-content mt-0">
+								@Model.Value("content")
+							</div>
+
+							<!-- Comments -->
+							<div id="comments" class="mt-4">
+								@{
+									var approvedComments = Model.Children()
+										.Where(x => x.ContentType.Alias == "comment" && x.IsVisible())
+										.OrderByDescending(x => x.CreateDate);
+									var commentCount = approvedComments.Count();
+								}
+
+								<h3 id="comments-title"><span>@commentCount</span> Comentarios</h3>
+
+								<!-- Comments List -->
+								@if (approvedComments.Any())
+								{
+									<ol class="commentlist">
+										@foreach (var comment in approvedComments)
+										{
+											<li class="comment even thread-even depth-1" id="li-comment-@comment.Id">
+												<div id="comment-@comment.Id" class="comment-wrap">
+													<div class="comment-meta">
+														<div class="comment-author vcard">
+															<span class="comment-avatar"></span>
+														</div>
+													</div>
+
+													<div class="comment-content">
+														<div class="comment-author">
+															@comment.Value("userName")
+															<span>
+																<a href="#" title="Permalink to this comment">
+																	@comment.CreateDate.ToString("dd MMMM yyyy 'a las' HH:mm")
+																</a>
+															</span>
+														</div>
+
+														<p>@comment.Value("userComment")</p>
+														<div class="reply">
+															<a class="comment-reply-link" href="#" data-comment-id="@comment.Id">
+																<i class="uil uil-reply"></i> Responder
+															</a>
+														</div>
+													</div>
+
+													<div class="clear"></div>
+												</div>
+
+												@{
+													var responses = comment.Children()
+														.Where(x => x.ContentType.Alias == "comment" && x.IsVisible())
+														.OrderBy(x => x.CreateDate);
+												}
+
+												@if (responses.Any())
+												{
+													<ul class="children">
+														@foreach (var response in responses)
+														{
+															<li class="comment odd alt depth-2" id="li-comment-@response.Id">
+																<div id="comment-@response.Id" class="comment-wrap">
+																	<div class="comment-meta">
+																		<div class="comment-author vcard">
+																			<span class="comment-avatar"></span>
+																		</div>
+																	</div>
+
+																	<div class="comment-content">
+																		<div class="comment-author">
+																			@response.Value("name")
+																			<span>
+																				<a href="#" title="Permalink to this comment">
+																					@response.CreateDate.ToString("dd MMMM yyyy 'a las' HH:mm")
+																				</a>
+																			</span>
+																		</div>
+
+																		<p>@response.Value("comment")</p>
+																	</div>
+
+																	<div class="clear"></div>
+																</div>
+															</li>
+														}
+													</ul>
+												}
+											</li>
+										}
+									</ol>
+								}
+								else
+								{
+									<p>No hay comentarios aún. ¡Sé el primero en comentar!</p>
+								}
+
+								<div class="clear"></div>
+
+								<!-- Comment Form -->
+								<div id="respond">
+									<h3>Dejar un <span>Comentario</span></h3>
+									<p class="small text-muted">Tu comentario será revisado antes de ser publicado.</p>
+
+									<div class="alert alert-success d-none" role="alert">
+										¡Gracias por tu comentario! Será revisado y publicado pronto.
+									</div>
+
+									<form class="row needs-validation" id="commentform" novalidate>
+										<input type="hidden" name="ArticleId" value="@Model.Id" />
+										<input type="hidden" name="ParentCommentId" id="parentCommentId" value="" />
+										
+										<div class="col-md-6 form-group">
+											<label for="author">Nombre <small>*</small></label>
+											<input type="text" name="Name" id="author" value="" class="form-control" required>
+											<div class="invalid-feedback">
+												Por favor, ingrese su nombre
+											</div>
+										</div>
+
+										<div class="col-md-6 form-group">
+											<label for="email">Correo Electrónico <small>*</small></label>
+											<input type="email" name="Email" id="email" value="" class="form-control" required>
+											<div class="invalid-feedback">
+												Por favor, ingrese un email válido
+											</div>
+										</div>
+
+										<div class="w-100"></div>
+
+										<div class="col-12 form-group">
+											<label for="comment">Comentario <small>*</small></label>
+											<textarea name="Comment" cols="58" rows="7" class="form-control" required></textarea>
+											<div class="invalid-feedback">
+												Por favor, ingrese su comentario
+											</div>
+										</div>
+
+										<div class="col-12 form-group">
+											<button name="submit" type="submit" id="submit-button" class="button button-3d m-0">Enviar Comentario</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Sidebar -->
+				@await Html.PartialAsync("_BlogSidebar", Model.Root().FirstChild(x => x.ContentType.Alias == "blog"))
+			</div>
+		</div>
+</section>
+            
