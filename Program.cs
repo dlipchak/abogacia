@@ -1,37 +1,38 @@
-﻿using System.Globalization;
-using System.IO.Compression;
-using System.Collections.Generic;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Localization;
-using Microsoft.AspNetCore.ResponseCompression;
-using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.AspNetCore.Server.Kestrel.Core;
-using AbogaciaCore;
-using AbogaciaCore.Helpers;
-using Westwind.AspNetCore.LiveReload;
-using Umbraco.Cms.Core.DependencyInjection;
-using Umbraco.Cms.Web.Website.Controllers;
+using Umbraco.Cms.Core.DependencyInjection;               // IUmbracoBuilder
 using Umbraco.Extensions;
+using Umbraco.Cms.Persistence.Sqlite;
+using Microsoft.AspNetCore.ResponseCompression;
+using System.IO.Compression;
+using Microsoft.AspNetCore.StaticFiles;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
+using System.Linq;
+using Microsoft.AspNetCore.Localization;
+using System.Collections.Generic;
+using System.Globalization;
+using Microsoft.AspNetCore.Http;
+using Westwind.AspNetCore.LiveReload;
+using System;
+using System.IO;           // for AddUmbracoEFCoreSqlite()
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ------------------------------------------
-// UMBRACO CONFIG
-// ------------------------------------------
-builder.CreateUmbracoBuilder()
+Console.WriteLine(Directory.GetCurrentDirectory());
+
+// Build the Umbraco pipeline with EFCore + SQLite
+builder.Services.AddUmbraco(builder.Environment, builder.Configuration)
     .AddBackOffice()
     .AddWebsite()
-    .AddDeliveryApi()
     .AddComposers()
+    .AddUmbracoSqliteSupport() // <-- EF Core SQLite support
     .Build();
 
-// ------------------------------------------
+// --------------------------------------------------
 // SERVICE REGISTRATIONS
-// ------------------------------------------
+// --------------------------------------------------
 builder.Services.AddLiveReload();
 builder.Services.AddHttpClient();
 
@@ -77,9 +78,9 @@ builder.Services.Configure<FileExtensionContentTypeProvider>(options =>
 builder.Services.AddResponseCaching();
 builder.Services.AddHttpContextAccessor();
 
-// ------------------------------------------
+// --------------------------------------------------
 // KESTREL CONFIG
-// ------------------------------------------
+// --------------------------------------------------
 builder.WebHost.ConfigureKestrel((context, options) =>
 {
     if (context.HostingEnvironment.IsDevelopment())
@@ -119,14 +120,14 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// ------------------------------------------
+// --------------------------------------------------
 // BOOT UMBRACO
-// ------------------------------------------
+// --------------------------------------------------
 await app.BootUmbracoAsync();
 
-// ------------------------------------------
+// --------------------------------------------------
 // MIDDLEWARE PIPELINE
-// ------------------------------------------
+// --------------------------------------------------
 if (app.Environment.IsDevelopment())
 {
     app.UseLiveReload();
@@ -148,7 +149,9 @@ provider.Mappings[".avif"] = "image/avif";
 provider.Mappings[".br"] = "application/x-brotli";
 provider.Mappings[".gz"] = "application/gzip";
 
-app.UseCompressedFiles(); // if you have a custom extension that does the same
+// If you have a custom extension for pre-compressed files:
+app.UseCompressedFiles();
+
 app.UseStaticFiles(new StaticFileOptions
 {
     ContentTypeProvider = provider,
@@ -211,17 +214,14 @@ var accessor = app.Services.GetRequiredService<IHttpContextAccessor>();
 VersionedFileHelper.Configure(accessor);
 AssetHelper.Configure(accessor);
 
-// ------------------------------------------
-// USE ROUTING
-// ------------------------------------------
+// --------------------------------------------------
+// ROUTING
+// --------------------------------------------------
 app.UseRouting();
 
-// ------------------------------------------
+// --------------------------------------------------
 // UMBRACO MIDDLEWARE
-// ------------------------------------------
-// By default, "UseWebsiteEndpoints()" will route *all* front-end pages to Umbraco.
-// If you only need Umbraco for /novedades (plus backoffice), you can do partial routing or
-// keep the entire site under Umbraco. Below is the standard "use all Umbraco routes" approach.
+// --------------------------------------------------
 app.UseUmbraco()
     .WithMiddleware(u =>
     {
@@ -235,26 +235,23 @@ app.UseUmbraco()
         u.UseWebsiteEndpoints();
     });
 
-// ------------------------------------------
+// --------------------------------------------------
 // ADD YOUR OWN CONTROLLER ROUTES
-// ------------------------------------------
-// For everything else that is *not* handled by Umbraco or static files
+// --------------------------------------------------
 app.UseEndpoints(endpoints =>
 {
-    // Normal MVC or Razor Pages route
     endpoints.MapControllerRoute(
         name: "default",
         pattern: "{controller=Home}/{action=Index}/{id?}"
     );
 
-    // Razor Pages (if you have them)
     endpoints.MapRazorPages();
 });
 
 // Add CORS middleware
 app.UseCors("AllowAll");
 
-// ------------------------------------------
+// --------------------------------------------------
 // RUN
-// ------------------------------------------
+// --------------------------------------------------
 app.Run();

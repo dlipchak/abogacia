@@ -183,8 +183,14 @@
     <PackageReference Include="System.Text.Json" Version="8.0.1" />
     <PackageReference Include="Umbraco.Cms" Version="13.0.3" />
     <PackageReference Include="Umbraco.Cms.Infrastructure" Version="13.0.3" />
+    <PackageReference Include="Umbraco.Cms.Persistence.EFCore.Sqlite" Version="13.0.3" />
+    <PackageReference Include="Umbraco.Cms.Persistence.EFCore" Version="13.0.3" />
+
     <PackageReference Include="WebMarkupMin.AspNetCore8" Version="2.16.0" />
     <PackageReference Include="WestWind.AspnetCore.LiveReload" Version="0.4.2" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
