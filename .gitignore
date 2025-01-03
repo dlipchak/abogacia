@@ -15,6 +15,7 @@ umbraco/BackOffice/
 umbraco/UmbracoBackOffice/
 umbraco/UmbracoWebsite/
 umbraco/TEMP/
+umbraco/Data/TEMP/
 
 # User-specific files
 *.rsuser
