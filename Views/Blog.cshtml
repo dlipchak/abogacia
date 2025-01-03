@@ -28,14 +28,24 @@
 <!-- Content -->
 <section id="content">
 		<div class="container">
-			<div class="row gx-5 col-mb-80">
-				<!-- Post Content -->
-				<main class="postcontent col-lg-9">
-					@await Html.PartialAsync("_BlogEntryList", articles)
-				</main>
+			@if (!articles.Any())
+			{
+				<div class="alert alert-info text-center">
+					<h3 class="mb-0">Próximamente</h3>
+					<p class="mb-0 mt-2">Estamos preparando contenido interesante para compartir con ustedes.</p>
+				</div>
+			}
+			else
+			{
+				<div class="row gx-5 col-mb-80">
+					<!-- Post Content -->
+					<main class="postcontent col-lg-9">
+						@await Html.PartialAsync("_BlogEntryList", articles)
+					</main>
 
-				<!-- Sidebar -->
-				@await Html.PartialAsync("_BlogSidebar", Model)
-			</div>
+					<!-- Sidebar -->
+					@await Html.PartialAsync("_BlogSidebar", Model)
+				</div>
+			}
 		</div>
 </section>

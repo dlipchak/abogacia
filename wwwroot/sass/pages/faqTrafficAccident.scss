@@ -11,8 +11,8 @@
   background: url("/images/faq/faq-traffic-accident.jpeg") center center / cover
     no-repeat;
 
-  @supports (background-image: url("/images/faq/faq-traffic-accident.avif")) {
-    background: url("/images/faq/faq-traffic-accident.avif") center center /
+  @supports (background-image: url("/images/faq/faq-traffic-accident.webp")) {
+    background: url("/images/faq/faq-traffic-accident.webp") center center /
       cover no-repeat;
   }
 

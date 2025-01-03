@@ -18,47 +18,52 @@ public class ImageFormatMiddleware
     {
         var path = context.Request.Path.Value;
 
-        // Check if the request is for a .jpg or .jpeg file
+        // Check if the request is for a .jpg, .jpeg, or .webp file
         if (path.EndsWith(".jpg", System.StringComparison.OrdinalIgnoreCase) ||
-            path.EndsWith(".jpeg", System.StringComparison.OrdinalIgnoreCase))
+            path.EndsWith(".jpeg", System.StringComparison.OrdinalIgnoreCase) ||
+            path.EndsWith(".webp", System.StringComparison.OrdinalIgnoreCase))
         {
             _logger.LogInformation("Detected image request for path: {Path}", path);
 
-            // Check if the client accepts AVIF
-            if (context.Request.Headers["Accept"].ToString().Contains("image/avif"))
+            // Check if the client accepts WebP and the original request wasn't for WebP
+            if (!path.EndsWith(".webp", System.StringComparison.OrdinalIgnoreCase) &&
+                context.Request.Headers["Accept"].ToString().Contains("image/webp"))
             {
-                // Construct the corresponding AVIF path
-                var avifFilePath = path.Replace(".jpg", ".avif", System.StringComparison.OrdinalIgnoreCase)
-                                       .Replace(".jpeg", ".avif", System.StringComparison.OrdinalIgnoreCase);
+                // Construct the corresponding WebP path
+                var webpFilePath = path
+                    .Replace(".jpg", ".webp", System.StringComparison.OrdinalIgnoreCase)
+                    .Replace(".jpeg", ".webp", System.StringComparison.OrdinalIgnoreCase);
 
-                var physicalAvifPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", avifFilePath.TrimStart('/'));
+                var physicalWebpPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", webpFilePath.TrimStart('/'));
 
-                // Check if the AVIF file exists on disk
-                if (File.Exists(physicalAvifPath))
+                // Check if the WebP file exists on disk
+                if (File.Exists(physicalWebpPath))
                 {
-                    _logger.LogInformation("AVIF file found. Serving AVIF file: {AvifPath}", avifFilePath);
+                    _logger.LogInformation("WebP file found. Serving WebP file: {WebpPath}", webpFilePath);
 
-                    // Serve the AVIF file directly
-                    context.Response.ContentType = "image/avif";
-                    await context.Response.SendFileAsync(physicalAvifPath);
+                    // Serve the WebP file directly
+                    context.Response.ContentType = "image/webp";
+                    await context.Response.SendFileAsync(physicalWebpPath);
                     return;
                 }
             }
 
-            // Fallback to the original .jpg/.jpeg file if AVIF is not available
-            var physicalJpgPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", path.TrimStart('/'));
+            // Fallback to the original file
+            var physicalOriginalPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", path.TrimStart('/'));
 
-            if (File.Exists(physicalJpgPath))
+            if (File.Exists(physicalOriginalPath))
             {
-                _logger.LogInformation("Serving original JPEG file: {Path}", path);
+                _logger.LogInformation("Serving original file: {Path}", path);
 
-                context.Response.ContentType = "image/jpeg";
-                await context.Response.SendFileAsync(physicalJpgPath);
+                context.Response.ContentType = path.EndsWith(".webp", System.StringComparison.OrdinalIgnoreCase)
+                    ? "image/webp"
+                    : "image/jpeg";
+                await context.Response.SendFileAsync(physicalOriginalPath);
                 return;
             }
             else
             {
-                _logger.LogWarning("File not found: {Path}", physicalJpgPath);
+                _logger.LogWarning("File not found: {Path}", physicalOriginalPath);
                 context.Response.StatusCode = StatusCodes.Status404NotFound;
                 return;
             }

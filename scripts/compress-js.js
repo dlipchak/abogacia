@@ -26,18 +26,45 @@ async function compressFiles() {
       await mkdir(compressedDir, { recursive: true });
     }
 
-    // Get all .js files including those in the root directory
-    const files = glob.sync("**/*.js", {
-      cwd: jsRootDir,
-      ignore: [
-        "pages/**/*",
-        "compressed/**/*",
-        "**/*.br",
-        "**/*.gz",
-        "**/*.map",
-      ],
-      absolute: true,
-    });
+    // Check if a specific path was provided
+    const targetPath = process.argv[2];
+    let files = [];
+
+    if (targetPath) {
+      const absolutePath = path.resolve(targetPath);
+      if (!fs.existsSync(absolutePath)) {
+        console.error(`❌ Path not found: ${absolutePath}`);
+        process.exit(1);
+      }
+
+      if (fs.statSync(absolutePath).isDirectory()) {
+        console.log(`Processing directory: ${absolutePath}`);
+        files = glob.sync("**/*.js", {
+          cwd: absolutePath,
+          ignore: ["**/*.br", "**/*.gz", "**/*.map"],
+          absolute: true,
+        });
+      } else if (absolutePath.endsWith(".js")) {
+        console.log(`Processing single file: ${absolutePath}`);
+        files = [absolutePath];
+      } else {
+        console.error("❌ Target must be a .js file or a directory");
+        process.exit(1);
+      }
+    } else {
+      // Get all .js files including those in the root directory
+      files = glob.sync("**/*.js", {
+        cwd: jsRootDir,
+        ignore: [
+          "pages/**/*",
+          "compressed/**/*",
+          "**/*.br",
+          "**/*.gz",
+          "**/*.map",
+        ],
+        absolute: true,
+      });
+    }
 
     console.log("Found files to compress:", files.length);
 

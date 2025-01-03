@@ -12,8 +12,8 @@
   background: url("/images/faq/faq-work-accident.jpeg") center center / cover
     no-repeat;
 
-  @supports (background-image: url("/images/faq/faq-work-accident.avif")) {
-    background: url("/images/faq/faq-work-accident.avif") center center / cover
+  @supports (background-image: url("/images/faq/faq-work-accident.webp")) {
+    background: url("/images/faq/faq-work-accident.webp") center center / cover
       no-repeat;
   }
 

@@ -130,11 +130,11 @@
 														</div>
 
 														<p>@comment.Value("userComment")</p>
-														<div class="reply">
+														<!-- <div class="reply">
 															<a class="comment-reply-link" href="#" data-comment-id="@comment.Id">
 																<i class="uil uil-reply"></i> Responder
 															</a>
-														</div>
+														</div> -->
 													</div>
 
 													<div class="clear"></div>
@@ -239,7 +239,7 @@
 				</div>
 
 				<!-- Sidebar -->
-				@await Html.PartialAsync("_BlogSidebar", Model.Root().FirstChild(x => x.ContentType.Alias == "blog"))
+				@await Html.PartialAsync("_BlogSidebar", Model.Root().FirstChild(x => x.ContentType.Alias == "blog"), new ViewDataDictionary(ViewData) { { "additionalClass", "blog-entry-sidebar" } })
 			</div>
 		</div>
 </section>

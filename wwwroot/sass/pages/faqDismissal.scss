@@ -11,8 +11,8 @@
   background: url("/images/faq/faq-dismissals-2.jpeg") right center / cover
     no-repeat;
 
-  @supports (background-image: url("/images/faq/faq-dismissals-2.avif")) {
-    background: url("/images/faq/faq-dismissals-2.avif") right center / cover
+  @supports (background-image: url("/images/faq/faq-dismissals-2.webp")) {
+    background: url("/images/faq/faq-dismissals-2.webp") right center / cover
       no-repeat;
   }
 

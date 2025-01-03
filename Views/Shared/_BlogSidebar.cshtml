@@ -4,9 +4,10 @@
 @using System.Globalization
 @{
     var culture = new CultureInfo("es-ES");
+    var additionalClass = ViewData["additionalClass"] as string;
 }
 
-<aside class="sidebar col-lg-3">
+<aside class="sidebar col-lg-3 @additionalClass">
     <div class="sidebar-widgets-wrap">
         <div class="widget">
             <h4>Entradas Recientes</h4>
@@ -29,7 +30,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col ps-3">
+                            <div class="col ps-1">
                                 <div class="entry-title">
                                     <h4><a href="@blogEntry.Url()">@blogEntry.Name</a></h4>
                                 </div>
@@ -76,7 +77,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col ps-3">
+                            <div class="col ps-1">
                                 <div class="entry-title">
                                     <h4><a href="@blogEntry.Url()">@blogEntry.Name()</a></h4>
                                 </div>

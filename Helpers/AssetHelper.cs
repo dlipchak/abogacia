@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 using Microsoft.AspNetCore.Http;
+using System.Linq;
 
 public static class AssetHelper
 {
@@ -47,32 +48,59 @@ public static class AssetHelper
 
     public static PageAssets GetAssetsForUrl(string currentUrl, IWebHostEnvironment env)
     {
-        var path = currentUrl.Split('?')[0].TrimEnd('/');
+        // Normalize the path: trim trailing slash, convert to lowercase
+        var path = currentUrl.Split('?')[0].TrimEnd('/').ToLowerInvariant();
         if (string.IsNullOrEmpty(path)) path = "/";
 
-        // Check if this is a novedades path
+        // Check if this is a novedades/blog path
         if (path.StartsWith("/novedades"))
         {
-            var segments = path.Split('/').Length;
-            if (segments >= 4)
+            var segments = path.Split('/', StringSplitOptions.RemoveEmptyEntries).Length;
+            if (segments >= 3)
             {
                 return new PageAssets { EntryName = "blogEntry" };
             }
-            else if (segments == 3)
+            else if (segments == 2)
             {
                 return new PageAssets { EntryName = "blogEntryCategory" };
             }
-            else if (segments == 2)
+            else if (segments == 1)
             {
                 return new PageAssets { EntryName = "blog" };
             }
         }
 
-        if (!UrlToEntryMap.Value.TryGetValue(path, out var entryName))
+        // Try exact match first
+        if (UrlToEntryMap.Value.TryGetValue(path, out var entryName))
         {
-            return new PageAssets();
+            return CreatePageAssets(entryName, env);
         }
 
+        // Try with trailing slash
+        if (UrlToEntryMap.Value.TryGetValue(path + "/", out entryName))
+        {
+            return CreatePageAssets(entryName, env);
+        }
+
+        // Try without trailing slash
+        if (path.EndsWith("/") && UrlToEntryMap.Value.TryGetValue(path.TrimEnd('/'), out entryName))
+        {
+            return CreatePageAssets(entryName, env);
+        }
+
+        // Try case-insensitive match
+        var caseInsensitiveMatch = UrlToEntryMap.Value
+            .FirstOrDefault(x => x.Key.Equals(path, StringComparison.OrdinalIgnoreCase));
+        if (!string.IsNullOrEmpty(caseInsensitiveMatch.Key))
+        {
+            return CreatePageAssets(caseInsensitiveMatch.Value, env);
+        }
+
+        return new PageAssets();
+    }
+
+    private static PageAssets CreatePageAssets(string entryName, IWebHostEnvironment env)
+    {
         var assets = new PageAssets { EntryName = entryName };
 
         var viewportType = "desktop";

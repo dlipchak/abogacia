@@ -117,7 +117,7 @@
           }
 
           i {
-            margin-right: 0.5rem;
+            margin-right: 0.1rem;
             color: #1abc9c;
           }
 
@@ -384,6 +384,7 @@
 
           img {
             border-radius: 0.25rem;
+            height: 50px;
           }
         }
 
@@ -421,5 +422,9 @@
 @media screen and (min-width: 980px) {
   .content-wrap {
     padding-top: 200px;
+  }
+
+  .sidebar.blog-entry-sidebar {
+    margin-top: 220px;
   }
 }

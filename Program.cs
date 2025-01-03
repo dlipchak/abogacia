@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -15,12 +15,12 @@ using System.Collections.Generic;
 using System.Globalization;
 using Microsoft.AspNetCore.Http;
 using Westwind.AspNetCore.LiveReload;
-using System;
-using System.IO;           // for AddUmbracoEFCoreSqlite()
+using Umbraco.Cms.Core.DependencyInjection;
+using Umbraco.Cms.Web.Website.Controllers;
+using Umbraco.Extensions;
+using Umbraco.Cms.Persistence.Sqlite.Services;
 
 var builder = WebApplication.CreateBuilder(args);
-
-Console.WriteLine(Directory.GetCurrentDirectory());
 
 // Build the Umbraco pipeline with EFCore + SQLite
 builder.Services.AddUmbraco(builder.Environment, builder.Configuration)
@@ -72,6 +72,7 @@ builder.Services.Configure<GzipCompressionProviderOptions>(options =>
 builder.Services.Configure<FileExtensionContentTypeProvider>(options =>
 {
     options.Mappings[".avif"] = "image/avif";
+    options.Mappings[".webp"] = "image/webp";
 });
 
 // Response caching + HttpContext accessor
@@ -118,6 +119,8 @@ builder.Services.AddCors(options =>
         });
 });
 
+
+
 var app = builder.Build();
 
 // --------------------------------------------------
@@ -135,9 +138,12 @@ if (app.Environment.IsDevelopment())
 }
 else
 {
-    app.UseExceptionHandler("/Home/Error");
+    app.UseExceptionHandler("/error/500");
     app.UseHsts();
 }
+
+// Configure error handling
+app.UseStatusCodePagesWithReExecute("/error/{0}");
 
 app.UseHttpsRedirection();
 app.UseResponseCompression();
@@ -146,6 +152,7 @@ app.UseCookiePolicy();
 // Serve static files (including .br, .gz, etc.)
 var provider = new FileExtensionContentTypeProvider();
 provider.Mappings[".avif"] = "image/avif";
+provider.Mappings[".webp"] = "image/webp";
 provider.Mappings[".br"] = "application/x-brotli";
 provider.Mappings[".gz"] = "application/gzip";
 
@@ -222,6 +229,8 @@ app.UseRouting();
 // --------------------------------------------------
 // UMBRACO MIDDLEWARE
 // --------------------------------------------------
+
+
 app.UseUmbraco()
     .WithMiddleware(u =>
     {

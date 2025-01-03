@@ -1,8 +1,15 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PublishReadyToRun>false</PublishReadyToRun>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <PublishTrimmed>false</PublishTrimmed>
+    <TieredCompilation>true</TieredCompilation>
+    <SelfContained>false</SelfContained>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,179 +20,22 @@
   <ItemGroup>
     <None Include="bundleconfig.json" />
     <None Include="package.json" />
-    <None Include="wwwroot\css\fonts\font-icons-snapchat.svg" />
-    <None Include="wwwroot\css\fonts\font-icons.svg" />
-    <None Include="wwwroot\css\fonts\lined-icons.svg" />
-    <None Include="wwwroot\css\fonts\simple-line-icons.dev.svg" />
-    <None Include="wwwroot\css\fonts\simple-line-icons.svg" />
-    <None Include="wwwroot\images\backup\logo-white.png" />
-    <None Include="wwwroot\images\backup\logo.png" />
-    <None Include="wwwroot\images\icons\iconalt.svg" />
-    <None Include="wwwroot\images\intro\niche\photography1.psd" />
-    <None Include="wwwroot\images\intro\targets\blogs\.smbdeleteAAA2018fda1b" />
-    <None Include="wwwroot\js\components\bs-datatable.js" />
-    <None Include="wwwroot\js\components\bs-filestyle.js" />
-    <None Include="wwwroot\js\components\bs-select.js" />
-    <None Include="wwwroot\js\components\bs-switches.js" />
-    <None Include="wwwroot\js\components\datepicker.js" />
-    <None Include="wwwroot\js\components\daterangepicker.js" />
-    <None Include="wwwroot\js\components\moment.js" />
-    <None Include="wwwroot\js\components\rangeslider.min.js" />
-    <None Include="wwwroot\js\components\responsive-tabs.js" />
-    <None Include="wwwroot\js\components\select-boxes.js" />
-    <None Include="wwwroot\js\components\selectsplitter.js" />
-    <None Include="wwwroot\js\components\star-rating.js" />
-    <None Include="wwwroot\js\components\timepicker.js" />
-    <None Include="wwwroot\js\components\tinymce\jquery.tinymce.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\advlist\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\advlist\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\anchor\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\anchor\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\autolink\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\autolink\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\autoresize\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\autoresize\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\autosave\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\autosave\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\bbcode\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\bbcode\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\charmap\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\charmap\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\codesample\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\codesample\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\code\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\code\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\colorpicker\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\colorpicker\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\contextmenu\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\contextmenu\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\directionality\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\directionality\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\emoticons\js\emojis.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\emoticons\js\emojis.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\emoticons\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\emoticons\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\fullpage\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\fullpage\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\fullscreen\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\fullscreen\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\help\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\help\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\hr\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\hr\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\imagetools\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\imagetools\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\image\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\image\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\importcss\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\importcss\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\insertdatetime\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\insertdatetime\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\legacyoutput\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\legacyoutput\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\link\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\link\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\lists\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\lists\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\media\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\media\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\nonbreaking\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\nonbreaking\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\noneditable\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\noneditable\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\pagebreak\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\pagebreak\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\paste\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\paste\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\preview\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\preview\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\print\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\print\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\quickbars\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\quickbars\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\save\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\save\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\searchreplace\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\searchreplace\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\spellchecker\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\spellchecker\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\tabfocus\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\tabfocus\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\table\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\table\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\template\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\template\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\textcolor\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\textcolor\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\textpattern\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\textpattern\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\toc\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\toc\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\visualblocks\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\visualblocks\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\visualchars\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\visualchars\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\wordcount\plugin.js" />
-    <None Include="wwwroot\js\components\tinymce\plugins\wordcount\plugin.min.js" />
-    <None Include="wwwroot\js\components\tinymce\skins\content\default\content.min.css.map" />
-    <None Include="wwwroot\js\components\tinymce\skins\content\document\content.min.css.map" />
-    <None Include="wwwroot\js\components\tinymce\skins\content\writer\content.min.css.map" />
-    <None Include="wwwroot\js\components\tinymce\skins\ui\oxide-dark\content.inline.min.css.map" />
-    <None Include="wwwroot\js\components\tinymce\skins\ui\oxide-dark\content.min.css.map" />
-    <None Include="wwwroot\js\components\tinymce\skins\ui\oxide-dark\skin.min.css.map" />
-    <None Include="wwwroot\js\components\tinymce\skins\ui\oxide\content.inline.min.css.map" />
-    <None Include="wwwroot\js\components\tinymce\skins\ui\oxide\content.min.css.map" />
-    <None Include="wwwroot\js\components\tinymce\skins\ui\oxide\skin.min.css.map" />
-    <None Include="wwwroot\js\components\tinymce\skins\ui\oxide\skin.mobile.min.css.map" />
-    <None Include="wwwroot\js\components\tinymce\themes\mobile\theme.js" />
-    <None Include="wwwroot\js\components\tinymce\themes\mobile\theme.min.js" />
-    <None Include="wwwroot\js\components\tinymce\themes\silver\theme.js" />
-    <None Include="wwwroot\js\components\tinymce\themes\silver\theme.min.js" />
-    <None Include="wwwroot\js\components\tinymce\tinymce.js" />
-    <None Include="wwwroot\js\components\tinymce\tinymce.min.js" />
-    <None Include="wwwroot\js\components\typehead.js" />
-    <None Include="wwwroot\js\plugins\jquery.bootstrap.js" />
-    <None Include="wwwroot\js\plugins\jquery.chart.js" />
-    <None Include="wwwroot\js\plugins\jquery.color.js" />
-    <None Include="wwwroot\js\plugins\jquery.cookie.js" />
-    <None Include="wwwroot\js\plugins\jquery.countdown.js" />
-    <None Include="wwwroot\js\plugins\jquery.countto.js" />
-    <None Include="wwwroot\js\plugins\jquery.dribbble.js" />
-    <None Include="wwwroot\js\plugins\jquery.fitvids.js" />
-    <None Include="wwwroot\js\plugins\jquery.flexslider.js" />
-    <None Include="wwwroot\js\plugins\jquery.flickrfeed.js" />
-    <None Include="wwwroot\js\plugins\jquery.form.js" />
-    <None Include="wwwroot\js\plugins\jquery.important.js" />
-    <None Include="wwwroot\js\plugins\jquery.infinitescroll.js" />
-    <None Include="wwwroot\js\plugins\jquery.instagram.js" />
-    <None Include="wwwroot\js\plugins\jquery.isotope.js" />
-    <None Include="wwwroot\js\plugins\jquery.magnific.js" />
-    <None Include="wwwroot\js\plugins\jquery.owlcarousel.js" />
-    <None Include="wwwroot\js\plugins\jquery.pagetransition.js" />
-    <None Include="wwwroot\js\plugins\jquery.paginate.js" />
-    <None Include="wwwroot\js\plugins\jquery.parallax.js" />
-    <None Include="wwwroot\js\plugins\jquery.piechart.js" />
-    <None Include="wwwroot\js\plugins\jquery.sticky-sidebar.js" />
-    <None Include="wwwroot\js\plugins\jquery.superfish.js" />
-    <None Include="wwwroot\js\plugins\jquery.swiper.js" />
-    <None Include="wwwroot\js\plugins\jquery.tabs.js" />
-    <None Include="wwwroot\js\plugins\jquery.textrotator.js" />
-    <None Include="wwwroot\js\plugins\jquery.toastr.js" />
-    <None Include="wwwroot\js\plugins\jquery.twitterfeed.js" />
-    <None Include="wwwroot\js\plugins\jquery.validation.js" />
-    <None Include="wwwroot\js\plugins\jquery.youtube.js" />
+    <None Include="wwwroot\**\*" /> <!-- Includes all necessary files under wwwroot -->
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="BundlerMinifier.Core" Version="3.2.449" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="System.Text.Json" Version="8.0.1" />
+    <PackageReference Include="Serilog" Version="4.2.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="6.0.0" />
+    <PackageReference Include="System.Text.Json" Version="9.0.0" />
     <PackageReference Include="Umbraco.Cms" Version="13.0.3" />
     <PackageReference Include="Umbraco.Cms.Infrastructure" Version="13.0.3" />
     <PackageReference Include="Umbraco.Cms.Persistence.EFCore.Sqlite" Version="13.0.3" />
     <PackageReference Include="Umbraco.Cms.Persistence.EFCore" Version="13.0.3" />
-
     <PackageReference Include="WebMarkupMin.AspNetCore8" Version="2.16.0" />
     <PackageReference Include="WestWind.AspnetCore.LiveReload" Version="0.4.2" />
     <PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.0" />
@@ -194,12 +44,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <!-- extends watching group to include *.js files -->
-    <Watch Include="**\site.min.js" />
-    <Watch Include="**\site.min.css" />
+    <!-- Watch files -->
+    <Watch Include="**\*.js" />
+    <Watch Include="**\*.css" />
   </ItemGroup>
 
   <ItemGroup>
+    <!-- Exclude unnecessary or backup files -->
     <Compile Remove="wwwroot\images\backup\**" />
     <Content Remove="wwwroot\images\backup\**" />
     <EmbeddedResource Remove="wwwroot\images\backup\**" />
@@ -208,7 +59,22 @@
   </ItemGroup>
 
   <ItemGroup>
+    <!-- Include specific folders -->
     <Folder Include="wwwroot\js\components\tinymce\langs\" />
+  </ItemGroup>
+
+  <Target Name="CreateFoldersOnPublish" AfterTargets="AfterPublish">
+    <MakeDir Directories="$(PublishDir)wwwroot\js\components\tinymce\langs" />
+  </Target>
+
+  <ItemGroup>
+    <!-- Exclude development-time files -->
+    <Content Remove="**/*.map" />
+    <Content Remove="**/*.ts" />
+    <Content Remove="**/package.json" />
+    <Content Remove="**/package-lock.json" />
+    <Content Remove="**/.gitignore" />
+    <!-- Add other patterns as needed -->
   </ItemGroup>
 
 </Project>
