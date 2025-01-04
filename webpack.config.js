@@ -9,31 +9,36 @@ const fs = require("fs");
 const { execSync } = require("child_process");
 const { rmSync } = require("fs");
 
+const SOURCE_DIR = "./src";
+const VIEWS_DIR = "./views";
+const WWWROOT_DIR = "./wwwroot";
+const DIST_DIR = `${WWWROOT_DIR}/dist`;
+
 const commonPurgePaths = [
-  "./views/shared/_Layout.cshtml",
-  "./views/shared/Header.cshtml",
-  "./views/shared/Footer.cshtml",
-  "./views/shared/GoogleReviewsPartial.cshtml",
-  "./views/shared/_HeroSection.cshtml",
-  "./wwwroot/js/modules/lazyload.js",
-  "./wwwroot/js/plugins.bootstrap.js",
-  "./wwwroot/js/modules/stickfooteronsmall.js",
-  "./wwwroot/js/modules/gototop.js",
-  "./wwwroot/js/modules/logo.js",
-  "./wwwroot/js/modules/bscomponents.js",
-  "./wwwroot/js/modules/headers.js",
-  "./wwwroot/js/modules/menus.js",
-  "./wwwroot/js/modules/sliderdimensions.js",
-  "./wwwroot/js/modules/bootstrap.js",
-  "./wwwroot/js/modules/pagetransition.js",
+  `${VIEWS_DIR}/shared/_Layout.cshtml`,
+  `${VIEWS_DIR}/shared/Header.cshtml`,
+  `${VIEWS_DIR}/shared/Footer.cshtml`,
+  `${VIEWS_DIR}/shared/GoogleReviewsPartial.cshtml`,
+  `${VIEWS_DIR}/shared/_HeroSection.cshtml`,
+  `${SOURCE_DIR}/js/modules/lazyload.js`,
+  `${SOURCE_DIR}/js/plugins.bootstrap.js`,
+  `${SOURCE_DIR}/js/modules/stickfooteronsmall.js`,
+  `${SOURCE_DIR}/js/modules/gototop.js`,
+  `${SOURCE_DIR}/js/modules/logo.js`,
+  `${SOURCE_DIR}/js/modules/bscomponents.js`,
+  `${SOURCE_DIR}/js/modules/headers.js`,
+  `${SOURCE_DIR}/js/modules/menus.js`,
+  `${SOURCE_DIR}/js/modules/sliderdimensions.js`,
+  `${SOURCE_DIR}/js/modules/bootstrap.js`,
+  `${SOURCE_DIR}/js/modules/pagetransition.js`,
 ];
 
 function cleanDistFolder() {
-  const distPath = path.resolve(__dirname, "wwwroot/dist");
+  const distPath = path.resolve(__dirname, DIST_DIR);
   if (fs.existsSync(distPath)) {
     console.log("🧹 Cleaning dist folder:", distPath);
     rmSync(distPath, { recursive: true, force: true });
-    console.log("✅ Cleaned wwwroot/dist folder");
+    console.log(`✅ Cleaned ${DIST_DIR} folder`);
   }
 }
 
@@ -52,12 +57,7 @@ function generateUrlMapping(entries) {
     }
   });
 
-  const criticalDir = path.resolve(__dirname, "wwwroot/dist/critical");
-  if (!fs.existsSync(criticalDir)) {
-    fs.mkdirSync(criticalDir, { recursive: true });
-  }
-
-  const mappingPath = path.resolve(criticalDir, "url-mapping.json");
+  const mappingPath = path.resolve(__dirname, `${SOURCE_DIR}/url-mapping.json`);
   fs.writeFileSync(mappingPath, JSON.stringify(mapping, null, 2));
   console.log("Generated URL mapping");
 }
@@ -67,7 +67,10 @@ async function generateCriticalCSS(url, entryName, entries) {
   console.log(`   🌐 URL: ${url}`);
 
   // Read the manifest
-  const manifestPath = path.resolve(__dirname, "wwwroot/rev-manifest.json");
+  const manifestPath = path.resolve(
+    __dirname,
+    `${SOURCE_DIR}/rev-manifest.json`
+  );
   console.log("   📖 Reading manifest file");
   const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
 
@@ -79,8 +82,8 @@ async function generateCriticalCSS(url, entryName, entries) {
 
   console.log(`Looking for CSS file: ${hashedCssFileName}`); // Debug log
 
-  const cssFile = path.resolve(__dirname, `wwwroot/dist/${hashedCssFileName}`);
-  const criticalDir = path.resolve(__dirname, "wwwroot/dist/critical");
+  const cssFile = path.resolve(__dirname, `${DIST_DIR}/${hashedCssFileName}`);
+  const criticalDir = path.resolve(__dirname, `${DIST_DIR}/critical`);
 
   if (!fs.existsSync(criticalDir)) {
     fs.mkdirSync(criticalDir, { recursive: true });
@@ -123,7 +126,7 @@ async function generateCriticalCSS(url, entryName, entries) {
         );
 
         await generate({
-          base: "wwwroot/dist/",
+          base: `${DIST_DIR}/`,
           src: url,
           css: [hashedCssFileName],
           target: viewportCriticalPath,
@@ -188,240 +191,240 @@ module.exports = (env, argv) => {
 
   const entries = {
     calculatorWorkDismissal: {
-      entry: "./wwwroot/js/pages/calculatorWorkDismissal/index.js",
+      entry: `${SOURCE_DIR}/js/pages/calculatorWorkDismissal/index.js`,
       url: "http://localhost:5000/calculadoras/despidos",
       purgePaths: glob.sync([
-        "./views/Calculators/calculatorWorkDismissal.cshtml",
-        "./views/Calculators/partials/**/*.cshtml",
-        "./views/Shared/CalculatorsLinks.cshtml",
+        `${VIEWS_DIR}/Calculators/calculatorWorkDismissal.cshtml`,
+        `${VIEWS_DIR}/Calculators/partials/**/*.cshtml`,
+        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
         ...commonPurgePaths,
       ]),
       selectors: [],
     },
     calculatorWorkAccident: {
-      entry: "./wwwroot/js/pages/calculatorWorkAccident/index.js",
+      entry: `${SOURCE_DIR}/js/pages/calculatorWorkAccident/index.js`,
       url: "http://localhost:5000/calculadoras/accidentes-laborales",
       purgePaths: glob.sync([
-        "./views/Calculators/calculatorWorkAccident.cshtml",
-        "./views/Calculators/partials/**/*.cshtml",
-        "./views/Shared/CalculatorsLinks.cshtml",
+        `${VIEWS_DIR}/Calculators/calculatorWorkAccident.cshtml`,
+        `${VIEWS_DIR}/Calculators/partials/**/*.cshtml`,
+        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
         ...commonPurgePaths,
       ]),
       selectors: [],
     },
     calculatorTrafficAccident: {
-      entry: "./wwwroot/js/pages/calculatorTrafficAccident/index.js",
+      entry: `${SOURCE_DIR}/js/pages/calculatorTrafficAccident/index.js`,
       url: "http://localhost:5000/calculadoras/accidentes-de-transito",
       purgePaths: glob.sync([
-        "./views/Calculators/CalculatorTrafficAccident.cshtml",
-        "./views/Calculators/partials/**/*.cshtml",
-        "./views/Shared/CalculatorsLinks.cshtml",
+        `${VIEWS_DIR}/Calculators/CalculatorTrafficAccident.cshtml`,
+        `${VIEWS_DIR}/Calculators/partials/**/*.cshtml`,
+        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
         ...commonPurgePaths,
       ]),
       selectors: [],
     },
     faqDismissal: {
-      entry: "./wwwroot/js/pages/faqDismissal/index.js",
+      entry: `${SOURCE_DIR}/js/pages/faqDismissal/index.js`,
       url: "http://localhost:5000/preguntas-frecuentes/despidos",
       purgePaths: glob.sync([
-        "./views/FAQ/DismissalsFaq.cshtml",
-        "./views/Shared/CalculatorsLinks.cshtml",
+        `${VIEWS_DIR}/FAQ/DismissalsFaq.cshtml`,
+        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
         ...commonPurgePaths,
       ]),
       selectors: [],
     },
     faqTrafficAccident: {
-      entry: "./wwwroot/js/pages/faqTrafficAccident/index.js",
+      entry: `${SOURCE_DIR}/js/pages/faqTrafficAccident/index.js`,
       url: "http://localhost:5000/preguntas-frecuentes/accidentes-de-transito",
       purgePaths: glob.sync([
-        "./views/FAQ/TrafficAccidentFaq.cshtml",
-        "./views/Shared/CalculatorsLinks.cshtml",
+        `${VIEWS_DIR}/FAQ/TrafficAccidentFaq.cshtml`,
+        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
         ...commonPurgePaths,
       ]),
       selectors: [],
     },
     faqWorkAccident: {
-      entry: "./wwwroot/js/pages/faqWorkAccident/index.js",
+      entry: `${SOURCE_DIR}/js/pages/faqWorkAccident/index.js`,
       url: "http://localhost:5000/preguntas-frecuentes/accidentes-laborales",
       purgePaths: glob.sync([
-        "./views/FAQ/WorkAccidentFaq.cshtml",
-        "./views/Shared/CalculatorsLinks.cshtml",
+        `${VIEWS_DIR}/FAQ/WorkAccidentFaq.cshtml`,
+        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
         ...commonPurgePaths,
       ]),
       selectors: [],
     },
     contactUs: {
-      entry: "./wwwroot/js/pages/contactUs/index.js",
+      entry: `${SOURCE_DIR}/js/pages/contactUs/index.js`,
       url: "http://localhost:5000/contacto",
       purgePaths: glob.sync([
-        "./views/ContactUs/ContactUs.cshtml",
+        `${VIEWS_DIR}/ContactUs/ContactUs.cshtml`,
         ...commonPurgePaths,
       ]),
       selectors: [],
       additionalUrls: ["/Contacto", "/contacto"],
     },
     workerRights: {
-      entry: "./wwwroot/js/pages/workerRights/index.js",
+      entry: `${SOURCE_DIR}/js/pages/workerRights/index.js`,
       url: "http://localhost:5000/despidos/derechos-del-trabajador",
       purgePaths: glob.sync([
-        "./views/Dismissals/WorkerRights.cshtml",
+        `${VIEWS_DIR}/Dismissals/WorkerRights.cshtml`,
         ...commonPurgePaths,
       ]),
       selectors: [],
     },
     articles: {
-      entry: "./wwwroot/js/pages/articles/index.js",
+      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
       url: "http://localhost:5000/guias",
       purgePaths: glob.sync([
-        "./views/Articles/Articles.cshtml",
-        "./views/Articles/ArticlesHeader.cshtml",
-        "./views/Shared/CalculatorsLinks.cshtml",
+        `${VIEWS_DIR}/Articles/Articles.cshtml`,
+        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
         ...commonPurgePaths,
       ]),
       selectors: [],
     },
     accidentesEnTransportePublico: {
-      entry: "./wwwroot/js/pages/articles/index.js",
+      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
       url: "http://localhost:5000/guias/accidentes-en-transporte-publico",
       purgePaths: glob.sync([
-        "./views/Articles/AccidentesEnTransportePublico.cshtml",
-        "./views/Articles/ArticlesHeader.cshtml",
-        "./views/Shared/CalculatorsLinks.cshtml",
+        `${VIEWS_DIR}/Articles/AccidentesEnTransportePublico.cshtml`,
+        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
         ...commonPurgePaths,
       ]),
       selectors: [],
     },
     accidentesEnAuto: {
-      entry: "./wwwroot/js/pages/articles/index.js",
+      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
       url: "http://localhost:5000/guias/accidentes-en-auto",
       purgePaths: glob.sync([
-        "./views/Articles/AccidentesEnAuto.cshtml",
-        "./views/Articles/ArticlesHeader.cshtml",
-        "./views/Shared/CalculatorsLinks.cshtml",
+        `${VIEWS_DIR}/Articles/AccidentesEnAuto.cshtml`,
+        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
         ...commonPurgePaths,
       ]),
       selectors: [],
     },
     accidentesEnMoto: {
-      entry: "./wwwroot/js/pages/articles/index.js",
+      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
       url: "http://localhost:5000/guias/accidentes-en-moto",
       purgePaths: glob.sync([
-        "./views/Articles/AccidentesEnMoto.cshtml",
-        "./views/Articles/ArticlesHeader.cshtml",
-        "./views/Shared/CalculatorsLinks.cshtml",
+        `${VIEWS_DIR}/Articles/AccidentesEnMoto.cshtml`,
+        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
         ...commonPurgePaths,
       ]),
       selectors: [],
     },
     accidentesEnBicicleta: {
-      entry: "./wwwroot/js/pages/articles/index.js",
+      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
       url: "http://localhost:5000/guias/accidentes-en-bicicleta",
       purgePaths: glob.sync([
-        "./views/Articles/AccidentesEnBicicleta.cshtml",
-        "./views/Articles/ArticlesHeader.cshtml",
-        "./views/Shared/CalculatorsLinks.cshtml",
+        `${VIEWS_DIR}/Articles/AccidentesEnBicicleta.cshtml`,
+        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
         ...commonPurgePaths,
       ]),
       selectors: [],
     },
     accidentesComoAcompanantes: {
-      entry: "./wwwroot/js/pages/articles/index.js",
+      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
       url: "http://localhost:5000/guias/accidentes-como-acompanantes",
       purgePaths: glob.sync([
-        "./views/Articles/AccidentesComoAcompanantes.cshtml",
-        "./views/Articles/ArticlesHeader.cshtml",
-        "./views/Shared/CalculatorsLinks.cshtml",
+        `${VIEWS_DIR}/Articles/AccidentesComoAcompanantes.cshtml`,
+        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
         ...commonPurgePaths,
       ]),
       selectors: [],
     },
     accidentesComoPeaton: {
-      entry: "./wwwroot/js/pages/articles/index.js",
+      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
       url: "http://localhost:5000/guias/accidentes-como-peaton",
       purgePaths: glob.sync([
-        "./views/Articles/AccidentesComoPeaton.cshtml",
-        "./views/Articles/ArticlesHeader.cshtml",
-        "./views/Shared/CalculatorsLinks.cshtml",
+        `${VIEWS_DIR}/Articles/AccidentesComoPeaton.cshtml`,
+        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
         ...commonPurgePaths,
       ]),
       selectors: [],
     },
     destruccionTotal: {
-      entry: "./wwwroot/js/pages/articles/index.js",
+      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
       url: "http://localhost:5000/guias/destruccion-total",
       purgePaths: glob.sync([
-        "./views/Articles/DestruccionTotal.cshtml",
-        "./views/Articles/ArticlesHeader.cshtml",
-        "./views/Shared/CalculatorsLinks.cshtml",
+        `${VIEWS_DIR}/Articles/DestruccionTotal.cshtml`,
+        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
         ...commonPurgePaths,
       ]),
       selectors: [],
     },
     accidentesDeTrabajo: {
-      entry: "./wwwroot/js/pages/articles/index.js",
+      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
       url: "http://localhost:5000/guias/accidentes-de-trabajo",
       purgePaths: glob.sync([
-        "./views/Articles/AccidentesDeTrabajo.cshtml",
-        "./views/Articles/ArticlesHeader.cshtml",
-        "./views/Shared/CalculatorsLinks.cshtml",
+        `${VIEWS_DIR}/Articles/AccidentesDeTrabajo.cshtml`,
+        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
         ...commonPurgePaths,
       ]),
       selectors: [],
     },
     accidentesInItinere: {
-      entry: "./wwwroot/js/pages/articles/index.js",
+      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
       url: "http://localhost:5000/guias/accidentes-in-itinere",
       purgePaths: glob.sync([
-        "./views/Articles/AccidentesInItinere.cshtml",
-        "./views/Articles/ArticlesHeader.cshtml",
-        "./views/Shared/CalculatorsLinks.cshtml",
+        `${VIEWS_DIR}/Articles/AccidentesInItinere.cshtml`,
+        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
         ...commonPurgePaths,
       ]),
       selectors: [],
     },
     enfermedadesProfesionales: {
-      entry: "./wwwroot/js/pages/articles/index.js",
+      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
       url: "http://localhost:5000/guias/enfermedades-profesionales",
       purgePaths: glob.sync([
-        "./views/Articles/EnfermedadesProfesionales.cshtml",
-        "./views/Articles/ArticlesHeader.cshtml",
-        "./views/Shared/CalculatorsLinks.cshtml",
+        `${VIEWS_DIR}/Articles/EnfermedadesProfesionales.cshtml`,
+        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
         ...commonPurgePaths,
       ]),
       selectors: [],
     },
     comoActuarAnteUnAccidenteDeTransito: {
-      entry: "./wwwroot/js/pages/articles/index.js",
+      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
       url:
         "http://localhost:5000/guias/como-actuar-ante-un-accidente-de-transito",
       purgePaths: glob.sync([
-        "./views/Articles/HowToActOnTrafficAccident.cshtml",
-        "./views/Articles/ArticlesHeader.cshtml",
-        "./views/Shared/CalculatorsLinks.cshtml",
+        `${VIEWS_DIR}/Articles/HowToActOnTrafficAccident.cshtml`,
+        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
         ...commonPurgePaths,
       ]),
       selectors: [],
     },
     covid19: {
-      entry: "./wwwroot/js/pages/articles/index.js",
+      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
       url: "http://localhost:5000/guias/covid19",
       purgePaths: glob.sync([
-        "./views/Articles/Covid19.cshtml",
-        "./views/Articles/ArticlesHeader.cshtml",
-        "./views/Shared/CalculatorsLinks.cshtml",
+        `${VIEWS_DIR}/Articles/Covid19.cshtml`,
+        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
         ...commonPurgePaths,
       ]),
       selectors: [],
     },
     blog: {
-      entry: "./wwwroot/js/pages/blog/index.js",
+      entry: `${SOURCE_DIR}/js/pages/blog/index.js`,
       url: "http://localhost:5000/novedades",
       purgePaths: glob.sync([
-        "./views/Blog.cshtml",
-        "./views/BlogEntry.cshtml",
-        "./views/BlogEntryCategory.cshtml",
-        "./views/Shared/_BlogSidebar.cshtml",
-        "./views/Shared/_Layout.cshtml",
+        `${VIEWS_DIR}/Blog.cshtml`,
+        `${VIEWS_DIR}/BlogEntry.cshtml`,
+        `${VIEWS_DIR}/BlogEntryCategory.cshtml`,
+        `${VIEWS_DIR}/Shared/_BlogSidebar.cshtml`,
+        `${VIEWS_DIR}/Shared/_Layout.cshtml`,
         ...commonPurgePaths,
       ]),
       selectors: [],
@@ -430,14 +433,14 @@ module.exports = (env, argv) => {
       },
     },
     blogEntryCategory: {
-      entry: "./wwwroot/js/pages/blog/index.js",
+      entry: `${SOURCE_DIR}/js/pages/blog/index.js`,
       url: "http://localhost:5000/novedades/accidentes-laborales/",
       purgePaths: glob.sync([
-        "./views/Blog.cshtml",
-        "./views/BlogEntry.cshtml",
-        "./views/BlogEntryCategory.cshtml",
-        "./views/Shared/_BlogSidebar.cshtml",
-        "./views/Shared/_Layout.cshtml",
+        `${VIEWS_DIR}/Blog.cshtml`,
+        `${VIEWS_DIR}/BlogEntry.cshtml`,
+        `${VIEWS_DIR}/BlogEntryCategory.cshtml`,
+        `${VIEWS_DIR}/Shared/_BlogSidebar.cshtml`,
+        `${VIEWS_DIR}/Shared/_Layout.cshtml`,
         ...commonPurgePaths,
       ]),
       selectors: [],
@@ -446,14 +449,14 @@ module.exports = (env, argv) => {
       },
     },
     blogEntry: {
-      entry: "./wwwroot/js/pages/blog/entry.js",
+      entry: `${SOURCE_DIR}/js/pages/blog/entry.js`,
       url: "http://localhost:5000/novedades/accidentes-laborales/articulo-1/",
       purgePaths: glob.sync([
-        "./views/Blog.cshtml",
-        "./views/BlogEntry.cshtml",
-        "./views/BlogEntryCategory.cshtml",
-        "./views/Shared/_BlogSidebar.cshtml",
-        "./views/Shared/_Layout.cshtml",
+        `${VIEWS_DIR}/Blog.cshtml`,
+        `${VIEWS_DIR}/BlogEntry.cshtml`,
+        `${VIEWS_DIR}/BlogEntryCategory.cshtml`,
+        `${VIEWS_DIR}/Shared/_BlogSidebar.cshtml`,
+        `${VIEWS_DIR}/Shared/_Layout.cshtml`,
         ...commonPurgePaths,
       ]),
       selectors: [],
@@ -462,18 +465,18 @@ module.exports = (env, argv) => {
       },
     },
     home: {
-      entry: "./wwwroot/js/pages/home/index.js",
+      entry: `${SOURCE_DIR}/js/pages/home/index.js`,
       url: "http://localhost:5000/",
       purgePaths: glob.sync([
-        "./views/Home/home.cshtml",
-        "./views/Home/galleryPartial.cshtml",
-        "./views/Shared/CalculatorsLinks.cshtml",
-        "./wwwroot/css/reviews.css",
-        "./wwwroot/css/swiper.css",
-        "./wwwroot/js/plugins.swiper.js",
-        "./wwwroot/js/modules/canvasslider.js",
-        "./wwwroot/js/modules/sliderparallax.js",
-        "./wwwroot/js/modules/animations.js",
+        `${VIEWS_DIR}/Home/home.cshtml`,
+        `${VIEWS_DIR}/Home/galleryPartial.cshtml`,
+        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
+        `${SOURCE_DIR}/css/reviews.css`,
+        `${SOURCE_DIR}/css/swiper.css`,
+        `${SOURCE_DIR}/js/plugins.swiper.js`,
+        `${SOURCE_DIR}/js/modules/canvasslider.js`,
+        `${SOURCE_DIR}/js/modules/sliderparallax.js`,
+        `${SOURCE_DIR}/js/modules/animations.js`,
         ...commonPurgePaths,
       ]),
       selectors: [],
@@ -487,7 +490,7 @@ module.exports = (env, argv) => {
       try {
         const scriptPath = path.resolve(
           __dirname,
-          "wwwroot/js/extract-selectors.js"
+          `${SOURCE_DIR}/js/extract-selectors.js`
         );
         console.log(`   🔍 Extracting from URL: ${url}`);
         const rawOutput = execSync(`node ${scriptPath} ${url}`, {
@@ -548,7 +551,7 @@ module.exports = (env, argv) => {
             console.log("📝 Generating manifest file");
             const manifestPath = path.resolve(
               __dirname,
-              "wwwroot/rev-manifest.json"
+              `${SOURCE_DIR}/rev-manifest.json`
             );
             let existingManifest = {};
 
@@ -595,7 +598,7 @@ module.exports = (env, argv) => {
               const hashedCssFileName = updatedManifest[`${entryName}.css`];
               const cssFile = path.resolve(
                 __dirname,
-                `wwwroot/dist/${hashedCssFileName}`
+                `${DIST_DIR}/${hashedCssFileName}`
               );
 
               if (fs.existsSync(cssFile)) {
@@ -603,7 +606,7 @@ module.exports = (env, argv) => {
                 const entryUrl = entries[entryName].url;
                 await generateCriticalCSS(entryUrl, entryName, entries);
               } else {
-                console.error(`   ��� CSS file not found: ${cssFile}`);
+                console.error(`   ❌ CSS file not found: ${cssFile}`);
                 throw new Error(`CSS file not found: ${cssFile}`);
               }
             }
@@ -617,8 +620,11 @@ module.exports = (env, argv) => {
         apply: (compiler) => {
           compiler.hooks.done.tap("CopyCompressedFiles", () => {
             console.log("\n📂 Starting compressed files copy process...");
-            const sourceDir = path.resolve(__dirname, "wwwroot/js/compressed");
-            const targetDir = path.resolve(__dirname, "wwwroot/dist");
+            const sourceDir = path.resolve(
+              __dirname,
+              `${SOURCE_DIR}/js/compressed`
+            );
+            const targetDir = path.resolve(__dirname, DIST_DIR);
 
             console.log("   📁 Source directory:", sourceDir);
             console.log("   📁 Target directory:", targetDir);
@@ -669,8 +675,11 @@ module.exports = (env, argv) => {
         apply: (compiler) => {
           compiler.hooks.done.tap("CopyFontFiles", () => {
             console.log("\n📂 Starting font files copy process...");
-            const fontSourceDir = path.resolve(__dirname, "wwwroot/css/icons");
-            const fontTargetDir = path.resolve(__dirname, "wwwroot/dist");
+            const fontSourceDir = path.resolve(
+              __dirname,
+              `${SOURCE_DIR}/css/icons`
+            );
+            const fontTargetDir = path.resolve(__dirname, `${DIST_DIR}`);
 
             console.log("   📁 Font source directory:", fontSourceDir);
             console.log("   📁 Font target directory:", fontTargetDir);
@@ -763,7 +772,7 @@ module.exports = (env, argv) => {
         [entryName]: entry,
       },
       output: {
-        path: path.resolve(__dirname, "wwwroot/dist"),
+        path: path.resolve(__dirname, DIST_DIR),
         filename: `[name]${hash}.js`,
         clean: false,
       },
@@ -833,9 +842,9 @@ module.exports = (env, argv) => {
       resolve: {
         extensions: [".js", ".json", ".css", ".scss", ".sass"],
         alias: {
-          "@css": path.resolve(__dirname, "wwwroot/css"),
-          "@js": path.resolve(__dirname, "wwwroot/js"),
-          "@scss": path.resolve(__dirname, "wwwroot/sass"),
+          "@css": path.resolve(__dirname, `${SOURCE_DIR}/css`),
+          "@js": path.resolve(__dirname, `${SOURCE_DIR}/js`),
+          "@scss": path.resolve(__dirname, `${SOURCE_DIR}/sass`),
         },
       },
     };

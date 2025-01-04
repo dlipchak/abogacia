@@ -29,7 +29,7 @@ public static class VersionedFileHelper
 
     private static Dictionary<string, string> LoadManifest()
     {
-        var manifestPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "rev-manifest.json");
+        var manifestPath = Path.Combine(Directory.GetCurrentDirectory(), "src", "rev-manifest.json");
         return File.Exists(manifestPath)
             ? JsonSerializer.Deserialize<Dictionary<string, string>>(File.ReadAllText(manifestPath))
             : new Dictionary<string, string>();

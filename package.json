@@ -58,6 +58,7 @@
     "dev": "webpack --mode development --watch > webpack.log 2>&1 && type webpack.log",
     "build": "webpack --mode production > webpack.log 2>&1 && type webpack.log",
     "compress": "node scripts/compress-js.js",
+    "compress:file": "node scripts/compress-js.js",
     "build:prod": "npm run build && npm run compress"
   }
 }

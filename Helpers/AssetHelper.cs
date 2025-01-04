@@ -22,7 +22,7 @@ public static class AssetHelper
         {
             var mappingPath = Path.Combine(
                 Directory.GetCurrentDirectory(),
-                "wwwroot", "dist", "critical", "url-mapping.json"
+                "src", "url-mapping.json"
             );
             var json = File.ReadAllText(mappingPath);
             return JsonSerializer.Deserialize<Dictionary<string, string>>(json)

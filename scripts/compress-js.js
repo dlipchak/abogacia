@@ -13,7 +13,7 @@ const gzip = util.promisify(zlib.gzip);
 
 async function compressFiles() {
   try {
-    const jsRootDir = path.join(__dirname, "../wwwroot/js");
+    const jsRootDir = path.join(__dirname, "../src/js");
     const compressedDir = path.join(jsRootDir, "compressed");
 
     // Debug logs
