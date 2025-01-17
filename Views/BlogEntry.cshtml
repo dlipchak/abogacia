@@ -103,7 +103,10 @@
 									var commentCount = approvedComments.Count();
 								}
 
-								<h3 id="comments-title"><span>@commentCount</span> Comentarios</h3>
+								@if (commentCount > 0)
+								{
+									<h3 id="comments-title"><span>@commentCount</span> @(commentCount == 1 ? "Comentario" : "Comentarios")</h3>
+								}
 
 								<!-- Comments List -->
 								@if (approvedComments.Any())

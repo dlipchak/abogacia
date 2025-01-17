@@ -4,6 +4,8 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<IPublishedContent>
 @{
 	Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewData["Title"] = $"{Model.Name} - Blog - Estudio Jurídico López Giacomelli";
+	ViewData["Description"] = $"Artículos sobre {Model.Name.ToLower()} - Noticias y actualidad jurídica";
 	var articles = Model.Children.Where(x => x.ContentType.Alias == "blogEntry");
 }
 

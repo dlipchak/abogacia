@@ -64,7 +64,15 @@
     .entry-image {
       margin-bottom: 1.5rem;
 
-      img {
+      img:not(#recent-post-list-sidebar img, #popular-post-list-sidebar img) {
+        border-radius: 0.25rem;
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+      }
+
+      #recent-post-list-sidebar img,
+      #popular-post-list-sidebar img {
         border-radius: 0.25rem;
         width: 100%;
       }
@@ -352,6 +360,10 @@
 //     }
 //   }
 // }
+
+.commentlist li {
+  margin-left: 0px;
+}
 
 /* sidebar */
 .sidebar {

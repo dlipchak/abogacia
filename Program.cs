@@ -1,33 +1,23 @@
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Umbraco.Cms.Core.DependencyInjection;               // IUmbracoBuilder
-using Umbraco.Extensions;
-using Umbraco.Cms.Persistence.Sqlite;
-using Microsoft.AspNetCore.ResponseCompression;
-using System.IO.Compression;
-using Microsoft.AspNetCore.StaticFiles;
-using Microsoft.AspNetCore.Server.Kestrel.Core;
-using System.Linq;
 using Microsoft.AspNetCore.Localization;
-using System.Collections.Generic;
+using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
+using Microsoft.AspNetCore.StaticFiles;
 using System.Globalization;
-using Microsoft.AspNetCore.Http;
+using System.IO.Compression;
+using Umbraco.Cms.Persistence.EFCore;
+using Umbraco.Cms.Persistence.EFCore.SqlServer;
+using Umbraco.Cms.Persistence.SqlServer;
 using Westwind.AspNetCore.LiveReload;
-using Umbraco.Cms.Core.DependencyInjection;
-using Umbraco.Cms.Web.Website.Controllers;
-using Umbraco.Extensions;
-using Umbraco.Cms.Persistence.Sqlite.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Build the Umbraco pipeline with EFCore + SQLite
+// Build the Umbraco pipeline with EFCore + SQL Server
 builder.Services.AddUmbraco(builder.Environment, builder.Configuration)
     .AddBackOffice()
     .AddWebsite()
     .AddComposers()
-    .AddUmbracoSqliteSupport() // <-- EF Core SQLite support
+    // This is the method available in Umbraco 13.0.3 for EF Core + SQL Server
+    .AddUmbracoSqlServerSupport()
     .Build();
 
 // --------------------------------------------------
@@ -119,8 +109,6 @@ builder.Services.AddCors(options =>
         });
 });
 
-
-
 var app = builder.Build();
 
 // --------------------------------------------------
@@ -156,7 +144,6 @@ provider.Mappings[".webp"] = "image/webp";
 provider.Mappings[".br"] = "application/x-brotli";
 provider.Mappings[".gz"] = "application/gzip";
 
-// If you have a custom extension for pre-compressed files:
 app.UseCompressedFiles();
 
 app.UseStaticFiles(new StaticFileOptions
@@ -216,11 +203,6 @@ app.Use(async (context, next) =>
     await next();
 });
 
-// Configure accessors
-var accessor = app.Services.GetRequiredService<IHttpContextAccessor>();
-VersionedFileHelper.Configure(accessor);
-AssetHelper.Configure(accessor);
-
 // --------------------------------------------------
 // ROUTING
 // --------------------------------------------------
@@ -229,8 +211,6 @@ app.UseRouting();
 // --------------------------------------------------
 // UMBRACO MIDDLEWARE
 // --------------------------------------------------
-
-
 app.UseUmbraco()
     .WithMiddleware(u =>
     {
@@ -239,7 +219,6 @@ app.UseUmbraco()
     })
     .WithEndpoints(u =>
     {
-        u.UseInstallerEndpoints();
         u.UseBackOfficeEndpoints();
         u.UseWebsiteEndpoints();
     });
