@@ -190,6 +190,15 @@ module.exports = (env, argv) => {
   const hash = isDevelopment ? "" : ".[contenthash:8]";
 
   const entries = {
+    page404: {
+      entry: `${SOURCE_DIR}/js/pages/error/index.js`,
+      url: "http://localhost:5000/fdfsfsas",
+      purgePaths: glob.sync([
+        `${VIEWS_DIR}/Page404.cshtml`,
+        ...commonPurgePaths,
+      ]),
+      selectors: [],
+    },
     calculatorWorkDismissal: {
       entry: `${SOURCE_DIR}/js/pages/calculatorWorkDismissal/index.js`,
       url: "http://localhost:5000/calculadoras/despidos",

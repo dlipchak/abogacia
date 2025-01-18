@@ -4,10 +4,11 @@ using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.AspNetCore.StaticFiles;
 using System.Globalization;
 using System.IO.Compression;
-using Umbraco.Cms.Persistence.EFCore;
-using Umbraco.Cms.Persistence.EFCore.SqlServer;
 using Umbraco.Cms.Persistence.SqlServer;
 using Westwind.AspNetCore.LiveReload;
+using Umbraco.Cms.Core.Notifications;
+using AbogaciaCore.Handlers;
+using AbogaciaCore.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,9 +17,14 @@ builder.Services.AddUmbraco(builder.Environment, builder.Configuration)
     .AddBackOffice()
     .AddWebsite()
     .AddComposers()
-    // This is the method available in Umbraco 13.0.3 for EF Core + SQL Server
+    .AddNotificationHandler<ContentPublishedNotification, SitemapHandler>()
+    .AddNotificationHandler<ContentUnpublishedNotification, SitemapHandler>()
+    .AddNotificationHandler<ContentMovedToRecycleBinNotification, SitemapHandler>()
     .AddUmbracoSqlServerSupport()
     .Build();
+
+// Register ViewCountService
+builder.Services.AddScoped<ViewCountService>();
 
 // --------------------------------------------------
 // SERVICE REGISTRATIONS
@@ -130,8 +136,8 @@ else
     app.UseHsts();
 }
 
-// Configure error handling
-app.UseStatusCodePagesWithReExecute("/error/{0}");
+// Let Umbraco handle 404s
+app.UseStatusCodePages();
 
 app.UseHttpsRedirection();
 app.UseResponseCompression();

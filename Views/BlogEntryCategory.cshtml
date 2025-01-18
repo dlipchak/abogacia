@@ -6,7 +6,18 @@
 	Layout = "~/Views/Shared/_Layout.cshtml";
 	ViewData["Title"] = $"{Model.Name} - Blog - Estudio Jurídico López Giacomelli";
 	ViewData["Description"] = $"Artículos sobre {Model.Name.ToLower()} - Noticias y actualidad jurídica";
+	ViewData["Keywords"] = Model.Value<string>("seoKeywords") ?? 
+						$"{Model.Name.ToLower()}, derecho laboral, accidentes, blog jurídico, noticias legales";
 	var articles = Model.Children.Where(x => x.ContentType.Alias == "blogEntry");
+
+	var jsonLdModel = new JsonLdModel
+	{
+		Headline = $"{Model.Name} - Blog - Estudio Jurídico López Giacomelli",
+		Description = ViewData["Description"].ToString(),
+		Keywords = ViewData["Keywords"].ToString(),
+		Category = Model.Name,
+		ArticleBody = $"Artículos sobre {Model.Name.ToLower()} - Noticias y actualidad jurídica"
+	};
 }
 
 <!-- Page Title -->
@@ -42,3 +53,27 @@
 			</div>
 		</div>
 </section>
+
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "CollectionPage",
+    "headline": "@Html.Raw(jsonLdModel.Headline)",
+    "description": "@Html.Raw(jsonLdModel.Description)",
+    "keywords": "@Html.Raw(jsonLdModel.Keywords)",
+    "url": "@($"{Context.Request.Scheme}://{Context.Request.Host}{Context.Request.Path}")",
+    "about": {
+        "@@type": "Thing",
+        "name": "@Html.Raw(jsonLdModel.Category)"
+    },
+    "publisher": {
+        "@@type": "Organization",
+        "name": "Estudio Jurídico López Giacomelli",
+        "url": "https://estudiolopezgiacomelli.com.ar",
+        "logo": {
+            "@@type": "ImageObject",
+            "url": "https://estudiolopezgiacomelli.com.ar/images/logo.png"
+        }
+    }
+}
+</script>

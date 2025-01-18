@@ -5,11 +5,12 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <PublishReadyToRun>false</PublishReadyToRun>
-    <DebugType>none</DebugType>
-    <DebugSymbols>false</DebugSymbols>
+    <DebugType>Full</DebugType> <!-- Set to Full for comprehensive debugging support -->
+    <DebugSymbols>true</DebugSymbols> <!-- Enable generation of debug symbols -->
     <PublishTrimmed>false</PublishTrimmed>
     <TieredCompilation>true</TieredCompilation>
     <SelfContained>false</SelfContained>
+    <UmbracoErrorPageEnabled>true</UmbracoErrorPageEnabled>
   </PropertyGroup>
 
   <ItemGroup>
@@ -37,9 +38,7 @@
     <PackageReference Include="Umbraco.Cms.Persistence.EFCore" Version="15.0.0" />
     <PackageReference Include="WebMarkupMin.AspNetCore8" Version="2.16.0" />
     <PackageReference Include="WestWind.AspnetCore.LiveReload" Version="0.4.2" />
-
     <PackageReference Include="Umbraco.Cms.Persistence.EFCore.SqlServer" Version="15.0.0" />
-
   </ItemGroup>
 
   <ItemGroup>
@@ -47,11 +46,12 @@
     <Watch Include="**\*.js" />
     <Watch Include="**\*.css" />
   </ItemGroup>
+
   <ItemGroup>
-  <!-- Exclude pre-compressed files so they don't collide -->
-  <Content Remove="wwwroot\**\*.br" />
-  <Content Remove="wwwroot\**\*.gz" />
-</ItemGroup>
+    <!-- Exclude pre-compressed files so they don't collide -->
+    <Content Remove="wwwroot\**\*.br" />
+    <Content Remove="wwwroot\**\*.gz" />
+  </ItemGroup>
 
   <ItemGroup>
     <!-- Exclude unnecessary or backup files -->

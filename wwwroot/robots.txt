@@ -4,5 +4,13 @@ User-agent: *
 Allow: /robots.txt
 Allow: /sitemap.xml
 
+# Disallow Umbraco backoffice
+Disallow: /umbraco/
+Disallow: /umbraco*
+Disallow: */preview/*
+Disallow: */preview
+Disallow: /install/
+Disallow: /install*
+
 # Incluir el Sitemap
 Sitemap: https://estudiolopezgiacomelli.com.ar/sitemap.xml
