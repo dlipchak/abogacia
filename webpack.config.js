@@ -190,241 +190,241 @@ module.exports = (env, argv) => {
   const hash = isDevelopment ? "" : ".[contenthash:8]";
 
   const entries = {
-    page404: {
-      entry: `${SOURCE_DIR}/js/pages/error/index.js`,
-      url: "http://localhost:5000/fdfsfsas",
-      purgePaths: glob.sync([
-        `${VIEWS_DIR}/Page404.cshtml`,
-        ...commonPurgePaths,
-      ]),
-      selectors: [],
-    },
-    calculatorWorkDismissal: {
-      entry: `${SOURCE_DIR}/js/pages/calculatorWorkDismissal/index.js`,
-      url: "http://localhost:5000/calculadoras/despidos",
-      purgePaths: glob.sync([
-        `${VIEWS_DIR}/Calculators/calculatorWorkDismissal.cshtml`,
-        `${VIEWS_DIR}/Calculators/partials/**/*.cshtml`,
-        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
-        ...commonPurgePaths,
-      ]),
-      selectors: [],
-    },
-    calculatorWorkAccident: {
-      entry: `${SOURCE_DIR}/js/pages/calculatorWorkAccident/index.js`,
-      url: "http://localhost:5000/calculadoras/accidentes-laborales",
-      purgePaths: glob.sync([
-        `${VIEWS_DIR}/Calculators/calculatorWorkAccident.cshtml`,
-        `${VIEWS_DIR}/Calculators/partials/**/*.cshtml`,
-        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
-        ...commonPurgePaths,
-      ]),
-      selectors: [],
-    },
-    calculatorTrafficAccident: {
-      entry: `${SOURCE_DIR}/js/pages/calculatorTrafficAccident/index.js`,
-      url: "http://localhost:5000/calculadoras/accidentes-de-transito",
-      purgePaths: glob.sync([
-        `${VIEWS_DIR}/Calculators/CalculatorTrafficAccident.cshtml`,
-        `${VIEWS_DIR}/Calculators/partials/**/*.cshtml`,
-        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
-        ...commonPurgePaths,
-      ]),
-      selectors: [],
-    },
-    faqDismissal: {
-      entry: `${SOURCE_DIR}/js/pages/faqDismissal/index.js`,
-      url: "http://localhost:5000/preguntas-frecuentes/despidos",
-      purgePaths: glob.sync([
-        `${VIEWS_DIR}/FAQ/DismissalsFaq.cshtml`,
-        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
-        ...commonPurgePaths,
-      ]),
-      selectors: [],
-    },
-    faqTrafficAccident: {
-      entry: `${SOURCE_DIR}/js/pages/faqTrafficAccident/index.js`,
-      url: "http://localhost:5000/preguntas-frecuentes/accidentes-de-transito",
-      purgePaths: glob.sync([
-        `${VIEWS_DIR}/FAQ/TrafficAccidentFaq.cshtml`,
-        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
-        ...commonPurgePaths,
-      ]),
-      selectors: [],
-    },
-    faqWorkAccident: {
-      entry: `${SOURCE_DIR}/js/pages/faqWorkAccident/index.js`,
-      url: "http://localhost:5000/preguntas-frecuentes/accidentes-laborales",
-      purgePaths: glob.sync([
-        `${VIEWS_DIR}/FAQ/WorkAccidentFaq.cshtml`,
-        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
-        ...commonPurgePaths,
-      ]),
-      selectors: [],
-    },
-    contactUs: {
-      entry: `${SOURCE_DIR}/js/pages/contactUs/index.js`,
-      url: "http://localhost:5000/contacto",
-      purgePaths: glob.sync([
-        `${VIEWS_DIR}/ContactUs/ContactUs.cshtml`,
-        ...commonPurgePaths,
-      ]),
-      selectors: [],
-      additionalUrls: ["/Contacto", "/contacto"],
-    },
-    workerRights: {
-      entry: `${SOURCE_DIR}/js/pages/workerRights/index.js`,
-      url: "http://localhost:5000/despidos/derechos-del-trabajador",
-      purgePaths: glob.sync([
-        `${VIEWS_DIR}/Dismissals/WorkerRights.cshtml`,
-        ...commonPurgePaths,
-      ]),
-      selectors: [],
-    },
-    articles: {
-      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
-      url: "http://localhost:5000/guias",
-      purgePaths: glob.sync([
-        `${VIEWS_DIR}/Articles/Articles.cshtml`,
-        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
-        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
-        ...commonPurgePaths,
-      ]),
-      selectors: [],
-    },
-    accidentesEnTransportePublico: {
-      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
-      url: "http://localhost:5000/guias/accidentes-en-transporte-publico",
-      purgePaths: glob.sync([
-        `${VIEWS_DIR}/Articles/AccidentesEnTransportePublico.cshtml`,
-        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
-        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
-        ...commonPurgePaths,
-      ]),
-      selectors: [],
-    },
-    accidentesEnAuto: {
-      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
-      url: "http://localhost:5000/guias/accidentes-en-auto",
-      purgePaths: glob.sync([
-        `${VIEWS_DIR}/Articles/AccidentesEnAuto.cshtml`,
-        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
-        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
-        ...commonPurgePaths,
-      ]),
-      selectors: [],
-    },
-    accidentesEnMoto: {
-      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
-      url: "http://localhost:5000/guias/accidentes-en-moto",
-      purgePaths: glob.sync([
-        `${VIEWS_DIR}/Articles/AccidentesEnMoto.cshtml`,
-        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
-        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
-        ...commonPurgePaths,
-      ]),
-      selectors: [],
-    },
-    accidentesEnBicicleta: {
-      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
-      url: "http://localhost:5000/guias/accidentes-en-bicicleta",
-      purgePaths: glob.sync([
-        `${VIEWS_DIR}/Articles/AccidentesEnBicicleta.cshtml`,
-        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
-        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
-        ...commonPurgePaths,
-      ]),
-      selectors: [],
-    },
-    accidentesComoAcompanantes: {
-      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
-      url: "http://localhost:5000/guias/accidentes-como-acompanantes",
-      purgePaths: glob.sync([
-        `${VIEWS_DIR}/Articles/AccidentesComoAcompanantes.cshtml`,
-        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
-        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
-        ...commonPurgePaths,
-      ]),
-      selectors: [],
-    },
-    accidentesComoPeaton: {
-      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
-      url: "http://localhost:5000/guias/accidentes-como-peaton",
-      purgePaths: glob.sync([
-        `${VIEWS_DIR}/Articles/AccidentesComoPeaton.cshtml`,
-        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
-        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
-        ...commonPurgePaths,
-      ]),
-      selectors: [],
-    },
-    destruccionTotal: {
-      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
-      url: "http://localhost:5000/guias/destruccion-total",
-      purgePaths: glob.sync([
-        `${VIEWS_DIR}/Articles/DestruccionTotal.cshtml`,
-        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
-        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
-        ...commonPurgePaths,
-      ]),
-      selectors: [],
-    },
-    accidentesDeTrabajo: {
-      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
-      url: "http://localhost:5000/guias/accidentes-de-trabajo",
-      purgePaths: glob.sync([
-        `${VIEWS_DIR}/Articles/AccidentesDeTrabajo.cshtml`,
-        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
-        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
-        ...commonPurgePaths,
-      ]),
-      selectors: [],
-    },
-    accidentesInItinere: {
-      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
-      url: "http://localhost:5000/guias/accidentes-in-itinere",
-      purgePaths: glob.sync([
-        `${VIEWS_DIR}/Articles/AccidentesInItinere.cshtml`,
-        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
-        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
-        ...commonPurgePaths,
-      ]),
-      selectors: [],
-    },
-    enfermedadesProfesionales: {
-      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
-      url: "http://localhost:5000/guias/enfermedades-profesionales",
-      purgePaths: glob.sync([
-        `${VIEWS_DIR}/Articles/EnfermedadesProfesionales.cshtml`,
-        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
-        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
-        ...commonPurgePaths,
-      ]),
-      selectors: [],
-    },
-    comoActuarAnteUnAccidenteDeTransito: {
-      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
-      url:
-        "http://localhost:5000/guias/como-actuar-ante-un-accidente-de-transito",
-      purgePaths: glob.sync([
-        `${VIEWS_DIR}/Articles/HowToActOnTrafficAccident.cshtml`,
-        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
-        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
-        ...commonPurgePaths,
-      ]),
-      selectors: [],
-    },
-    covid19: {
-      entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
-      url: "http://localhost:5000/guias/covid19",
-      purgePaths: glob.sync([
-        `${VIEWS_DIR}/Articles/Covid19.cshtml`,
-        `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
-        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
-        ...commonPurgePaths,
-      ]),
-      selectors: [],
-    },
+    // page404: {
+    //   entry: `${SOURCE_DIR}/js/pages/error/index.js`,
+    //   url: "http://localhost:5000/fdfsfsas",
+    //   purgePaths: glob.sync([
+    //     `${VIEWS_DIR}/Page404.cshtml`,
+    //     ...commonPurgePaths,
+    //   ]),
+    //   selectors: [],
+    // },
+    // calculatorWorkDismissal: {
+    //   entry: `${SOURCE_DIR}/js/pages/calculatorWorkDismissal/index.js`,
+    //   url: "http://localhost:5000/calculadoras/despidos",
+    //   purgePaths: glob.sync([
+    //     `${VIEWS_DIR}/Calculators/calculatorWorkDismissal.cshtml`,
+    //     `${VIEWS_DIR}/Calculators/partials/**/*.cshtml`,
+    //     `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
+    //     ...commonPurgePaths,
+    //   ]),
+    //   selectors: [],
+    // },
+    // calculatorWorkAccident: {
+    //   entry: `${SOURCE_DIR}/js/pages/calculatorWorkAccident/index.js`,
+    //   url: "http://localhost:5000/calculadoras/accidentes-laborales",
+    //   purgePaths: glob.sync([
+    //     `${VIEWS_DIR}/Calculators/calculatorWorkAccident.cshtml`,
+    //     `${VIEWS_DIR}/Calculators/partials/**/*.cshtml`,
+    //     `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
+    //     ...commonPurgePaths,
+    //   ]),
+    //   selectors: [],
+    // },
+    // calculatorTrafficAccident: {
+    //   entry: `${SOURCE_DIR}/js/pages/calculatorTrafficAccident/index.js`,
+    //   url: "http://localhost:5000/calculadoras/accidentes-de-transito",
+    //   purgePaths: glob.sync([
+    //     `${VIEWS_DIR}/Calculators/CalculatorTrafficAccident.cshtml`,
+    //     `${VIEWS_DIR}/Calculators/partials/**/*.cshtml`,
+    //     `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
+    //     ...commonPurgePaths,
+    //   ]),
+    //   selectors: [],
+    // },
+    // faqDismissal: {
+    //   entry: `${SOURCE_DIR}/js/pages/faqDismissal/index.js`,
+    //   url: "http://localhost:5000/preguntas-frecuentes/despidos",
+    //   purgePaths: glob.sync([
+    //     `${VIEWS_DIR}/FAQ/DismissalsFaq.cshtml`,
+    //     `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
+    //     ...commonPurgePaths,
+    //   ]),
+    //   selectors: [],
+    // },
+    // faqTrafficAccident: {
+    //   entry: `${SOURCE_DIR}/js/pages/faqTrafficAccident/index.js`,
+    //   url: "http://localhost:5000/preguntas-frecuentes/accidentes-de-transito",
+    //   purgePaths: glob.sync([
+    //     `${VIEWS_DIR}/FAQ/TrafficAccidentFaq.cshtml`,
+    //     `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
+    //     ...commonPurgePaths,
+    //   ]),
+    //   selectors: [],
+    // },
+    // faqWorkAccident: {
+    //   entry: `${SOURCE_DIR}/js/pages/faqWorkAccident/index.js`,
+    //   url: "http://localhost:5000/preguntas-frecuentes/accidentes-laborales",
+    //   purgePaths: glob.sync([
+    //     `${VIEWS_DIR}/FAQ/WorkAccidentFaq.cshtml`,
+    //     `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
+    //     ...commonPurgePaths,
+    //   ]),
+    //   selectors: [],
+    // },
+    // contactUs: {
+    //   entry: `${SOURCE_DIR}/js/pages/contactUs/index.js`,
+    //   url: "http://localhost:5000/contacto",
+    //   purgePaths: glob.sync([
+    //     `${VIEWS_DIR}/ContactUs/ContactUs.cshtml`,
+    //     ...commonPurgePaths,
+    //   ]),
+    //   selectors: [],
+    //   additionalUrls: ["/Contacto", "/contacto"],
+    // },
+    // workerRights: {
+    //   entry: `${SOURCE_DIR}/js/pages/workerRights/index.js`,
+    //   url: "http://localhost:5000/despidos/derechos-del-trabajador",
+    //   purgePaths: glob.sync([
+    //     `${VIEWS_DIR}/Dismissals/WorkerRights.cshtml`,
+    //     ...commonPurgePaths,
+    //   ]),
+    //   selectors: [],
+    // },
+    // articles: {
+    //   entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
+    //   url: "http://localhost:5000/guias",
+    //   purgePaths: glob.sync([
+    //     `${VIEWS_DIR}/Articles/Articles.cshtml`,
+    //     `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+    //     `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
+    //     ...commonPurgePaths,
+    //   ]),
+    //   selectors: [],
+    // },
+    // accidentesEnTransportePublico: {
+    //   entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
+    //   url: "http://localhost:5000/guias/accidentes-en-transporte-publico",
+    //   purgePaths: glob.sync([
+    //     `${VIEWS_DIR}/Articles/AccidentesEnTransportePublico.cshtml`,
+    //     `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+    //     `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
+    //     ...commonPurgePaths,
+    //   ]),
+    //   selectors: [],
+    // },
+    // accidentesEnAuto: {
+    //   entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
+    //   url: "http://localhost:5000/guias/accidentes-en-auto",
+    //   purgePaths: glob.sync([
+    //     `${VIEWS_DIR}/Articles/AccidentesEnAuto.cshtml`,
+    //     `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+    //     `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
+    //     ...commonPurgePaths,
+    //   ]),
+    //   selectors: [],
+    // },
+    // accidentesEnMoto: {
+    //   entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
+    //   url: "http://localhost:5000/guias/accidentes-en-moto",
+    //   purgePaths: glob.sync([
+    //     `${VIEWS_DIR}/Articles/AccidentesEnMoto.cshtml`,
+    //     `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+    //     `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
+    //     ...commonPurgePaths,
+    //   ]),
+    //   selectors: [],
+    // },
+    // accidentesEnBicicleta: {
+    //   entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
+    //   url: "http://localhost:5000/guias/accidentes-en-bicicleta",
+    //   purgePaths: glob.sync([
+    //     `${VIEWS_DIR}/Articles/AccidentesEnBicicleta.cshtml`,
+    //     `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+    //     `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
+    //     ...commonPurgePaths,
+    //   ]),
+    //   selectors: [],
+    // },
+    // accidentesComoAcompanantes: {
+    //   entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
+    //   url: "http://localhost:5000/guias/accidentes-como-acompanantes",
+    //   purgePaths: glob.sync([
+    //     `${VIEWS_DIR}/Articles/AccidentesComoAcompanantes.cshtml`,
+    //     `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+    //     `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
+    //     ...commonPurgePaths,
+    //   ]),
+    //   selectors: [],
+    // },
+    // accidentesComoPeaton: {
+    //   entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
+    //   url: "http://localhost:5000/guias/accidentes-como-peaton",
+    //   purgePaths: glob.sync([
+    //     `${VIEWS_DIR}/Articles/AccidentesComoPeaton.cshtml`,
+    //     `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+    //     `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
+    //     ...commonPurgePaths,
+    //   ]),
+    //   selectors: [],
+    // },
+    // destruccionTotal: {
+    //   entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
+    //   url: "http://localhost:5000/guias/destruccion-total",
+    //   purgePaths: glob.sync([
+    //     `${VIEWS_DIR}/Articles/DestruccionTotal.cshtml`,
+    //     `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+    //     `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
+    //     ...commonPurgePaths,
+    //   ]),
+    //   selectors: [],
+    // },
+    // accidentesDeTrabajo: {
+    //   entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
+    //   url: "http://localhost:5000/guias/accidentes-de-trabajo",
+    //   purgePaths: glob.sync([
+    //     `${VIEWS_DIR}/Articles/AccidentesDeTrabajo.cshtml`,
+    //     `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+    //     `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
+    //     ...commonPurgePaths,
+    //   ]),
+    //   selectors: [],
+    // },
+    // accidentesInItinere: {
+    //   entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
+    //   url: "http://localhost:5000/guias/accidentes-in-itinere",
+    //   purgePaths: glob.sync([
+    //     `${VIEWS_DIR}/Articles/AccidentesInItinere.cshtml`,
+    //     `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+    //     `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
+    //     ...commonPurgePaths,
+    //   ]),
+    //   selectors: [],
+    // },
+    // enfermedadesProfesionales: {
+    //   entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
+    //   url: "http://localhost:5000/guias/enfermedades-profesionales",
+    //   purgePaths: glob.sync([
+    //     `${VIEWS_DIR}/Articles/EnfermedadesProfesionales.cshtml`,
+    //     `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+    //     `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
+    //     ...commonPurgePaths,
+    //   ]),
+    //   selectors: [],
+    // },
+    // comoActuarAnteUnAccidenteDeTransito: {
+    //   entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
+    //   url:
+    //     "http://localhost:5000/guias/como-actuar-ante-un-accidente-de-transito",
+    //   purgePaths: glob.sync([
+    //     `${VIEWS_DIR}/Articles/HowToActOnTrafficAccident.cshtml`,
+    //     `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+    //     `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
+    //     ...commonPurgePaths,
+    //   ]),
+    //   selectors: [],
+    // },
+    // covid19: {
+    //   entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
+    //   url: "http://localhost:5000/guias/covid19",
+    //   purgePaths: glob.sync([
+    //     `${VIEWS_DIR}/Articles/Covid19.cshtml`,
+    //     `${VIEWS_DIR}/Articles/ArticlesHeader.cshtml`,
+    //     `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
+    //     ...commonPurgePaths,
+    //   ]),
+    //   selectors: [],
+    // },
     blog: {
       entry: `${SOURCE_DIR}/js/pages/blog/index.js`,
       url: "http://localhost:5000/novedades",
@@ -473,23 +473,23 @@ module.exports = (env, argv) => {
         rejectUnauthorized: false,
       },
     },
-    home: {
-      entry: `${SOURCE_DIR}/js/pages/home/index.js`,
-      url: "http://localhost:5000/",
-      purgePaths: glob.sync([
-        `${VIEWS_DIR}/Home/home.cshtml`,
-        `${VIEWS_DIR}/Home/galleryPartial.cshtml`,
-        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
-        `${SOURCE_DIR}/css/reviews.css`,
-        `${SOURCE_DIR}/css/swiper.css`,
-        `${SOURCE_DIR}/js/plugins.swiper.js`,
-        `${SOURCE_DIR}/js/modules/canvasslider.js`,
-        `${SOURCE_DIR}/js/modules/sliderparallax.js`,
-        `${SOURCE_DIR}/js/modules/animations.js`,
-        ...commonPurgePaths,
-      ]),
-      selectors: [],
-    },
+    // home: {
+    //   entry: `${SOURCE_DIR}/js/pages/home/index.js`,
+    //   url: "http://localhost:5000/",
+    //   purgePaths: glob.sync([
+    //     `${VIEWS_DIR}/Home/home.cshtml`,
+    //     `${VIEWS_DIR}/Home/galleryPartial.cshtml`,
+    //     `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
+    //     `${SOURCE_DIR}/css/reviews.css`,
+    //     `${SOURCE_DIR}/css/swiper.css`,
+    //     `${SOURCE_DIR}/js/plugins.swiper.js`,
+    //     `${SOURCE_DIR}/js/modules/canvasslider.js`,
+    //     `${SOURCE_DIR}/js/modules/sliderparallax.js`,
+    //     `${SOURCE_DIR}/js/modules/animations.js`,
+    //     ...commonPurgePaths,
+    //   ]),
+    //   selectors: [],
+    // },
   };
   if (!isDevelopment) {
     console.log("📝 Production build: Extracting selectors for each entry");

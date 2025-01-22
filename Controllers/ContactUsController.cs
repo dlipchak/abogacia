@@ -23,9 +23,8 @@ namespace AbogaciaCore.Controllers
             return View("ContactUs", model);
         }
 
-        // POST: home/Create
-        [HttpPost]
-        public ActionResult SendEmail(ContactModel model)
+        [HttpPost("SendEmail")]
+        public ActionResult SendEmail([FromBody] ContactModel model)
         {
             if (ModelState.IsValid)
             {
@@ -33,8 +32,8 @@ namespace AbogaciaCore.Controllers
                 {
                     const string body = "<p><b>Email de:</b> {0} ({1})<p><b>Teléfono:</b> {4}</p><p><b>Asunto:</b> {2}</p></p><p><b>Mensaje:</b></p><p>{3}</p>";
                     var message = new MailMessage();
-                    message.To.Add(new MailAddress("daniel.lipchak7603@gmail.com"));
-                    //message.To.Add(new MailAddress("estudiolopezgiacomelli@gmail.com"));
+                    message.To.Add(new MailAddress("contacto@estudiolopezgiacomelli.com.ar"));
+                    message.Bcc.Add(new MailAddress("daniel.lipchak7603@gmail.com"));
                     message.From = new MailAddress(model.Email); // replace with valid value
                     message.Subject = model.Subject;
                     message.Body = string.Format(body, model.Name, model.Email, model.Subject, model.Message, model.Phone);
@@ -44,7 +43,7 @@ namespace AbogaciaCore.Controllers
                     var credential = new NetworkCredential
                     {
                         UserName = "daniel.lipchak7603@gmail.com",
-                        Password = "GFIpass123"
+                        Password = "zpvb vkdl bvgi pzlb"  // Your 16-character App Password here
                     };
                     smtp.Credentials = credential;
                     smtp.Host = "smtp.gmail.com";
