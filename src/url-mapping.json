@@ -1,5 +1,3 @@
 {
-  "/novedades": "blog",
-  "/novedades/accidentes-laborales/": "blogEntryCategory",
-  "/novedades/accidentes-laborales/articulo-1/": "blogEntry"
+  "/": "home"
 }

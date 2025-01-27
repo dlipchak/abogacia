@@ -5,25 +5,25 @@
 }
 
 <script type="application/ld+json">
-{
-    "@@context": "https://schema.org",
-    "@@type": "BlogPosting",
-    "headline": "@Html.Raw(Model.Headline)",
-    "description": "@Html.Raw(Model.Description)",
-    "keywords": "@Html.Raw(Model.Keywords)",
-    "url": "@currentUrl",
-    "image": "@Model.ImageName",
-    "articleBody": "@Html.Raw(Model.ArticleBody)",
-    "datePublished": "@Model.DatePublished?.ToString("yyyy-MM-dd")",
-    "articleSection": "@Html.Raw(Model.Category)",
-    "publisher": {
-        "@@type": "Organization",
-        "name": "Estudio Jurídico López Giacomelli",
-        "url": "https://estudiolopezgiacomelli.com.ar",
-        "logo": {
-            "@@type": "ImageObject",
-            "url": "https://estudiolopezgiacomelli.com.ar/images/logo.png"
+    {
+        "@@context": "https://schema.org",
+        "@@type": "BlogPosting",
+        "headline": "@Model.Headline.Replace("\"", "\\\"")",
+        "description": "@Model.Description.Replace("\"", "\\\"")",
+        "keywords": "@Model.Keywords.Replace("\"", "\\\"")",
+        "url": "@currentUrl",
+        "image": "@Model.ImageName",
+        "articleBody": "@Html.Raw(Model.ArticleBody.Replace("\\", "\\\\").Replace("\"", "\\\""))",
+        "datePublished": "@Model.DatePublished?.ToString("yyyy-MM-dd")",
+        "articleSection": "@Model.Category.Replace("\"", "\\\"")",
+        "publisher": {
+            "@@type": "Organization",
+            "name": "Estudio Jurídico López Giacomelli",
+            "url": "https://estudiolopezgiacomelli.com.ar",
+            "logo": {
+                "@@type": "ImageObject",
+                "url": "https://estudiolopezgiacomelli.com.ar/images/logo.png"
+            }
         }
     }
-}
-</script> 
+    </script>

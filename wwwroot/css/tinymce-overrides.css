@@ -1,0 +1,42 @@
+/* Word-like styling */
+.word-style-editor {
+  font-family: "Calibri", sans-serif;
+  font-size: 11pt;
+  line-height: 1.15;
+  margin: 1in;
+}
+
+.mce-content-body {
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-height: 11in;
+  padding: 1.5rem;
+}
+
+/* Table styling */
+table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Font presets */
+.mce-font-select {
+  width: 150px;
+}
+
+/* Fullscreen mode */
+.mce-fullscreen .mce-content-body {
+  max-width: 8.5in;
+  margin: 0 auto;
+}
