@@ -1,8 +1,13 @@
 ﻿@{
-  ViewData["Title"] = "Estudio Jurídico López Giacomelli - Especialistas en accidentes y despidos";
-  ViewData["Description"] = "Estudio Jurídico especializado en accidentes de tránsito, laborales y despidos. Contáctenos para recibir asesoría legal en Argentina.";
-  ViewData["Keywords"] = "abogados, accidentes de tránsito, accidentes laborales, despidos, derecho laboral, Argentina";
-  ViewData["Canonical"] = "/";
+    ViewData["Title"] = "Estudio Jurídico López Giacomelli - Especialistas en accidentes y despidos";
+    ViewData["Description"] = "Estudio Jurídico especializado en accidentes de tránsito, laborales y despidos. Contáctenos para recibir asesoría legal en Argentina.";
+    ViewData["Keywords"] = "abogados, accidentes de tránsito, accidentes laborales, despidos, derecho laboral, Argentina";
+    ViewData["Canonical"] = "/";
+}
+
+@section PreloadLinks {
+    <!-- Preload the hero (first) slide image for LCP improvement -->
+    <link rel="preload" as="image" href="/images/home/gallery/1.webp" type="image/webp" fetchpriority="high" />
 }
 
 <!-- Page Title -->
@@ -13,138 +18,151 @@
 <!-- Content Section -->
 <section id="content">
   <div class="content-wrap">
+    <div class="container clearfix">
+      <div class="row justify-content-center col-mb-50">
+
+        <!-- Feature Boxes -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="feature-box media-box">
+            <div class="fbox-media">
+              <!-- Single <img> using only .webp, with lazy loading & explicit dimensions -->
+              <img
+                data-src="images/home/services/accidentesDeTrabajo.webp"
+                alt="Asesoría en Accidentes de Trabajo"
+                width="1920"
+                height="1280"
+                class="lazy"
+              />
+            </div>
+            <div class="fbox-content px-0 ms-2">
+              <h3>Accidentes de trabajo</h3>
+              <ul class="iconlist iconlist-color mb-0">
+                <li><i class="bi-caret-right-fill"></i> Determinación de incapacidad</li>
+                <li><i class="bi-caret-right-fill"></i> Superintendencia de Riesgos del Trabajo</li>
+                <li><i class="bi-caret-right-fill"></i> Comisiónes Médicas</li>
+                <li><i class="bi-caret-right-fill"></i> Coberturas especiales por Covid-19</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="feature-box media-box">
+            <div class="fbox-media">
+              <img
+                data-src="images/home/services/accidentesDeTransito.webp"
+                alt="Asesoría en Accidentes de Tránsito"
+                width="1920"
+                height="1280"
+                class="lazy"
+              />
+            </div>
+            <div class="fbox-content px-0 ms-2">
+              <h3>Accidentes de tránsito</h3>
+              <ul class="iconlist iconlist-color mb-0">
+                <li><i class="bi-caret-right-fill"></i> Reclamos a aseguradoras por accidentes de tránsito</li>
+                <li><i class="bi-caret-right-fill"></i> Lesiones a peatones, motos y ciclistas</li>
+                <li><i class="bi-caret-right-fill"></i> Acuerdos express con aseguradoras</li>
+                <li><i class="bi-caret-right-fill"></i> Cobertura para Rappi, Glovo, Pedidos Ya, Uber</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="feature-box media-box">
+            <div class="fbox-media">
+              <img
+                data-src="images/home/services/despidos.webp"
+                alt="Asesoría en Despidos Laborales"
+                width="1920"
+                height="1280"
+                class="lazy"
+              />
+            </div>
+            <div class="fbox-content px-0 ms-2">
+              <h3>Despidos</h3>
+              <ul class="iconlist iconlist-color mb-0">
+                <li><i class="bi-caret-right-fill"></i> Indemnizaciones por despido y trabajo en negro</li>
+                <li><i class="bi-caret-right-fill"></i> Acuerdos en SECLO y salarios mínimos por sector</li>
+                <li><i class="bi-caret-right-fill"></i> Acoso laboral y licencias especiales</li>
+                <li><i class="bi-caret-right-fill"></i> Doble indemnización por Covid-19</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Calculators Section -->
+    <div class="section">
       <div class="container clearfix">
-          <div class="row justify-content-center col-mb-50">
-              <!-- Feature Boxes -->
-              <div class="col-sm-6 col-lg-4">
-                <div class="feature-box media-box">
-                    <div class="fbox-media">
-                        <picture>
-                            <source data-srcset="images/home/services/accidentesDeTrabajo.webp" type="image/webp">
-                            <source data-srcset="images/home/services/accidentesDeTrabajo.jpeg" type="image/jpeg">
-                            <img data-src="images/home/services/accidentesDeTrabajo.jpeg" alt="Asesoría en Accidentes de Trabajo" class="lazy" />
-                        </picture>
-                    </div>
-                    <div class="fbox-content px-0 ms-2">
-                        <h3>Accidentes de trabajo</h3>
-                        <ul class="iconlist iconlist-color mb-0">
-                            <li><i class="bi-caret-right-fill"></i> Determinación de incapacidad</li>
-                            <li><i class="bi-caret-right-fill"></i> Superintendencia de Riesgos del Trabajo</li>
-                            <li><i class="bi-caret-right-fill"></i> Comisiónes Médicas</li>
-                            <li><i class="bi-caret-right-fill"></i> Coberturas especiales por Covid-19</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-sm-6 col-lg-4">
-                <div class="feature-box media-box">
-                    <div class="fbox-media">
-                        <picture>
-                            <source data-srcset="images/home/services/accidentesDeTransito.webp" type="image/webp">
-                            <source data-srcset="images/home/services/accidentesDeTransito.jpeg" type="image/jpeg">
-                            <img data-src="images/home/services/accidentesDeTransito.jpeg" alt="Asesoría en Accidentes de Tránsito" class="lazy" />
-                        </picture>
-                    </div>
-                    <div class="fbox-content px-0 ms-2">
-                        <h3>Accidentes de tránsito</h3>
-                        <ul class="iconlist iconlist-color mb-0">
-                            <li><i class="bi-caret-right-fill"></i> Reclamos a aseguradoras por accidentes de tránsito</li>
-                            <li><i class="bi-caret-right-fill"></i> Lesiones a peatones, motos y ciclistas</li>
-                            <li><i class="bi-caret-right-fill"></i> Acuerdos express con aseguradoras</li>
-                            <li><i class="bi-caret-right-fill"></i> Cobertura para Rappi, Glovo, Pedidos Ya, Uber</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-sm-6 col-lg-4">
-                <div class="feature-box media-box">
-                    <div class="fbox-media">
-                        <picture>
-                            <source data-srcset="images/home/services/despidos.webp" type="image/webp">
-                            <source data-srcset="images/home/services/despidos.jpeg" type="image/jpeg">
-                            <img data-src="images/home/services/despidos.jpeg" alt="Asesoría en Despidos Laborales" class="lazy" />
-                        </picture>
-                    </div>
-                    <div class="fbox-content px-0 ms-2">
-                        <h3>Despidos</h3>
-                        <ul class="iconlist iconlist-color mb-0">
-                            <li><i class="bi-caret-right-fill"></i> Indemnizaciones por despido y trabajo en negro</li>
-                            <li><i class="bi-caret-right-fill"></i> Acuerdos en SECLO y salarios mínimos por sector</li>
-                            <li><i class="bi-caret-right-fill"></i> Acoso laboral y licencias especiales</li>
-                            <li><i class="bi-caret-right-fill"></i> Doble indemnización por Covid-19</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-          </div>
+        <partial name="CalculatorsLinks" />
       </div>
+    </div>
 
-      <!-- Calculators Section -->
-      <div class="section">
-          <div class="container clearfix">
-              <partial name="CalculatorsLinks" />
+    <!-- Why Choose Us Section -->
+    <div class="container clearfix why-choose-us">
+      <div class="row justify-content-center col-mb-50">
+        <div class="col-sm-6 col-lg-4">
+          <div class="heading-block fancy-title border-bottom-0 title-bottom-border">
+            <h4>POR QUÉ <span>ELEGIRNOS</span></h4>
           </div>
-      </div>
+          <p>Somos un equipo jurídico de abogados y profesionales médicos con más de 25 años de experiencia en accidentes de tránsito, laborales y derecho laboral.</p>
+        </div>
 
-      <!-- Why Choose Us Section -->
-      <div class="container clearfix why-choose-us">
-          <div class="row justify-content-center col-mb-50">
-              <div class="col-sm-6 col-lg-4">
-                  <div class="heading-block fancy-title border-bottom-0 title-bottom-border">
-                      <h4>POR QUÉ <span>ELEGIRNOS</span></h4>
-                  </div>
-                  <p>Somos un equipo jurídico de abogados y profesionales médicos con más de 25 años de experiencia en accidentes de tránsito, laborales y derecho laboral.</p>
-              </div>
-
-              <div class="col-sm-6 col-lg-4">
-                  <div class="heading-block fancy-title border-bottom-0 title-bottom-border">
-                      <h4>Nuestra <span>Misión</span></h4>
-                  </div>
-                  <p>Defendemos sus derechos con un enfoque en equidad, justicia y cumplimiento de las leyes, ofreciendo un seguimiento personalizado.</p>
-              </div>
-
-              <div class="col-sm-6 col-lg-4">
-                  <div class="heading-block fancy-title border-bottom-0 title-bottom-border">
-                      <h4>Nuestro <span>Trabajo</span></h4>
-                  </div>
-                  <p>Garantizamos el cumplimiento de todos sus derechos con el objetivo de obtener la mayor indemnización posible. Sólo cobramos si su reclamo tiene éxito.</p>
-              </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="heading-block fancy-title border-bottom-0 title-bottom-border">
+            <h4>Nuestra <span>Misión</span></h4>
           </div>
+          <p>Defendemos sus derechos con un enfoque en equidad, justicia y cumplimiento de las leyes, ofreciendo un seguimiento personalizado.</p>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="heading-block fancy-title border-bottom-0 title-bottom-border">
+            <h4>Nuestro <span>Trabajo</span></h4>
+          </div>
+          <p>Garantizamos el cumplimiento de todos sus derechos con el objetivo de obtener la mayor indemnización posible. Sólo cobramos si su reclamo tiene éxito.</p>
+        </div>
       </div>
+    </div>
 
   </div>
 </section>
 
 @section Scripts {
     <script type="application/ld+json">
-        {
-            "@@context": "https://schema.org",
-            "@@type": "LegalService",
-            "name": "Estudio Jurídico López Giacomelli",
-            "url": "https://estudiolopezgiacomelli.com.ar/",
-            "description": "Estudio Jurídico especializado en accidentes de tránsito, laborales y despidos.",
-            "address": {
-                "@@type": "PostalAddress",
-                "addressLocality": "Buenos Aires",
-                "addressRegion": "CABA",
-                "addressCountry": "AR"
-            },
-            "telephone": "+54 11 6198 0179",
-            "areaServed": {
-                "@@type": "Place",
-                "name": "Buenos Aires, Argentina"
-            },
-            "aggregateRating": {
-                "@@type": "AggregateRating",
-                "ratingValue": "5.0",
-                "reviewCount": "67"
-            },
-            "openingHours": "Mo-Fr 09:00-18:00",
-            "serviceType": ["Accidentes de Tránsito", "Accidentes Laborales", "Derecho Laboral", "Despidos", "Asesoría en Reclamos de Indemnización"]
-        }
-        </script>
-        
+    {
+        "@@context": "https://schema.org",
+        "@@type": "LegalService",
+        "name": "Estudio Jurídico López Giacomelli",
+        "url": "https://estudiolopezgiacomelli.com.ar/",
+        "description": "Estudio Jurídico especializado en accidentes de tránsito, laborales y despidos.",
+        "address": {
+            "@@type": "PostalAddress",
+            "addressLocality": "Buenos Aires",
+            "addressRegion": "CABA",
+            "addressCountry": "AR"
+        },
+        "telephone": "+54 11 6198 0179",
+        "areaServed": {
+            "@@type": "Place",
+            "name": "Buenos Aires, Argentina"
+        },
+        "aggregateRating": {
+            "@@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "67"
+        },
+        "openingHours": "Mo-Fr 09:00-18:00",
+        "serviceType": [
+          "Accidentes de Tránsito",
+          "Accidentes Laborales",
+          "Derecho Laboral",
+          "Despidos",
+          "Asesoría en Reclamos de Indemnización"
+        ]
+    }
+    </script>
     <!-- <script src="@VersionedFileHelper.GetVersionedFile("home.js")"></script> -->
-  }
+}

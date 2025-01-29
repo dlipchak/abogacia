@@ -1,10 +1,14 @@
-﻿
-<title class="logo">Derechos del trabajador</title>
+﻿@section PreloadLinks {
+    <link rel="preload" href="/images/articles/WorkerRights.webp" as="image" type="image/webp" fetchpriority="high" />
+}
 
 <partial name="_HeroSection" model='(
   Title: "Derechos Laborales",
   Subtitle: "Conocé tus derechos",
-  ClassName: "workerRights"
+  ClassName: "workerRights",
+  ImagePath: "/images/articles/WorkerRights.webp",
+  Width: 1920,
+  Height: 1279
   )' />
 
  <section id="content">
@@ -54,8 +58,8 @@ Como profesionales somos conscientes de la <span class="green">importancia que t
                 <p>
                     Nuestra <span class="green">calculadora</span> es una herramienta práctica que lo ayudará a
                     conocer de manera estimativa cual es el monto que a usted le
-                    corresponde. Si usted desea calcular su indemnización por “despido
-                    sin causa” presione <a href="@Url.Action("despidos", "Calculators")">AQUÍ.</a>
+                    corresponde. Si usted desea calcular su indemnización por "despido
+                    sin causa" presione <a href="@Url.Action("despidos", "Calculators")">AQUÍ.</a>
                 </p>
                 <p>
                     Recuerde siempre que estamos para ayudarlo y su consulta no molesta.

@@ -272,15 +272,15 @@ module.exports = (env, argv) => {
     //   selectors: [],
     //   additionalUrls: ["/Contacto", "/contacto"],
     // },
-    // workerRights: {
-    //   entry: `${SOURCE_DIR}/js/pages/workerRights/index.js`,
-    //   url: "http://localhost:5000/despidos/derechos-del-trabajador",
-    //   purgePaths: glob.sync([
-    //     `${VIEWS_DIR}/Dismissals/WorkerRights.cshtml`,
-    //     ...commonPurgePaths,
-    //   ]),
-    //   selectors: [],
-    // },
+    workerRights: {
+      entry: `${SOURCE_DIR}/js/pages/workerRights/index.js`,
+      url: "http://localhost:5000/despidos/derechos-del-trabajador",
+      purgePaths: glob.sync([
+        `${VIEWS_DIR}/Dismissals/WorkerRights.cshtml`,
+        ...commonPurgePaths,
+      ]),
+      selectors: [],
+    },
     // articles: {
     //   entry: `${SOURCE_DIR}/js/pages/articles/index.js`,
     //   url: "http://localhost:5000/guias",
@@ -473,23 +473,23 @@ module.exports = (env, argv) => {
     //     rejectUnauthorized: false,
     //   },
     // },
-    home: {
-      entry: `${SOURCE_DIR}/js/pages/home/index.js`,
-      url: "http://localhost:5000/",
-      purgePaths: glob.sync([
-        `${VIEWS_DIR}/Home/home.cshtml`,
-        `${VIEWS_DIR}/Home/galleryPartial.cshtml`,
-        `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
-        `${SOURCE_DIR}/css/reviews.css`,
-        `${SOURCE_DIR}/css/swiper.css`,
-        `${SOURCE_DIR}/js/plugins.swiper.js`,
-        `${SOURCE_DIR}/js/modules/canvasslider.js`,
-        `${SOURCE_DIR}/js/modules/sliderparallax.js`,
-        `${SOURCE_DIR}/js/modules/animations.js`,
-        ...commonPurgePaths,
-      ]),
-      selectors: [],
-    },
+    // home: {
+    //   entry: `${SOURCE_DIR}/js/pages/home/index.js`,
+    //   url: "http://localhost:5000/",
+    //   purgePaths: glob.sync([
+    //     `${VIEWS_DIR}/Home/home.cshtml`,
+    //     `${VIEWS_DIR}/Home/galleryPartial.cshtml`,
+    //     `${VIEWS_DIR}/Shared/CalculatorsLinks.cshtml`,
+    //     `${SOURCE_DIR}/css/reviews.css`,
+    //     `${SOURCE_DIR}/css/swiper.css`,
+    //     `${SOURCE_DIR}/js/plugins.swiper.js`,
+    //     `${SOURCE_DIR}/js/modules/canvasslider.js`,
+    //     `${SOURCE_DIR}/js/modules/sliderparallax.js`,
+    //     `${SOURCE_DIR}/js/modules/animations.js`,
+    //     ...commonPurgePaths,
+    //   ]),
+    //   selectors: [],
+    // },
   };
   if (!isDevelopment) {
     console.log("📝 Production build: Extracting selectors for each entry");

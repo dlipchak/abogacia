@@ -1,9 +1,4 @@
-﻿
-@section PreloadLinks {
-  <!-- Preload the hero (first) slide image for LCP improvement -->
-  <link rel="preload" as="image" href="/images/home/gallery/1.webp" />
-}
-<section
+﻿<section
 id="slider"
 class="slider-element slider-parallax swiper_wrapper min-vh-60 min-vh-md-90"
 data-loop="true"
@@ -35,7 +30,8 @@ data-speed="650"
                         class="slide-image"
                         src="/images/home/gallery/1.webp"
                         alt="Accidentes de Tránsito, Motos y Lesiones"
-                        /* no lazy-loading here, we want it ASAP */
+                        width="1920"
+                        height="1280"
                     />
                 </div>
             </div>
@@ -60,7 +56,9 @@ data-speed="650"
                         class="slide-image"
                         src="/images/home/gallery/2.webp"
                         alt="Accidentes laborales, reclamos ante la SRT"
-                        loading="lazy" <!-- Defer loading of offscreen slides -->
+                        loading="lazy" 
+                        width="1920"
+                        height="1280"
                     />
                 </div>
             </div>
@@ -86,6 +84,8 @@ data-speed="650"
                         src="/images/home/gallery/3.webp"
                         alt="Derecho laboral y despidos"
                         loading="lazy"
+                        width="1920"
+                        height="1431"
                     />
                 </div>
             </div>

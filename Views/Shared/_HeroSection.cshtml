@@ -1,7 +1,19 @@
-@model (string Title, string Subtitle, string ClassName)
+@model (string Title, string Subtitle, string ClassName, string ImagePath, int Width, int Height)
 
 <section id="hero-title" class="heroHeader @Model.ClassName min-vh-60">
-    <div class="container clearfix d-flex flex-column align-items-start">
+    <div class="hero-image-container">
+        <img 
+            src="@Model.ImagePath" 
+            alt="@Model.Title" 
+            class="hero-image" 
+            loading="eager" 
+            fetchpriority="high"
+            decoding="async"
+            importance="high"
+            width="@Model.Width"
+            height="@Model.Height" />
+    </div>
+    <div class="container clearfix d-flex flex-column align-items-start hero-content">
         <h1>@Model.Title</h1>
         @if (!string.IsNullOrEmpty(Model.Subtitle))
         {

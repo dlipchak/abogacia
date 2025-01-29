@@ -1,12 +1,17 @@
 ﻿@using Microsoft.AspNetCore.Hosting
 @using Microsoft.Extensions.Hosting
 
-<title class="logo">Calculadora de indemnización por despido</title>
+@section PreloadLinks {
+    <link rel="preload" href="/images/calculators/dismissal-calculator.webp" as="image" type="image/webp" fetchpriority="high" />
+}
 
 <partial name="_HeroSection" model='(
   Title: "Despidos",
   Subtitle: "Calculadora de indemnización",
-  ClassName: "calculatorDismissalHeader"
+  ClassName: "calculatorDismissalHeader",
+  ImagePath: "/images/calculators/dismissal-calculator.webp",
+  Width: 1920,
+  Height: 1280
   )' />
 
 <section id="content" class="calculatorWorkDismissal">

@@ -3,14 +3,18 @@
 
 @inject IWebHostEnvironment Environment
 
-<title class="logo">
-  Accidentes de tránsito.
-  Preguntas frecuentes.
+@section PreloadLinks {
+    <link rel="preload" href="/images/faq/faq-traffic-accident.webp" as="image" type="image/webp" fetchpriority="high" />
+}
 
-</title>
-
-@await Html.PartialAsync("_HeroSection", ( Title: "Accidentes de tránsito",
-Subtitle: "Preguntas Frecuentes", ClassName: "trafficAccidentFaqHeader" ))
+<partial name="_HeroSection" model='(
+    Title: "Accidentes de tránsito",
+    Subtitle: "Preguntas Frecuentes",
+    ClassName: "trafficAccidentFaqHeader",
+    ImagePath: "/images/faq/faq-traffic-accident.webp",
+    Width: 1920,
+    Height: 710
+)' />
 
 </section>
 <section id="faq" class="container container-block mt-5">

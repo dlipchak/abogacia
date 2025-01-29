@@ -1,5 +1,39 @@
 /* hero header */
 
+.heroHeader {
+  position: relative;
+  overflow: hidden;
+  padding: 250px;
+
+  @media (max-width: 991.98px) {
+    padding: 0px;
+    background-position: 0px 0px !important;
+  }
+}
+
+.hero-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 @media (max-width: 575.98px) {
   .container,
   #header.full-header .container,
@@ -23,7 +57,7 @@
 
   h1 {
     font-weight: 700;
-    text-transform: uppercase; /* Transform h1 to uppercase */
+    text-transform: uppercase;
   }
 
   h2 {
@@ -86,15 +120,6 @@
 
   @media (max-width: 991.98px) {
     float: left !important;
-  }
-}
-
-.heroHeader {
-  padding: 250px;
-
-  @media (max-width: 991.98px) {
-    padding: 0px;
-    background-position: 0px 0px !important;
   }
 }
 
