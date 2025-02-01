@@ -30,6 +30,7 @@ namespace AbogaciaCore.Handlers
                 var sitemapPath = Path.Combine(_webHostEnvironment.WebRootPath, "sitemap.xml");
                 var sitemap = XDocument.Load(sitemapPath);
                 var urlset = sitemap.Root;
+                var ns = urlset.Name.Namespace;
                 bool changed = false;
 
                 if (_umbracoContextAccessor.TryGetUmbracoContext(out var context))
@@ -39,25 +40,26 @@ namespace AbogaciaCore.Handlers
                         x.ContentType.Alias == "blogEntryCategory"))
                     {
                         var publishedContent = context.Content.GetById(entity.Id);
-                        if (publishedContent == null) continue;
+                        if (publishedContent == null)
+                            continue;
 
                         var url = $"https://estudiolopezgiacomelli.com.ar{publishedContent.Url()}";
                         var lastmod = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss+00:00");
 
-                        var existingUrl = urlset.Elements("url")
-                            .FirstOrDefault(x => x.Element("loc")?.Value == url);
+                        var existingUrl = urlset.Elements(ns + "url")
+                            .FirstOrDefault(x => x.Element(ns + "loc")?.Value == url);
 
                         if (existingUrl != null)
                         {
-                            existingUrl.Element("lastmod").Value = lastmod;
+                            existingUrl.Element(ns + "lastmod").Value = lastmod;
                         }
                         else
                         {
-                            urlset.Add(new XElement("url",
-                                new XElement("loc", url),
-                                new XElement("lastmod", lastmod),
-                                new XElement("priority", entity.ContentType.Alias == "blogEntryCategory" ? "0.70" : "0.80"),
-                                new XElement("changefreq", "weekly"),
+                            urlset.Add(new XElement(ns + "url",
+                                new XElement(ns + "loc", url),
+                                new XElement(ns + "lastmod", lastmod),
+                                new XElement(ns + "priority", entity.ContentType.Alias == "blogEntryCategory" ? "0.70" : "0.80"),
+                                new XElement(ns + "changefreq", "weekly"),
                                 new XComment($" entityId: {entity.Id} ")
                             ));
                         }
@@ -90,19 +92,22 @@ namespace AbogaciaCore.Handlers
         {
             try
             {
-                if (!entities.Any(x => x.ContentType.Alias == "blogEntry" || x.ContentType.Alias == "blogEntryCategory"))
+                if (!entities.Any(x =>
+                    x.ContentType.Alias == "blogEntry" ||
+                    x.ContentType.Alias == "blogEntryCategory"))
                     return;
 
                 var sitemapPath = Path.Combine(_webHostEnvironment.WebRootPath, "sitemap.xml");
                 var sitemap = XDocument.Load(sitemapPath);
                 var urlset = sitemap.Root;
+                var ns = urlset.Name.Namespace;
                 bool changed = false;
 
                 foreach (var entity in entities.Where(x =>
                     x.ContentType.Alias == "blogEntry" ||
                     x.ContentType.Alias == "blogEntryCategory"))
                 {
-                    var urlsToRemove = urlset.Elements("url")
+                    var urlsToRemove = urlset.Elements(ns + "url")
                         .Where(x => x.Nodes()
                             .OfType<XComment>()
                             .Any(c => c.Value.Trim() == $"entityId: {entity.Id}"))
