@@ -1,4 +1,5 @@
 ﻿@using AbogaciaCore.Helpers;
+@using System.IO;
 @model ArticleModel
 
 @{
@@ -18,10 +19,14 @@
         "EnfermedadesProfesionales" => ("/images/articles/enfermedades-profesionales.webp", 1920, 451),
         _ => ("", 1920, 1280)
     };
+
+    var extension = System.IO.Path.GetExtension(imagePath);
+    var pathWithoutExt = imagePath[..^extension.Length];
 }
 
 @section PreloadLinks {
-    <link rel="preload" href="@imagePath" as="image" type="image/webp" fetchpriority="high" />
+    <link rel="preload" href="@(pathWithoutExt)_1920w@(extension)" as="image" type="image/webp" fetchpriority="high" />
+    <link rel="preload" href="@(pathWithoutExt)_960w@(extension)" as="image" type="image/webp" media="(max-width: 960px)" />
 }
 
 <partial name="ArticlesHeader" />
