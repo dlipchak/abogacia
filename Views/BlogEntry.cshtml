@@ -9,17 +9,16 @@
 	Layout = "~/Views/Shared/_Layout.cshtml";
 	var culture = new CultureInfo("es-ES");
 
-	// Set SEO meta tags
-	ViewData["Title"] = Model.HasValue("metaTitle") ? Model.Value<string>("metaTitle") : Model.Name;
-	ViewData["Description"] = Model.HasValue("metaDescription") ? Model.Value<string>("metaDescription") : Model.Value<string>("summary");
-	ViewData["Keywords"] = Model.HasValue("metaKeywords") ? Model.Value<string>("metaKeywords") : "";
-	ViewData["Canonical"] = Model.HasValue("canonicalUrl") ? Model.Value<string>("canonicalUrl") : Model.Url();
+	// Use article fields for metadata
+	ViewData["Title"] = $"{Model.Name} - Blog - Estudio Jurídico López Giacomelli";
+	ViewData["Description"] = Model.Value<string>("summary");
+	ViewData["Keywords"] = Model.Value<string>("seoKeywords") ?? 
+						  "derecho laboral, accidentes, blog jurídico";
 
-	// Open Graph meta tags
-	ViewData["OgTitle"] = ViewData["Title"];
-	ViewData["OgDescription"] = ViewData["Description"];
-	ViewData["OgImage"] = Model.HasValue("ogImage") ? Model.Value<IPublishedContent>("ogImage")?.Url() : 
-						 (Model.HasValue("mainImage") ? Model.Value<IPublishedContent>("mainImage")?.Url() : "");
+	// Use same values for Open Graph
+	ViewData["OgTitle"] = Model.Name;
+	ViewData["OgDescription"] = Model.Value<string>("summary");
+	ViewData["OgImage"] = Model.Value<IPublishedContent>("mainImage")?.Url();
 
 	// Increment view count
 	try
@@ -46,11 +45,23 @@
 		System.Diagnostics.Debug.WriteLine($"Error updating view count: {ex.Message}");
 		System.Diagnostics.Debug.WriteLine($"Stack trace: {ex.StackTrace}");
 	}
+
+	var jsonLdModel = new JsonLdModel
+	{
+		Headline = Model.Name,
+		Description = ViewData["Description"].ToString(),
+		Keywords = ViewData["Keywords"].ToString(),
+		ImageName = Model.Value<IPublishedContent>("mainImage")?.Url(),
+		Category = Model.Parent.Name,
+		ArticleBody = Model.Value<string>("content"),
+		DatePublished = Model.CreateDate
+	};
 }
+
+<partial name="_BlogJsonLdSchema" model="jsonLdModel" />
 
 <section id="page-title">
 	<div class="container clearfix">
-		<h1>@Model.Name</h1>
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item"><a href="/">Inicio</a></li>
 			<li class="breadcrumb-item"><a href="/novedades">Novedades</a></li>
@@ -103,7 +114,10 @@
 									var commentCount = approvedComments.Count();
 								}
 
-								<h3 id="comments-title"><span>@commentCount</span> Comentarios</h3>
+								@if (commentCount > 0)
+								{
+									<h3 id="comments-title"><span>@commentCount</span> @(commentCount == 1 ? "Comentario" : "Comentarios")</h3>
+								}
 
 								<!-- Comments List -->
 								@if (approvedComments.Any())

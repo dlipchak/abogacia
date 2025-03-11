@@ -3,9 +3,18 @@
 
 @inject IWebHostEnvironment Environment
 
-<title class="logo">Despidos. Preguntas frecuentes</title>
+@section PreloadLinks {
+    <link rel="preload" href="/images/faq/faq-dismissals-2.webp" as="image" type="image/webp" fetchpriority="high" />
+}
 
-<partial name="_HeroSection" model='( Title: "Despidos", Subtitle: "Preguntas Frecuentes", ClassName: "dismissalsFaqHeader" )' />
+<partial name="_HeroSection" model='(
+    Title: "Despidos",
+    Subtitle: "Preguntas Frecuentes",
+    ClassName: "dismissalsFaqHeader",
+    ImagePath: "/images/faq/faq-dismissals-2.webp",
+    Width: 1920,
+    Height: 1280
+)' />
 
 <section id="faq" class="container container-block mt-5">
 
@@ -274,7 +283,7 @@
                 "name": "¿CÓMO SE CALCULA LA INDEMNIZACIÓN POR DESPIDO SIN CAUSA?",
                 "acceptedAnswer": {
                     "@@type": "Answer",
-                    "text": "La indemnización por “despido sin causa” está directamente ligada a su antigüedad y tal como lo contempla el art 245 de la LCT es igual a UN (1) mes de sueldo por cada año de servicio o fracción mayor de TRES (3) meses, tomando como referencia la mejor remuneración mensual, normal y habitual del último año."
+                    "text": "La indemnización por "despido sin causa" está directamente ligada a su antigüedad y tal como lo contempla el art 245 de la LCT es igual a UN (1) mes de sueldo por cada año de servicio o fracción mayor de TRES (3) meses, tomando como referencia la mejor remuneración mensual, normal y habitual del último año."
                 }
             },
             {

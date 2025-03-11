@@ -1,41 +1,41 @@
-@model JsonLdModel 
+@model JsonLdModel
 
 @{
-  var currentUrl = $"{Context.Request.Scheme}://{Context.Request.Host}{Context.Request.Path}";
-  var imageUrl = $"{Context.Request.Scheme}://{Context.Request.Host}/images/{Model.ImageName}"; // Ensure to pass the image name in the model
+    var currentUrl = $"{Context.Request.Scheme}://{Context.Request.Host}{Context.Request.Path}";
+    var imageUrl = $"{Context.Request.Scheme}://{Context.Request.Host}/images/{Model.ImageName}";
 }
 
 <script type="application/ld+json">
 {
-  "@@context": "https://schema.org",
-  "@@type": "Article",
-  "headline": "@Html.Raw(Model.Headline)",
-  "description": "@Html.Raw(Model.Description)",
-  "keywords": "@Html.Raw(Model.Keywords)",
-  "url": "@currentUrl",
-  "image": "@imageUrl",
-  "author": {
-    "@@type": "Organization",
-    "name": "Estudio Jurídico López Giacomelli",
-    "url": "https://estudiolopezgiacomelli.com.ar"
-  },
-  "publisher": {
-    "@@type": "Organization",
-    "name": "Estudio Jurídico López Giacomelli",
-    "logo": {
-      "@@type": "ImageObject",
-      "url": "https://estudiolopezgiacomelli.com.ar/images/logo.png"
-    }
-  },
-  "mainEntityOfPage": {
-    "@@type": "WebPage",
-    "@@id": "@currentUrl"
-  },
-  "datePublished": "2024-11-05",
-  "about": {
-    "@@type": "Thing",
-    "name": "@Html.Raw(Model.Category)"
-  },
-  "articleBody": "@Html.Raw(Model.ArticleBody)"
+    "@@context": "https://schema.org",
+    "@@type": "Article",
+    "headline": "@Html.Raw(Model.Headline)",
+    "description": "@Html.Raw(Model.Description)",
+    "keywords": "@Html.Raw(Model.Keywords)",
+    "url": "@currentUrl",
+    "image": "@imageUrl",
+    "author": {
+        "@@type": "Organization",
+        "name": "Estudio Jurídico López Giacomelli",
+        "url": "https://estudiolopezgiacomelli.com.ar"
+    },
+    "publisher": {
+        "@@type": "Organization",
+        "name": "Estudio Jurídico López Giacomelli",
+        "logo": {
+            "@@type": "ImageObject",
+            "url": "https://estudiolopezgiacomelli.com.ar/images/logo.png"
+        }
+    },
+    "mainEntityOfPage": {
+        "@@type": "WebPage",
+        "@@id": "@currentUrl"
+    },
+    "datePublished": "2024-11-05",
+    "about": {
+        "@@type": "Thing",
+        "name": "@Html.Raw(Model.Category)"
+    },
+    "articleBody": "@Html.Raw(Model.ArticleBody)"
 }
 </script>

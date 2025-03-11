@@ -16,20 +16,18 @@
                 {
                     <div class="entry col-12">
                         <div class="grid-inner row g-0">
+                            @if (blogEntry.HasValue("mainImage"))
+                            {
                             <div class="col-auto">
                                 <div class="entry-image">
                                     <a href="@blogEntry.Url()">
-                                        @if (blogEntry.HasValue("mainImage"))
-                                        {
+                                       
                                             <img  src="@(blogEntry.Value<IPublishedContent>("mainImage")?.Url() ?? "#")" alt="@blogEntry.Name">
-                                        }
-                                        else
-                                        {
-                                            <img  src="/images/placeholder.jpg" alt="@blogEntry.Name">
-                                        }
+                                        
                                     </a>
                                 </div>
                             </div>
+                            }
                             <div class="col ps-1">
                                 <div class="entry-title">
                                     <h4><a href="@blogEntry.Url()">@blogEntry.Name</a></h4>
@@ -62,21 +60,18 @@
                 @foreach (var blogEntry in Model.Descendants().Where(x => x.ContentType.Alias == "blogEntry").OrderByDescending(x => x.Value<int>("viewCount")).Take(5))
                 {
                     <div class="entry col-12">
-                        <div class="grid-inner row g-0">
+                        <div class="grid-inner row g-0">     
+                            @if (blogEntry.HasValue("mainImage")){
                             <div class="col-auto">
                                 <div class="entry-image">
                                     <a href="@blogEntry.Url()">
-                                        @if (blogEntry.HasValue("mainImage"))
-                                        {
+                                      
                                             <img  src="@(blogEntry.Value<IPublishedContent>("mainImage")?.Url() ?? "#")" alt="@blogEntry.Name()">
-                                        }
-                                        else
-                                        {
-                                            <img  src="/images/placeholder.jpg" alt="@blogEntry.Name()">
-                                        }
+                                       
                                     </a>
                                 </div>
                             </div>
+                        }
                             <div class="col ps-1">
                                 <div class="entry-title">
                                     <h4><a href="@blogEntry.Url()">@blogEntry.Name()</a></h4>

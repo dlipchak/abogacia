@@ -3,17 +3,17 @@
 
 @inject IWebHostEnvironment Environment
 
-
-
-<title class="logo">
-  Calculadora de indemnización por accidentes laborales.
-
-</title>
+@section PreloadLinks {
+    <link rel="preload" href="/images/calculators/work-accident-calculator.webp" as="image" type="image/webp" fetchpriority="high" />
+}
 
 @await Html.PartialAsync("_HeroSection", (
   Title: "Accidentes laborales",
   Subtitle: "Calculadora de indemnización",
-  ClassName: "calculatorWorkAccidentHeader"
+  ClassName: "calculatorWorkAccidentHeader",
+  ImagePath: "/images/calculators/work-accident-calculator.webp",
+  Width: 1920,
+  Height: 1080
   ))
 
 <section id=" content" class="calculatorWorkAccident">
@@ -97,15 +97,15 @@
             </p>
             <p>
               <strong class="green">Accidente in itinere (camino al trabajo o de regreso a
-                casa)</strong>: los accidentes in itinere (del latin “itinere”: “en curso”) se
+                casa)</strong>: los accidentes in itinere (del latin "itinere": "en curso") se
               encuentran definidos en el artículo sexto de la Ley de Riesgos del
-              Trabajo (Ley 24.557) como: “todo
+              Trabajo (Ley 24.557) como: "todo
               <span class="green">acontecimiento súbito y violento</span>
               ocurrido por el hecho o en ocasión del trabajo, o en el
               <span class="green">
                 trayecto entre el domicilio del trabajador y el lugar de trabajo </span>, siempre y cuando el
               damnificado no hubiere interrumpido o
-              alterado dicho trayecto por causas ajenas al trabajo”.
+              alterado dicho trayecto por causas ajenas al trabajo".
             </p>
             <p>
               <strong class="green">Porcentaje de incapacidad:</strong> se
@@ -171,8 +171,6 @@
     </div>
   </div>
 </section>
-
-
 
 @section Scripts {
   

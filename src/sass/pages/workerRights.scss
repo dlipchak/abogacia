@@ -29,9 +29,7 @@
 }
 
 .workerRights {
-  background: url("/images/articles/WorkerRights.webp") center center / cover
-    no-repeat;
-  background-position: 0px 110.519px !important;
+  // Background image is now handled by _HeroSection partial
 }
 
 /* end worker rights */

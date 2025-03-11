@@ -16,7 +16,10 @@
                 {
                     <div class="entry-image">
                         <a href="@blogEntry.Url()">
-                            <img src="@(blogEntry.Value<IPublishedContent>("mainImage")?.Url() ?? "#")" alt="@blogEntry.Name()">
+                            <img src="@(blogEntry.Value<IPublishedContent>("mainImage")?.Url() ?? "#")" 
+                                 alt="@blogEntry.Name()"
+                                 width="800"
+                                 height="450">
                         </a>
                     </div>
                 }

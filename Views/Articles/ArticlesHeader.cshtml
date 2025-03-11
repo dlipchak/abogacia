@@ -1,9 +1,39 @@
 ﻿@using AbogaciaCore.Helpers;
+@using System.IO;
 @model ArticleModel;
 
+@{
+    // Get the base image path without width suffix
+    var (imagePath, width, height) = Model.Article switch
+    {
+        "HowToActOnTrafficAccident" => ("/images/articles/accidentesDeTransito.webp", 1920, 1280),
+        "AccidentesEnTransportePublico" => ("/images/articles/accidente-en-transporte-publico.webp", 1920, 1354),
+        "Covid19" => ("/images/articles/covid19.webp", 1920, 576),
+        "AccidentesEnAuto" => ("/images/articles/accidente-en-automovil.webp", 1920, 1080),
+        "AccidentesEnMoto" => ("/images/articles/accidente-en-moto.webp", 1920, 1281),
+        "AccidentesEnBicicleta" => ("/images/articles/accidente-en-bicicleta.webp", 1920, 1281),
+        "AccidentesComoAcompanantes" => ("/images/articles/accidentes-como-acompanantes.webp", 1920, 1280),
+        "AccidentesComoPeaton" => ("/images/articles/peatones.webp", 1920, 782),
+        "DestruccionTotal" => ("/images/articles/destruccion-total.webp", 1920, 1280),
+        "AccidentesDeTrabajo" => ("/images/articles/accidentes-en-ocasion-del-trabajo.webp", 1920, 1280),
+        "AccidentesInItinere" => ("/images/articles/accidentes-initinere.webp", 1920, 1178),
+        "EnfermedadesProfesionales" => ("/images/articles/enfermedades-profesionales.webp", 1920, 451),
+        _ => ("", 1920, 1280)
+    };
+
+    // Remove any existing width suffix if present
+    var extension = System.IO.Path.GetExtension(imagePath);
+    var pathWithoutExt = imagePath[..^extension.Length];
+    var baseImagePath = pathWithoutExt.EndsWith("_1920w") ? pathWithoutExt[..^6] + extension : imagePath;
+}
+
 <partial name="_HeroSection" model='(
-  Title: @Model.ArticleName,
-  Subtitle: "",
-  ClassName: @Model.Article.Substring(0, 1).ToLowerInvariant() + @Model.Article.Substring(1)
-  )' />
+    Title: Model.ArticleName,
+    Subtitle: "",
+    ClassName: Model.Article.Substring(0, 1).ToLowerInvariant() + Model.Article.Substring(1),
+    ImagePath: baseImagePath,
+    Width: width,
+    Height: height,
+    UseResponsiveImage: true
+    )' />
 

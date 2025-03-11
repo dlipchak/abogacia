@@ -1,71 +1,40 @@
 /* services */
 
-.accidentesEnTransportePublico {
-  background: url("/images/articles/accidente-en-transporte-publico.webp")
-    center center / cover no-repeat;
+.heroHeader {
+  position: relative;
+  overflow: hidden;
 }
 
-.covid19 {
-  background: url("/images/articles/covid19.webp") 64% center / cover no-repeat;
+.hero-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
-.howToActOnTrafficAccident {
-  background: url("/images/articles/accidentesDeTransito.webp") center center /
-    cover no-repeat;
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
-.accidentesEnAuto {
-  background: url("/images/articles/accidente-en-automovil.webp") center center /
-    cover no-repeat;
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff; /* Ensure text is visible on image */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: adds readability */
 }
 
-.accidentesEnMoto {
-  background: url("/images/articles/accidente-en-moto.webp") center center /
-    cover no-repeat;
-}
-
-.accidentesEnBicicleta {
-  background: url("/images/articles/accidente-en-bicicleta.webp") center center /
-    cover no-repeat;
-}
-
-.accidentesComoAcompanantes {
-  background: url("/images/articles/accidentes-como-acompanantes.webp") center
-    center / cover no-repeat;
-}
-
-.accidentesComoPeaton {
-  background: url("/images/articles/peatones.webp") center center / cover
-    no-repeat;
-}
-
-.destruccionTotal {
-  background: url("/images/articles/destruccion-total.webp") center center /
-    cover no-repeat;
-}
-
-.accidentesDeTrabajo {
-  background: url("/images/articles/accidentes-en-ocasion-del-trabajo.webp")
-    center center / cover no-repeat;
-}
-
-.accidentesInItinere {
-  background: url("/images/articles/accidentes-initinere.webp") center center /
-    cover no-repeat;
-}
-
-.enfermedadesProfesionales {
-  background: url("/images/articles/enfermedades-profesionales.webp") center
-    center / cover no-repeat;
-}
-
-/* Common styles for all s */
-[class*=""] {
+/* Common styles for all sections */
+.heroHeader {
   padding: 250px 0;
 }
 
 @media (max-width: 991.98px) {
-  [class*=""] {
+  .heroHeader {
     padding: 116px 0;
   }
 }

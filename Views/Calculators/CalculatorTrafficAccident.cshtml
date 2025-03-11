@@ -3,12 +3,17 @@
 
 @inject IWebHostEnvironment Environment
 
-<title class="logo">Calculadora de indemnización por accidentes de tránsito</title>
+@section PreloadLinks {
+    <link rel="preload" href="/images/calculators/traffic-accident-calculator.webp" as="image" type="image/webp" fetchpriority="high" />
+}
 
 <partial name="_HeroSection" model='(
   Title: "Accidentes de Tránsito",
   Subtitle: "Calculadora de indemnización",
-  ClassName: "calculatorTrafficAccidentHeader"
+  ClassName: "calculatorTrafficAccidentHeader",
+  ImagePath: "/images/calculators/traffic-accident-calculator.webp",
+  Width: 1920,
+  Height: 1280
   )' />
 
 <section id="content" class="calculatorTrafficAccident">

@@ -1,11 +1,29 @@
-@model (string Title, string Subtitle, string ClassName)
+@using AbogaciaCore.Helpers;
+@model (string Title, string Subtitle, string ClassName, string ImagePath, int Width, int Height, bool UseResponsiveImage)
 
-<section id="hero-title" class="heroHeader @Model.ClassName min-vh-60">
-    <div class="container clearfix d-flex flex-column align-items-start">
+<section id="page-title" class="page-title-parallax page-title-dark @Model.ClassName">
+    <div class="container clearfix">
         <h1>@Model.Title</h1>
         @if (!string.IsNullOrEmpty(Model.Subtitle))
         {
-            <h2>@Model.Subtitle</h2>
+            <span>@Model.Subtitle</span>
         }
     </div>
+
+    @if (!string.IsNullOrEmpty(Model.ImagePath))
+    {
+        if (Model.UseResponsiveImage)
+        {
+            @Html.ResponsiveImage(
+                Model.ImagePath,
+                Model.Title,
+                "parallax-bg",
+                fetchPriority: "high"
+            )
+        }
+        else
+        {
+            <img class="parallax-bg" src="@Model.ImagePath" alt="@Model.Title" width="@Model.Width" height="@Model.Height" fetchpriority="high" />
+        }
+    }
 </section>

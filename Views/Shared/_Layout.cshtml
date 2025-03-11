@@ -4,7 +4,8 @@
 @inject IWebHostEnvironment WebHostEnvironment
 
 @{
-    var currentUrl = Context.Request.Path.Value?.ToLowerInvariant();
+    const string DOMAIN = "https://estudiolopezgiacomelli.com.ar";
+    var currentUrl = Context.Request.Path.Value?.ToLowerInvariant().TrimEnd('/');
     var assets = AssetHelper.GetAssetsForUrl(currentUrl, WebHostEnvironment);
 }
 
@@ -21,16 +22,14 @@
         content="@(ViewData["Description"] ?? "Abogados especialistas en accidentes y derecho laboral en Argentina.")">
     <meta name="keywords"
         content="@(ViewData["Keywords"] ?? "abogados, accidentes de tránsito, accidentes laborales, despidos, derecho laboral, indemnización")">
-    <link rel="canonical" href="https://estudiolopezgiacomelli.com.ar/@(ViewData["Canonical"] ?? "")" />
-    <link rel="alternate" hreflang="es-AR" href="https://estudiolopezgiacomelli.com.ar/" />
-    <link rel="alternate" hreflang="es" href="https://estudiolopezgiacomelli.com.ar/" />
+    <link rel="canonical" href="@(DOMAIN)@(currentUrl)" />
 
     <!-- Open Graph / Social Media Meta Tags -->
     @if (ViewData["OgTitle"] != null)
     {
         <meta property="og:title" content="@ViewData["OgTitle"]" />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://estudiolopezgiacomelli.com.ar/@(ViewData["Canonical"] ?? "")" />
+        <meta property="og:url" content="@(DOMAIN)@(currentUrl)" />
         <meta property="og:description" content="@ViewData["OgDescription"]" />
         @if (!string.IsNullOrEmpty(ViewData["OgImage"]?.ToString()))
         {
