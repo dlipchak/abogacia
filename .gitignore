@@ -359,3 +359,5 @@ wwwroot/rev-manifest-*.json.gz
 *.br
 wwwroot/dist/*
 wwwroot/rev-manifest.json
+wwwroot/dist - Copy/*
+my-published-app/*

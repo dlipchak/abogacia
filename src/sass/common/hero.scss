@@ -35,6 +35,7 @@
 }
 
 @media (max-width: 575.98px) {
+
   .container,
   #header.full-header .container,
   .container-fullwidth {
@@ -45,6 +46,7 @@
 }
 
 #hero-title {
+
   h1,
   h2 {
     line-height: 55px;
@@ -67,6 +69,7 @@
   }
 
   @media (max-width: 991.98px) {
+
     h1,
     h2 {
       font-size: 30px !important;
@@ -83,7 +86,7 @@
 }
 
 .articleTitle {
-  line-height: 55px !important;
+  // line-height: 55px !important;
   display: inline-block !important;
   background: rgba(26, 188, 156, 0.65) !important;
   padding: 12px !important;
@@ -106,7 +109,7 @@
 }
 
 .articleCategoryTitle {
-  line-height: 55px !important;
+  // line-height: 55px !important;
   background: rgba(26, 188, 156, 0.65) !important;
   padding-left: 15px;
   padding-right: 15px;

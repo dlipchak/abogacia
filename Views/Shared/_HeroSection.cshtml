@@ -1,29 +1,42 @@
 @using AbogaciaCore.Helpers;
 @model (string Title, string Subtitle, string ClassName, string ImagePath, int Width, int Height, bool UseResponsiveImage)
 
-<section id="page-title" class="page-title-parallax page-title-dark @Model.ClassName">
-    <div class="container clearfix">
-        <h1>@Model.Title</h1>
-        @if (!string.IsNullOrEmpty(Model.Subtitle))
+<section id="hero-title" class="heroHeader">
+    <div class="hero-image-container">
+        @if (!string.IsNullOrEmpty(Model.ImagePath))
         {
-            <span>@Model.Subtitle</span>
+            if (Model.UseResponsiveImage)
+            {
+                <div class="parallax scroll-detect vh-75 align-items-center justify-content-center d-flex">
+                    @Html.ResponsiveImage(
+                        Model.ImagePath,
+                        Model.Title,
+                        "parallax-bg",
+                        fetchPriority: "high"
+                    )
+                </div>
+            }
+            else
+            {
+                <div class="parallax scroll-detect vh-75 align-items-center justify-content-center d-flex">
+                    <img class="parallax-bg @Model.ClassName" 
+                         src="@Model.ImagePath" 
+                         alt="@Model.Title" 
+                         width="@Model.Width" 
+                         height="@Model.Height" 
+                         fetchpriority="high" />
+                </div>
+            }
         }
     </div>
-
-    @if (!string.IsNullOrEmpty(Model.ImagePath))
-    {
-        if (Model.UseResponsiveImage)
-        {
-            @Html.ResponsiveImage(
-                Model.ImagePath,
-                Model.Title,
-                "parallax-bg",
-                fetchPriority: "high"
-            )
-        }
-        else
-        {
-            <img class="parallax-bg" src="@Model.ImagePath" alt="@Model.Title" width="@Model.Width" height="@Model.Height" fetchpriority="high" />
-        }
-    }
+    
+    <div class="container hero-content">
+        <div class="d-flex flex-column align-items-start">
+            <h1 class="articleTitle d-inline-block mb-2">@Model.Title</h1>
+            @if (!string.IsNullOrEmpty(Model.Subtitle))
+            {
+                <h2 class="articleCategoryTitle d-inline-block mt-0">@Model.Subtitle</h2>
+            }
+        </div>
+    </div>
 </section>

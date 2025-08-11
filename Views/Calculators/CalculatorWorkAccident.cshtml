@@ -4,17 +4,19 @@
 @inject IWebHostEnvironment Environment
 
 @section PreloadLinks {
-    <link rel="preload" href="/images/calculators/work-accident-calculator.webp" as="image" type="image/webp" fetchpriority="high" />
+  <link rel="preload" href="/images/calculators/work-accident-calculator.webp" as="image" type="image/webp"
+    fetchpriority="high" />
 }
 
 @await Html.PartialAsync("_HeroSection", (
-  Title: "Accidentes laborales",
-  Subtitle: "Calculadora de indemnización",
-  ClassName: "calculatorWorkAccidentHeader",
-  ImagePath: "/images/calculators/work-accident-calculator.webp",
-  Width: 1920,
-  Height: 1080
-  ))
+Title: "Accidentes laborales",
+Subtitle: "Calculadora de indemnización",
+ClassName: "calculatorWorkAccidentHeader",
+ImagePath: "/images/calculators/work-accident-calculator.webp",
+Width: 1920,
+Height: 1080,
+UseResponsiveImage: false
+))
 
 <section id=" content" class="calculatorWorkAccident">
   <div class="content-wrap pt-0">
@@ -173,21 +175,21 @@
 </section>
 
 @section Scripts {
-  
-<script type="application/ld+json">
-  {
-    "@@context": "https://schema.org",
-    "@@type": "WebApplication",
-    "name": "Calculadora de Indemnización por Accidentes Laborales",
-    "description": "Herramienta para calcular estimaciones de indemnización por accidentes laborales en Argentina, proporcionada por el Estudio Jurídico López Giacomelli.",
-    "url": "https://estudiolopezgiacomelli.com.ar/calculadoras/accidentes-laborales",
-    "applicationCategory": "LegalCalculator",
-    "operatingSystem": "All",
-    "provider": {
-      "@@type": "Organization",
-      "name": "Estudio Jurídico López Giacomelli",
-      "url": "https://estudiolopezgiacomelli.com.ar"
-    }
-  }
-  </script>
+
+  <script type="application/ld+json">
+              {
+                "@@context": "https://schema.org",
+                "@@type": "WebApplication",
+                "name": "Calculadora de Indemnización por Accidentes Laborales",
+                "description": "Herramienta para calcular estimaciones de indemnización por accidentes laborales en Argentina, proporcionada por el Estudio Jurídico López Giacomelli.",
+                "url": "https://estudiolopezgiacomelli.com.ar/calculadoras/accidentes-laborales",
+                "applicationCategory": "LegalCalculator",
+                "operatingSystem": "All",
+                "provider": {
+                  "@@type": "Organization",
+                  "name": "Estudio Jurídico López Giacomelli",
+                  "url": "https://estudiolopezgiacomelli.com.ar"
+                }
+              }
+              </script>
 }

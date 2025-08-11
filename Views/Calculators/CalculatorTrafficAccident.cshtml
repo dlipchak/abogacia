@@ -4,17 +4,19 @@
 @inject IWebHostEnvironment Environment
 
 @section PreloadLinks {
-    <link rel="preload" href="/images/calculators/traffic-accident-calculator.webp" as="image" type="image/webp" fetchpriority="high" />
+  <link rel="preload" href="/images/calculators/traffic-accident-calculator.webp" as="image" type="image/webp"
+    fetchpriority="high" />
 }
 
 <partial name="_HeroSection" model='(
-  Title: "Accidentes de Tránsito",
-  Subtitle: "Calculadora de indemnización",
-  ClassName: "calculatorTrafficAccidentHeader",
-  ImagePath: "/images/calculators/traffic-accident-calculator.webp",
-  Width: 1920,
-  Height: 1280
-  )' />
+                                                            Title: "Accidentes de Tránsito",
+                                                            Subtitle: "Calculadora de indemnización",
+                                                            ClassName: "calculatorTrafficAccidentHeader",
+                                                            ImagePath: "/images/calculators/traffic-accident-calculator.webp",
+                                                            Width: 1920,
+                                                            Height: 1280,
+                                                            UseResponsiveImage: false
+                                                            )' />
 
 <section id="content" class="calculatorTrafficAccident">
   <div class="content-wrap pt-0">
@@ -28,53 +30,35 @@
                   <label for="age" class="form-label">
                     <small>*</small> Edad:
                   </label>
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="age"
-                    name="age"
-                    placeholder="Por ej: 25"
-                    aria-label="Ingrese su edad"
-                  />
+                  <input type="number" class="form-control" id="age" name="age" placeholder="Por ej: 25"
+                    aria-label="Ingrese su edad" />
                 </div>
               </div>
-            
+
               <div class="row mb-3">
                 <div class="col-md-12">
                   <label for="incapacity" class="form-label">
                     <small>*</small> Porcentaje de incapacidad:
                   </label>
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="incapacity"
-                    name="incapacity"
-                    placeholder="Por ej: 30"
-                    aria-label="Ingrese porcentaje de incapacidad"
-                  />
+                  <input type="number" class="form-control" id="incapacity" name="incapacity" placeholder="Por ej: 30"
+                    aria-label="Ingrese porcentaje de incapacidad" />
                 </div>
               </div>
-            
+
               <div class="row mb-3">
                 <div class="col-md-12">
                   <label for="salary" class="form-label">
                     <small>*</small> Ingreso mensual:
                   </label>
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="salary"
-                    name="salary"
-                    placeholder="Por ej: 5000"
-                    aria-label="Ingrese su ingreso mensual"
-                  />
+                  <input type="number" class="form-control" id="salary" name="salary" placeholder="Por ej: 5000"
+                    aria-label="Ingrese su ingreso mensual" />
                 </div>
               </div>
-            
+
               <button class="btn btn-success" type="button" id="btnCalculate" disabled>
                 Calcular
               </button>
-            
+
               <div class="mt-3">
                 <div class="style-msg successmsg invisible">
                   <div class="sb-msg">
@@ -83,7 +67,7 @@
                 </div>
               </div>
             </form>
-            
+
           </div>
           <div class="col-md-6">
 
@@ -169,22 +153,22 @@
   </div>
 </section>
 
-  @section Scripts {
+@section Scripts {
 
-    <script type="application/ld+json">
-      {
-        "@@context": "https://schema.org",
-        "@@type": "WebApplication",
-        "name": "Calculadora de Indemnización por Accidentes de Tránsito",
-        "description": "Herramienta para calcular estimaciones de indemnización por accidentes de tránsito, proporcionada por el Estudio Jurídico López Giacomelli.",
-        "url": "https://estudiolopezgiacomelli.com.ar/calculadoras/accidentes-de-transito",
-        "applicationCategory": "LegalCalculator",
-        "operatingSystem": "All",
-        "provider": {
-          "@@type": "Organization",
-          "name": "Estudio Jurídico López Giacomelli",
-          "url": "https://estudiolopezgiacomelli.com.ar"
-        }
-      }
-      </script>
+  <script type="application/ld+json">
+          {
+            "@@context": "https://schema.org",
+            "@@type": "WebApplication",
+            "name": "Calculadora de Indemnización por Accidentes de Tránsito",
+            "description": "Herramienta para calcular estimaciones de indemnización por accidentes de tránsito, proporcionada por el Estudio Jurídico López Giacomelli.",
+            "url": "https://estudiolopezgiacomelli.com.ar/calculadoras/accidentes-de-transito",
+            "applicationCategory": "LegalCalculator",
+            "operatingSystem": "All",
+            "provider": {
+              "@@type": "Organization",
+              "name": "Estudio Jurídico López Giacomelli",
+              "url": "https://estudiolopezgiacomelli.com.ar"
+            }
+          }
+          </script>
 }
