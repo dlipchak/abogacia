@@ -196,10 +196,7 @@
 										}
 									</ol>
 								}
-								else
-								{
-									<p>No hay comentarios aún. ¡Sé el primero en comentar!</p>
-								}
+							
 
 								<div class="clear"></div>
 
@@ -212,7 +209,13 @@
 										¡Gracias por tu comentario! Será revisado y publicado pronto.
 									</div>
 
-									<form class="row needs-validation" id="commentform" novalidate>
+									<form class="row needs-validation" id="commentform" novalidate style="position: relative;">
+										<div class="form-process">
+											<div class="css3-spinner">
+												<div class="css3-spinner-scaler"></div>
+											</div>
+										</div>
+										
 										<input type="hidden" name="ArticleId" value="@Model.Id" />
 										<input type="hidden" name="ParentCommentId" id="parentCommentId" value="" />
 										

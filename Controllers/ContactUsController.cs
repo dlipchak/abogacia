@@ -24,7 +24,7 @@ namespace AbogaciaCore.Controllers
         }
 
         [HttpPost("SendEmail")]
-        public ActionResult SendEmail([FromBody] ContactModel model)
+        public async Task<ActionResult> SendEmail([FromBody] ContactModel model)
         {
             if (ModelState.IsValid)
             {
@@ -50,11 +50,13 @@ namespace AbogaciaCore.Controllers
                     smtp.Port = 587;
                     smtp.EnableSsl = true;
                     smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-                    smtp.Send(message);
+                    await smtp.SendMailAsync(message);
                     return Json(new { success = true });
                 }
                 catch (Exception ex)
                 {
+                    System.Diagnostics.Debug.WriteLine($"Contact form email error: {ex.Message}");
+                    System.Diagnostics.Debug.WriteLine($"Stack trace: {ex.StackTrace}");
                     return Json(new { success = false, error = ex.Message });
                 }
 

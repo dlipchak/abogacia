@@ -15,6 +15,13 @@ function handleSubmit(e) {
   form.classList.add("was-validated");
 
   if (form.checkValidity()) {
+    const spinner = form.querySelector(".form-process");
+    console.log("Spinner element found:", spinner);
+    if (spinner) {
+      spinner.style.display = "block";
+      console.log("Spinner should now be visible");
+    }
+
     const commentForm = {
       articleId: form.querySelector('input[name="ArticleId"]').value,
       parentCommentId: form.querySelector('input[name="ParentCommentId"]')
@@ -24,7 +31,7 @@ function handleSubmit(e) {
       comment: form.querySelector('textarea[name="Comment"]').value,
     };
 
-    sendCommentForm(commentForm, form);
+    sendCommentForm(commentForm, spinner, form);
   }
 }
 
@@ -45,7 +52,7 @@ function showSuccessMessage() {
   }
 }
 
-async function sendCommentForm(commentForm, form) {
+async function sendCommentForm(commentForm, spinner, form) {
   try {
     const response = await fetch("/api/comments/submit", {
       method: "POST",
@@ -59,10 +66,12 @@ async function sendCommentForm(commentForm, form) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
+    if (spinner) spinner.style.display = "none";
     clearForm(form);
     showSuccessMessage();
   } catch (error) {
     console.error("Error sending comment:", error);
+    if (spinner) spinner.style.display = "none";
 
     const alert = document.querySelector("#respond .alert-success");
     if (alert) {
