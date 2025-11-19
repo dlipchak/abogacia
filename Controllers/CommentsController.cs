@@ -1,5 +1,6 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Umbraco.Cms.Core.Services;
 using System.Diagnostics;
 using System.Net.Mail;
@@ -15,11 +16,13 @@ namespace AbogaciaCore.Controllers
     {
         private readonly IContentService _contentService;
         private readonly IUmbracoContextAccessor _umbracoContextAccessor;
+        private readonly IConfiguration _configuration;
 
-        public CommentsController(IContentService contentService, IUmbracoContextAccessor umbracoContextAccessor)
+        public CommentsController(IContentService contentService, IUmbracoContextAccessor umbracoContextAccessor, IConfiguration configuration)
         {
             _contentService = contentService;
             _umbracoContextAccessor = umbracoContextAccessor;
+            _configuration = configuration;
         }
 
         [HttpPost("submit")]
@@ -156,7 +159,7 @@ namespace AbogaciaCore.Controllers
             var credential = new NetworkCredential
             {
                 UserName = "daniel.lipchak7603@gmail.com",
-                Password = "zpvb vkdl bvgi pzlb"
+                Password = _configuration["SmtpPassword"]
             };
             smtp.Credentials = credential;
             smtp.Host = "smtp.gmail.com";

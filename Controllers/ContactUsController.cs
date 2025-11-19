@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.Mail;
 using AbogaciaCore.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 
 namespace AbogaciaCore.Controllers
 {
@@ -10,6 +11,12 @@ namespace AbogaciaCore.Controllers
     [Route("/Contacto")]
     public class ContactUsController : Controller
     {
+        private readonly IConfiguration _configuration;
+
+        public ContactUsController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
 
         public ActionResult Index()
         {
@@ -43,7 +50,7 @@ namespace AbogaciaCore.Controllers
                     var credential = new NetworkCredential
                     {
                         UserName = "daniel.lipchak7603@gmail.com",
-                        Password = "zpvb vkdl bvgi pzlb"  // Your 16-character App Password here
+                        Password = _configuration["SmtpPassword"]
                     };
                     smtp.Credentials = credential;
                     smtp.Host = "smtp.gmail.com";
