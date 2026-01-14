@@ -2,25 +2,7 @@
 @import "./header";
 @import "./footer";
 @import "./reviews";
-
-.contact-us-whatsapp,
-.contact-us-whatsapp:hover {
-  width: 60px;
-  height: 60px;
-  z-index: 599;
-  position: fixed;
-  line-height: 60px;
-  text-align: center;
-  top: auto;
-  right: 18px;
-  left: auto;
-  bottom: 19px;
-  cursor: pointer;
-  background-color: #25d366;
-  color: #fff;
-  font-size: 36px;
-  border-radius: 50px;
-}
+@import "./whatsapp-widget";
 
 .green {
   color: #1abc9c !important;

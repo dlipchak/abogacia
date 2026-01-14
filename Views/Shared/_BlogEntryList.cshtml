@@ -29,6 +29,7 @@
                 <div class="entry-meta">
                     <ul>
                         <li><i class="uil uil-schedule"></i> @blogEntry.CreateDate.ToString("dd MMMM yyyy", culture)</li>
+                        <li><i class="uil uil-eye"></i> @blogEntry.Value("viewCount") vistas</li>
                         <li><i class="uil uil-folder"></i> <a href="@blogEntry.Parent.Url()">@blogEntry.Parent.Name()</a></li>
                     </ul>
                 </div>

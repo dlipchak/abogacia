@@ -87,6 +87,14 @@ async function sendContactForm(contactForm, spinner, form) {
     if (spinner) spinner.style.display = "none";
     clearForm(form);
     showSuccessMessage();
+    
+    // Track form submission in Google Analytics
+    if (typeof gtag === 'function') {
+      gtag('event', 'contact_form_submit', {
+        'event_category': 'contact',
+        'event_label': 'contact_page'
+      });
+    }
   } catch (error) {
     console.error("Error sending form:", error);
     if (spinner) spinner.style.display = "none";

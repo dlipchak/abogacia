@@ -57,17 +57,6 @@
         <style>@Html.Raw(assets.CriticalCss)</style>
     } -->
 
-    <style>
-        .contact-us-whatsapp {
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s;
-        }
-        .contact-us-whatsapp.loaded {
-            opacity: 1;
-            visibility: visible;
-        }
-    </style>
 
     <!-- Font loading -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap"
@@ -90,12 +79,37 @@
 </head>
 
 <body class="stretched  page-transition" data-loader-color="theme">
-    <!-- WhatsApp button -->
-    <a href="https://api.whatsapp.com/send?phone=541161980179" 
-       class="bi-whatsapp contact-us-whatsapp"
-       target="_blank"
-       rel="noopener">
-    </a>
+    <!-- WhatsApp Widget -->
+    <div class="whatsapp-widget">
+        <button class="whatsapp-toggle contact-us-whatsapp bi-whatsapp" 
+                aria-label="Abrir chat de WhatsApp">
+        </button>
+        
+        <div class="whatsapp-popup" id="whatsappPopup">
+            <div class="whatsapp-header">
+                <span>Estudio López Giacomelli</span>
+                <button class="whatsapp-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="whatsapp-body">
+                <div class="whatsapp-message">
+                    Dejanos tu <strong>consulta gratuita</strong> por escrito de <strong>lunes a viernes, de 9:00 a 18:00</strong>. Los mensajes fuera de ese horario, serán respondidos a la brevedad posible.
+                    
+                </div>
+            </div>
+            <div class="whatsapp-footer">
+                <a href="https://api.whatsapp.com/send?phone=541161980179" 
+                   target="_blank" 
+                   rel="noopener"
+                   class="whatsapp-cta"
+                   onclick="if(typeof gtag === 'function') gtag('event', 'whatsapp_click', { 'event_category': 'contact', 'event_label': 'floating_widget' });">
+                    Abrir chat
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.44 1.28 4.89L2 22l5.23-1.37C8.69 21.53 10.3 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.46 14.12c-.23.64-1.34 1.22-1.84 1.26-.5.04-.98.22-3.29-.68-2.79-1.09-4.56-3.93-4.7-4.11-.14-.18-1.12-1.49-1.12-2.84s.71-2.02.96-2.3c.25-.27.55-.34.73-.34.18 0 .36 0 .52.01.17.01.39-.06.61.47.23.54.77 1.87.84 2.01.07.14.11.3.02.48-.09.18-.14.29-.27.44-.14.16-.29.35-.41.47-.14.14-.28.29-.12.56.16.27.71 1.17 1.53 1.9 1.05.93 1.94 1.22 2.21 1.36.27.14.43.12.59-.07.16-.19.67-.78.85-1.05.18-.27.36-.23.61-.14.25.09 1.57.74 1.84.88.27.14.45.2.52.32.07.11.07.64-.16 1.28z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <div id="wrapper" class="clearfix">
         <partial name="Header" />
@@ -114,11 +128,6 @@
     {
         <script src="@assets.JsPath" defer></script>
     }
-    <script>
-        document.fonts.ready.then(function() {
-            document.querySelector('.contact-us-whatsapp').classList.add('loaded');
-        });
-    </script>
 </body>
 
 </html>

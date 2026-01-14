@@ -1,0 +1,26 @@
+{
+  "$schema": "../../umbraco-package-schema.json",
+  "name": "Blog Views Dashboard",
+  "version": "1.0.0",
+  "extensions": [
+    {
+      "type": "dashboard",
+      "alias": "blogViewsReport.dashboard",
+      "name": "Blog Views Report",
+      "element": "/App_Plugins/BlogViewsDashboard/dashboard.js",
+      "weight": -10,
+      "meta": {
+        "label": "Reporte de Vistas",
+        "pathname": "blog-views-report"
+      },
+      "conditions": [
+        {
+          "alias": "Umb.Condition.SectionAlias",
+          "match": "Umb.Section.Content"
+        }
+      ]
+    }
+  ]
+}
+
+

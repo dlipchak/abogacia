@@ -18,3 +18,9 @@
 
 import "./googleReviewsPlugin.js";
 // import "./footer.js";
+
+// Google Analytics tracking for all pages
+import "./analytics-tracking.js";
+
+// WhatsApp chat widget
+import "./whatsapp-widget.js";

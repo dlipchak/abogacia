@@ -96,6 +96,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     resultElement.textContent = currencyFormat(ret);
     msgElement.classList.remove("invisible");
+
+    // Track calculator usage in Google Analytics
+    if (typeof gtag === 'function') {
+      const monthsWorked = monthDiff(startDate, endDate);
+      gtag('event', 'calculator_work_dismissal', {
+        'event_category': 'calculator',
+        'salary': bestSalary,
+        'months_worked': monthsWorked,
+        'years_worked': Math.floor(monthsWorked / 12),
+        'notice_type': notice,
+        'result': ret
+      });
+    }
   }
 
   function monthDiff(startDate, endDate) {

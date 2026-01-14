@@ -12,6 +12,24 @@ using AbogaciaCore.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Debug: Log which connection string is being used
+var connectionString = builder.Configuration.GetConnectionString("umbracoDbDSN");
+var environment = builder.Environment.EnvironmentName;
+
+// Write to console (visible when running as Project, not IIS Express)
+Console.WriteLine("\n╔═══════════════════════════════════════════════════════╗");
+Console.WriteLine("║         CONFIGURATION DEBUG - CONNECTION STRING        ║");
+Console.WriteLine("╠═══════════════════════════════════════════════════════╣");
+Console.WriteLine($"║ Environment: {environment,-41} ║");
+Console.WriteLine($"║ Connection: {(connectionString?.Length > 50 ? connectionString.Substring(0, 47) + "..." : connectionString ?? "NULL"),-41} ║");
+Console.WriteLine("╚═══════════════════════════════════════════════════════╝\n");
+
+// Also write to Debug Output (visible in Visual Studio Debug Output window)
+System.Diagnostics.Debug.WriteLine($"=== CONFIGURATION DEBUG ===");
+System.Diagnostics.Debug.WriteLine($"Environment: {environment}");
+System.Diagnostics.Debug.WriteLine($"Connection String: {connectionString}");
+System.Diagnostics.Debug.WriteLine($"===========================");
+
 // Build the Umbraco pipeline with EFCore + SQL Server
 builder.Services.AddUmbraco(builder.Environment, builder.Configuration)
     .AddBackOffice()

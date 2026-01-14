@@ -69,6 +69,14 @@ async function sendCommentForm(commentForm, spinner, form) {
     if (spinner) spinner.style.display = "none";
     clearForm(form);
     showSuccessMessage();
+    
+    // Track comment submission in Google Analytics
+    if (typeof gtag === 'function') {
+      gtag('event', 'comment_submit', {
+        'event_category': 'engagement',
+        'event_label': 'blog_comment'
+      });
+    }
   } catch (error) {
     console.error("Error sending comment:", error);
     if (spinner) spinner.style.display = "none";

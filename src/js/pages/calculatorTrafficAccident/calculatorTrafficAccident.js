@@ -82,6 +82,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     resultElement.textContent = currencyFormat(ret);
     msgElement.classList.remove("invisible");
+
+    // Track calculator usage in Google Analytics
+    if (typeof gtag === 'function') {
+      gtag('event', 'calculator_traffic_accident', {
+        'event_category': 'calculator',
+        'salary': salary,
+        'incapacity_percent': incapacity,
+        'age': age,
+        'result': ret
+      });
+    }
   }
 
   function calculateVuotto() {

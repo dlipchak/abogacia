@@ -88,6 +88,7 @@
 							<div class="entry-meta">
 								<ul>
 									<li><i class="uil uil-schedule"></i> @Model.CreateDate.ToString("dd MMMM yyyy", culture)</li>
+									<li><i class="uil uil-eye"></i> @Model.Value("viewCount") vistas</li>
 									<li><i class="uil uil-folder"></i> <a href="@Model.Parent.Url()">@Model.Parent.Name</a></li>
 								</ul>
 							</div>

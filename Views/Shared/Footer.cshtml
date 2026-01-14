@@ -23,12 +23,14 @@
                     <a href="https://api.whatsapp.com/send?phone=541161980179" 
                        class="visible-xs"
                        target="_blank"
-                       rel="noopener">
+                       rel="noopener"
+                       onclick="if(typeof gtag === 'function') gtag('event', 'whatsapp_click', { 'event_category': 'contact', 'event_label': 'footer_link' });">
                       +54-1161980179
                     </a>
                     <br />
                     <span title="Email"><strong>Email: </strong></span>
-                    <a href="mailto:estudiolopezgiacomelli@gmail.com">
+                    <a href="mailto:estudiolopezgiacomelli@gmail.com"
+                       onclick="if(typeof gtag === 'function') gtag('event', 'email_click', { 'event_category': 'contact', 'event_label': 'footer' });">
                       estudiolopezgiacomelli@gmail.com
                     </a>
                   </div>
@@ -38,7 +40,8 @@
                   <div class="embed-responsive embed-responsive-16by9">
                     <a href="https://www.google.com/maps/search/?api=1&query=Estudio+Lopez+Giacomelli,+Ciudad+de+Buenos+Aires" 
                        target="_blank"
-                       rel="noopener">
+                       rel="noopener"
+                       onclick="if(typeof gtag === 'function') gtag('event', 'map_click', { 'event_category': 'contact', 'event_label': 'footer_map' });">
                       <img class="embed-responsive-item"
                            src="/images/staticmap.webp"
                            alt="Ubicación de Estudio Lopez Giacomelli"

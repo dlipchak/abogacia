@@ -1,0 +1,179 @@
+/* WhatsApp Chat Widget */
+
+.whatsapp-widget {
+  position: fixed !important;
+  right: 18px !important;
+  bottom: 19px !important;
+  z-index: 599 !important;
+  display: block !important;
+}
+
+.whatsapp-toggle {
+  width: 60px !important;
+  height: 60px !important;
+  border: none !important;
+  padding: 0 !important;
+  line-height: 60px !important;
+  text-align: center !important;
+  cursor: pointer !important;
+  background-color: #25d366 !important;
+  color: #fff !important;
+  font-size: 36px !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s, background-color 0.3s;
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative !important;
+  display: block !important;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  &.active {
+    background-color: #128c7e;
+  }
+}
+
+.contact-us-whatsapp {
+  // When inside .whatsapp-widget, positioning is handled by the widget container
+  // This class provides styling compatibility
+}
+
+.whatsapp-widget .whatsapp-toggle {
+  // Override any fixed positioning from .contact-us-whatsapp when inside widget
+  position: relative !important;
+}
+
+.whatsapp-popup {
+  position: absolute;
+  bottom: 75px;
+  right: 0;
+  width: 340px;
+  max-width: calc(100vw - 40px);
+  background: #e5ddd5;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.95);
+  transition: all 0.3s ease;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.whatsapp-header {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: #fff;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.whatsapp-close {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.whatsapp-body {
+  padding: 20px;
+  background-color: #e5ddd5;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAP1BMVEXy8e7y8e7z8u/z8u/08/D09PH19fL29vP39/T4+PX5+fb6+vf7+/j8/Pn9/fr+/vv///z///3///7////z8u8MP6BtAAAAFnRSTlMDBwsQFRsjKzM7Q0xUW2JrcHd/h5Bi/9cWAAAAeaklEQVRIx+3SRw6AMAwEULek946+/1mJYIEAERD7z2ZkebGyAACwfyPVnPJ4m6YsVJqy7UfXeZTEPk13GXuVSJduLxFv/X7jSBwn4kQcJ+JEHCfiRBwn4kScJ+I4EceBOE/EgThPxHEiTsRxIk7EcSL+T8R9Ig4A+FUP3cAMnLZgVUYAAAAASUVORK5CYII=");
+}
+
+.whatsapp-message {
+  background: #fff;
+  padding: 14px 16px;
+  border-radius: 0 12px 12px 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #303030;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -8px;
+    border-width: 0 8px 8px 0;
+    border-style: solid;
+    border-color: transparent #fff transparent transparent;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: #0d7cd5;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+}
+
+.whatsapp-footer {
+  padding: 16px 20px;
+  background: #f0f0f0;
+}
+
+.whatsapp-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 20px;
+  background: #25d366;
+  color: #fff !important;
+  border: none;
+  border-radius: 24px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none !important;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+
+  &:hover {
+    background: #20bd5a;
+    transform: scale(1.02);
+    color: #fff !important;
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 400px) {
+  .whatsapp-popup {
+    width: calc(100vw - 36px);
+    right: -9px;
+  }
+}

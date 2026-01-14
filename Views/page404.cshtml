@@ -73,4 +73,15 @@
 
 @section Scripts {
 	<script src="@jsPath" defer></script>
+	<script>
+		// Track 404 errors to identify broken links
+		if (typeof gtag === 'function') {
+			gtag('event', 'page_not_found', {
+				'event_category': 'error',
+				'event_label': window.location.pathname,
+				'page_referrer': document.referrer || 'direct',
+				'full_url': window.location.href
+			});
+		}
+	</script>
 }
