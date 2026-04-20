@@ -362,3 +362,6 @@ wwwroot/rev-manifest.json
 wwwroot/dist - Copy/*
 my-published-app/*
 wwwroot/dist.zip
+
+# Google Business Profile OAuth tool (do not commit tokens)
+tools/gbp-fetch-reviews/token.json

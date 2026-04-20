@@ -1,605 +1,1352 @@
 [
   {
-    "reviewerName": "Eduardo Ceballos",
-    "profileUrl": "https://www.google.com/maps/contrib/112156166534888165250?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Eduardo_Ceballos_0.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Muy buena atención y rapidez, te sacan cualquier duda que tengas, me llevo el caso sebastian y un lujo pensé que iba a tardar más pero en menos del tiempo que se acordó se pudo solucionar recomendado",
+    "reviewerName": "Diego Gualdoni",
+    "profileUrl": "https://www.google.com/maps/contrib/110861046481352912300/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXYhMFP8DDoPEDm1TUnY7e9XsdpuzccsMue5id5eJzh97yk1Gw=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Diego_Gualdoni.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "La verdad que estoy muy conforme con el Estudio López Giacomelli sobre la gestión de mi siniestro automotor, lo resolvieron super rápido a pesar de la feria judicial y con muy buen resultado económico para mí parte !! Super recomendable, …",
+    "reviewTime": "una semana atrás",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Cristian Lazzatti",
+    "profileUrl": "https://www.google.com/maps/contrib/112406254393674655259/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJgExg3mBy7c3eoTEUwinr7i9tGykoWH5imChaMTrFEZ02AaQ=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Cristian_Lazzatti.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente el trabajo del Sr Sebastian Lopez, muy recomendable, rapidez, eficacia y seriedad!",
+    "reviewTime": "una semana atrás",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Hugo De Marco",
+    "profileUrl": "https://www.google.com/maps/contrib/116028548673067992463/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJMyE8hLZp_gitpKwmBkmUdCLriyVoBEHw0q8TdmmYbk8pJmA=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Hugo_Marco.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Muy recomendable excelente servicio",
     "reviewTime": "2 semanas atrás",
     "likeCount": "0"
   },
   {
-    "reviewerName": "karina garro",
-    "profileUrl": "https://www.google.com/maps/contrib/108221379871947266006?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/karina_garro_1.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Un excelente estudio. Me quisieron estafar con el seguro y Sebastian lo resolvió. Muchas gracias",
+    "reviewerName": "Natalia Pietracupa",
+    "profileUrl": "https://www.google.com/maps/contrib/117955365879583313177/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocKXNuqLl_q5kx97iYCra6i33E_9ee53o4-0ea4X9ZqAudYsow=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Natalia_Pietracupa.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "",
     "reviewTime": "Hace un mes",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Miguel Angel Del Cogliano",
+    "profileUrl": "https://www.google.com/maps/contrib/103290392004907275846/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocKYOHty_VgSMnksQtOP5OL-1Hy9p4JYDzWgIrum0vG-6iEnhw=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Miguel_Cogliano.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelentes profesionales, los necesite por temas de propiedades y automotores y siempre con una atención de excelencia y respuesta rápida a solucionar las cosas, muy recomendables.",
+    "reviewTime": "Hace un mes",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Nelson Lopez",
+    "profileUrl": "https://www.google.com/maps/contrib/108564331194157596578/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjWO8ppG37rLSvJ7i6-zQV7UTMB0SBF7JWrYypLimPQAePbHpX-rYg=s64-c-rp-mo-ba3-br100",
+    "imageUrl": "/images/testimonials/Nelson_Lopez.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Gracias Sebastian por la predisposición, claridad, seriedad y celeridad con la que trabajaste mi reclamo.Despues de tanto renegar con otros estudios, es bueno encontrar personas como …",
+    "reviewTime": "Hace un mes",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Pupy Pupy",
+    "profileUrl": "https://www.google.com/maps/contrib/108999013523124060022/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocLAsQsjlZkobTLQ9iQAlsAs4DgjZ0tLq-IZzMDfVo0FdlQJzg=s64-c-rp-mo-ba4-br100",
+    "imageUrl": "/images/testimonials/Pupy_Pupy.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente atención y profesionalismo de Sebastián,me saco un choque muy rápido y encima me quedó plata a favor. 100%recomendable.",
+    "reviewTime": "Hace un mes",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Gustavo Perez",
+    "profileUrl": "https://www.google.com/maps/contrib/104183267213611263012/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocIkHs_Jl81J5LL2FExOTMzXYVj5mr0F96Y50Iz7Q2JRPQhzoA=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Gustavo_Perez.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Impresionante!!! Gracias por su atención y forma de actuar son genios!!!estudio López Giacomelli. Por cierto Sebastián agradecido por tu atención y sobretodo tu trabajo de estar al tanto de todo!!! sos un crack!!! ESTUDIO LOPEZ GIACOMELLI SUPER RECOMDABLE!",
+    "reviewTime": "Hace 2 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Luis Morales",
+    "profileUrl": "https://www.google.com/maps/contrib/117054401879091270605/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocI1XQH01j0hAKSe0bpkLEAwGwi3B7-BRh0WzKGNxrZSqwjnyg=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Luis_Morales.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente atención, eficacia y rapidez muy recomendable",
+    "reviewTime": "Hace 2 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Pipi Gerez",
+    "profileUrl": "https://www.google.com/maps/contrib/101437726614091146601/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocLtPKxAzJJ_CtCEcZ3oM3PJYxuzhCtddiCLKruXACrMUn6x5Q=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Pipi_Gerez.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Muy conforme con su trabajo, exelente atención gracias.",
+    "reviewTime": "Hace 3 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Marcelo Nicosanti",
+    "profileUrl": "https://www.google.com/maps/contrib/103290184278282107896/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocLQtj1dtlbljHHE6MAL7AT51oUXFkc_zamZv8MvTKxKIJETOA=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Marcelo_Nicosanti.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Muy Buena La Atención. Y cumplieron con las fechas que me dijeron. Ya que mi seguro no me defendió para cobrar lo que correspondía por el arreglo de mi vehículo. Muchas Gracias. Se los recomiendo. Suerte",
+    "reviewTime": "Hace 3 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Diana María Álvarez",
+    "profileUrl": "https://www.google.com/maps/contrib/103925145949423488706/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVo1Od7OiWaArWpFyQTIzGvVqpsg-HMSKg1mXd3IRgZVpUJy1c=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Diana_Alvarez.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente trabajo, predisposición, eficacia. Desde el día que me contaste me ayudaron en todo. Muchas gracias a Sebastián y equipo. Saludos buen año. Los recomiendo!!",
+    "reviewTime": "Hace 3 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Beely Casalini",
+    "profileUrl": "https://www.google.com/maps/contrib/109282736014348712891/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocL_-LhmeV4BJAGR80DjY5KI6gmEoFPquBSnEyzSV1iBfK7O0w=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Beely_Casalini.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelentes profesionales muy buena atención 👌🏼 recomiendo 👍🏼",
+    "reviewTime": "Hace 3 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Nicole Avila",
+    "profileUrl": "https://www.google.com/maps/contrib/108857875972498800097/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocKnIZpkQX4vVE2J98c4ZEL9UoP9kAzTaUkflm8FPXOAymdPhvU=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Nicole_Avila.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente profesional. Me resolvió el caso en un plazo de tiempo muy bueno, menos al esperado. Siempre muy atenta, predispuesta a escuchar e informar toda novedad. …",
+    "reviewTime": "Hace 3 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "matias caffre",
+    "profileUrl": "https://www.google.com/maps/contrib/113496708871468312213/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXS-CeGhYESEYWb8uIB1ZTTAOvoTwnN_urFfM8b56_2SVuJgyVXag=s64-c-rp-mo-ba3-br100",
+    "imageUrl": "/images/testimonials/matias_caffre.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Abogada 10/10. Me resolvio un caso imposible. Super agradable, amable y atenta. En todo momento super profesional. Recontra recomendable.",
+    "reviewTime": "Hace 3 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Rosa C. Alvarez",
+    "profileUrl": "https://www.google.com/maps/contrib/107536742838685008644/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjUBaZ8WFkTR_LNtm-tqZ2RVPak_nRu05XwUdszJXofZFJj6pmY=s64-c-rp-mo-ba4-br100",
+    "imageUrl": "/images/testimonials/Rosa_Alvarez.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Muy recomendable la Doc Giacomelli. Muy buena atención, te disipa todas las dudas y siempre atenta al caso. Gracias!!",
+    "reviewTime": "Hace 3 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Federico Garcia",
+    "profileUrl": "https://www.google.com/maps/contrib/114735232625003125850/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVWf2XMMp-5ZOcaY63KiwSmCaRTWqagOVfHAisnNP7tM6BFGBuM=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Federico_Garcia.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente trabajo, t responden rápido son expeditivos, no te hacen perder el tiempo ni dinero. Super recomendable.",
+    "reviewTime": "Hace 3 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Carina Cerovaz",
+    "profileUrl": "https://www.google.com/maps/contrib/107972477297302571554/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjWU6JlZCakD_xgAn2vGjMs2N-cQweSBoTKly7sRQDrZhUGWn8H8Vg=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Carina_Cerovaz.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "La verdad impecable la gestión, se ocuparon de todo, muchas gracias",
+    "reviewTime": "Hace 4 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "eric montaño",
+    "profileUrl": "https://www.google.com/maps/contrib/111367879029346956757/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJv1QAfoinFqAsR6-ZoNoeEDotB-Yw5Tf_XDbdp1xKXOWfYPA=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/eric_montano.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "super contento, buena atencion y recomendable.",
+    "reviewTime": "Hace 4 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Julio César Cañás",
+    "profileUrl": "https://www.google.com/maps/contrib/102924145189018276619/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocIkRIDLwg9-lfRtiIofCShNBHhUr_k_g_KyfRu63_0lQtsiCA=s64-c-rp-mo-ba3-br100",
+    "imageUrl": "/images/testimonials/Julio_Canas.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Destaco la calidad humana y profesional de la doctora Giacomelli. Luego de haber sufrido un siniestro, lograr el mejor acuerdo de forma práctica y rápida, es mérito absoluto de Silvana.",
+    "reviewTime": "Hace 5 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Cesar Bautista",
+    "profileUrl": "https://www.google.com/maps/contrib/117681361048555458384/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjWAQQrmdm2ncGiqgMhBw9vlhzTFrSwxq3oZz8WEAviWMss4e1s8=s64-c-rp-mo-ba2-br100",
+    "imageUrl": "/images/testimonials/Cesar_Bautista.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Muy buena atención, y sobretodo el acompañamiento que me brindaron en todo mi proceso legal de accidente de tránsito 👏",
+    "reviewTime": "Hace 5 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Rene Ricaldez",
+    "profileUrl": "https://www.google.com/maps/contrib/106109227972871550748/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJEeZAGXMEGiYycwIyZOv-wiBRQZy9vKwBL_TSv8pg0ymCg7g=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Rene_Ricaldez.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Muy buena experiencia y muy confiable muchas gracias",
+    "reviewTime": "Hace 5 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Juan cruz Orgiazzi",
+    "profileUrl": "https://www.google.com/maps/contrib/106342607787643000704/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJ_3hroshrJ2Z0ehY7-HiLWqXuzR6As2BfyuXYxjBxblo_stQ=s64-c-rp-mo-ba2-br100",
+    "imageUrl": "/images/testimonials/Juan_Orgiazzi.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente experiencia, muy profesionales, me habían robado una moto. El seguro me lo rechazó el siniestro y gracias al esfuerzo de los abogados logramos dar vuelta ese rechazo y que me reconozcan lo que me corresponde.",
+    "reviewTime": "Hace 5 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Facundo kostirja",
+    "profileUrl": "https://www.google.com/maps/contrib/105488943004594825938/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXWJ2mCsu3h2rVw07xFRVl8qms3MY6HiZam3QCNoMEvzGyo9lhMeQ=s64-c-rp-mo-ba2-br100",
+    "imageUrl": "/images/testimonials/Facundo_kostirja.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Buenas gente, y profesional en lo que hace!",
+    "reviewTime": "Hace 6 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Roberto Gomez",
+    "profileUrl": "https://www.google.com/maps/contrib/116341825288331349458/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJVaQr3T3VkbrBVrpVI_yiO3IOFND7CLLF8P88ZdY3YOoad8w=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Roberto_Gomez.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Recomiendo el Labor y responzabilida y acompañamiento aportada al cliente super recomendable gracias por el excelente trabajo",
+    "reviewTime": "Hace 7 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Rodolfo Flores",
+    "profileUrl": "https://www.google.com/maps/contrib/104195483029587021247/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjW-brx5Vc1E3VjNuPyDIxtbPLWQX8h62NR3lKgpJRBcOfen-3I=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Rodolfo_Flores.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente atención! Me asesoraron en todo y ayudaron a resolver mi inconveniente de tránsito. Total confianza con la Dra. Silvana y a la hora de responder mis dudas en todo momento fuí asesorado y tuve respuesta por su parte. Recomiendo a …",
+    "reviewTime": "Hace 7 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Ramón alberto Ajalla",
+    "profileUrl": "https://www.google.com/maps/contrib/105824007977548027632/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocKBWpOb-JLbs1ycQt16XXZM6DNuJqA8XM_c8EOO7kOXMDpOjw=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Ramon_Ajalla.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Muy profesional.ecelente atención y compromiso.muy conforme.estudio Recomendable",
+    "reviewTime": "Hace 7 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Denis Aquino",
+    "profileUrl": "https://www.google.com/maps/contrib/100137080507185070567/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJqylkF6oOsVXtei7v_bgxcETDjcsRfYEDY3T5HAv-puy4i-w=s64-c-rp-mo-ba4-br100",
+    "imageUrl": "/images/testimonials/Denis_Aquino.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Muy buena atencion y asesoramiento lo recomiendo al %100 la verdad muy buenos profesionales",
+    "reviewTime": "Hace 7 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Dani Basso",
+    "profileUrl": "https://www.google.com/maps/contrib/118019363334154924272/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocLwyjI3Dq602aN9azGQoVRkSM9KWMyHaLj0N0IJIo0XlQDR3g=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Dani_Basso.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Muy buen trabajo.gracias por la atencion",
+    "reviewTime": "Hace 7 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Cristina Torres",
+    "profileUrl": "https://www.google.com/maps/contrib/101104349200799602991/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXgwFluqZgw9ULbngSILLH4tsGRHpjAs3tfi06dz2vWWsBIK7iC=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Cristina_Torres.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Agradezco la atención, fue de una gran ayuda y logro sacar todo rápido. Excelente servicio. Super recomendable",
+    "reviewTime": "Hace 8 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Gabriela San Martin",
+    "profileUrl": "https://www.google.com/maps/contrib/102026493087454861914/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjV1vw4kgZ9OrDNd-S0JZikEMd0KDnPYUvbbMMGEy8jFLXdrKonh=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Gabriela_Martin.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelentes profesionales ! Fueron muy rápidos. en el acuerdo con la Aseguradora y se cumplieron los tiempos tal cual lo previsto.",
+    "reviewTime": "Hace 8 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "sergio lópez",
+    "profileUrl": "https://www.google.com/maps/contrib/102075955162813007359/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJZEPgZBEabi-TCT1cW6cw6igdRrBR50iugpe65ouBG1X6npg=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/sergio_lopez.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Totalmente recomendable por su empatia y eficacia, muy agradecido!!",
+    "reviewTime": "Hace 10 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Gary Garcia",
+    "profileUrl": "https://www.google.com/maps/contrib/100168595172007402864/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocIbwU6uwqFfZJ7JrRAyPUS93S8JWgmUqSuoa9Qo-IWwvOXVgw=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Gary_Garcia.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Super recomendable,excelente atencion...!!!",
+    "reviewTime": "Hace 10 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Christian Franco",
+    "profileUrl": "https://www.google.com/maps/contrib/103767206185798975335/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjX4Y1AySitABntYWHC0F3e6D3ok0dO2uzyYHgIMmrbXMMyxDDA=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Christian_Franco.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Muy buena atención en el estudio cordiales buena atención y rapides con los trámite me solucionaron mi situación",
+    "reviewTime": "Hace 10 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "David Aguirre",
+    "profileUrl": "https://www.google.com/maps/contrib/109990376681839192213/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJZdYTApIpVzClCmMZJmwsjRDsHKYj4OEXlLhkNXKTHm20Rkw=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/David_Aguirre.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "",
+    "reviewTime": "Hace 10 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Gustavo Arce",
+    "profileUrl": "https://www.google.com/maps/contrib/102846327690600671417/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocI8gisX0_5sgFF44R9WcshaqOX0wZ5x7ucxBRXIa6DM2y6U1A=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Gustavo_Arce.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Muy buena atención y eficiencia",
+    "reviewTime": "Hace 10 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Hernán Estrin",
+    "profileUrl": "https://www.google.com/maps/contrib/117434502909756344543/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVIrew9qq1NzbK0FMD8Kxc2AWXaRo2K3itg1bu_wOp0-cJ6gHU=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Hernan_Estrin.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Muy buena experiencia con el estudio. Me ayudaron con un reclamo complicado y siempre estuvieron presentes para explicar cada paso y mantenerme al tanto. Se nota que tienen experiencia y saben cómo manejar este tipo de casos. El trato fue …",
+    "reviewTime": "Hace 10 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Diana isabel Garamendi perez",
+    "profileUrl": "https://www.google.com/maps/contrib/105744002324196843178/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocIl4-osDpbM05hxbWxSryYw98ookG7hFTkZoZ1glnub_Oo16A=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Diana_perez.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Me sentí acompañada en todo el proceso,muy agradecida por el servicio brindado y sobre todo destaco su profesionalismo y confianza.No dudo en recomendarlos.Gracias!!",
+    "reviewTime": "Hace 10 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Luis fernando Franco",
+    "profileUrl": "https://www.google.com/maps/contrib/106247756541348210165/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocIrL88j2fhSUsSm_rBgWcvVvd7NocAaHMHE7jlZ2Xbf52MuBQ=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Luis_Franco.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Muy profesional excelente atención. Y una rápida resolución en mi siniestro es altamente recomendable",
+    "reviewTime": "Hace 11 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Leo Lopez",
+    "profileUrl": "https://www.google.com/maps/contrib/106094138343754847102/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocKk0tu-Qm9IIhZ_RqOUlZrLDaJZDKDd8vozJohkWpF44_MRbA=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Leo_Lopez.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente servicio",
+    "reviewTime": "Hace 11 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Bianca Sobral",
+    "profileUrl": "https://www.google.com/maps/contrib/108356757990394084667/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjUT2wutebicUnctRRFD9TyVGJO0y2nsGeWEXpAqSlRDayfw7H4d=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Bianca_Sobral.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Los encontré por internet cuando más los necesitaba, y no fallaron. Siempre atentos, claros y con toda la buena onda. Ya me salvaron dos veces, 100% recomendables",
+    "reviewTime": "Hace 11 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Cristian Gonzalez",
+    "profileUrl": "https://www.google.com/maps/contrib/112234563854491649449/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJifAWU15eObOiTzUmA9irRd_hVUYhn7nmXCkPu48tmeb-axw=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Cristian_Gonzalez.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Exelente su trabajo mil veces agradecido lo recomiendo",
+    "reviewTime": "Hace 11 meses",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Mariana Méndez",
+    "profileUrl": "https://www.google.com/maps/contrib/111233102377855696494/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjW5UQ4mT4hzqcNFfdFeaB49d_37Os-lBGOo6h7undBiEOtX3ac=s64-c-rp-mo-ba12-br100",
+    "imageUrl": "/images/testimonials/Mariana_Mendez.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Mi reclamo fue seguido por Silvana y además de llegar a una buena resolución ella fue muy amable, muy clara e hizo un buen seguimiento del mismo",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Dany Marquez",
+    "profileUrl": "https://www.google.com/maps/contrib/112183658561058523507/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocIrjCp0_lMa6dKYdv049WvjXt4Pl1sDL99lFxPqU2kyY_xyCA=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Dany_Marquez.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Agradezco siempre que me cruzo por la vida a la persona que me recomendó a Estudio López Giacomelli. Encontré en este grupo de excelentes abogados, no solo eficacia en su trabajo con óptimos resultados sino que a través del tiempo se han …",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Ana Cabral",
+    "profileUrl": "https://www.google.com/maps/contrib/114447916325050904069/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocKA7wk74LhxS0dPoDxOR7WOzdsxgJkCdUISzu4_F7I1RHRD=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Ana_Cabral.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Tuve la grata experiencia de dejar en manos del Estudio López Giacomelli conflicto judicial y no solo tuvo el mejor resultado , sino que a través del desarrollo del litigio me sentí contenida y siempre informada de los diferentes pasos . …",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Maria Rosa Prodo (Rosi)",
+    "profileUrl": "https://www.google.com/maps/contrib/111550164775097857046/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjUJ3rPp_N_wAi9dpMXKi5LHrJayQaIZfEYZhAS0eQ3zn7NNV2C0IQ=s64-c-rp-mo-ba12-br100",
+    "imageUrl": "/images/testimonials/Maria_Rosi.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "A quién pueda interesarle mi opinión, quiero decirles que la Asesoría del Estudio no solo resolvió mi juicio, el cuál era muy difícil por la controversia entre partes, sino la profesionalidad y contención del mismo, hicieron posible llevarlo a cabo con resultados muy favorables!!",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Daniel Rojas",
+    "profileUrl": "https://www.google.com/maps/contrib/107717467689324015966/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXYo_0_alnctFv2CcDeox94FWE4-HAKdWxQpSRXDUWAUeGW-qqjjA=s64-c-rp-mo-ba12-br100",
+    "imageUrl": "/images/testimonials/Daniel_Rojas.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Quiero destacar como valor agregado el trato , la contención y la responsabilidad de los doctores!! Súper recomendados",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Erica Frette",
+    "profileUrl": "https://www.google.com/maps/contrib/107277436722095899987/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjUmQiliryPdmfuF8FENOaFlTSgadUitYr2HwrXgxBQmNciaYdCdeA=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Erica_Frette.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Me siento muy agradecida por la excelente atención y asesoramiento que recibí. Su profesionalismo, dedicación y empatía fue excelente para poder resolver el caso. …",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Scor Pion",
+    "profileUrl": "https://www.google.com/maps/contrib/101778552173197233414/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVwTNbH5-QJFodGQfzuUr3-e-weaGabZlYrvbaD4YXjYFP2XzmuVQ=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Scor_Pion.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Quiero agradecer al estudio Giacomelli por su excelente atención y profesionalismo para resolver positivasmente mi caso y sobre todo su acompañamiento en todo lo que duro el proceso.super recomendado!",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Matias Esquivel",
+    "profileUrl": "https://www.google.com/maps/contrib/112367744612811877035/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJVtKH38SsUjAFXMM_6_UyOVUjE-e7gQIVmx8Fk5x3xHzmIMw=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Matias_Esquivel.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Impecable el trabajo . Super responsables y recomendables",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Alan Sosa",
+    "profileUrl": "https://www.google.com/maps/contrib/111410416021796105000/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjW47qRTbF8g1NJHaAaDCJPeMLWPxDMhgjl8dn4JX3eyF8yACa9sKA=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Alan_Sosa.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente atención, siempre recomiendo a este gran equipo que llevo mi caso adelante, muy agradecido con la atención y el trabajo realizado",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "julieta conde",
+    "profileUrl": "https://www.google.com/maps/contrib/102259224688202066368/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocLqoMDmW0XGk3LefXK8FFA3lso0JSdBWOLehl2X6KY1lOhBcQ=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/julieta_conde.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente atención y el mejor asesoramiento, super personalizado y empaticoLos recomiendo ciento por ciento",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Leandro Rein",
+    "profileUrl": "https://www.google.com/maps/contrib/116504972404554467875/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJvIjEnc_32cE5G7sjtaErIJxasnWxBkVF875jGQy8sSi4hdw=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Leandro_Rein.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente atención más que satisfecho 👌👌",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "brian nuar",
+    "profileUrl": "https://www.google.com/maps/contrib/107820968549399698752/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjWBUOwsFHWVD00NRyXOJubstRaqRuNOqWZPITrAoenXfSneVs0=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/brian_nuar.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente atención lo cual es primordial. Rápida resolución y constante comunicación. Mi caso lo llevó a cabo Silvana. Recomiendo.",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Dylan Valdez",
+    "profileUrl": "https://www.google.com/maps/contrib/117536247006439140770/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjUCkg2yuXLJsTjBtc5hUzZ_KAzXTSeCsNwgCJBFbbXZXXD3U2XTUA=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Dylan_Valdez.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente servicio, todo muy prolijo. Súper recomendable. Cumplió en tiempo y forma.",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "MAXIMILIANO AMAIZ",
+    "profileUrl": "https://www.google.com/maps/contrib/109063961458897139212/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJDTcdnchlAqOu5vMGMAJluYK3WTWJ_QIE9WG5oc4HSIqGs8A=s64-c-rp-mo-ba12-br100",
+    "imageUrl": "/images/testimonials/MAXIMILIANO_AMAIZ.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Exelente atención, 100% recomendado te resuelven y te mantienen siempre al tanto",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Alan Lionel Ameri",
+    "profileUrl": "https://www.google.com/maps/contrib/110482259307178941014/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjU4sDzmXOX2PPfiDCx_XKNuV-j7IQiZxKhS79AurcPP1RA4skM=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Alan_Ameri.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Una excelente profesional. Muy buen trabajo",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Jose Casal",
+    "profileUrl": "https://www.google.com/maps/contrib/106426662530788710021/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocLbDl4v71Oooe6TOeQRsPBLOVJMbfvpRo0ACoKlodkdZqGHug=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Jose_Casal.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Muchas gracias por solucionarme con eficacia el cobro del siniestro de mi camioneta. Excelente atención y dedicación!! Muy recomendable el estudio !!",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "lilian casalini",
+    "profileUrl": "https://www.google.com/maps/contrib/116936223316189321160/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjUg58kFg2xpr5JSYIFLzNH-kSEQa6fDsjdYuUNZso4aZ4oJbdqK=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/lilian_casalini.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente personas y profesionales, agradecida de haberlos elegidos para llevar a cabo mí caso mis saludos y respeto",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Mariela soledad Figueroa",
+    "profileUrl": "https://www.google.com/maps/contrib/111431890947682968953/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocKgogHLOVDoe7FIu2YwvUk3XZ7irdAKrLWcB1Z7lNwsn7jCxA=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Mariela_Figueroa.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente atención y muy rápido los resultados",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Ali Trerotola",
+    "profileUrl": "https://www.google.com/maps/contrib/101441298594730872374/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocIVtizFxKPzLC_VzxWdbAqEfKpXEvR051_ne2GEPFIJJziMbw=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Ali_Trerotola.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelentes abogados, honestos y expedición. Super recomendables",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Sandra Espinosa",
+    "profileUrl": "https://www.google.com/maps/contrib/110059438287718424021/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJi_BEX3HB0VQ5QflQMxHokNUumS_3uOmKpQmGuRpZNDNx0ag=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Sandra_Espinosa.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Muy conforme en todos los aspectos, no solo como profesional sino también como persona. Se resovio todo muy rápido. Recomendable",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Franco Casalini",
+    "profileUrl": "https://www.google.com/maps/contrib/102398763555192952968/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjW_ypCxl9jw7QV8PuRJlk41rDLa-RtT1vWKzAvABVxGfY_CrqVP=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Franco_Casalini.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excepcional servicio. La educación y los valores frente a las relaciones con clientes es más que notable. El profesionalismo a la hora de actuar es un tema a destacar! Cien por ciento recomendado.",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Raul domingo Hernandez",
+    "profileUrl": "https://www.google.com/maps/contrib/109902722280924036905/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocLmXbYYHJGeCjOR84T5sm-wiCxaSb4CJmWxwOg-dJui_mexRQ=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Raul_Hernandez.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Muy buena atención y excelente eficiencia en resolver los casos, muy rápido.",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "gladys ines formeliano",
+    "profileUrl": "https://www.google.com/maps/contrib/116843092320152606457/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJ2JL6dmqm8nP7Lm-4E0ELwlZ11BFztA1H5wtoJsbtJh_uvTQ=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/gladys_formeliano.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente atención y diligencia eficaz.muy comprometidos con clientes.gracias por sus actitud positiva.",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "daniel otero",
+    "profileUrl": "https://www.google.com/maps/contrib/116437865701676942178/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocL6h9cM4cCklvalzU9Eyd87g9dvNjTpk8ShBDxLxB5OxdCE5g=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/daniel_otero.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente trabajo que hicieron por tiempo y eficacia.",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Elizabeth Quiroga",
+    "profileUrl": "https://www.google.com/maps/contrib/105426036141285187133/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjUTf6lsNwTFoMC-xY88w4LxhpYHK-c6MbYBi67JCOmkwAeNVapc=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Elizabeth_Quiroga.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Súper eficientes. Supieron asesorarme, darme calma y trabajar en algo que daba por perdido. Los recomiendo sin dudarlo. Gracias Sil y Sebastian!",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Rocio Acosta",
+    "profileUrl": "https://www.google.com/maps/contrib/107709885637666248458/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVVH6P33s7qKzTKoNn5cEL3J1pP4JgbKs1j9LjRQ0yU0Dg7rOX9=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Rocio_Acosta.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente la rapidez y eficiencia en resolver mi caso, mucho más rápido de lo esperado. Sebastián muy atento y resolutivo. Sin dudas recomendable",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Candela Puy",
+    "profileUrl": "https://www.google.com/maps/contrib/105451129686409206256/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVR0EHv0T5lEXQlXvhmLqvu90i4DzZ6Sb2ocS4pxw70x7CQ9uyvkA=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Candela_Puy.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "100% recomendable. Mi caso lo llevó Sebastián. Super expeditivo. Se mantuvo atrás del caso en todo momento y consiguió llegar a un buen arreglo. Graciasss",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Eduardo Ceballos",
+    "profileUrl": "https://www.google.com/maps/contrib/112156166534888165250/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjX9XXz_f63DcpoB2zOvHYaGsEEnNeUURzzP3UrvZ-WddXHW-LuU=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Eduardo_Ceballos.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Muy buena atención y rapidez, te sacan cualquier duda que tengas, me llevo el caso sebastian y un lujo pensé que iba a tardar más pero en menos del tiempo que se acordó se pudo solucionar recomendado",
+    "reviewTime": "Hace un año",
     "likeCount": "0"
   },
   {
     "reviewerName": "Marcelo Castillo",
-    "profileUrl": "https://www.google.com/maps/contrib/114892572772366566142?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Marcelo_Castillo_2.jpg",
-    "rating": "Calificación: 5.0 de 5,",
+    "profileUrl": "https://www.google.com/maps/contrib/114892572772366566142/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXIqV1glTA-39O6T0YI6wQtxzrA_Ove5AMKWTHL4SWLx9UY3_s=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Marcelo_Castillo.jpg",
+    "rating": "Calificación: 5.0 de 5",
     "reviewText": "Excelente atención del estudio en poco tiempo me resolvieron todo .Recomiendo absolutamente",
-    "reviewTime": "Hace un mes",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "karina garro",
+    "profileUrl": "https://www.google.com/maps/contrib/108221379871947266006/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjWyNB7Sd6etJ2NbUnfv1hZ51sbntfqPCI8Nzwja1DoftYUJPB5b9A=s64-c-rp-mo-ba4-br100",
+    "imageUrl": "/images/testimonials/karina_garro.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Un excelente estudio. Me quisieron estafar con el seguro y Sebastian lo resolvió. Muchas gracias",
+    "reviewTime": "Hace un año",
     "likeCount": "0"
   },
   {
     "reviewerName": "Jose Oscar Torres",
-    "profileUrl": "https://www.google.com/maps/contrib/106653743087921057883?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Jose_Oscar_Torres_3.jpg",
-    "rating": "Calificación: 5.0 de 5,",
+    "profileUrl": "https://www.google.com/maps/contrib/106653743087921057883/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocLr85slCLipKVELYa4WcIIH0V8xX1Gwe11cxO0VsO_oa74EVQ=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Jose_Torres.jpg",
+    "rating": "Calificación: 5.0 de 5",
     "reviewText": "Quiero dejar mi comentario, sinceramente es muy bueno y rápido las gestiones que realizó la Dra Silvana para darme una solución al problema del siniestro (choque automovilístico) estoy muy agradecido, ya que pensé que sería más tiempo.",
-    "reviewTime": "Hace 2 meses",
-    "likeCount": "1"
-  },
-  {
-    "reviewerName": "Yesica Salto",
-    "profileUrl": "https://www.google.com/maps/contrib/103627599772922160760?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Yesica_Salto_4.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Exelente trato y manejo profesional!Muy recomendable, atención en todo momento.  Y sobre todo sincero a la hora de trabajar!!",
-    "reviewTime": "Hace 5 meses",
-    "likeCount": "1"
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
   },
   {
     "reviewerName": "Oscar Gomez Gomez",
-    "profileUrl": "https://www.google.com/maps/contrib/102989295184891425852?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Oscar_Gomez_Gomez_5.jpg",
-    "rating": "Calificación: 5.0 de 5,",
+    "profileUrl": "https://www.google.com/maps/contrib/102989295184891425852/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocK6XgOiiKYFBKrUu9r6LFDUV6KcDR6qe6Gibi_NuYWu6NtW=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Oscar_Gomez.jpg",
+    "rating": "Calificación: 5.0 de 5",
     "reviewText": "Excelente atención y profesionalismo.Realizaron una gestión encomendada de forma rápida y exitosa.",
-    "reviewTime": "Hace 3 meses",
-    "likeCount": "1"
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
   },
   {
     "reviewerName": "Juan Carlos Martinez",
-    "profileUrl": "https://www.google.com/maps/contrib/105595186290806459709?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Juan_Carlos_Martinez_6.jpg",
-    "rating": "Calificación: 5.0 de 5,",
+    "profileUrl": "https://www.google.com/maps/contrib/105595186290806459709/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJC_aEtbix_H87N7vTrdW8v346budcB_at3OtVwHT5_JbxgNw=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Juan_Martinez.jpg",
+    "rating": "Calificación: 5.0 de 5",
     "reviewText": "La verdad un re abogado, me resolvio todo super rapido, un genio Sebastian😊",
-    "reviewTime": "Hace 5 meses",
-    "likeCount": "1"
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
   },
   {
-    "reviewerName": "Juan ramon Armoa gimenez",
-    "profileUrl": "https://www.google.com/maps/contrib/105772313656758042171?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Juan_ramon_Armoa_gimenez_7.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Excelente reclamo y orientacion cualquier dudas y reclamos fue rapidez recomiendo 100% son los mejores te dan solución en el momento gracias",
-    "reviewTime": "Hace 7 meses",
-    "likeCount": "3"
-  },
-  {
-    "reviewerName": "Daniel Aguirre",
-    "profileUrl": "https://www.google.com/maps/contrib/100227192189756057087?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Daniel_Aguirre_8.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Sebastián un súper profesional.  Se los recomiendo. Te resuelve y hace su funcion en tiempo y forma.",
-    "reviewTime": "Hace 6 meses",
-    "likeCount": "2"
+    "reviewerName": "Yesica Salto",
+    "profileUrl": "https://www.google.com/maps/contrib/103627599772922160760/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocLxLk6dTSPllVCVHlo7NQ-MryxiDES-5JTBSmOOSVdetjGbMA=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Yesica_Salto.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Exelente trato y manejo profesional!Muy recomendable, atención en todo momento. Y sobre todo sincero a la hora de trabajar!!",
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
   },
   {
     "reviewerName": "Romi.fernandez.91",
-    "profileUrl": "https://www.google.com/maps/contrib/107654643576511216733?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Romi.fernandez.91_9.jpg",
-    "rating": "Calificación: 5.0 de 5,",
+    "profileUrl": "https://www.google.com/maps/contrib/107654643576511216733/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocKwLD7eCBAh_lj--o9GaKGZd-T0gOePrOcl212j3kYrBpqIcg=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Romifernandez91_User.jpg",
+    "rating": "Calificación: 5.0 de 5",
     "reviewText": "Todo en tiempo y forma! Excelente servicio! Muchas gracias !",
-    "reviewTime": "Hace 6 meses",
-    "likeCount": "1"
+    "reviewTime": "Hace un año",
+    "likeCount": "0"
   },
   {
     "reviewerName": "Axel Alvarez",
-    "profileUrl": "https://www.google.com/maps/contrib/118428428206149574699?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Axel_Alvarez_10.jpg",
-    "rating": "Calificación: 5.0 de 5,",
+    "profileUrl": "https://www.google.com/maps/contrib/118428428206149574699/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXAzLm1pUE7X6o2D85U211OU1KIyLbFTYsMgGFaW7A0VWp_QlxRjA=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Axel_Alvarez.jpg",
+    "rating": "Calificación: 5.0 de 5",
     "reviewText": "Trabajan muy bien y rapido.EXCELENTE 👌",
-    "reviewTime": "Hace 6 meses",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Eduardo Batista",
-    "profileUrl": "https://www.google.com/maps/contrib/112034593094494033920?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Eduardo_Batista_11.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Excelente atención les lleve un reclamo me orientaron y agilizaron los trámites en menos de dos meses mí caso estaba resuelto, los recomiendo completamente.",
-    "reviewTime": "Hace 10 meses",
-    "likeCount": "3"
-  },
-  {
-    "reviewerName": "patricia chingolani",
-    "profileUrl": "https://www.google.com/maps/contrib/105005562745092596100?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/patricia_chingolani_12.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Excelentes profesionales!!!!!Hace años llevan todos nuestros casos.Son muy eficientes y sobre todo resuelven los problemas con suma rapidez.Siempre dispuestos a atender cualquiera de nuestras consultas, con un agradable trato y calidez.",
-    "reviewTime": "Hace 2 años",
-    "likeCount": "3"
-  },
-  {
-    "reviewerName": "Gabx Llanos",
-    "profileUrl": "https://www.google.com/maps/contrib/111682590551974605034?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Gabx_Llanos_13.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Trabajaron muy bien, siempre muy atentos siguiendo el caso; teniendo en cuenta todas las trabas de la burocracia argentina.100%recomendables la luchan hasta el final 💪💪💪",
-    "reviewTime": "Hace 9 meses",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Dario Lopez",
-    "profileUrl": "https://www.google.com/maps/contrib/116434700498634492122?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Dario_Lopez_14.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Excelentes profesionales y rapidez para solucionar los siniestros. Los recomiendo",
-    "reviewTime": "Hace 7 meses",
-    "likeCount": "3"
-  },
-  {
-    "reviewerName": "miguel hugo placanica",
-    "profileUrl": "https://www.google.com/maps/contrib/115173067501245065357?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/miguel_hugo_placanica_15.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Muy buena atención,me solucionaron mi problema con mi seguro,hicieron un trabajo de hormiga y poco a poco lo consiguieronMuchas gracias y sigan asíSon para recomendarUn saludo",
     "reviewTime": "Hace un año",
-    "likeCount": "3"
+    "likeCount": "0"
   },
   {
-    "reviewerName": "Karina Marconi",
-    "profileUrl": "https://www.google.com/maps/contrib/106070790152645667757?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Karina_Marconi_16.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "\"Excelente atención\". Tanto Sebastián como Silvana fueron muy amables con el asesoramiento y súper eficientes. Me solucionaron mi problema con el seguro de forma muy expeditiva y lograron la mejor negociación a mi favor.",
+    "reviewerName": "Daniel Aguirre",
+    "profileUrl": "https://www.google.com/maps/contrib/100227192189756057087/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocILw6pmY3UatMbyCV3mRgDpJNokYa3vOK4rQiS_SIV5OVy0hg=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Daniel_Aguirre.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Sebastián un súper profesional. Se los recomiendo. Te resuelve y hace su funcion en tiempo y forma.",
     "reviewTime": "Hace un año",
-    "likeCount": "2"
+    "likeCount": "0"
   },
   {
-    "reviewerName": "Rolo Grisostolo",
-    "profileUrl": "https://www.google.com/maps/contrib/115047486652635763247?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Rolo_Grisostolo_17.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Excelente atención  de silvana  , no es la primera vez que me soluciona un problema , el estudio es muy recomendable!",
-    "reviewTime": "Hace 10 meses",
-    "likeCount": "3"
-  },
-  {
-    "reviewerName": "Jose Mereles",
-    "profileUrl": "https://www.google.com/maps/contrib/117625844810127141678?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Jose_Mereles_18.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Excelente atención del Dr. López, muy conforme y agradecido por le trabajo realizado. Todo en tiempo y forma. Recomendable",
-    "reviewTime": "Hace un año",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Maricel Algañaraz",
-    "profileUrl": "https://www.google.com/maps/contrib/104691169803954662605?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Maricel_Algañaraz_19.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Excelentes profesionales, resolvieron mí caso con rapidez, empatía y profesionalismo y quedé muy conforme con los resultados siempre q pueda los recomendaré. Muchas gracias nuevamente!!",
+    "reviewerName": "Juan ramon Armoa gimenez",
+    "profileUrl": "https://www.google.com/maps/contrib/105772313656758042171/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVnjLolN0UEdccYwdwBj_sHGquodj4kUiWNLsu_wMDxTF9eizW-=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Juan_gimenez.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente reclamo y orientacion cualquier dudas y reclamos fue rapidez recomiendo 100% son los mejores te dan solución en el momento gracias",
     "reviewTime": "Hace 2 años",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Juana Lemus",
-    "profileUrl": "https://www.google.com/maps/contrib/115771639353508471847?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Juana_Lemus_20.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "La verdad que los chicos se pasaron me ayudaron en cada inconveniente que tuve y pudieron solucionarlo, la paciencia y un muy execelente trabajo, muy agradecida!!!!",
-    "reviewTime": "Hace un año",
-    "likeCount": "3"
-  },
-  {
-    "reviewerName": "Gabriel Cidade",
-    "profileUrl": "https://www.google.com/maps/contrib/112820249015489471393?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Gabriel_Cidade_21.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Impecable!! Muy profecional y la atencion de Sebastian inmejorable, me soluciono un gran problema y en un tiempo record!! 100% recomendable. Muchas gracias por todo.",
-    "reviewTime": "Hace 2 años",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Cristian Merched",
-    "profileUrl": "https://www.google.com/maps/contrib/110141509439089659464?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Cristian_Merched_22.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Buen trabajo buena atención y rápida los recomiendo",
-    "reviewTime": "Hace 9 meses",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Susana Saucedo",
-    "profileUrl": "https://www.google.com/maps/contrib/107921730223205617757?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Susana_Saucedo_23.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Excelente atención y rapidez en la resolución. Muy buen trabajo. Se los recomiendo.",
-    "reviewTime": "Hace 2 años",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Francisca Letelier",
-    "profileUrl": "https://www.google.com/maps/contrib/114968433237775524985?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Francisca_Letelier_24.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Excelente servicio!! Su trabajo es prolijo y muy bueno, full recomendado.Muchas gracias por todo",
-    "reviewTime": "Hace 2 años",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Pablo Gabriel Armoa",
-    "profileUrl": "https://www.google.com/maps/contrib/105580448832883997432?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Pablo_Gabriel_Armoa_25.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Exelente staff 100% recomendables buenos a atentos a tu demanda",
-    "reviewTime": "Hace 10 meses",
-    "likeCount": "3"
-  },
-  {
-    "reviewerName": "Sergioacri Macri",
-    "profileUrl": "https://www.google.com/maps/contrib/111789195048635684229?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Sergioacri_Macri_26.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Excelentes profesionales y muy amables tanto Sebastián cómo Silvana.Recomendables 100x100",
-    "reviewTime": "Hace un año",
-    "likeCount": "3"
-  },
-  {
-    "reviewerName": "oscar leonel Brizzi",
-    "profileUrl": "https://www.google.com/maps/contrib/114752783625165534068?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/oscar_leonel_Brizzi_27.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Profesionales excelentes.Eficientes en todo sentido.En mi experiencia, no solo solucionaron mi problema con rapidez, sino q obtuve mas de lo q esperaba.",
-    "reviewTime": "Hace 2 años",
-    "likeCount": "3"
-  },
-  {
-    "reviewerName": "Fran Estrabón",
-    "profileUrl": "https://www.google.com/maps/contrib/102014551504726723859?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Fran_Estrabón_28.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "excelentes profesionales! Buen asesoramiento, predisposición y servicio. Muy eficaces.",
-    "reviewTime": "Hace un año",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Carmen Paolucci",
-    "profileUrl": "https://www.google.com/maps/contrib/112980998674211594420?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Carmen_Paolucci_29.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Este Estudio tiene un profesionalismo  increíble, Sebastián es un genio, quedé muy contenta con su trabajo que fue impecable. se los recomiendo.",
-    "reviewTime": "Hace 2 años",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Norita Dieguez",
-    "profileUrl": "https://www.google.com/maps/contrib/110347750167070323944?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Norita_Dieguez_30.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Tuve el gusto de conocerlos a Silvana y Sebastián en mi peor momento laboral,En el cual su accionar fue muy eficaz y tuveMucha contención humana durante todo elProceso , excelentes personas muchas gracias.",
-    "reviewTime": "Hace 2 años",
-    "likeCount": "3"
-  },
-  {
-    "reviewerName": "Matias Godoy",
-    "profileUrl": "https://www.google.com/maps/contrib/108357250859464876594?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Matias_Godoy_31.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Super recomendables. Gestionaron todo en tiempo y forma. Sobrepasaron mis expectativas.",
-    "reviewTime": "Hace un año",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Aldana Herlein",
-    "profileUrl": "https://www.google.com/maps/contrib/114474828553755565615?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Aldana_Herlein_32.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Super recomendables! Excelente atención, asesoramiento rapido y super claros en todo.",
-    "reviewTime": "Hace un año",
-    "likeCount": "3"
-  },
-  {
-    "reviewerName": "Viky Lordi",
-    "profileUrl": "https://www.google.com/maps/contrib/114972156883159638971?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Viky_Lordi_33.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Excelente trato y responsabilidad...muy comprometidos ... rapida gestión...muy conforme... gracias",
-    "reviewTime": "Hace un año",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Jorge luis MArrazzi",
-    "profileUrl": "https://www.google.com/maps/contrib/106438575132403156619?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Jorge_luis_MArrazzi_34.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "La verdad muy buena atención  muy rápido y por sobre todo muy sincero es para recomendar",
-    "reviewTime": "Hace un año",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "cristian flores",
-    "profileUrl": "https://www.google.com/maps/contrib/116049002959933618272?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/cristian_flores_35.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Excelente atencion me asesoraron en tiempo y forma, mas que recomendable 👌",
-    "reviewTime": "Hace un año",
-    "likeCount": "3"
-  },
-  {
-    "reviewerName": "cintia muñoz",
-    "profileUrl": "https://www.google.com/maps/contrib/114962944738119687407?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/cintia_muñoz_36.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Contención, asesoramiento y resolución. Sebastián nos atendió con empatía, transparencia y profesionalismo. Sin dudas los  recomendamos.",
-    "reviewTime": "Hace 2 años",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Sergio Lipchak",
-    "profileUrl": "https://www.google.com/maps/contrib/100829908243885968407?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Sergio_Lipchak_37.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "super profesionales. no esperaba que me dieran una solucion tan completa y rapida. muy agradecido con su trabajo!",
-    "reviewTime": "Hace 2 años",
-    "likeCount": "3"
-  },
-  {
-    "reviewerName": "Martin Company",
-    "profileUrl": "https://www.google.com/maps/contrib/113217698417363944710?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Martin_Company_38.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Me solucionaron el problema rápido y con excelentes resultados en el acuerdo, super recomendables!!",
-    "reviewTime": "Hace 2 años",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "lucas nicolas avendaño",
-    "profileUrl": "https://www.google.com/maps/contrib/100426647338199479793?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/lucas_nicolas_avendaño_39.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Sebastian siempre fue muy atento y se manejo perfectamente antes las consultas y los problemas que e tenido.",
-    "reviewTime": "Hace 2 años",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Ruben Carrera",
-    "profileUrl": "https://www.google.com/maps/contrib/106150339081077074709?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Ruben_Carrera_40.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Muy conforme por el trato personal y profesional y contento con el resultado de la demanda !",
-    "reviewTime": "Hace un año",
-    "likeCount": "3"
-  },
-  {
-    "reviewerName": "Matías RD",
-    "profileUrl": "https://www.google.com/maps/contrib/109889066643572604730?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Matías_RD_41.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Excelente y eficiente gestión de Sebastian para conseguir mi seguro.",
-    "reviewTime": "Hace un año",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Lujan Guemes",
-    "profileUrl": "https://www.google.com/maps/contrib/110139151749405302683?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Lujan_Guemes_42.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Excelente profesionales ,  atención   resolución rápida  , recomendable .!!!",
-    "reviewTime": "Hace un año",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Hugo B",
-    "profileUrl": "https://www.google.com/maps/contrib/105346517786141648839?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Hugo_B_43.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "100x100 RECOMENDABLE! Sebastián me asesoró desde el primer momento. MUY PROFESIONAL Y RESOLVIO MI CASO .MUY ATENTO!",
-    "reviewTime": "Hace 2 años",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "zaa uma",
-    "profileUrl": "https://www.google.com/maps/contrib/114123867945643013466?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/zaa_uma_44.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Lo recomiendo ampliamente, logró resolver mi caso y a su vez obtuve mas de lo esperado.",
-    "reviewTime": "Hace un año",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Andrea Lomba",
-    "profileUrl": "https://www.google.com/maps/contrib/107257537339852448351?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Andrea_Lomba_45.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Sebastián se ha manejado con mucho profesionalismo, empatía y buen trato. Los recomiendo.",
-    "reviewTime": "Hace 2 años",
-    "likeCount": "3"
-  },
-  {
-    "reviewerName": "Ezequiel Urdinez",
-    "profileUrl": "https://www.google.com/maps/contrib/107029139057089043842?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Ezequiel_Urdinez_46.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Trabajamos varias oportunidades con ellos por siniestros viales siempre con buenos resultados. Lo recomiendo",
-    "reviewTime": "Hace 2 años",
-    "likeCount": "3"
-  },
-  {
-    "reviewerName": "Marcelo Barbero",
-    "profileUrl": "https://www.google.com/maps/contrib/112219536559478285220?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Marcelo_Barbero_47.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Excelente trato y atención muy recomendable",
-    "reviewTime": "Hace 2 años",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Mercedes Barraz",
-    "profileUrl": "https://www.google.com/maps/contrib/118189886270265216298?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Mercedes_Barraz_48.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Es muy buen abogado los trámites los saco súper rápido y es muy recomendable muy humilde y muy sabio agradecida por haberlo encontrado",
-    "reviewTime": "Hace 2 años",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Gladis Veron",
-    "profileUrl": "https://www.google.com/maps/contrib/110525747244042687389?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Gladis_Veron_49.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Un trabajo excelente, respuestas claras y rápidas, soluciones a los problemas.",
-    "reviewTime": "Hace un año",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "mari plaju",
-    "profileUrl": "https://www.google.com/maps/contrib/107550039354016884034?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/mari_plaju_50.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Buena calidad de atención y resolución inmediata, excelente calidad humana .",
-    "reviewTime": "Hace 2 años",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Miguel Randone",
-    "profileUrl": "https://www.google.com/maps/contrib/111848170201825786850?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Miguel_Randone_51.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Excelente atención  y rapidez  en resolver la demanda  ,muy recomendable",
-    "reviewTime": "Hace un año",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "gustavo haylan",
-    "profileUrl": "https://www.google.com/maps/contrib/114009631750217566124?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/gustavo_haylan_52.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Muy buena atención y una rápida resolución. Muy recomendable",
-    "reviewTime": "Hace 2 años",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Alejandra Merched",
-    "profileUrl": "https://www.google.com/maps/contrib/109571051905115979187?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Alejandra_Merched_53.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Excelente profesional,100%recomendable",
-    "reviewTime": "Hace un año",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Daniel Canteros",
-    "profileUrl": "https://www.google.com/maps/contrib/112878863805534065825?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Daniel_Canteros_54.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Excelente atencion!!! Muy recomendable!! Gracias Sebastian!!",
-    "reviewTime": "Hace 2 años",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Federico Martinez",
-    "profileUrl": "https://www.google.com/maps/contrib/108052166995218162465?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Federico_Martinez_55.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Unos genios resolvieron mi problema automovilistico en tiempo y forma",
-    "reviewTime": "Hace 2 años",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Leo gamella",
-    "profileUrl": "https://www.google.com/maps/contrib/106553138322114155497?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Leo_gamella_56.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Excelente estudio, super recomendable de confianza!",
-    "reviewTime": "Hace 2 años",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "EMILIO Gould",
-    "profileUrl": "https://www.google.com/maps/contrib/112989011813681669460?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/EMILIO_Gould_57.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Muy buena atención, lo recomiendo!!!",
-    "reviewTime": "Hace 2 años",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Geraldine Saad Centurion",
-    "profileUrl": "https://www.google.com/maps/contrib/113090762926480144403?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Geraldine_Saad_Centurion_58.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Excelentes profesionales y maravillosas personas.",
-    "reviewTime": "Hace 2 años",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Pablo Forgia",
-    "profileUrl": "https://www.google.com/maps/contrib/109620471669779112728?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Pablo_Forgia_59.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Excelente atención y predisposición.  De diez!! 👌🏼",
-    "reviewTime": "Hace 2 años",
-    "likeCount": "2"
-  },
-  {
-    "reviewerName": "Juan Carlos Mansilla",
-    "profileUrl": "https://www.google.com/maps/contrib/110386866174822414700?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Juan_Carlos_Mansilla_60.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Muy sincero,muy profecional y honesto",
-    "reviewTime": "Hace 2 años",
-    "likeCount": "2"
+    "likeCount": "0"
   },
   {
     "reviewerName": "Walter Razzetto",
-    "profileUrl": "https://www.google.com/maps/contrib/108348986748306150262?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Walter_Razzetto_61.jpg",
-    "rating": "Calificación: 5.0 de 5,",
+    "profileUrl": "https://www.google.com/maps/contrib/108348986748306150262/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocK9a12eyJ2yl0s5uBw3RRIxInyN-koLSQJnfje7ZQgVK98MWg=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Walter_Razzetto.jpg",
+    "rating": "Calificación: 5.0 de 5",
     "reviewText": "Excelente atención!!!",
-    "reviewTime": "Hace 7 meses",
-    "likeCount": "2"
+    "reviewTime": "Hace 2 años",
+    "likeCount": "0"
   },
   {
-    "reviewerName": "Gaston Bongiovanni",
-    "profileUrl": "https://www.google.com/maps/contrib/102903531194524478849?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Gaston_Bongiovanni_62.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Excelente atencion 👍muy recomendable",
+    "reviewerName": "Dario Lopez",
+    "profileUrl": "https://www.google.com/maps/contrib/116434700498634492122/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocLL_gQ7gBPLW3h4AlLW5fCtXZIL1p0D8mDaR-4eaY_6CSzBmg=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Dario_Lopez.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelentes profesionales y rapidez para solucionar los siniestros. Los recomiendo",
     "reviewTime": "Hace 2 años",
-    "likeCount": "2"
+    "likeCount": "0"
   },
   {
-    "reviewerName": "Diego Jara",
-    "profileUrl": "https://www.google.com/maps/contrib/112473137544972871760?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Diego_Jara_63.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": "Excelentes profesionales.recomendables!!!",
+    "reviewerName": "Gabx Llanos",
+    "profileUrl": "https://www.google.com/maps/contrib/111682590551974605034/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjWqofg562xRP3a-8j-xIpKLn5sWs3AURr_4dAQS-pIKe6ZxwsOMXw=s64-c-rp-mo-ba4-br100",
+    "imageUrl": "/images/testimonials/Gabx_Llanos.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Trabajaron muy bien, siempre muy atentos siguiendo el caso; teniendo en cuenta todas las trabas de la burocracia argentina.100%recomendables la luchan hasta el final 💪💪💪",
     "reviewTime": "Hace 2 años",
-    "likeCount": "3"
+    "likeCount": "0"
   },
   {
     "reviewerName": "Francesco Serpagli",
-    "profileUrl": "https://www.google.com/maps/contrib/113902308402647173496?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Francesco_Serpagli_64.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": null,
-    "reviewTime": "Hace 9 meses",
+    "profileUrl": "https://www.google.com/maps/contrib/113902308402647173496/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVFWmZdh3Tk7pUdfwpmu1QnG_Ygh9gJaMDsdPKq1-GOifycJfQx=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Francesco_Serpagli.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "",
+    "reviewTime": "Hace 2 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Cristian Merched",
+    "profileUrl": "https://www.google.com/maps/contrib/110141509439089659464/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJPri9W0BQLSjg3pLYCARTcUJwvg76SEV1UONO5zYRXMUkT5Q=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Cristian_Merched.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Buen trabajo buena atención y rápida los recomiendo",
+    "reviewTime": "Hace 2 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Rolo Grisostolo",
+    "profileUrl": "https://www.google.com/maps/contrib/115047486652635763247/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJPyxJg1j4Bjms1EXHYRjdaZo2ZpdzbAfjgLjmugEbYamJ2og=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Rolo_Grisostolo.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente atención de silvana , no es la primera vez que me soluciona un problema , el estudio es muy recomendable!",
+    "reviewTime": "Hace 2 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Eduardo Batista",
+    "profileUrl": "https://www.google.com/maps/contrib/112034593094494033920/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXX6zqcGUCaXfZ9jgONSa1yL_2_YqOryivI9X-9eo-sgjPMo38D=s64-c-rp-mo-ba2-br100",
+    "imageUrl": "/images/testimonials/Eduardo_Batista.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente atención les lleve un reclamo me orientaron y agilizaron los trámites en menos de dos meses mí caso estaba resuelto, los recomiendo completamente.",
+    "reviewTime": "Hace 2 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Pablo Gabriel Armoa",
+    "profileUrl": "https://www.google.com/maps/contrib/105580448832883997432/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjU1fzIglTIJ7HDXOMmLIaiA1-0bfVBSn7JIsl8PhJWb21Qx6Kk=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Pablo_Armoa.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Exelente staff 100% recomendables buenos a atentos a tu demanda",
+    "reviewTime": "Hace 2 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Sergioacri Macri",
+    "profileUrl": "https://www.google.com/maps/contrib/111789195048635684229/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJ0Zcxjcuzvr-9js00veEojGXXkiaA3C_qvdZQmEdEV6zv3pw=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Sergioacri_Macri.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelentes profesionales y muy amables tanto Sebastián cómo Silvana.Recomendables 100x100",
+    "reviewTime": "Hace 2 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Matias Godoy",
+    "profileUrl": "https://www.google.com/maps/contrib/108357250859464876594/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjWyTuLGNv57E-6h9P-6F4DZT0405Nzx7AbGnLOiGgcLxL5Z6rdymg=s64-c-rp-mo-ba3-br100",
+    "imageUrl": "/images/testimonials/Matias_Godoy.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Super recomendables. Gestionaron todo en tiempo y forma. Sobrepasaron mis expectativas.",
+    "reviewTime": "Hace 2 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Matías RD",
+    "profileUrl": "https://www.google.com/maps/contrib/109889066643572604730/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjUEGQF9_31AmeAr_ZBsxQ6l2Mj62AgvEJ8SuL46bEQ_O6e_AWXWBQ=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Matias_RD.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente y eficiente gestión de Sebastian para conseguir mi seguro.",
+    "reviewTime": "Hace 2 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Gladis Veron",
+    "profileUrl": "https://www.google.com/maps/contrib/110525747244042687389/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocLRpM-UZwvkKBLSk4SMjb94Q-mmyd9KoPrNxQLMcix43f1KOA=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Gladis_Veron.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Un trabajo excelente, respuestas claras y rápidas, soluciones a los problemas.",
+    "reviewTime": "Hace 2 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Juana Lemus",
+    "profileUrl": "https://www.google.com/maps/contrib/115771639353508471847/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocIoN4H0FmtHxIe07FLYnIHuTGwOMSEMF5xPxaPpSn0CmffW7Q=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Juana_Lemus.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "La verdad que los chicos se pasaron me ayudaron en cada inconveniente que tuve y pudieron solucionarlo, la paciencia y un muy execelente trabajo, muy agradecida!!!!",
+    "reviewTime": "Hace 2 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Karina Marconi",
+    "profileUrl": "https://www.google.com/maps/contrib/106070790152645667757/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocI7J_yLDQKpGHZSsK_pv5i8YcshsN7FJEv_-M56KM0if9NBKQ=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Karina_Marconi.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "\"Excelente atención\". Tanto Sebastián como Silvana fueron muy amables con el asesoramiento y súper eficientes. Me solucionaron mi problema con el seguro de forma muy expeditiva y lograron la mejor negociación a mi favor.",
+    "reviewTime": "Hace 2 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "miguel hugo placanica",
+    "profileUrl": "https://www.google.com/maps/contrib/115173067501245065357/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXZH360u3bgeX1N30JejqQqGOxIlSk0nEFAiKVwQZ3dYFH3wVGqlw=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/miguel_placanica.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Muy buena atención,me solucionaron mi problema con mi seguro,hicieron un trabajo de hormiga y poco a poco lo consiguieronMuchas gracias y sigan así …",
+    "reviewTime": "Hace 2 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Aldana Herlein",
+    "profileUrl": "https://www.google.com/maps/contrib/114474828553755565615/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjWKPuSlfLf4w-AH2JAcm8-hnqKu1MVk8UiB5pEFfOn_gJQ0lkCJig=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Aldana_Herlein.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Super recomendables! Excelente atención, asesoramiento rapido y super claros en todo.",
+    "reviewTime": "Hace 2 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Jose Mereles",
+    "profileUrl": "https://www.google.com/maps/contrib/117625844810127141678/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJrPBFnWLJAeD0JzgBPfav8xcFOFjN-nYNw07roAulij1Aj-w=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Jose_Mereles.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente atención del Dr. López, muy conforme y agradecido por le trabajo realizado. Todo en tiempo y forma. Recomendable",
+    "reviewTime": "Hace 2 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Lujan Guemes",
+    "profileUrl": "https://www.google.com/maps/contrib/110139151749405302683/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJW14J5bEkYqHCngRe2BdoeCWJSVokpyirXkcKQYEsEOUrQMg=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Lujan_Guemes.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente profesionales , atención resolución rápida , recomendable .!!!",
+    "reviewTime": "Hace 2 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Fran Estrabón",
+    "profileUrl": "https://www.google.com/maps/contrib/102014551504726723859/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjUtS5zLQnnYMJPMIXMd4l2Ez0Y7dERhqIfxRatQw_SoAGPqx-GRPA=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Fran_Estrabon.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "excelentes profesionales! Buen asesoramiento, predisposición y servicio. Muy eficaces.",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Miguel Randone",
+    "profileUrl": "https://www.google.com/maps/contrib/111848170201825786850/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjWEtmayN-HotSsCpTNq_LW1E20lokXdiSY9pF6T68FcX9bwGvJi=s64-c-rp-mo-ba2-br100",
+    "imageUrl": "/images/testimonials/Miguel_Randone.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente atención y rapidez en resolver la demanda ,muy recomendable",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "cristian flores",
+    "profileUrl": "https://www.google.com/maps/contrib/116049002959933618272/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjW32yQqlXYMJnOe2CYaU-bHwFoRmNXXtepR4VdRYtFvOPdTGqI=s64-c-rp-mo-ba2-br100",
+    "imageUrl": "/images/testimonials/cristian_flores.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente atencion me asesoraron en tiempo y forma, mas que recomendable 👌",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Alejandra Merched",
+    "profileUrl": "https://www.google.com/maps/contrib/109571051905115979187/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJfgWl4A4J1wdSGnqUJjBUNmx4mPGq5dhFpuTY6rW4Z2UHHcg=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Alejandra_Merched.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente profesional,100%recomendable",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Ruben Carrera",
+    "profileUrl": "https://www.google.com/maps/contrib/106150339081077074709/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocL2birWRg-5oGre3DTM3Z1r0y7eFonwQ4ap1PmAoCIghO6OuQ=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Ruben_Carrera.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Muy conforme por el trato personal y profesional y contento con el resultado de la demanda !",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Viky Lordi",
+    "profileUrl": "https://www.google.com/maps/contrib/114972156883159638971/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocKxbbaaaET7Kx6gurpitua94hsWsyVlc3INzUqIFtEwg7AXcQ=s64-c-rp-mo-ba3-br100",
+    "imageUrl": "/images/testimonials/Viky_Lordi.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente trato y responsabilidad...muy comprometidos ... rapida gestión...muy conforme... gracias",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "zaa uma",
+    "profileUrl": "https://www.google.com/maps/contrib/114123867945643013466/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJ4gDkxaeguRSEWjrZAm0bVg6g6sjZl6Omtri4xYcOuQirVSw=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/zaa_uma.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Lo recomiendo ampliamente, logró resolver mi caso y a su vez obtuve mas de lo esperado.",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Jorge luis MArrazzi",
+    "profileUrl": "https://www.google.com/maps/contrib/106438575132403156619/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocKUoWOtuvfNdPpAB6QPPpjqJ3X7DCP-OfedOSuoH9cMWrlwiA=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Jorge_MArrazzi.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "La verdad muy buena atención muy rápido y por sobre todo muy sincero es para recomendar",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Daniel Canteros",
+    "profileUrl": "https://www.google.com/maps/contrib/112878863805534065825/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVverBEPi1f6CZbdfrYGCg4Ezu4jvadw-9Obz3n7lW83gIOZzLA=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Daniel_Canteros.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente atencion!!! Muy recomendable!! Gracias Sebastian!!",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Marcelo Barbero",
+    "profileUrl": "https://www.google.com/maps/contrib/112219536559478285220/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocLEIZBcwYMceBAIb4FI5LtPRhgDmhOj9jeSMe7EoDbZU1bHZA=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Marcelo_Barbero.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente trato y atención muy recomendable",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Francisca Letelier",
+    "profileUrl": "https://www.google.com/maps/contrib/114968433237775524985/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXwUd2nfnrTmU1u35oADZumSQ7VsSKuqdloQSYxuF6p-47O4rs=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Francisca_Letelier.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente servicio!! Su trabajo es prolijo y muy bueno, full recomendado.Muchas gracias por todo",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Gaston Bongiovanni",
+    "profileUrl": "https://www.google.com/maps/contrib/102903531194524478849/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJhLwPROEJw8lI9-diYCs4-bXHTBxxwKX90WdYDQSLViaqG0w=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Gaston_Bongiovanni.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente atencion 👍muy recomendable",
+    "reviewTime": "Hace 3 años",
     "likeCount": "0"
   },
   {
     "reviewerName": "Matias Marchetti",
-    "profileUrl": "https://www.google.com/maps/contrib/108769300998006439173?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Matias_Marchetti_65.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": null,
-    "reviewTime": "Hace 2 años",
+    "profileUrl": "https://www.google.com/maps/contrib/108769300998006439173/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocKqIHK_tdHQwpT3gzFRGr0WY1_caWBCS1_7-39bTP_Dw34qYQ=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Matias_Marchetti.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "gustavo haylan",
+    "profileUrl": "https://www.google.com/maps/contrib/114009631750217566124/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXIly6QI00Ga4N5cpfw1EWbIcYOSiOGU1VF-Px2qno25W4wRs6C=s64-c-rp-mo-ba3-br100",
+    "imageUrl": "/images/testimonials/gustavo_haylan.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Muy buena atención y una rápida resolución. Muy recomendable",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Federico Martinez",
+    "profileUrl": "https://www.google.com/maps/contrib/108052166995218162465/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjUMR9kpYMVTNoOzEfRwoZbmvvvN3qAS6HNwLZljNN_Qc1sTGjDJ=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Federico_Martinez.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Unos genios resolvieron mi problema automovilistico en tiempo y forma",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Susana Saucedo",
+    "profileUrl": "https://www.google.com/maps/contrib/107921730223205617757/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXDsFWqNiVcrhL9SEhtupJuzNnCgDSrDYf9TbmHRmcIFvmkNDX_VQ=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Susana_Saucedo.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente atención y rapidez en la resolución. Muy buen trabajo. Se los recomiendo.",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "EMILIO Gould",
+    "profileUrl": "https://www.google.com/maps/contrib/112989011813681669460/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocIzxoJ3HqnPTEGtwDd3Dogku3djkVNBsozkINkfbwcNBc-QQg=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/EMILIO_Gould.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Muy buena atención, lo recomiendo!!!",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "oscar leonel Brizzi",
+    "profileUrl": "https://www.google.com/maps/contrib/114752783625165534068/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocKZ2HOgwynSzG0WuiWLu1koYO-S7no6eAdDLTLMa5p3zQp3sA=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/oscar_Brizzi.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Profesionales excelentes.Eficientes en todo sentido.En mi experiencia, no solo solucionaron mi problema con rapidez, sino q obtuve mas de lo q esperaba.",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "patricia chingolani",
+    "profileUrl": "https://www.google.com/maps/contrib/105005562745092596100/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjV1fdVhIccXkGGlaX6e64nWmzAptPY2P4BrBqH7frOa07PdO4kUjw=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/patricia_chingolani.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelentes profesionales!!!!!Hace años llevan todos nuestros casos.Son muy eficientes y sobre todo resuelven los problemas con suma rapidez. …",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "cintia muñoz",
+    "profileUrl": "https://www.google.com/maps/contrib/114962944738119687407/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJc3aXj5Jh_D1Fes31vNBv9N-2u1w7G7W2SSzfQ6rxf2ab1sw=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/cintia_munoz.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Contención, asesoramiento y resolución. Sebastián nos atendió con empatía, transparencia y profesionalismo. Sin dudas los recomendamos.",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "mari plaju",
+    "profileUrl": "https://www.google.com/maps/contrib/107550039354016884034/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXVI6wjt8pkbI6Abl8ZNYlUeA1DHzxHnTYWKpnynludztjxF4Egsw=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/mari_plaju.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Buena calidad de atención y resolución inmediata, excelente calidad humana .",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "lucas nicolas avendaño",
+    "profileUrl": "https://www.google.com/maps/contrib/100426647338199479793/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVL6lZtblaqJiXl8d2c7X-vypzqQSqAcoG4cexowBAemRvWzXwO=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/lucas_avendano.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Sebastian siempre fue muy atento y se manejo perfectamente antes las consultas y los problemas que e tenido.",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Geraldine Saad Centurion",
+    "profileUrl": "https://www.google.com/maps/contrib/113090762926480144403/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVOt0pH8IYgg3zy0PhSMhdSo6R1h_UOik1kjBySfrcCKPutajyofQ=s64-c-rp-mo-ba3-br100",
+    "imageUrl": "/images/testimonials/Geraldine_Centurion.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelentes profesionales y maravillosas personas.",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Andrea Lomba",
+    "profileUrl": "https://www.google.com/maps/contrib/107257537339852448351/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjWigWsq34RN-Jzg6Mks226djHgPiOmOwQbU27Xdzrl51inWM8Yc=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Andrea_Lomba.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Sebastián se ha manejado con mucho profesionalismo, empatía y buen trato. Los recomiendo.",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Leo gamella",
+    "profileUrl": "https://www.google.com/maps/contrib/106553138322114155497/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVf0ky7a74Q2Q9ke0dAxabpjweTnhAxOFyF3nIVpkuLn9eBbXdy=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Leo_gamella.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente estudio, super recomendable de confianza!",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Hugo B",
+    "profileUrl": "https://www.google.com/maps/contrib/105346517786141648839/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocL4BnLRmypTUH2SKNhSREryrcK-AwZTvnnfa2Js8isd8z5g8A=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Hugo_B.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "100x100 RECOMENDABLE! Sebastián me asesoró desde el primer momento. MUY PROFESIONAL Y RESOLVIO MI CASO .MUY ATENTO!",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Mercedes Barraz",
+    "profileUrl": "https://www.google.com/maps/contrib/118189886270265216298/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocKaTaVHXBT779m-VtsieIVXWFBA7aefbRqkuBP5h2uJkCpZfA=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Mercedes_Barraz.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Es muy buen abogado los trámites los saco súper rápido y es muy recomendable muy humilde y muy sabio agradecida por haberlo encontrado",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Pablo Forgia",
+    "profileUrl": "https://www.google.com/maps/contrib/109620471669779112728/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocLyjeJAECTgGr2kBnj_riUuCt0Z14hcmRKi_Si6PIYgTCbUcw=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Pablo_Forgia.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelente atención y predisposición. De diez!! 👌🏼",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Sergio Lipchak",
+    "profileUrl": "https://www.google.com/maps/contrib/100829908243885968407/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVMp3B7UwIOe9lgSE-WMo9Lxz8xorWFherrZfACP6AZO7Z9vfK6=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Sergio_Lipchak.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "super profesionales. no esperaba que me dieran una solucion tan completa y rapida. muy agradecido con su trabajo!",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Norita Dieguez",
+    "profileUrl": "https://www.google.com/maps/contrib/110347750167070323944/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjWM8JNMclHG_s7hmR1lNxYI1fszl1FR7T0m1Ls2G6V2cqE5RSyU=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Norita_Dieguez.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Tuve el gusto de conocerlos a Silvana y Sebastián en mi peor momento laboral,En el cual su accionar fue muy eficaz y tuveMucha contención humana durante todo elProceso , excelentes personas muchas gracias.",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Gabriel Cidade",
+    "profileUrl": "https://www.google.com/maps/contrib/112820249015489471393/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocKyn6rKoKy7118SSIFLmemle8L0qQ3_Jb48TBEXkRjup1Dgmg=s64-c-rp-mo-ba2-br100",
+    "imageUrl": "/images/testimonials/Gabriel_Cidade.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Impecable!! Muy profecional y la atencion de Sebastian inmejorable, me soluciono un gran problema y en un tiempo record!! 100% recomendable. Muchas gracias por todo.",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Ezequiel Urdinez",
+    "profileUrl": "https://www.google.com/maps/contrib/107029139057089043842/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJiQZbJ8Uzsl99PnbvAv-JPqGbkYFD1ZaGHOKYWVl6I1xaUIA=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Ezequiel_Urdinez.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Trabajamos varias oportunidades con ellos por siniestros viales siempre con buenos resultados. Lo recomiendo",
+    "reviewTime": "Hace 3 años",
     "likeCount": "0"
   },
   {
     "reviewerName": "Martin Correa",
-    "profileUrl": "https://www.google.com/maps/contrib/101140027891344169681?hl=es-419&ved=1t:31294&ictx=111",
-    "imageUrl": "/images/testimonials/Martin_Correa_66.jpg",
-    "rating": "Calificación: 5.0 de 5,",
-    "reviewText": null,
-    "reviewTime": "Hace 2 años",
+    "profileUrl": "https://www.google.com/maps/contrib/101140027891344169681/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocL1gC7f5sShkr9rJvEinWn5clfEfZb3E2skmTS5ykG-9gt5x-Ul=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Martin_Correa.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Maricel Algañaraz",
+    "profileUrl": "https://www.google.com/maps/contrib/104691169803954662605/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocImdI0t3FZ1OH2gPgDtY_Ru87LKosDYjsrI0ieIHdBLB60V5isr=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Maricel_Alganaraz.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelentes profesionales, resolvieron mí caso con rapidez, empatía y profesionalismo y quedé muy conforme con los resultados siempre q pueda los recomendaré. Muchas gracias nuevamente!!",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Diego Jara",
+    "profileUrl": "https://www.google.com/maps/contrib/112473137544972871760/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocIo-qlTgzNAFNaq1iCrjsI8WmiEiaTso1W2mWwIXUQTCmREYw=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Diego_Jara.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Excelentes profesionales.recomendables!!!",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Flor Carmen Paolucci",
+    "profileUrl": "https://www.google.com/maps/contrib/103796457674476949433/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjU59j_Hf95GF_YNnjK-0tWQ9qgjgla3g5L_3384E3ueXTJvy5g=s64-c-rp-mo-ba4-br100",
+    "imageUrl": "/images/testimonials/Flor_Paolucci.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Este Estudio tiene un profesionalismo increíble, Sebastián es un genio, quedé muy contenta con su trabajo que fue impecable. se los recomiendo.",
+    "reviewTime": "Hace 3 años",
+    "likeCount": "0"
+  },
+  {
+    "reviewerName": "Martin Company",
+    "profileUrl": "https://www.google.com/maps/contrib/113217698417363944710/reviews?hl=es-419",
+    "profileImageSourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjUXsoWAQPnUyDMwEhjNfHOCZ-9BBX9RoMNnh59vGg0hOJvdUsrF=s64-c-rp-mo-br100",
+    "imageUrl": "/images/testimonials/Martin_Company.jpg",
+    "rating": "Calificación: 5.0 de 5",
+    "reviewText": "Me solucionaron el problema rápido y con excelentes resultados en el acuerdo, super recomendables!!",
+    "reviewTime": "Hace 4 años",
     "likeCount": "0"
   }
 ]

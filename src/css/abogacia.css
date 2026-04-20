@@ -961,11 +961,23 @@ small {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .custom-reviews-carousel .pagination {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 5px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-bottom: 0;
 }
 
 .custom-reviews-carousel .page-item {
@@ -1017,16 +1029,6 @@ small {
   /* Slightly transparent to show it's disabled */
   cursor: not-allowed;
   /* Shows "not-allowed" cursor on hover */
-}
-
-/* Make pagination responsive and compact */
-.pagination-container {
-  max-width: 100%;
-  overflow-x: auto;
-  /* Enables horizontal scroll if needed */
-  white-space: nowrap;
-  /* Prevents pagination items from wrapping */
-  padding: 0 10px;
 }
 
 .pagination .page-item {

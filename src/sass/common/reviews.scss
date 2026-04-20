@@ -120,10 +120,22 @@
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
 
     .pagination {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
       gap: 5px;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      margin-bottom: 15px;
 
       .page-item {
         list-style: none;
@@ -155,13 +167,6 @@
     .pagination-container {
       justify-content: center;
     }
-  }
-
-  .pagination-container {
-    max-width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
-    padding: 0 10px;
   }
 }
 
